@@ -54,12 +54,12 @@ If any files are in the pull request outside of your personal folder, we will se
 **Submit homework by pushing up to your `sf-wdi-51` fork, then submit a pull request**
 
 Week 1 (January 22 - January 25) | Due Monday, January 28
- \#       | Assignment | Class Topic | Additional Resources
- :------: | :--------- | :---------- | :-------
-  1       | `Command Line Practice` | The Client, Server & You!, IDE, Command Line, Semantic HTML | [Command Line Mystery][1-1A]
-  2       | `Monument Pt 1` | CSS Selectors, Box Model, Flexbox | [Flexbox Frogger][1-1A]
-  3       | `Monument Pt 3` | HTML Forms, Fonts & Ems, Transitions & Animations | [Animate.css library][1-1A]
-  4       | `Monument Pt 2` | Wireframes, Responsive Design, Positioning | [What is responsive design?][1-1A]
 
+| \#       | Assignment | Class Topic | Additional Resources |
+| :------: | :--------- | :---------- | :-------             |
+| 1       | `Command Line Practice` | The Client, Server & You!, IDE, Command Line, Semantic HTML | [Command Line Mystery][1-1A] |
+| 2       | `Monument Pt 1` | CSS Selectors, Box Model, Flexbox | [Flexbox Frogger][1-1A] |
+| 3       | `Monument Pt 3` | HTML Forms, Fonts & Ems, Transitions & Animations | [Animate.css library][1-1A] |
+| 4       | `Monument Pt 2` | Wireframes, Responsive Design, Positioning | [What is responsive design?][1-1A] |
 
 [1-1A]: https://github.com/Borgaard/sf-wdi-51-assignments
