@@ -10,12 +10,22 @@ How To Use This Repo
 This is the repository where you'll submit your homework.    
 Follow these directions closely to switch over to this repository.
 
+Setup (do this only once):
 1. Fork this repository.
 2. Clone your fork to your ```~/code``` folder.
-3. Create a directory in the ```sf-wdi-51-homework``` folder using your real name and github account name. Example: ```sf-wdi-51-homework/nicole-Borgaard```. That will make it easier for us to remember everyone's GitHub username. :)
-4. For each homework make sure to put your files in a new `week_x` directory in your named directory. Example for homework in week 2: `sf-wdi-51-homework/nicole-Borgaard/week_2/slackBot/hubot.js`
+3. Create a directory in the ```sf-wdi-51-assignments``` folder using your real name and github account name. Example: ```sf-wdi-51-homework/nicole-Borgaard```. That will make it easier for us to remember everyone's GitHub username. :)
 
-Example of how your local homework directory should be structured:
+Submit homework assignments:
+1. Create a folder for the current week in your personal directory. 
+2. Add each assignment in the current week's folder. Example for homework in week 2: `sf-wdi-51-assignments/nicole-Borgaard/week_2/slackBot/hubot.js`
+3. `$ cd` to `sf-wdi-51-assignments`. To figure out where you are in terminal, `$ pwd` to find your present working directory.
+4. `$ git add .` to stage files you'd like to commit and push to GitHub.
+5. `$ git commit -m "adding week 2 slackBot assignment"` to add a descriptive comment about what you're doing. Comments are a requirement of the commit command.
+6. `$ git push origin master` to push your local code to your personal remote repository on GitHub.
+7. Your homework is now located on your personal repo (`yourUsername/sf-wdi-51-assignments`). Create a pull request to the homework repo (`Borgaard/sf-wdi-51-assignments`) to submit your assignment.
+
+
+This is how your local homework directory should be structured:
 
 
     |-- code/
@@ -53,3 +63,7 @@ If any files are in the pull request outside of your personal folder, we will se
   6      | `500px` | 12-advanced-apis | Monday, March 4
   7      | `Feedr` project | 13-feedr-lab | Monday, March 11 
  | -     | No more homework! Focus on `Feedr` & your final project :) | - | -
+
+
+
+
