@@ -4,6 +4,9 @@ Web Development Immersive 51 Homework Repository
 Office hours with GA's mentors:    
 Monday - Thursday 5-7pm, located in Concourse.
 
+Sign up for [1 on 1 with instructional team][1o1].    
+Reference [WDI-51 class resources][resources] for each assignment.
+
 How To Use This Repo
 --------------------
 
@@ -48,18 +51,35 @@ This is how your local homework directory should be structured:
 Weekly Homework
 ---------------
 
-Homework [assigned each week](https://git.generalassemb.ly/sf-wdi-51/installfest) is due the following Monday.    
+Homework [assigned each week][resources] is due the following Monday.    
 If any files are in the pull request outside of your personal folder, we will send it back to you to fix!
 
 **Submit homework by pushing up to your `sf-wdi-51` fork, then submit a pull request**
 
 Week 1 (January 22 - January 25) | Due Monday, January 28
 
-| \#       | Assignment | Class Topic | Additional Resources |
-| :------: | :--------- | :---------- | :-------             |
-| 1       | `Command Line Practice` | The Client, Server & You!, IDE, Command Line, Semantic HTML | [Command Line Mystery][1-1A] |
-| 2       | `Monument Pt 1` | CSS Selectors, Box Model, Flexbox | [Flexbox Frogger][1-1A] |
-| 3       | `Monument Pt 3` | HTML Forms, Fonts & Ems, Transitions & Animations | [Animate.css library][1-1A] |
-| 4       | `Monument Pt 2` | Wireframes, Responsive Design, Positioning | [What is responsive design?][1-1A] |
+| \#      | Assignment | Class Topic | Additional Resources |
+| :-----: | :--------- | :---------- | :------------------- |
+| 1       | Command Line Practice | The Client, Server & You!, IDE, Command Line, Semantic HTML | [Command Line Mystery][2-1] |
+| 2       | Monument Pt 1 | CSS Selectors, Box Model, Flexbox | [Flexbox Frogger][2-2] |
+| 3       | Monument Pt 3 | HTML Forms, Fonts & Ems, Transitions & Animations | [Animate.css library][2-3] |
+| 4       | Monument Pt 2 | Wireframes, Responsive Design, Positioning | [What is responsive design?][2-4] |
 
-[1-1A]: https://github.com/Borgaard/sf-wdi-51-assignments
+<!-- Links -->
+[resources]: https://git.generalassemb.ly/sf-wdi-51
+[1o1]: https://docs.google.com/spreadsheets/d/1IhDQLiCeZlOCLve4EEAzfwL1a22KipC6gaSTj_xQacc/edit#gid=0
+
+<!-- Format: [day-linkNumber] -->
+<!-- Week 1 -->
+[2-1]: https://github.com/veltman/clmystery
+[2-2]: https://flexboxfroggy.com/
+[2-3]: https://daneden.github.io/animate.css/
+[2-4]: https://guide.freecodecamp.org/html/responsive-web-design/
+
+<!-- Week 2 -->
+
+
+<!-- Week 3 -->
+
+
+<!-- Week 4 -->
