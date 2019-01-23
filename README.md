@@ -51,13 +51,12 @@ This is how your local homework directory should be structured:
 Weekly Homework
 ---------------
 
-Homework [assigned each week][resources] is due the following Monday.    
+Homework [assigned each week][resources].
 If any files are in the pull request outside of your personal folder, we will send it back to you to fix!
 
 **Submit homework by pushing up to your `sf-wdi-51` fork, then submit a pull request**
 
-Week 1 (January 22 - January 25) | Due Monday, January 28
-
+Week 1 (January 22 - January 25)
 | \#      | Assignment | Class Topic | Additional Resources |
 | :-----: | :--------- | :---------- | :------------------- |
 | 1       | Command Line Practice | The Client, Server & You!, IDE, Command Line, Semantic HTML | [Command Line Mystery][2-1] |
