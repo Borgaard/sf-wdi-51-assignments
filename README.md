@@ -57,6 +57,7 @@ If any files are in the pull request outside of your personal folder, we will se
 **Submit homework by pushing up to your `sf-wdi-51` fork, then submit a pull request**
 
 Week 1 (January 22 - January 25)
+
 | \#      | Assignment | Class Topic | Additional Resources |
 | :-----: | :--------- | :---------- | :------------------- |
 | 1       | Command Line Practice | The Client, Server & You!, IDE, Command Line, Semantic HTML | [Command Line Mystery][2-1] |
