@@ -1,0 +1,24 @@
+1. The code snippet is missing a tag to declare the document type.
+
+2. The code is missing a head tag.
+
+3. The document declaration does not need a closing tag. Also, img should have an alt tag.
+
+4. There is no closing tag for title.
+
+Questions
+Title provides metadata to the page. It gives the wedpage a name in the browser but the actual title does not appear on the page itself.
+
+Images need a source and alt, so it can get and display an actual images and provide more information to the image in case it does not show up or for accessibility.
+
+Head takes care of some metadata, like the title and linking to a CSS file. Body displays the content of the page.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
