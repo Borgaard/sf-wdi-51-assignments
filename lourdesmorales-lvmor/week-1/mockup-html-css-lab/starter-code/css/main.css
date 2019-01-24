@@ -1,13 +1,95 @@
-title {
-  color: #efd9b8;
+* {
   text-decoration: none;
+  font-family: Lato;
+  font-weight: 500;
+  margin: 0;
 }
 
-p {
-  color: gray;
+body {
+  margin: 2em 40em 3em 5em;
 }
 
 a {
-  color: orange;
-  text-decoration: none;
+  color: #FFA500; /*orange*/
+}
+
+header h1 {
+  font-size: 65px;
+  opacity: 0.5px;
+}
+
+header h2 {
+  font-size: 32px;
+  padding: 20px 0 20px 0;
+}
+
+header nav a {
+  color: #C0C0C0; /*silver*/
+  line-height: 1em;
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 28px;
+  padding: 10px;
+  opacity: 0.5;
+}
+
+article h2 {
+  padding: 20px 0 20px 0;
+  justify-content: flex-start;
+}
+
+article h2 a {
+  color: #000000; /*black*/
+  font-size: 50px;
+}
+
+article h3 {
+  color: #C0C0C0; /*silver*/
+  font-size: 50px;
+  padding: 60px 0 0 0;
+}
+
+article p {
+  padding: 20px 0 20px 0;
+  font-size: 25px
+}
+
+article h4 {
+  text-align: right;
+  border-bottom-style: solid;
+  border-width: 0.005em;
+  border-color: #C0C0C0;
+  padding: 25px 0 25px 0;
+}
+
+article h4 a {
+  font-weight: 800;
+  font-size: 30px;
+  opacity: 0.5;
+}
+
+article p:first-letter {
+  font-size: 160px;
+  color: #C0C0C0; /*silver*/
+  float: left;
+  line-height: 60px;
+  padding: 30px 8px 40px 3px;
+  opacity: 0.5;
+}
+
+footer {
+  padding: 80px 0 0 0;
+}
+
+footer nav a {
+  text-decoration: underline;
+  font-size: 25px;
+  padding: 10px;
+  opacity: 0.5;
+}
+
+footer p {
+  padding: 40px 0 0 0;
+  font-size: 25px;
+  color: #C0C0C0; /*silver*/
 }
