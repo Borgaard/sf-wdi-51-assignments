@@ -1,0 +1,97 @@
+/*When it comes to spacing elements? Whats the best practice?
+For example spacing elements vertically...
+is it best to apply bottom margin to the top element? or top margin
+on the bottom element? */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: lato;
+  border-left: 8px solid lightgrey;
+  padding: 45px 0 30px 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+h1 a {
+  font-size:60px;
+  color: #F6CE8D;
+}
+
+header nav {
+  margin-top: 25px;
+}
+
+header nav a {
+  color: lightgrey;
+  font-size:18px;
+  margin-right: 22px;
+  border-bottom: 2px solid lightgrey;
+}
+
+header h2 {
+  margin: 30px 0 0 0;
+}
+
+article h3 {
+  margin-top:65px;
+  color: lightgrey;
+  font-size: 35px;
+}
+article h2 {
+  margin: 20px 0 25px 0;
+  font-size:45px;
+}
+article a {
+  color:black;
+}
+
+img {
+  width: 100%;
+}
+
+article {
+  width: 80%;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom:30px;
+}
+
+article p::first-letter {
+  font-size:90px;
+  float:left;
+  color:lightgrey;
+  padding:0 20px 0 0;
+}
+
+article p {
+  font-size:20px;
+  line-height: 1.5;
+}
+
+article h4 a {
+  margin-top: 0;
+  color: orange;
+  float: right;
+}
+
+footer nav {
+  padding:50px 0 30px 0;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: orange;
+}
+
+footer p {
+  color: lightgrey;
+}
