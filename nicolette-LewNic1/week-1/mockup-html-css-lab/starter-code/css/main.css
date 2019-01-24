@@ -1,0 +1,112 @@
+* {
+	font-family: 'Lato', sans-serif;
+	margin: 10px;
+}
+
+
+/*On the Road */
+h1 a {
+	color: #F8CE78;
+	font-size: 45px;
+	font-style: normal;
+	text-decoration: none;
+	font-weight: lighter;
+	padding: 15px
+}
+/*Adventure...*/
+h2  { 
+	color: black;
+	text-align: left;
+	font-size: 24px;
+	font-weight: normal;
+	 
+}
+/*List items */
+nav a {
+	color: inherit;
+	font-weight: lighter;
+	color: grey;
+	font-weight: lighter;
+	padding: 20px;
+	font-size: 19px;
+
+}
+/*the date 11/12/15 */
+h3 {
+	font-size: 27px;
+	padding: 15px;
+	
+}
+
+/*camping by Loon...*/
+h2 a { 
+	text-decoration: none;
+	color: black;
+	font-size: 34px;
+}
+
+/* paragraph cray...*/
+p {
+
+}
+
+/*continues...*/
+h4 a {
+	color: #F8CE78;
+	text-decoration: none;
+	text-align: right;
+}
+
+/*date 11/11/15*/
+h3 {
+	font-size: 27px
+	font-weight: lighter;
+
+
+}
+
+/*A morning hike...*/
+h2 a {
+
+}
+
+/*paragraph selfies...*/
+p {
+	font-size: 17px;
+
+}
+/*continues...*/
+h4 a {
+	color: #F8CE78;
+}
+
+/*list items*/
+footer nav a {
+	text-decoration: none;
+	font-size: 15px;
+	text-align: left;
+	color: #F8CE78;
+}
+
+
+/*paragraph &copy*/
+p {
+	color: grey;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
