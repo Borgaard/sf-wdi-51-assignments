@@ -1,0 +1,85 @@
+* {
+  font-family: Lato;
+
+
+}
+
+h1 a{
+  font-size: 40px;
+
+  color:orange;
+  text-decoration: none;
+  font-weight: lighter;
+}
+ a{
+  color:lightgray;
+ }
+
+ h2{
+  font-weight: lighter;
+ }
+
+h3{
+  color: lightgray;
+  font-weight: lighter;
+  font-size: 25px;
+
+}
+
+ article p::first-letter {
+  font-size: 550%;
+  color: lightgray;
+  float: left;
+}
+
+
+article {
+  margin: auto 40% auto 3%;
+  padding: auto 30px auto 100px;
+
+}
+
+
+h2 a{
+  text-decoration: none;
+  color: black;
+}
+
+h4{
+  text-align: right;
+}
+
+h4 a{
+  color:orange;
+  text-decoration: none;
+}
+
+p footer {
+  font-size: 100%;
+}
+
+header, footer {
+ margin: auto 40% auto 3%;
+}
+
+ footer a{
+  color:orange;
+  text-decoration: none;
+}
+
+footer p{
+  color: lightgray;
+}
+
+img{
+  width:95%;
+}
+
+header nav{
+   word-spacing: 10px;
+}
+
+
+
+
+
