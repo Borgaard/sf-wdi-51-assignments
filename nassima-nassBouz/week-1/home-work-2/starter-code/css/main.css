@@ -1,0 +1,46 @@
+a{
+  color: orange;
+}
+nav{
+  color: grey;
+  width:900px;
+  box-sizing: border-box;
+}
+a:hover{
+  color: grey;
+  text-decoration: underline !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+*{
+  font-family: arial;
+  margin: 15px;
+  border: 15px bold gray;
+  box-sizing: border-box;
+}
+
+p.subhead::first-letter {
+  color: grey;
+  float: left;
+  /*font-family: arial;*/
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+h2{
+  color: black;
+  text
+}
+p{
+  float: center;
+  width:900px;
+  box-sizing: border-box;
+}
+h3 {
+  color: gray;
+  font-size: 25px;
+}
