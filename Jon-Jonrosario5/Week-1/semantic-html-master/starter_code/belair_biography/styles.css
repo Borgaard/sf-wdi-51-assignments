@@ -95,7 +95,13 @@ header, footer {
 header {
   margin-bottom:20px;
   border-bottom-width:1px;
+  display: inline-block;
+  background-size: cover;
+  color: white;
+
 }
+
+
 
 footer {
   padding-top:10px;
