@@ -1,5 +1,5 @@
 body{
-  font-family: gill sans;
+  font-family: lato;
   font-weight: 100;
   display: flex;
   flex-direction: column;
@@ -74,5 +74,10 @@ footer a{
 footer p{
   font-size: 15px;
   color:#00000030;
+}
+
+a:hover{
+  color: white;
+  background: lightgray;
 }
 
