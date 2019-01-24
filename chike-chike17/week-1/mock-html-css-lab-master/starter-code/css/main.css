@@ -31,6 +31,11 @@ p {
   text-align: left;
 }
 
+article p::first-letter {
+  font-size: 400%;
+  color: #d5dbe5;
+}
+
 h4 {
   color: yellow;
   font-size: 7px;
