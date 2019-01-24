@@ -1,0 +1,52 @@
+body {
+   font-family: 'Lato', sans-serif;
+   width: 900px;
+   margin-left: 450px;
+}
+
+h1 {
+  color: grey;
+}
+
+h1 a {
+  text-decoration: none;
+  color: goldenrod;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #d5dbe5;
+}
+
+nav a {
+  color: goldenrod;
+}
+
+h2 {
+ color: solid black;
+}
+
+p {
+  font-size: 20px;
+  text-align: left;
+}
+
+h4 {
+  color: yellow;
+  font-size: 7px;
+}
+
+h4 a {
+  color: goldenrod;
+  margin-left: 800px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+h3 {
+  color: solid grey;
+}
+
+h2 {
+  color: solid black;
+}
