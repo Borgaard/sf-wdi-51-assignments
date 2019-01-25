@@ -1,69 +1,55 @@
 * {
     font-family: sans-serif;
-    font-weight: 200;
-    
+    font-weight: lighter;
 }
-.topHeader {
-    color:#FFB77E;
-    text-decoration: none;
-    font-weight: 200;
-    font-size: 60px;
 
+h1 a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 40px;
 
 }
 
-.topNav {
-    color: darkgray;
-    padding-bottom: 6px;
-    border-bottom: 1px solid darkgray;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 6px;
-    padding: 2px;
-    border-right: 1px solid gray;
-
+h2 {
+    margin-top: -10px
 }
 
-.topNav:hover {
-    color: gray;
-    background-color: darkgray;
+h2 a {
     text-decoration: none;
-    
+    color: black;
+    font-size: 36px;
 }
 
 h3 {
     color: gray;
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
-.articleName {
+nav a {
     text-decoration: none;
-    color: black;
-    font-size: 42px;
+    text-align: center;
+    color: gray;
+    padding: 4px;
+    border-bottom: 1px solid gray;
 }
 
-.continues {
-    color:#FFB77E;
-    text-decoration: none;
-    display: flexbox;
-    flex-
-}
+nav a:hover {
+    background-color: darkgray;
 
-article {
-    border-bottom: 1px solid darkgray;
-    margin-bottom: 20px;
-    display: flexbox;
 }
 
 p {
-    color: rgb(20,20,20);
     line-height: 1.4;
-    display: flexbox;
-    flex-wrap: wrap;
+    color: rgb(32,32,32)
 }
 
 p::first-letter {
-    font-size: 400%;
+    float: left;
+    padding: 2px;
+    font-size: 64px;
     color: gray;
+
 }
+
+p:last
