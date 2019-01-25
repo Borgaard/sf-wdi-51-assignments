@@ -23,7 +23,7 @@ h1 + h2{
 }
 h2 > a {
 	/*article titles*/
-	color: #000000;
+	font-color: #000000;
 	text-decoration: none;
 	font-weight: 300;
 	font-size: 1.6em;
@@ -33,7 +33,7 @@ h2 > a {
 }
 h2 + nav {
 	/*menu nav*/
-	color: #000000;
+	font-color: cornflowerblue;
 	text-decoration: none;
 	/*can't get the color to change*/
 	font-weight: 300;
@@ -112,9 +112,20 @@ a{
 	font-weight: 300;
 	font-size: 16px;
 	max-width: 70%;
-	display: flex
+	display: flex;
 	flex-direction: row;
 	justify-content: left;
+}
+footer nav a {
+	color: #C9C9C9;
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 16px;
+	max-width: 50%;
+	display: inline-block;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+}
 
-  }
   
