@@ -36,7 +36,11 @@ body {
 }*/
 #main {
   display: flex;
-  flex-direction: row;
+}
+
+#main section {
+  width: 70%;
+  margin-right: 50px;
 }
 
 #sidebar {/*
@@ -153,6 +157,11 @@ footer {
    ================================================================ */
 header ul {
   display: flex;
+}
+
+header {
+  display: flex;
+display: inline-block;
 }
 
 header nav ul li {
