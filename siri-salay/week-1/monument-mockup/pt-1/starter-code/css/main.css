@@ -1,0 +1,200 @@
+
+body {
+  width:70em;
+  margin:0 auto;
+  color: #43545d;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3em;
+}
+
+.header{
+  width: 70em;
+  margin: 0 auto;
+}
+
+.main {
+  width: 90em;
+  margin: 0 3em;
+}
+
+
+.sidebar {
+  margin-top: 30px;
+  margin-left: 3em;
+  width: 35em;
+}
+
+.about h2 {
+  font-size: 14px;
+}
+
+.mainImg {
+  width: 100%;
+}
+
+.aboutImg {
+  width: 90%;
+}
+
+nav{
+  width: 50em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  height: 7em;
+  width: 70em;
+  padding-top: 3.5em;
+  line-height: 1em;
+  top: 0;
+  position: sticky;
+  background-color: white;
+  z-index: 100;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+  color: #8ba6b4;
+}
+
+ul li {
+color: #8ba6b4;
+}
+
+h1 {
+  position: relative;
+  top: 6em;
+  letter-spacing: 11px;
+  font-size: 32px;
+  color: white ;
+  font-weight: normal;
+}
+
+
+h1 {
+  text-align: center;
+  padding-bottom: 1em;
+  line-height: 22px;
+}
+
+h2, h3 {
+  letter-spacing: 3px;
+}
+
+.main h2 {
+  margin-bottom: 2em;
+}
+
+
+h3 {
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  margin: 20px auto;
+  color: #808c91;
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Raleway", sans-serif;
+}
+
+footer {
+  background: #c9f3f6;
+  text-align: center;
+  height: 20em;
+  margin: 4em 0;
+  display: flex;
+  flex-direction: column;
+  padding: 4em 0;
+}
+
+footer nav {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+footer nav li
+{
+  margin-top: 2em;
+}
+
+
+footer nav li i{
+ width: 3em;
+ height: 3em;
+ font-size: 32px;
+}
+
+input[type="email"]{
+  background-color: white;
+  border-radius: 0;
+  margin-right: 20px;
+  text-align: center;
+  padding: 10px 5px;
+  border: none;
+  width: 16em;
+  height: 3em;
+
+  margin-top: 2em;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+margin-left: 40px;
+width: 20em;
+height: 3em;
+
+
+  margin-top: 2em;
+
+
+
+cursor: pointer;
+outline: 0;
+border: 2px solid #44545E;
+color: #44545E;
+font-weight: bolder;
+text-transform: uppercase;
+font-size: 12px;
+letter-spacing: 1.2px;
+transition: all .3s ease-in-out;
+
+
+}
+
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #44545E;
+  color: white;
+  font-weight: bold;
+}
+
+copyright {
+  border-top: 1px solid black;
+  padding-top:2em;
+  margin-top: 7em;
+}
+
+
+
+/*
+
+*/
+
+
+
+
