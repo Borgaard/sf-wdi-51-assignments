@@ -215,17 +215,16 @@ hr {
 
 /* media query 800px
    ================================================================ */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
 
 #main {
-  width: 100%;
   display: flex;
   flex-direction: column;
 
 }
 
 #sidebar {
-  margin-top: 108px;
+  margin-top: .5em;
   color: #888;
   padding: 2%;
 }
@@ -233,7 +232,6 @@ hr {
 .wrapper {
   width: 100%;
   margin: auto;
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -244,29 +242,55 @@ img {
   margin: 10px 0;
 }
 
-/* Headings
+/* Articles
    ================================================================ */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+
+article {
+  margin: .5em 0;
+  display: flex;
+  flex-direction: column;
+
 }
 
-h1 {
-  font-size: 54px;
-  font-weight: normal;
+
+/* Header
+   ================================================================ */
+header {
+  display: flex;
+  flex-flow: column;
+  font-size: 1.5em;
 }
 
-nav{
+header h1 {
+  margin-right: 27px;
+  font-size: 2em;
+}
+
+header h2 {
+  font-size: 27px;
+  display: flex;
+  margin-bottom: 13.5px;
+  color: #888;
+  font-size: 1em;
+}
+
+/* Navigation
+   ================================================================ */
+header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header nav a {
+  font-size: .6em;
+  justify-content: center;
+}
+
+/* media query 600px
+   ================================================================ */
+@media screen and (max-width: 700px) {
+header nav {
   display: none;
-
 }
 
-h3 {
-  font-size: 36px;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-  color: #ccc;
-}
-
-}
