@@ -1,0 +1,118 @@
+* {
+	font-family: Lato;
+	font-weight: 300;
+}
+
+html {
+	padding-left: 5%;
+}
+
+h2, h3, nav {
+	color: grey;
+	opacity: .5;
+	text-decoration: none;
+  margin-top: auto;
+}
+
+header {
+	padding-bottom: 20px;
+}
+
+h1 {
+	color: goldenrod;
+  font-size: 48px;
+  margin: 10px;
+}
+
+h2 {
+	color: black;
+  font-weight: bold;
+}
+
+h3 {
+	margin: 10px;
+  font-size: 25px;
+}
+
+h4 {
+	color: #Daa520;
+	float: right;
+}
+
+article {
+	box-sizing: border-box;
+	margin: 0;
+	width: min-content;
+	font-size: 15px;
+  border-bottom: 2px solid rgba(232, 236, 241, 1);
+  padding: 50px 0px;
+}
+
+
+
+p {
+  line-height: 28px;
+  font-size: 16px;
+}
+
+a {
+	color: goldenrod;
+	text-decoration: none;
+}
+
+header > h2, h2 > a, {
+  font-size: 22.5px;
+  display: block;
+  color: #000;
+  margin: 10px 0px;
+   font-weight: 300;
+}
+
+h2 > a {
+  font-weight: bold;
+  color: black;
+  font-size: 40px;
+  opacity: 1;
+}
+header nav a{
+	text-decoration: underline;
+  color: grey;
+  opacity: 0.5;
+  font-size: 25px;
+  margin: 10px;
+}
+
+header nav a:hover{
+  background-color: #000;
+  opacity: 0.5;
+  color: deepSkyBlue;
+  border-radius: 300px;
+}
+
+footer p {
+  color: grey;
+  opacity: 0.5;
+}
+
+footer nav a:hover {
+ background-color: rgba(0, 0, 0, 0.5);
+ color: deepSkyBlue;
+  
+}
+
+p::first-letter {
+  initial-letter: 4;
+}
+
+/* @supports (not(initial-letter: 4)) and (not(-webkit-initial-letter: 4)) {
+	article p::first-letter {
+		color:  grey;
+		font-size: 130px;
+		float: left;
+    opacity: 0.5;
+    padding: 25px 0px;
+    margin: 10px 0px;
+  
+	}
+}
+ */
