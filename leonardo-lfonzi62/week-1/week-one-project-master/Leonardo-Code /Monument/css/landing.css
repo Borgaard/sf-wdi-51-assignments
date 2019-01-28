@@ -69,7 +69,8 @@ li a:hover {
 .wrap-4 h2 {
   margin:0;
 }
-
+/*--------------------
+HEADER
 /*--------------------*/
 header {
   background-image: url('../images/home_header_bg.jpg');
@@ -114,9 +115,8 @@ display: -ms-flexbox;
 -webkit-box-pack: center;
 -ms-flex-pack: center;
 }
-/*---------------------------*/
-
-
+/*---------------------------
+LISTS
 /*-------------------------*/
 
 nav li {
@@ -137,6 +137,8 @@ li {
   text-align: left;
 }
 
+/*---------------------------
+FLEXBOX FOR LANDING PAGE
 /*------------------------*/
 
 nav a {
@@ -231,9 +233,6 @@ footer .wrap {
   padding: 30px 15px;
 }
 
-/*-----------------*/
-
-
 
 .form-wrap {
   display: flex;
@@ -323,9 +322,9 @@ input[type="submit"] {
   padding: 15px 0 3px;
 }
 
-/* IPAD Screen Size*/
-
-/*---------------------*/
+/*---------------------------
+IPAD MEDIA QUERY
+/*------------------------*/
 @media screen and (max-width: 700px) {
 
 .wrap-1 {
@@ -349,6 +348,9 @@ width: 100%
   flex-direction: column;
 }
 }
+/*---------------------------
+MOBILE MEDIA QUERY
+/*------------------------*/
 
 @media screen and (max-width: 500px) {
 
@@ -372,13 +374,17 @@ width: 100%
   flex-direction: column;
 }
 .hamburger{
-  color: white;
+  color: grey;
   font-size: 26px;
   /*margin-bottom: 60%;*/
   /*margin-right: 10%;*/
-  visibility: visible;
   display: inline-block;
   align-self: flex-start;
+  top: 10px;
+  left: 30px;
+  position: fixed;
+  mix-blend-mode: difference;
+
 }
 
 .nav-container{
