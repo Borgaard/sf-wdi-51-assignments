@@ -1,9 +1,24 @@
 
+* {
+  box-sizing: border-box;
+}
+
 .headerImg{
   width:  85em;
   height: 55em;
   margin: 0 auto;
   position: sticky;
+   background-image: url("../images/home_header_bg.jpg");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-image:url('../images/home_header_bg.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -24,27 +39,31 @@ h2 {
   margin: 0 auto;
   font-size: 28px;
   text-align: center;
+
 }
 
 h3 {
   font-size: 22px;
-  text-align: center;
+  margin: 0 auto;
+
 }
 
 
 
 .currentIssue {
-  height: 100em;
+  max-height: 80em;
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
-
-  overflow:auto;
+  flex-direction: column;
 }
 
 .gallery {
-width: 33%;
-border: 1px solid black;
-padding-top: 0px;
+width: 30%;
+height: auto;
+/*border: 1px solid black;*/
+padding: 1em auto;
+margin: 1em auto;
 }
 
 
@@ -59,24 +78,30 @@ padding-top: 0px;
 
 .row1, .row2, .row3 {
   width: 30%;
+  margin: 2em auto;
 }
 
 .archiveImg {
-width: 100%;
+ width: 90%;
 }
 
-nav{
+.archiveImg:hover, .gallery:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
 
+
+
+
+nav{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 auto;
   position: sticky;
-
-
-    height: 7em;
+  height: 5em;
   width: 85em;
-  padding-top: 3em;
+  padding-top: 2.5em;
   line-height: 1em;
   top: 0;
 
@@ -87,7 +112,8 @@ nav{
 
 nav li {
     list-style-type: none;
-    border: 1px solid black;
+    margin: 0 4em;
+    font-size: 15px;
 }
 
 nav li a {
@@ -109,7 +135,7 @@ color: #8ba6b4;
 }
 
 .title h1 {
-  letter-spacing: 11px;
+  letter-spacing: 10px;
 
   font-weight: normal;
 
@@ -123,8 +149,14 @@ color: #8ba6b4;
   text-align: center;
   padding: 14em 3em;
   margin: 2em 0;
+  max-width: 100vw;
+  overflow-wrap: break-word;
 }
 
+.about p {
+  overflow-wrap: break-word;
+  max-width: 100vw;
+}
 
 footer {
   background: #c9f3f6;
@@ -141,40 +173,39 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+background-color: transparent;
 }
 
 footer nav li
 {
-  margin-top: 2em;
+  margin: 2em 4em 0 0;
 }
 
 
 footer nav li i{
- width: 3em;
+ width: 0;
  height: 3em;
  font-size: 32px;
 }
 
-input[type="email"]{
+footer input[type="email"]{
   background-color: white;
   border-radius: 0;
   margin-right: 20px;
   text-align: center;
-  padding: 10px 5px;
   border: none;
-  width: 16em;
+  width: 22em;
   height: 3em;
-
-  margin-top: 2em;
+  margin-top: 3.5em;
 }
 
-input[type="submit"] {
+footer input[type="submit"] {
   background-color: transparent;
 margin-left: 40px;
-width: 20em;
-height: 3em;
+width: 12em;
+height: 3.4em;
 
-  margin-top: 2em;
+  margin-top: 3.5em;
 
 cursor: pointer;
 outline: 0;
@@ -197,8 +228,9 @@ input[type="submit"]:hover {
 
 copyright {
   border-top: 1px solid black;
-  padding-top:2em;
-  margin-top: 7em;
+  padding-top:1em;
+  margin-top: 3em;
+  margin-left: -2em;
 }
 
 
@@ -215,59 +247,134 @@ copyright {
 
 
 .contact {
-  width: 30em;
-  height: 40em;
-  background: grey;
+  width: 85em;
+  text-align: center;
   margin: 5em auto;
   }
 
+  .contact h1 {
+     text-transform: uppercase;
+  margin-bottom: 2em;
+  font-size: 26px;
+  }
 
-h1 {
+
+.contact form {
+display: flex;
+flex-direction: column;
+}
+
+
+.message {
+  height: 14em;
+  width: 95%;
+  border: 2px solid #44545E;
   margin-top: 1em;
-  padding-top: 1em;
+}
+
+.contact form .submit {
+  width: 95%;
+  margin-left: -3px;
+  height: 3.5em;
+  margin-top: 1em;
+  background: white;
+  color: grey;
+  font-size: 1em;
+  text-transform: uppercase;
+  border: 2px solid #44545E;
+}
+
+input[type="text"].message::-webkit-input-placeholder {
+  position: relative;
+  bottom: 5em;
+}
+
+input::placeholder {
+  padding-left: 10px;
+  color: grey;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.contact form input[name = "name"], .contact form input[type = "email"],
+.contact form input[name = "subject"]
+{
+    height: 3em;
+    width: 30%;
+    margin:1px 1%;
+    border: 2px solid #44545E;
+}
+
+
+@media screen and (max-width: 1100px){
+
+.archive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+
+  margin-left: -12em;
+}
+
+.archiveHeader {
+   text-align: center;
+   padding-right: 13%;
+}
+
+.row1, .row2, .row3 {
+  width: 50%;
+  margin: 2em auto;
+}
+
+.archiveImg{
+  width: 55%;
+}
+
+.currentIssue {
+  width: 100vw;
+  height: 50em;
+  margin: 1em;
+  padding: 1em;
+}
+
+.gallery: {
+  padding: 1em;
+  margin: 1em;
+  width: 20vw;
+}
+
+.contactForm .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10em;
+}
+
+.contactForm .message {
+  width: 30%;
+  margin-left: 1%;
+}
+
+.contactForm .row .submit {
+  width: 30%;
+  margin-left: 1%;
+}
+
+.contact h1 {
+  width: 50vw;
   text-align: center;
 }
 
+footer,
+footer nav,
+footer nav li {
+  max-width: 100vw;
 
-form .row {
 
-  display: flex;
-  width: 30em;
-  height: 30em;
 }
 
-form .col-sm-6 input[type="text"] {
-  width: 12em;
-  height: 3em;
-  margin: 2em 0 2em 2em;
-  border-radius: 20%;
-  box-shadow: -5px 5px grey;
-}
-
-form .col-sm-6
-{display: flex;
-  flex-direction: column;
-  width: 30em;
-  height: 20em;
-}
-
-
-form .message {
-   width: 12em;
-  height: 14em;
-   margin: 3em 6em 0 1em;
-  border-radius: 20%;
-  box-shadow: -5px 5px grey;
-}
-
-form .submit {
-   width: 26em;
-   height: 2em;
-  border-radius: 20%;
-  box-shadow: -5px 5px grey;
-  background: forestgreen;
-  color: white;
-  margin: 0 2em;
 }
 
 
@@ -277,29 +384,6 @@ form .submit {
     height: 36em;
   }
 
-  form .row {
-    width: 24em;
-  }
-
-  form .col-sm-6 {
-    width: 9em;
-  }
-
-form .col-sm-6 input[type="text"] {
-  width: 9em;
-}
-
-  form .message
-  {
-    width: 10em;
-    margin-left: 4em;
-  }
-
-  form .submit {
-    width: 21em;
-    margin: 0 1em;
-  }
-}
 
 
 

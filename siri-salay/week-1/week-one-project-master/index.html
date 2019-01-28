@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <!-- Bootstrap is already hooked up! -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -12,10 +13,10 @@
 
 <body>
     <nav>
-      <li><a href="">ABOUT</a></li>
-      <li><a href="">GALLERY</a></li>
-      <li><a href="">BLOG</a></li>
-      <li><a href="">CONTACT</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">GALLERY</a></li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">CONTACT</a></li>
      </nav>
 
     <header>
@@ -24,16 +25,16 @@
      <h1> MONUMENT </h1>
      <h3> A LIFESTYLE MAGAZINE </h3>
     </div>
+
       <img class="headerImg" src="./images/home_header_bg.jpg">
+
    </header>
 
 <div class="wrapper">
-
-<h2>
+    <h2 class="archiveHeader">
       FROM THE ARCHIVE
     </h2>
  <div class="archive">
-
   <div class="row1">
     <img class="archiveImg" src="./images/article_1.jpg">
     <h3>ISSUE TWENTY - THE SOUTHWEST</h3>
@@ -81,18 +82,29 @@ Aww, gee, you got me there, Rick. Well look where being smart got you.
 Pantani kaperij gutter van summeren valkenberg forest of arenberg, rouleur derby anduze. Giro d'italia nokere koerse muur vendee nitto, meyrueis liquigas sanchez autobus snob allez.
           </p>
     </div>
-.current>img.gallery.img$*6[src="./imagess/gallery_$.jpg"])*6
+
+    <!--
+.current>img.gallery.img$*6[src="./imagess/gallery_$.jpg"])*6 -->
 
        <h2> ISSUE TWENTY </h2>
        <h3> A VISUAL GUIDE TO THE SOUTHWEST </h3>
 
     <div class="currentIssue">
+
+    <!--  <div class="column1"></div> -->
        <img class= "gallery img1" src="./images/gallery_1.jpg" alt="">
-       <img class= "gallery img2" src="./images/gallery_2.jpg" alt="">
-       <img class= "gallery img3" src="./images/gallery_3.jpg" alt="">
-       <img class= "gallery img4" src="./images/gallery_4.jpg" alt="">
+       <img class= "gallery img2" src="./images/gallery_3.jpg" alt="">
+     <!-- </div> -->
+
+    <!--  <div class="column2"> -->
+      <img class= "gallery img3" src="./images/gallery_4.jpg" alt="">
+       <img class= "gallery img4" src="./images/gallery_2.jpg" alt="">
+      <!-- </div> -->
+
+      <!-- <div class="column3"> -->
        <img class= "gallery img5" src="./images/gallery_5.jpg" alt="">
        <img class= "gallery img6" src="./images/gallery_6.jpg" alt="">
+      <!-- </div> -->
     </div>
 
 
@@ -100,26 +112,23 @@ Pantani kaperij gutter van summeren valkenberg forest of arenberg, rouleur derby
 
 
 <div class="contact">
-  <h1>Contact me</h1>
+  <h1>get in touch</h1>
 
-  <form method="GET" action="http://hasthelargehadroncolliderdestroyedtheworldyet.com">
+  <form class="contactForm" method="GET" action="http://hasthelargehadroncolliderdestroyedtheworldyet.com">
 
-    <div class="row">
-
-      <div>
-        <input type="text" name="name" placeholder= "name" autofocus/>
-        <input type="email" name = "email" placeholder= "email address" />
+     <div class="row">
+        <input type="text" name="name" placeholder= "full name" autofocus/>
+        <input type="email" name = "email" placeholder= "email" />
         <input type="text" name = "subject" placeholder= "subject" />
-      </div>
-
-      <div>
+     </div>
+     <div class="row">
         <input class="message" type="text" name="message" placeholder="message" />
-      </div>
-
     </div>
-
-    <input class = "submit" type="submit" value = "are we doomed?"/>
+    <div class="row">
+         <input class = "submit" type="submit" value = "Submit"/>
+    </div>
   </form>
+
  </div>
 
 </div>
@@ -135,12 +144,9 @@ Pantani kaperij gutter van summeren valkenberg forest of arenberg, rouleur derby
         <li><i class="fab fa-instagram"></i></li>
       </nav>
 
-
   <form method="POST" action="http://hasthelargehadroncolliderdestroyedtheworldyet.com">
-      <input type="text" name="name" placeholder="name"/>
-      <input type="email" name="email" placeholder="email"/>
-      <textarea name="comment_body"></textarea>
-      <input class = "submit" type="submit" value = "Keep in touch!"/>
+      <input type="email" name="email" placeholder="Email Address"/>
+      <input class = "submit" type="submit" value = "Subscribe"/>
   </form>
 
     <copyright>
