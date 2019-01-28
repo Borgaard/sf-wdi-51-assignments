@@ -1,0 +1,449 @@
+/* To Do
+[x] add media queries, update padding, margins, fonts, layout
+[x] use ems for padding, margin, font sizes
+[x] hover effect on links with CSS transition
+[x] hover effect on buttons with CSS transistion
+[x] use a tag to link the landing page and blog page
+[x] use Google fonts Lato for <p> & Raleway for other text
+[x] check HTML and CSS with Validators
+[] use browser prefixes to make sure css renders properly  everywhere
+
+Bonus:
+[x] Google and implement "jump links to appropriate page and section when user clicks on navigation link
+[x] add hover effect to images in Gallery
+[] Google and implement a "fixed effect" for 'background-image' in the header (see .gif under 'Deliverable' for an example
+*/
+
+
+
+/* Base styles
+=====================================*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:400,600,700,900');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+/*make responsive images*/
+img {
+  max-width: 100%;
+}
+
+/*Header and Nav bar
+========================================*/
+
+#heading-wrapper {
+  background-image: url('../images/home_header_bg.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+}
+
+nav {
+  position: fixed;
+  /*bring navigation bar to center top*/
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+nav li {
+  display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #7B98AA;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  display: inline-block;
+  padding-left: 4em;
+}
+
+h1 a {
+  font-size: 1em;
+  letter-spacing: 0.5em;
+}
+
+h1 a, #heading-wrapper h2 {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  font-family: lato, sans-serif;
+}
+
+#heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  color: #44545E;
+  text-decoration: none;
+}
+
+/*Archive
+===========================================*/
+
+
+
+.archive h2 {
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  color: #44545E;
+  letter-spacing: 0.2em;
+  margin-top: 4em;
+}
+
+.row {
+  margin: 3em;
+}
+
+.row h3 {
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  color: #44545E;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.row p {
+  font-family: raleway, sans-serif;
+  margin-top: 3em;
+}
+
+.col-md-4 {
+  padding: 0.5em;
+}
+
+button {
+  border: 2px solid #44545E;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: 0.5em 1.5em;
+  margin-top: 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #44545E;
+  font-weight: bold;
+  color: white;
+}
+
+/*About
+========================================*/
+
+.about {
+  background-color: #CDF3F6;
+   padding: 5em;
+}
+
+.about h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+
+}
+
+.about h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+
+
+}
+
+.about h2, .about h3, .about p {
+  color: #44545E;
+}
+
+/*Gallery
+=========================================*/
+
+.gallery {
+  width: 100%;
+}
+
+.gallery h2 {
+  color: #44545E;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-top: 4em;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+
+}
+
+.gallery h3 {
+ color: #44545E;
+ text-transform: uppercase;
+ font-size: 1em;
+ margin-top: 3em;
+ margin-bottom: 1.5em;
+ font-size: 1em;
+ letter-spacing: 0.1em;
+}
+
+.gallery .row .col-md-12 {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-4 img {
+  margin-bottom: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.col-4 img:hover {
+ opacity: 0.5;
+}
+
+/* Form
+==================================================*/
+.form {
+  margin: 0em 2.5em;
+}
+
+.form-container {
+  margin: 0.5em;
+}
+
+.form h2 {
+  color: #44545E;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+
+.form input {
+  margin: 0em;
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+input[type="text"] {
+  outline: 0;
+  border: 2px solid #44545E;
+  color: #44545E;
+  padding: 0.6em 2em;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  transition: all .3s ease-in-out;
+}
+
+input[type="email"] {
+  outline: 0;
+  border: 2px solid #44545E;
+  color: #44545E;
+  padding: 0.6em 2em;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  transition: all .3s ease-in-out;
+}
+
+
+.col-md-12 textarea {
+  width: 100%;
+  height: 10em;
+  margin-bottom: 0em;
+  outline: 0;
+  border: 2px solid #44545E;
+  color: #44545E;
+  padding: 0.6em 2em;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.25em;
+  transition: all .3s ease-in-out;
+}
+
+.form .row .col-md-4 {
+  padding: 0em;
+}
+
+.row .col-md-12 {
+  padding: 0em;
+}
+
+form .row {
+  margin: 0.6em;
+  padding: 0em;
+  width: 100%;
+  height: auto;
+}
+
+.form button {
+  width: 100%;
+  height: 3em;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+  outline: 0;
+  border: 2px solid #44545E;
+  color: #44545E;
+  padding: 0.8em 2em;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  transition: all .3s ease-in-out;
+  margin-top: 0em;
+  margin-bottom: 7em;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #44545E;
+  color: white;
+  font-weight: 600;
+}
+
+
+/*footer
+===================================================*/
+
+footer {
+  background-color: #CDF3F6;
+  padding-bottom: 1em;
+}
+
+footer input[type="text"] {
+  padding: 0.9em 0.9em;
+  width: 23em;
+  margin-right: 2em;
+  border: 0;
+  text-align: center;
+  background-color: white;
+}
+
+footer .wrap {
+  padding: 2em 1em;
+  border-bottom: 2px solid #44545E;
+  margin-bottom: 1.5em;
+}
+
+.social-links a {
+  font-size: 2em;
+  font-size: 2rem;
+  padding: 1em;
+  padding: 1rem;
+  margin-bottom: 2em;
+  margin-bottom: 2rem;
+  display: inline-block;
+  color: #44545E;
+}
+
+/*Breakpoints for Mediaqueries
+============================================================*/
+
+@media screen and (max-width: 767px) {
+  /* Archive -  increase <p> size*/
+
+
+  /*About*/
+  .about {
+    padding: 3.5em 0.2em;
+  }
+
+  /*gallery*/
+  .col-4 img {
+  margin: 0.5em 0em;
+  padding: 0;
+  }
+
+
+  .row .col-4 {
+    padding: 0.5em;
+  }
+
+  /*form*/
+
+  .col-md-4 {
+    padding: 0em;
+  }
+
+  .container {
+    margin-right: 0em;
+    padding: 0em;
+    width: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 0em;
+    margin: 0em;
+  }
+
+  form input {
+    width: 100%;
+    margin:0em;
+  }
+
+  input[type="text"] {
+    margin: 0.2em 0em;
+  }
+
+  .form-container, input[type="email"] {
+    margin-top: 0em;
+  }
+}
+
+@media screen and (max-width: 542px) {
+
+/*Archive/*
+
+/*gallery*/
+.gallery h3 {
+  font-size: 70%;
+  font-weight: bold;
+  margin-bottom: 0em;
+}
+
+/*form*/
+.form h2 {
+  margin-bottom: 2em;
+}
+
+/*footer*/
+
+.sign-up input[type="text"] {
+  width: 80%;
+  height: auto;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  }
+
+footer button {
+  width: 80%;
+  height: auto;
+  }
+}
+
+
+
+
+
+
