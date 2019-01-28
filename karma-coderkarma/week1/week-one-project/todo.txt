@@ -1,0 +1,8 @@
+// Todo List 
+// use flex to aglin stuff
+//  Navbar 
+// container for background color   1st 
+//  div of 3 columns 3 rows for photos  2nd div
+// div for article  
+// div of 3 columsn 3 rows for photos 
+//  make site responsive  with media queries
