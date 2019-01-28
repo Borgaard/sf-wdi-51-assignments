@@ -13,6 +13,7 @@ header {
 	margin-right: 3%;
 	background-size: cover;
 	background-position: center;
+	height:  500px;
 /* 	padding-top: 6rem;
 	padding-bottom: 2.5rem; */
 
@@ -128,12 +129,19 @@ Layout
 	justify-content: space-around;*/
 }
 
+.read-more {
+	border: 2px solid #44545E;
+	margin-left: 3%;
+	margin-right: 3%;
+	padding: 5px;
+}
+
 .social input {
 	margin-bottom: 25px;
 }
 
 .inputs input {
-  border: 3px solid grey;
+  border: 2px solid #44545E;
 }
 
 .link-container {
