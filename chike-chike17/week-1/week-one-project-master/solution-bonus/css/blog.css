@@ -51,8 +51,9 @@ h1 a {
   margin: 10px;
 }
 
-.submit {
+button {
 	width: 100%;
+	color: solid-grey;
 }
 
 .cactus-container {
