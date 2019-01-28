@@ -32,7 +32,7 @@ body {
    ================================================================ */
 #main {
   display: flex;
-  width: 66.66667%;
+  width: 100%%;
 }
 
 #main section {
@@ -243,5 +243,17 @@ hr {
   #sidebar {
     display: none;
     width: 0;
+  }
+
+  .ad {
+    display: block;
+  }
+
+  article p:first-of-type:first-letter {
+    font-size: 54px;
+    line-height: 1;
+    float: left;
+    margin: -10px 10px 0 -8px;
+    color: #ddd;
   }
 }
