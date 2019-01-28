@@ -6,7 +6,7 @@
 h1 a {
     text-decoration: none;
     color: antiquewhite;
-    font-size: 40px;
+    font-size: 108px;
 
 }
 
@@ -46,10 +46,8 @@ p {
 
 p::first-letter {
     float: left;
-    padding: 2px;
-    font-size: 64px;
+    margin: -5px, 0px, 5px, -5px;
+    font-size: 108px;
     color: gray;
 
 }
-
-p:last
