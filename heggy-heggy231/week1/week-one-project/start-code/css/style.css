@@ -1,0 +1,217 @@
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+/* make sure flexbox works */
+/* https://github.com/franciscojgtz/mws-restaurant-stage-3/blob/master/client/sass/styles.scss */
+html {
+  box-sizing: border-box;
+  /* 10 px font size now we can use REM 1 rem = 10 px
+  1.5rem = 15px
+  */
+  font-size: 62.5%;
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+
+  font-size: 1rem;
+  line-height: 2rem;
+  margin: 0;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+	text-align: center;
+	color: #44545E;
+}
+/* Responsive images */
+img {
+  max-width: 100%;
+
+}
+
+/* ----------------------------------------
+Typography
+------------------------------------------- */
+p{
+  font-family: 'Lato', sans-serif;
+  text-transform: none;
+}
+
+a {
+	text-decoration: none;
+	color: #7B98AA;
+	font-weight: 600;
+	transition: all .3s ease-in-out;
+}
+
+a:hover {
+	color: #44545E;
+}
+
+
+header {
+  /* fixed the img to the viewport */
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  padding-top: 3rem;
+  background-repeat: no-repeat;
+	background-size: cover;
+}
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+  background-color: white;
+  /* bring the hamburger front */
+	z-index: 100;
+}
+/* space inbetween header */
+nav a {
+  font-weight: 600;
+}
+/* ----------------------------------------
+Lists
+------------------------------------------- */
+ul a {
+  padding: 0;
+
+}
+
+li {
+  display: inline-block;
+  text-align: left;
+}
+
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+
+header {
+  padding-top: 3 rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* when applying z-index element must have position applied */
+  z-index: 0;
+}
+/* ----------------------------------------
+Header
+------------------------------------------- */
+
+header {
+  padding-top: 3rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('../images/home_header_bg.jpg');
+	background-attachment: fixed;
+	height: 100vh;
+}
+/* mobile first no nav bar */
+nav ul {
+  display: none;
+}
+nav {
+   background-color: #fff; /* white */
+}
+
+nav a {
+	font-weight: 600;
+	letter-spacing: 0.75px;
+	letter-spacing: .05rem;
+	padding: 3px 60px;
+	padding: .2rem 4rem;
+	display: inline-block;
+	border-bottom: none;
+}
+
+/* 
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../images/home_header_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.hero-text {
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+} */
+
+.hamburger {
+  display: block;
+  color: #fff;
+  color: red;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+}
+
+.archive-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.about {
+  background-color: #CFF2F6;
+  text-align: center;
+  padding: 10rem 2rem;
+  /* 16 px standards */
+  font-size: 1.6rem;
+}
+
+/* ----------------------------------------
+Media Queries
+------------------------------------------- 
+/* ipad med size screen starting at 570 px */
+@media only screen and (min-width: 570px) {
+  .archive-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  /* When bigger screen nav bar is shown and hides hamburger */
+  nav {
+    background-color: #fff;
+  }
+  nav ul {
+    display: block;
+  }
+  .hamburger {
+    display: none;
+  }
+  nav a {
+    padding: .2rem 2rem;
+  }
+}
+
+
+/* desktop size min-width starting at 970 px*/
+@media only screen and (min-width: 970px) {
+
+
+
+}
+
