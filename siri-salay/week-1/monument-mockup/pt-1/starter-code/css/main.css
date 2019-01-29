@@ -40,7 +40,11 @@ body {
   width: 90%;
 }
 
-nav{
+.hamburger {
+  display: none;
+}
+
+nav ul{
   width: 50em;
   display: flex;
   flex-direction: row;
@@ -51,16 +55,16 @@ nav{
   padding-top: 3.5em;
   line-height: 1em;
   top: 0;
-  position: sticky;
+  position: relative;
   background-color: white;
   z-index: 100;
 }
 
-nav li {
+nav ul li {
     list-style-type: none;
 }
 
-nav li a {
+nav ul li a {
   color: #8ba6b4;
 }
 
@@ -189,6 +193,31 @@ copyright {
   margin-top: 7em;
 }
 
+
+
+
+@media only screen and (max-width: 720px) {
+
+nav {
+  background-color: transparent;
+}
+
+  nav ul {
+    display: none;
+  }
+
+
+  .hamburger {
+    display: block;
+    color: lightgrey;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 10px;
+    left: 2em;
+    position: fixed;
+  }
+
+}
 
 
 /*
