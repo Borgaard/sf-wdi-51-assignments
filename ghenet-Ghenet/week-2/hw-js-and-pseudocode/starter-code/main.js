@@ -70,13 +70,13 @@ let side3 = Math.sqrt(Math.pow(3,2)+Math.pow(4,2));
 */
 
 
-// 1. declare a variable highest
-// 2. initialize it with the first element of the array
-// 3. create a loop
-// 4. check if the value in highest is less than the value in the next index
-// 5. if yes , Assign highest the number in that index
-// 6. if no increment the index number and do step 4 again until the last index
-//  7. return the last value in highest
+1. declare a variable highest
+2. initialize it with the first element of the array
+3. create a loop
+4. check if the value in highest is less than the value in the next index
+5. if yes , Assign highest the number in that index
+6. if no increment the index number and do step 4 again until the last index
+7. return the last value in highest
 
 
 
