@@ -3,10 +3,15 @@
 	Create a fourth variable, greeting, that combines these 3 variables
 	to form a greeting.
 	For example, "Hello, I'm Anthony, I'm 20 years old and live in 100 Main St."
-	Log this variable to the console (console.log(yourVariableName)). 
+	Log this variable to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
 
 */
+var name = "Alom";
+var age = "32"
+var address = "San Franciso"
+var greeting = "Hello, I'm " + name + " I'm " + age + " years old and live in " + address + ".";
+console.log(greeting);
 
 /*
 	Part 2: Create another variable called greeting2. This time, use the
@@ -14,10 +19,12 @@
 
 	Hint: String interpolation uses backticks (`) instead of quotation marks.
 
-	Log this variable to the console (console.log(yourVariableName)). 
+	Log this variable to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
 
 */
+var greeting2 = `Hello, I'm ${name}, I'm ${age} years old and live in ${address}.`
+
 
 /*
 	Part 3: Pythagorean theorem. We will be using the Math object we saw earlier
@@ -39,9 +46,13 @@
 	Hint: We need to be able to calculate the square of a number to find the value
 	of the hypotenuse. Does the Math object give us a function find the square of a number?
 
-	Log the side1, side2 and side3 variables to the console (console.log(yourVariableName)). 
+	Log the side1, side2 and side3 variables to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
 */
+var side1 = 3;
+var side2 = 4;
+var side3 = Math.sqrt(Math.pow(side1,2) + Math.pow(side2,2))
+console.log(side3);
 
 /*
 	Part 4: (No coding is needed for this part).
@@ -56,19 +67,33 @@
 
 	Bonus: What would the pseudocode look like if you also had to find the smallest number?
 */
+// Part 4
+// pseudocode
+//   list numbers in an array
+//   set largest number to 0 by assigning to variable
+//   go through each array position
+//   if next number is larger then assigned variable
+//     assign as new largest number
+//   loop through until end of array
 
+//   //Part 4 Bonus
+//   list numbers in an array
+//   go through array and assign first number to variable
+//   if next number is smaller then assigned variable
+//     assign as new smallest number to array
+//   loop through until end of array
 
 /* Bonus
 Take a look at the numbers array below. Use the pseudo code you wrote above to find the largest number and log it to the console in the following format: `"The highest number is #"`.
 
-If you need a hint on how to solve this one, take a look at the steps listed below, along with the linked resources. 
+If you need a hint on how to solve this one, take a look at the steps listed below, along with the linked resources.
 
 Steps:
 - First create a variable highestNumber and give it a value of the number 0.
-- Then use a for loop(https://www.w3schools.com/js/js_loop_for.asp) to loop through the numbers array. 
+- Then use a for loop(https://www.w3schools.com/js/js_loop_for.asp) to loop through the numbers array.
 	Your for loop should look something like this:
 	for (var i = 0; i < numbers.length; i++) {
-	
+
 	}
 - Within the loop, use an if statement(https://www.w3schools.com/js/js_if_else.asp) to see if the current number (numbers[i]) is greater than the number that is currently stored in highestNumber.
 - If so, save numbers[i] in the highestNumber variable.
@@ -77,3 +102,16 @@ Steps:
 */
 
 var numbers = [20, 3, 5, 7, 13, 30];
+var highestNumber = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+  if(numbers[i] > highestNumber) {
+    highestNumber = numbers[i];
+  }
+}
+
+
+//Questions
+//1. Is ES6 `` the new industry standard for writing statements?
+//2. Are there any other new standards since ES6?
+
