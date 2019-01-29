@@ -443,6 +443,67 @@ footer button {
 }
 
 
+/*lunch class code to clarify navigation bar and hamburger icon*/
+
+/*hide hamburger class when desktop view*/
+/*hamburger is the class around the nav bar in conjunction with an icon from font face*/
+.hamburger {
+display: none;
+}
+
+/*use media query to control the change*/
+@media only screen and (max-width: 767px) {
+  /* Decrease font-size for the entire docuemnt!*/
+
+  html {
+    font-size: 14px;
+  }
+
+  /*change navigation behaviour*/
+  /*we want header to disappear from view*/
+  nav ul {
+    display: none;
+  }
+  /*see picture of desert behind nav item*/
+  nav {
+    background: transparent;
+  }
+
+  /*now show the icon and make changes to position it*/
+  .hamburger {
+  display: block;
+  color: white;
+  /*match browser to design that is given to you. increase size of icon*/
+  font-size: 1.7rem;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
