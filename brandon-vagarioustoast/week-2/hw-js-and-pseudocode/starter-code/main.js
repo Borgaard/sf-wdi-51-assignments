@@ -109,13 +109,13 @@ let highestNumber = 0;
 
 let numbers = [20, 3, 5, 7, 13, 30];
 
-for (var i = 0; i < numbers.length; i++){
+for (let i = 0; i < numbers.length; i++){
 	if (numbers[i] > highestNumber){
 		highestNumber = numbers[i];
 	}
 }
 
-console.log(highestNumber);
+console.log(`The highest number is ${highestNumber}.`);
 
 
 
