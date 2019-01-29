@@ -1,0 +1,149 @@
+/*Header Styling Starts*/
+header{
+  background-image: url("../images/home_header_bg.jpg");
+  /*Necessary to as ../ before specifying where to get image*/
+  background-attachment: fixed;
+  height: 50em;
+}
+
+
+
+
+
+
+h1{
+    margin-top: 7em;
+    position: sticky;
+}
+
+
+nav {
+
+}
+/*Header Styling Ends*/
+
+
+
+
+/*Article Styling Starts*/
+article{
+  display: flex;
+  padding: 105px 30px;
+}
+/*Article Styling Ends*/
+
+
+
+/*About Styling Starts*/
+.about{
+background-color: #CFF2F6;
+padding: 105px 30px;
+/*margin-top:10px;
+margin-bottom: 10px;*/
+}
+
+/*.about > p {
+  display: flex;
+
+}*/
+/*About Styling Ends*/
+
+
+
+
+/*Galley Styling Starts*/
+
+.gallery{
+padding: 105px 30px 0px 30px;
+
+}
+.column img {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/*@media (max-width: 500px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }*/
+
+ /* @media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }*/
+
+  /*With the above code everything */
+
+.column img:hover {
+  opacity: .6;
+}
+
+
+
+/*Galley Styling Ends*/
+
+
+
+/*Form Styling Starts*/
+form{
+padding: 105px 30px;
+
+}
+
+/*.column {
+display:flex;
+justify-content: center;
+box-sizing: border-box;}*/
+/*Form Styling Ends*/
+
+
+div > input, {
+padding:11px 10px;
+margin: 0 30 12 0;
+}
+
+footer{
+
+}
+footer > div {
+  display: flex;
+  justify-content: center;
+  flex: row;
+}
+
+/*.subcribe{
+  display: flex;
+  flex-flow: row wrap;
+}*/
+
+
+/*------------------------------------------
+Comment Form
+-------------------------------------------*/
+
+.row {
+max-width: 100%;
+}
+
+.form-wrapper .row .contact {
+  color: blue;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 2em;
+}
+
+.form-wrapper .row .contact .column {
+display: flex;
+flex-flow: row wrap;
+width: 100%;
+justify-content: space-between;
+margin-bottom: 10px
+}
+
+input{
+  width: 30%;
+
+}
+

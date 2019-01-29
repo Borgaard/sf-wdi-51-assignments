@@ -2,8 +2,9 @@
    Global Overrides
   ========================================================================== */
 * {
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
+
 
 .clearfix:after {
   display: table;
@@ -33,16 +34,30 @@ body {
 #main {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: : wrap;
 }
+
+section {
+  width: auto;
+  flex: 75%
+}
+
 
 #sidebar {
   width: auto; /*(auto is the same as 150% but why did 150% work)*/
   /*how could something be over 100%*/
   /*if there is limited space in a flex box*/
-  margin-top: 108px;
+  /*margin-top: 108px;*/
   color: #888;
-  margin-left: 4%;
+  padding-left: 4%;
+  flex: 25%;
 }
+
+
+
+
 
 .wrapper {
   width: 1080px;
