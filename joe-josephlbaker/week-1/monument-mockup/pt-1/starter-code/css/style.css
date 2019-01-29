@@ -1,0 +1,42 @@
+body {
+  font-size: 15px;
+  letter-spacing: .02em;
+  color: #44545E;
+}
+
+h1, h2, h3 {
+  font-family:system-ui, sans-serif;
+  text-transform: uppercase;
+}
+
+h1 a {
+  color: #44545E;
+  letter-spacing: .8rem;
+  text-decoration: none;
+  font-size: 37.5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .75px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  text-transform: none;
+  line-height: 1.4;
+}
+
+
