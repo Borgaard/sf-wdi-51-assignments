@@ -98,11 +98,9 @@ var numbers = [20, 3, 5, 7, 13, 30];
 
 var highestNumber = 0;
 
-for (let i = 0; i < numbers.length; i++) {
-	let currentNum = numbers[i];
-    if (numbers[i] > highestNumber) {
-        highestNumber = numbers[i];
-    }
-
+for (i = 0; i < numbers.length; i++) {
+  if(numbers[i] > highestNumber) {
+    highestNumber = numbers[i];
+  }
 }
 console.log(`Highest number is ${highestNumber}`);
