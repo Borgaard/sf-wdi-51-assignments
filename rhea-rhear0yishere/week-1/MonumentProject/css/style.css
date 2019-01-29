@@ -334,17 +334,17 @@ p{
 
 }
 
-.col1 {
+div.col1 {
   margin-left: 55px;
 
 }
 
-.col2  {
+div.col2  {
   margin-left: 10px;
 
 }
 
-.col3{
+div.col3{
   margin-right: 30px;
 }
 
@@ -381,7 +381,7 @@ p{
     color: white;
   }
 
-  .comment3{
+  div.comment3{
     margin-left: 0px ;
     width: 764px;
 }
@@ -432,9 +432,11 @@ form{
   }
 
 
-
-  .col3{
-    margin:auto !important;
+  div.col1{
+    margin:auto;
+  }
+  div.col3{
+    margin:auto ;
   }
 
   .about{
@@ -476,8 +478,8 @@ form{
   margin-bottom: 10px;
   }
 
-  .comment3{
-    margin:auto !important;
+  div.comment3{
+    margin:auto;
   }
 
 .post{
