@@ -3,8 +3,39 @@
 	Write a for-loop that will print each of the elements to the console.
 */
 
+/*
+great note about forEach
+var words = ['one', 'two', 'three', 'four'];
+words.forEach(function(word) {
+  console.log(word);
+  if (word === 'two') {
+    words.shift();
+  }
+});
+// one
+// two
+// four
+
+*/
+/*
 var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
 
+for (var i = 0; i < ages.length; i++) {
+	console.log(ages[i]);
+}
+
+let ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+
+for (let i = 0; i < ages.length; i++) {
+	console.log(ages[i]);
+}
+
+let ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+
+ages.forEach(function (age) {
+	console.log(age);
+});
+*/
 /*
 	Part 2: Let's create a new variable, "younger", which holds an empty array.
 	Using a for-loop, populate the "younger" array with numbers from the "ages"
@@ -15,7 +46,24 @@ var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
 	Hint: Use the array.push() method to add an element to the end of an array.
 	(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 */
+/*
+let ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+let younger = [];
+for (let i = 0; i <= ages.length; i++) {
+	if (ages[i] <= 20) {
+		younger.push(ages[i]);
+	};
+}
 
+
+let ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+let younger = [];
+ages.forEach(function(age) {
+	if(age <= 20) {
+		younger.push(age);
+	}
+});
+*/
 /*
 	Part 3: We're comfortable going through an element from beginning to end, but let's
 	flip this around. With the new "younger" array you created in the last part,
@@ -27,6 +75,45 @@ var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
 
 	Hint: What would the conditional for your for-loop look like?
 */
+/*
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+var younger = [];
+ages.forEach(function (age) {
+	console.log(age);
+});
+ages.forEach(function(age) {
+	if(age <= 20) {
+		younger.push(age);
+	}
+});
+console.log(younger);
+*/
+
+
+// print out younger array in console
+// flip the younger array [17, 14, 12, 20, 13]
+// var younger = [17, 14, 12, 20, 13];
+// this is wrong since is keep decremented and creates infinite loop
+/*
+for (var i = (younger.length - 1); i <= younger.length; i--){
+	console.log(younger[i]);	
+}
+*/
+
+let ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+let younger = [];
+ages.forEach(function (age) {
+	console.log(age);
+});
+ages.forEach(function(age) {
+	if(age <= 20) {
+		younger.push(age);
+	}
+});
+console.log(younger); 
+for (var i = (younger.length - 1); i >= 0; i--){
+	console.log(younger[i]);	
+}
 
 /*
 	Part 4: Now that you've finished the first 3 parts using a for-loop, repeat the same exercises
