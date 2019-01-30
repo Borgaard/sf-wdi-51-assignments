@@ -49,7 +49,7 @@ ages.forEach(function (age) {
 /*
 let ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
 let younger = [];
-for (let i = 0; i <= ages.length; i++) {
+for (let i = 0; i < ages.length; i++) {
 	if (ages[i] <= 20) {
 		younger.push(ages[i]);
 	};
@@ -120,6 +120,55 @@ for (var i = (younger.length - 1); i >= 0; i--){
 	(Part 1, Part 2, and Part 3) using a while-loop.
 */
 
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+var younger = [];
+/*
+for (var i = 0; i <= ages.length; i++){
+	console.log(ages[i]);
+}
+*/
+
+var i = 0;
+while (i < ages.length) {
+	console.log(ages[i]);
+	i++;
+}
+
+
+
+/*
+for (var i = 0; i < ages.length; i++){
+	if(ages[i] <= 20) {
+		younger.push(ages[i]);
+	}
+}*/
+var i = 0;
+younger = [];
+// convert to while
+while (i < ages.length) {
+	if (ages[i] <= 20) {
+		younger.push(ages[i]);
+	}
+	i++;
+}
+
+console.log(younger); 
+// start logging from the end of the array (younger.length -1)
+// decrement until i is = 0
+for (var i = (younger.length - 1); i >= 0; i--){
+	console.log(younger[i]);	
+}
+
+var i = (younger.length -1);
+while (i >= 0) {
+	console.log(younger[i]);
+	i--;
+}
+
+
+
+
+
 /*
 	Part 5: Create a function, getDayOfWeek, that will tell you what day of the week it is.
 	For example, getDayOfWeek(1) would return "Monday", and getDayOfWeek(5) would return "Friday".
@@ -127,6 +176,29 @@ for (var i = (younger.length - 1); i >= 0; i--){
 
 	Hint: Using a "switch" statement might result in cleaner code
 */
+
+function getDayOfWeek (dayInNumber) {
+	switch (dayInNumber) {
+		case 1:
+			// no need to write break since return exits the functions
+			return 'Monday';
+		case 2:
+			return 'Tuesday';
+		case 3: 
+			return 'Wednesday';
+		case 4:
+			return 'Thursday';
+		case 5: 
+			return 'Friday';
+		case 6:
+			return 'Saturday';
+		case 7:
+			return 'Sunday';
+		default:
+			dayInNumber = null;
+			return 'Please enter a valid day of the week';
+	}
+}
 
 /*
 	Bonus - Part 6: All this work is making me hungry. Let's create a new function, addPepperoniToPizza,
@@ -144,3 +216,16 @@ for (var i = (younger.length - 1); i >= 0; i--){
 	in our array?
 	(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 */
+function addPepperoniToPizza(ingredientsArray) {
+	// array.indexOf() returns -1 if no element ('pepperoni') is found in ingredientsArray
+	if (ingredientsArray.indexOf('pepperoni') === -1) {
+		// since no 'pepperoni' is in the array push in 'pepperoni'
+		ingredientsArray.push('pepperoni');
+		return ingredientsArray;
+	// if the list of ingredients have pepperoni; do nothing but return its array
+	} else {
+		return ingredientsArray;
+	}
+}
+console.log(addPepperoniToPizza(['onions', 'olives', 'pineapple']));
+console.log(addPepperoniToPizza(['spinach', 'pepperoni', 'mushrooms']));
