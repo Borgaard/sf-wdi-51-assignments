@@ -10,7 +10,7 @@ let name = "Leonardo";
 let age = 25;
 let address = "222 Main Street SF Ca 94272";
 
-let greeting = "Hello, my name is " + name + " I'm " +  age +  " years old and live at " +
+let greeting = "Hello, my name is " + name +  "." + " I'm "  +  age +  " years old and live at " +
 address + "."
 
 console.log(greeting);
@@ -25,7 +25,7 @@ console.log(greeting);
 
 */
 
- let greeting2 = `Hello, my name is ${name}.I'm ${age} years old and live at ${address}. `
+ let greeting2 = `Hello, my name is ${name}. I'm ${age} years old and live at ${address}. `
 
 console.log(greeting2);
 /*
@@ -139,6 +139,7 @@ for (var i = 0; i < numbers.length; i++) {
 }
 console.log(`The largest Number is ${highestNumber}`);
 console.log( `The smallest Number is ${smallNumber}`);
+
 
 // CODE SOLUTION USING INSTRUCTIONAL STEPS
 
