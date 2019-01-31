@@ -89,6 +89,59 @@ onesieButton.addEventListener("click", addOnesieImages);
 pillowButton.addEventListener("click", addPillowImages);
 
 
+var imageArray = document.querySelectorAll('.display img');
+
+for (let i =0; i<imageArray.length; i++) {
+  var loadingImage = imageArray[i];
+  alttext =
+}
+
+
+var buttons = document.querySelectorAll('li');
+
+
+for (let i = 0; i< buttons.length; i++) {
+   buttons[i].addEventListener('click', switchTheme);
+}
+
+function switchTheme(){
+  var clickedButton = this.className;
+  var body = document.getElementsByTagName('body')[0];
+  body.className = clickedButton;
+}
+
+/*
+  you want the shopping cart to fill with the things when you click on each image
+
+  button = getElementByTagName("BUTTON");
+  So button.onclick = function() {
+
+
+if clicked
+ (image)
+
+
+    image.onclick = function(){
+      create a new 'li' element in the cart that
+       has the inner HTML set to the description (the alt) of the image
+
+
+
+    }
+
+
+THIS IS VALID
+  element.addEventListener('nameOfEvent', function => (arguments) {
+    do something; }
+  )
+
+
+
+  }
+
+
+*/
+
 /*
 let addNewItem = (htmlInside, tagName) => {
   let newListItem = document.createElement(`${tagName}`);
@@ -107,42 +160,6 @@ WHY IS IT IN JQUERY?
 */
 
 
-
-/*
-  you want the shopping cart to fill with the things when you click on each image
-
-  button = getElementByTagName("BUTTON");
-  So button.onclick = function() {
-
-
-if clicked
- (image)
-
-
-    image.onclick = function(){
-      create a new 'li' element in the cart that
-       has the inner HTML set to the description
-
-
-
-    }
-
-
-THIS IS VALID
-  element.addEventListener('nameOfEvent', function => (arguments) {
-    do something; }
-  )
-
-
-
-  }
-
-
-
-
-
-
-*/
 
 
 /*

@@ -3,7 +3,7 @@
 var courage = document.getElementById('courage');
 var eustace = document.getElementById('eustace');
 
-var restart = document.getElementById('restart');
+var pause = document.getElementById('pause');
 var start = document.getElementById('start');
 
 let courageRight = -2;
@@ -15,14 +15,22 @@ function moveEustace() {
       checkIfWon();
 }
 
+var timer
+
 function startGame() {
- setInterval(moveEustace, 600);
+ timer = setInterval(moveEustace, 600);
+      start.disabled = true;
+      pauseGame.disabled = false;
 }
 
-function restartGame() {
-      var beginning = -8;
-      eustace.style.right = beginning + '%';
-      clearTimeout()
+function pauseGame() {
+
+      eustace.style.right = eustaceRight + '%';
+      // var beginning = -8;
+      // eustace.style.right = beginning + '%';
+      clearTimeout(timer);
+      start.disabled = false;
+      pauseGame.disabled = true;
 }
 
 // var changeCourage = function(){
@@ -42,7 +50,7 @@ function restartGame() {
 // eustaceButton.addEventListener('click', changeEustace);
 
 start.addEventListener('click', startGame)
-restart.addEventListener('click', restartGame)
+pause.addEventListener('click', pauseGame)
 
 
 
