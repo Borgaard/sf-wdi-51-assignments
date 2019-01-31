@@ -5,10 +5,17 @@
 	and a makeNoise property that prints out their noise.
 */
 
-var dog = {name: "Fido", noise:"woof!", makeNoise: function(){console.log(this.noise);}}
-var cat = {name: "Stripes", noise:"purrrrrrrr", makeNoise: function(){console.log(this.noise);}}
-var bird = {name: "Chicken", noise:"Buk buk bawkaaaack", makeNoise: function(){console.log(this.noise);}}
-var mouse = {name: "Sqweek", noise:"squeal!", makeNoise: function(){console.log(this.noise);}}
+var dog = {
+	name: "dog",
+	noise:"woof!",
+	makeNoise: function() {
+		console.log(this.noise);
+	},
+}
+
+var cat = {name: "cat", noise:"purrrrrrrr", makeNoise: function(){console.log(this.noise);}}
+var bird = {name: "bird", noise:"Buk buk bawkaaaack", makeNoise: function(){console.log(this.noise);}}
+var mouse = {name: "mouse", noise:"squeal!", makeNoise: function(){console.log(this.noise);}}
 
 
 /*
@@ -69,12 +76,14 @@ for(i=0; i<animals.length; i++){
 
 
 /*WHY CAN'T YOU DO THIS:
+
 	console.log(animals[i].name + " is walking!");
 		animals[i].hunger--;
+
 		WHY DO YOU HAVE TO USE THE THIS KEYWORD? */
 
-for(i=0; i<animals.length; i++){
-	animals[i].walk = function(){
+for(i=0; i<animals.length; i++) { //i = 0
+	animals[i].walk = function() { //dog.walk
 		console.log(this.name + " is walking!");
 		this.hunger--;
 	};
@@ -132,7 +141,8 @@ console.log(cat.friends);
 
 
 /* BONUS
-This bonus will be a challenge! To complete this step, you'll need to do some Googling to look up things that have not yet been covered.
+This bonus will be a challenge! To complete this step, you'll need to do some Googling to look up
+things that have not yet been covered.
 
 Take a look at the index.html file. You'll notice the following code:
 
@@ -154,10 +164,12 @@ Note that the name of each image is the animal name (bird, cat, dog, or mouse) p
 Now that you're familiar with the code and assets that are available to you, let's add an appear property to each animal.
 The appear property will be a method that updates the src attribute to the path of the image of that animal.
 
-Test things out by calling the appear method for one of your animals. When you load the page in your browser, the image of the animal should appear!
+Test things out by calling the appear method for one of your animals. When you load the page in your browser,
+the image of the animal should appear!
 
 Hint #1: Google the following:
 	- "JavaScript querySelector"
+	// let image = document.querySelector('img');
 	- "JavaScript setAttribute"
 
 Hint #2: You'll need to use the this keyword to access the name of the current animal from within the appear method to create the image path. The format to do so should look like this:
@@ -166,5 +178,15 @@ Hint #2: You'll need to use the this keyword to access the name of the current a
 Hint #3: Still stuck? The code to update the image source should look like this:
 	document.querySelector('img').setAttribute('src', 'images/' + this.name + '.jpg');
 */
+
+
+for (var i = 0; i < animals.length; i++) {
+	animals[i].appear = function() {
+		document.querySelector('img').setAttribute('src', 'images/' + this.name + '.jpg');
+	};
+}
+
+mouse.appear()
+
 
 

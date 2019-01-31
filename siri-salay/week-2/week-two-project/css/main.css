@@ -39,9 +39,10 @@ header img {
   font-size: 36px;
   text-align: center;
   padding-top: 1em;
+  padding-right: 3px;
   font-family: 'Josefin Slab', serif;
-
 }
+
 
 button {
   background-color: transparent;
@@ -69,18 +70,39 @@ button {
 }
 
 
-.categoryImages {
+#display {
   width: 70%;
   height: 50em;
   margin-left: 5%;
+  margin-top: 3px;
+  /*border: 2px solid #25484a;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#display img {
+  height: auto;
+  width: auto;
+  max-width: 25em;
+  max-height: 25em;
+  margin-right: 5%;
+  margin-top: 3%;
 }
 
 .cartItems {
   width: 19%;
   height: 50em;
   border: 2px solid #25484a;
-  margin-top: 4px;
-  margin-left: 4px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.cartItems ul li {
+  list-style: none;
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 

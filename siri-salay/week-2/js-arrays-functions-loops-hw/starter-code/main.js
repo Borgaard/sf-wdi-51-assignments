@@ -3,21 +3,21 @@
 	Write a for-loop that will print each of the elements to the console.
 */
 
-var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+var ages = [28, 30, 17, 14, 12, 20, 36, 68, 49, 37, 55, 56, 26, 13];
 
 function printAges(){
 for(var i = 0; i<ages.length; i++){
 	console.log(ages[i]);
-	};
-};
+	}
+}
 
 function printAgesWhileLoop(){
 var i = 0;
 while(i<ages.length) {
   console.log(ages[i]);
   i++
-};
-};
+}
+}
 
 
 /*
@@ -33,28 +33,31 @@ while(i<ages.length) {
 
 var younger = [];
 
-function addAges(){
+
+function youngerAges(){
 	for(var i = 0; i<ages.length; i++){
 		if(ages[i] <= 20){
 			younger.push(ages[i]);
-		};
-	};
-};
+		}
+	}
+}
+youngerAges();
+console.log(younger);
 
 
-function addAgesWhileLoop(){
+function youngerAgesWhileLoop(){
 var i = 0;
 while(i<ages.length) {
     if(ages[i] <= 20){
         younger.push(ages[i]);
-      };
+      }
     i++
-  };
-};
+  }
+}
 
 
 
-
+/*
 
 /*
 	Part 3: We're comfortable going through an element from beginning to end, but let's
@@ -69,17 +72,23 @@ while(i<ages.length) {
 */
 
 function printYoungerReversed(){
-	for(var i = younger.length-1; i>0; i--){
+	for(var i = younger.length-1; i>=0; i--){
 		console.log(younger[i]);
 	}
+}
 
 function printYoungerReversedWhile(){
   var i = younger.length-1;
-  while(i>0) {
+  while(i>=0) {
     console.log(younger[i]);
     i--;
-  };
-};
+  }
+}
+
+
+
+printYoungerReversedWhile();
+
 
 /*
 	Part 4: Now that you've finished the first 3 parts using a for-loop, repeat the same exercises
@@ -97,10 +106,24 @@ function printYoungerReversedWhile(){
 	Hint: Using a "switch" statement might result in cleaner code
 */
 
+// any parameter
+/*
+parameter is the input
+function
+switch( parameter)
+switch is the name of this function/statement
+case (if the parameter is 1)
+then case 1
+case (if the parameter is 2)
+then case 2
+after every case you need what needs to be done in that case
+
+*/
+
 function getDayOfWeek(day) {
 	switch(day){
   case 1:
-    currentday = "Monday";
+    console.log("Monday");
     break;
   case 2:
     console.log("Tuesday");
@@ -121,7 +144,7 @@ function getDayOfWeek(day) {
   	console.log("Sunday");
   break;
   default:
-    alert( "Please enter a valid day of the week" );
+    console.log( "Please enter a valid day of the week" );
 }
 }
 
@@ -141,3 +164,43 @@ function getDayOfWeek(day) {
 	in our array?
 	(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 */
+
+
+/*  WHY DON'T THESE FUNCTIONS WORK?
+
+function addPepperoniToPizza(ingredients){
+  var i = 0;
+   if(ingredients[i] === 'pepperoni'){
+      return ingredients;
+    };
+   while(ingredients[i] !== 'pepperoni'){
+    i++;
+  };
+  ingredients.push('pepperoni');
+  return ingredients;
+}
+
+function addPepperoniToPizza(ingredients){
+  for(var i = 0; (i<ingredients.length) && (ingredients[i] !== 'pepperoni'); i++){
+    if(i = ingredients.length-1){
+      ingredients.push('pepperoni');
+    }
+  }
+return ingredients
+}
+
+*/
+
+
+function addPepperoniToPizza(ingredients)
+{
+    for(var i=0;i<ingredients.length;i++)
+    {
+        if(ingredients[i] === 'pepperoni')
+          {return ingredients;}
+    }
+    ingredients.push('pepperoni');
+    return ingredients;
+}
+
+

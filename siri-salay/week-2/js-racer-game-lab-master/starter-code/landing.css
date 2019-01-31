@@ -1,0 +1,14 @@
+
+body {
+  background-image: url('./images/courage-landing.jpg');
+}
+
+button {
+  font-size: 66px;
+  margin: 0 auto;
+  background: none;
+}
+
+button a{
+  text-decoration: none
+}
