@@ -3,3 +3,14 @@
   height: 100px;
   width: 100px;
 }
+
+.racer_table td.active1 {
+  background-color: red;
+}
+
+.racer_table td.active2 {
+  background-color: blue;
+}
+
+
+
