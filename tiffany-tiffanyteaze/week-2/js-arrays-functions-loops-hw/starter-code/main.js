@@ -47,6 +47,27 @@ for (i = younger.length; i > 0 ; i--) {
 	(Part 1, Part 2, and Part 3) using a while-loop.
 */
 
+var a = 0;
+while (a < ages.length) {
+	console.log(ages[a]);
+	a++;
+}
+
+var b = 0;
+while (b < ages.length) {
+	if (ages[b] <= 20) {
+		younger.push(ages[b]);
+	}
+	b++;
+}
+console.log(younger);
+
+var c = younger.length;
+while (c > 0) {
+	console.log(younger[i]);
+	c--;
+}
+
 /*
 	Part 5: Create a function, getDayOfWeek, that will tell you what day of the week it is.
 	For example, getDayOfWeek(1) would return "Monday", and getDayOfWeek(5) would return "Friday".
@@ -54,26 +75,61 @@ for (i = younger.length; i > 0 ; i--) {
 
 	Hint: Using a "switch" statement might result in cleaner code
 */
-var day = 1;
+//var day = 1;
+//
+// function getDayOfWeek() {
+// 	if (day === 1) {console.log("Monday");}
+// 	if (day === 2) {console.log("Tuesday");}
+// 	if (day === 3) {console.log("Wednesday");}
+// 	if (day === 4) {console.log("Thursday");}
+// 	if (day === 5) {console.log ("Friday");}
+// 	if (day === 6) {console.log("Saturday");}
+// 	if (day === 7) {console.log("Sunday");}
+// 	else if (day < 1 || day > 7) {console.log("Please enter a valid day of the week.");}
+// };
 
-function getDayOfWeek() {
-	if (day === 1) {console.log("Monday");}
-	if (day === 2) {console.log("Tuesday");}
-	if (day === 3) {console.log("Wednesday");}
-	if (day === 4) {console.log("Thursday");}
-	if (day === 5) {console.log ("Friday");}
-	if (day === 6) {console.log("Saturday");}
-	if (day === 7) {console.log("Sunday");}
-	else if (day < 1 || day > 7) {console.log("Please enter a valid day of the week.");}
-};
+var number;
 
-getDayOfWeek();
+function getDayOfWeek(number) {
+switch (number) {
+	case 0:
+		day = 'Sunday';
+		console.log(day);
+		break;
+	case 1:
+		day = 'Monday';
+		console.log(day);
+		break;
+	case 2:
+		day = 'Tuesday';
+		console.log(day);
+		break;
+	case 3:
+		day = 'Wednesday';
+		console.log(day);
+		break;
+	case 4:
+		day = 'Thursday';
+		console.log(day);
+		break;
+	case 5:
+		day = 'Friday';
+		console.log(day);
+		break;
+	case 6:
+		day = 'Saturday';
+		console.log(day);
+		break;
+	default:
+		day = null;
+		console.log("Please enter a valid day of the week.");
+	}
+}
 
-day = 5;
-getDayOfWeek();
+getDayOfWeek(6);
+getDayOfWeek(10);
+getDayOfWeek(0);
 
-day = 8;
-getDayOfWeek();
 /*
 	Bonus - Part 6: All this work is making me hungry. Let's create a new function, addPepperoniToPizza,
 	that accepts an array of pizza ingredients. If the array of ingredients already contains
