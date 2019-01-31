@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animal Racing</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Race To The Finish!</h1>
+    <p>Use left and right arrow keys to move the Villager!</p>
+    <button id="start">Start</button>
+    <button id="stop">Pause</button>
+    <button id="restart">Restart</button>
+  </header>
+  <div id="container">
+    <div id="piece-1">
+      <img src="image/villager.png" alt="Hi! I'm Villager!">
+    </div>
+    <div id="piece-2">
+      <img src="image/isabelle.png" alt="I'm Isabelle!">
+    </div>
+    <div class="message isabelle">
+      <h1>Isabelle Wins!</h1>
+      <img src="image/isabelle-wins.gif">
+      <p>Press Restart to play again.</p>
+    </div>
+    <div class="message villager">
+      <h1>Villager Wins!</h1>
+      <img src="image/villager-win.gif">
+      <p>Press Restart to play again.</p>
+    </div>
+    <div id="finish"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
