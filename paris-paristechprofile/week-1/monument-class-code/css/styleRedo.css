@@ -106,7 +106,7 @@ nav a {
 }
 
 .hamburger {
-	display: none;
+
 }
 
 h1 a,
@@ -356,13 +356,14 @@ input[type="submit"] {
 
 nav {
 	display: flex;
-	justify-content: center
+	justify-content: center;
+	align-items: center;
 }
 nav a {
 	font-weight: 600;
 	letter-spacing: 0.75px;
 	letter-spacing: .05rem;
-	padding: 10% 0%;
+	padding: 5% 0%;
 	display: inline-block;
 	border-bottom: none;
 	text-transform: uppercase;
@@ -372,6 +373,7 @@ nav li {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 1em;
 }
 
 /*grid*//*grid*//*grid*//*grid*//*grid*/
