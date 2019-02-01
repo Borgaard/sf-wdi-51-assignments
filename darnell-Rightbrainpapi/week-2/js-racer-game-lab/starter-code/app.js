@@ -4,6 +4,7 @@
 // [x] set event listener with keys
 
 // []use the start stop button to initiate
+// []set win function
 // []make limit on margin to end game
 
 
@@ -21,28 +22,78 @@ var p = document.querySelector(".circle2");
 document.addEventListener("keydown", moverFunction);
 
 
-var mover = 2
+// var mover = 5
+
+// function moverFunction (e) {
+
+//  if (e.keyCode === 81)  {
+//     mover += 1
+//     q.style.marginBottom= `${mover}em`;
+//  }
+//  else if (e.keyCode === 80)  {
+//     mover += 1
+//     p.style.marginBottom= `${mover}em`;
+//     }
+// console.log("do you work?");
+// }
+
+
+// win function
+
+var mover = 5
+var qpacer = 5
+var ppacer = 5
 
 function moverFunction (e) {
   // console.log(e);
- if (e.keyCode === 81)  {
+  if (qpacer == 25)  {
+    alert("Player 1 wins!")
+  }
+  else if (ppacer == 25)  {
+    alert("Player 2 wins!")
+  }
+ else if (e.keyCode === 81)  {
     mover += 1
-    q.style.marginLeft= `${mover}em`;
+    qpacer += 1
+    q.style.marginBottom= `${mover}em`;
  }
  else if (e.keyCode === 80)  {
     mover += 1
-    p.style.marginLeft= `${mover}em`;
+    ppacer += 1
+    p.style.marginBottom= `${mover}em`;
     }
-console.log("do you work?");
 }
 
 
 
 
-// moverfunction{
-// if (e.code === 80) {
-// // some code here
-//  }
+// Buggy Code below allows balloon to move even after a winner is declared.
+
+// var qpacer = 5
+// var ppacer = 5
+// document.addEventListener("keydown", winnerFunction);
+// function winnerFunction (e){
+//  if (qpacer == 8)  {
+//     console.log("Player 1 wins!")
+//   }
+//   else if (ppacer == 8)  {
+//     console.log("Player 2 wins!")
+//   }
 // }
 
- // document.onkeydown == moverfunction
+// var mover = 5
+// function moverFunction (e) {
+//  if (e.keyCode === 81)  {
+//     mover += 1
+//     qpacer += 1
+//     q.style.marginBottom= `${mover}em`;
+//  }
+//  else if (e.keyCode === 80)  {
+//     mover += 1
+//     ppacer += 1
+//     p.style.marginBottom= `${mover}em`;
+//     }
+// }
+
+
+
