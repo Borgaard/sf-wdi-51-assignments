@@ -54,6 +54,15 @@ button {
   margin: 2em 2.4em .7em 3.8em;
 }
 
+
+@media only screen and (max-width: 1500px){
+
+  button {
+    font-size: 22px;
+  margin: 1em 1.6em .5em 3em;
+  }
+}
+
 /* shopping cart -------------------------------------------------------------------------*/
 
 .cart {
@@ -65,7 +74,7 @@ button {
   padding-top: 1em;
   font-family: 'Josefin Slab', serif;
   width: 19%;
-  margin-left: 4px;
+  margin-left: 3px;
 
 }
 
@@ -81,7 +90,7 @@ button {
   justify-content: space-around;
 }
 
-#display img {
+#display .wrap {
   height: auto;
   width: auto;
   max-width: 25em;
@@ -90,12 +99,27 @@ button {
   margin-top: 3%;
 }
 
+#display .wrap img {
+   max-width: 22em;
+  max-height: 22em;
+}
+
+#display .wrap h3 {
+  text-align: center;
+  padding-left: 1em;
+  margin: 3px auto;
+  font-family: 'Josefin Slab', serif;
+  font-size: 22px;
+  color:#25484a;
+}
+
+
 .cartItems {
   width: 19%;
   height: 50em;
   border: 2px solid #25484a;
   margin-top: 3px;
-  margin-left: 3px;
+  margin-left: 6px;
 }
 
 .cartItems ul li {

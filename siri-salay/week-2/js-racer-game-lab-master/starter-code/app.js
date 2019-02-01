@@ -5,6 +5,7 @@ var eustace = document.getElementById('eustace');
 
 var pause = document.getElementById('pause');
 var start = document.getElementById('start');
+var restart = document.getElementById('restart');
 
 let courageRight = -2;
 let eustaceRight = -8;
@@ -18,12 +19,14 @@ function moveEustace() {
 var timer
 
 function startGame() {
- timer = setInterval(moveEustace, 600);
+ timer = setInterval(moveEustace, 200);
       start.disabled = true;
       pauseGame.disabled = false;
+
+  document.onkeydown = moveDog;
 }
 
-function pauseGame() {
+pauseGame = function() {
 
       eustace.style.right = eustaceRight + '%';
       // var beginning = -8;
@@ -31,6 +34,16 @@ function pauseGame() {
       clearTimeout(timer);
       start.disabled = false;
       pauseGame.disabled = true;
+
+  document.onkeydown = null;
+}
+
+var pauseIt = pauseGame;
+
+function restartGame() {
+    pauseIt;
+    courage.style.right = '-2%';
+    eustace.style.right = '-8%';
 }
 
 // var changeCourage = function(){
@@ -50,22 +63,25 @@ function pauseGame() {
 // eustaceButton.addEventListener('click', changeEustace);
 
 start.addEventListener('click', startGame)
+
 pause.addEventListener('click', pauseGame)
 
-
+restart.addEventListener('click', restartGame)
 
 function checkIfWon(){
    if(courageRight === 54){
     alert("Courage Won!!!");
+
    }
    else if(eustaceRight === 54){
     alert("Eustace Won!!!");
+
    }
 
    //to do: make clear div not clear and remove the characters
 }
 
-  var moveChar = function moveCourage(e){
+ moveCourage = function(e){
 
     if(e.keyCode === 37){
       courageRight +=2;
@@ -74,11 +90,13 @@ function checkIfWon(){
     }
  }
 
+   var moveDog = moveCourage;
+
 //math.randommath.floor*10 var num
 
 /*onkeydown
 */
-  document.onkeydown = moveChar;
+
 
 
  // theBody.addEventListener('onkeydown', (e) => {

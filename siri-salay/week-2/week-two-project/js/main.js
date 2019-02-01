@@ -59,34 +59,90 @@ var pillowButton = document.getElementById("pillows");
 var addPlushImages = function(){
   for (var i=0; i<plushies.length; i++) {
   var loadingImage = document.querySelectorAll("#display img")[i];
+  var imageDescription = document.querySelectorAll("#display h3")[i];
+  imageDescription.innerHTML = plushies[i].description;
   var a = i+1;
   loadingImage.src= "./images/plush" + a + ".png";
-  loadingImage.alt= plushies[i].imageId;
+  loadingImage.alt= plushies[i].description;
+  //loadingImage.setAttribute("onclick", "putInCart()");
+  loadingImage.addEventListener("click", putInCart);
     }
 }
+
 
 var addOnesieImages = function(){
   for (var i=0; i<onesies.length; i++) {
   var loadingImage = document.querySelectorAll("#display img")[i];
+  var imageDescription = document.querySelectorAll("#display h3")[i];
+  imageDescription.innerHTML = onesies[i].description;
   var a = i+1;
   loadingImage.src="./images/onesie" + a + ".png";
-  loadingImage.alt= onesies[i].imageId;
+  loadingImage.alt= onesies[i].description;
+  //loadingImage.setAttribute("onclick", "putInCart()");
+  loadingImage.addEventListener("click", putInCart);
     }
 }
 
 var addPillowImages = function(){
   for (var i=0; i<pillows.length; i++) {
   var loadingImage = document.querySelectorAll("#display img")[i];
+  var imageDescription = document.querySelectorAll("#display h3")[i];
+  imageDescription.innerHTML = pillows[i].description;
   var a = i+1;
   loadingImage.src="./images/pillow" + a + ".png";
-  loadingImage.alt= pillows[i].imageId;
+  loadingImage.alt= pillows[i].description;
+  //loadingImage.setAttribute("onclick", "putInCart()");
+  loadingImage.addEventListener("click", putInCart);
     }
 }
 
+var putInCart = function(){
+
+      // Create list item and store it in a variable.
+      var newListItem = document.createElement('li');
+
+      // Update the text content of that list item.
+      // HOW TO GET SPECIFIC IMAGE DESCRIPTION - it's also the alt text
+
+      newListItem.innerHTML = this.alt;
+      //returns undefined
+      //document.getElementById("").alt;
+      //this.querySelector("img").src;
+      newListItem.style.margin = "1em 1em 0 0 ";
+
+      // Append list item as a child of the ul with class itemList.
+      document.getElementById('itemList').appendChild(newListItem);
+    }
+
+/*
+<script type="text/javascript">
+function image(img) {
+    var src = img.src;
+    window.open(src);
+}
+</script>
+<img src="pond1.jpg" height="150" size="150" alt="Johnson Pond" onclick="image(this)">
+shareedit
+*/
 
 plushButton.addEventListener("click", addPlushImages);
 onesieButton.addEventListener("click", addOnesieImages);
 pillowButton.addEventListener("click", addPillowImages);
+
+/*
+
+maybe in the display image function, use a for loop to
+add an event listener to each object that when you
+click on it, it calls the function that
+creates a list item in the fucking shopping cart,
+//WHERE DO YOU GET THIS
+sets the inner html of the list item to the description attached to the image.
+
+innerHTML = pillows[i].description
+
+
+
+
 
 
 var imageArray = document.querySelectorAll('.display img');

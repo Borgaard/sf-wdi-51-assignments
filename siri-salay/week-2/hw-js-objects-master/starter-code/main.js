@@ -4,6 +4,17 @@
 	Each of these animal objects should have a name, a noise that they make,
 	and a makeNoise property that prints out their noise.
 */
+var animal = function(name, noise) {
+	this.name =  name,
+	this.noise = noise,
+	makeNoise =  function() {
+		console.log(this.noise);
+	}
+}
+
+
+
+
 
 var dog = {
 	name: "dog",
