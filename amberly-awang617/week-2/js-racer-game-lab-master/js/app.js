@@ -1,5 +1,5 @@
 //Global Variables
-const container = document.getElementById("container");
+const container = document.querySelector(".container");
 const finish = document.getElementById("finish");
 
 const piece = document.getElementById("piece-1");
@@ -53,28 +53,36 @@ function restartGame() {
 function move(e){
   if (start.disabled && !pause.disabled) {
     if(e.keyCode == 39){
-      pieceLeft +=5;
-      piece.style.left = pieceLeft + "px";
-      if (pieceLeft >= 675){
-        pieceLeft -= 5;
-        villagerWin();
-      };
+      moveLeft();
     };
     if(e.keyCode == 37){
-      pieceLeft -=5;
-      piece.style.left = pieceLeft + "px";
-      if (pieceLeft <= 0){
-        pieceLeft += 5;
-      };
+      moveRight();
     };
   };
 };
 
+function moveLeft() {
+  pieceLeft +=.75;
+  piece.style.left = pieceLeft + "%";
+  if (pieceLeft >= 76){
+    pieceLeft -= .75;
+    villagerWin();
+  };
+};
+
+function moveRight() {
+  pieceLeft -=.75;
+  piece.style.left = pieceLeft + "%";
+  if (pieceLeft <= 0){
+    pieceLeft += .75;
+  };
+}
+
 function isabelleMove () {
-  isabelleLeft += 4;
-  isabelle.style.left = isabelleLeft + "px";
-  if (isabelleLeft >= 675){
-    isabelleLeft -= 4;
+  isabelleLeft += .65;
+  isabelle.style.left = isabelleLeft + "%";
+  if (isabelleLeft >= 76){
+    isabelleLeft -= .65;
     isabelleWin();
   }
 };
