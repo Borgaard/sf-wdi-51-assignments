@@ -1,8 +1,10 @@
-// []get the cicle elements and store in variable
-// [] save element in variable
-// [] target 1 cirlce
-// [] set event listener with keys
-//
+// [x]get the cicle elements and store in variable
+// [x] save element in variable
+// [x] target 1 cirlce
+// [x] set event listener with keys
+
+// []use the start stop button to initiate
+// []make limit on margin to end game
 
 
 
