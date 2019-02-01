@@ -1,0 +1,27 @@
+body{
+  background-color: lightgreen;
+}
+
+#field {
+  position: relative;
+  height:auto;
+  width:auto;
+}
+
+#redbox {
+  position: absolute;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  top:100px;
+  left: 0;
+}
+
+#bluebox {
+  position:absolute;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  top: 350px;
+  left:0;
+}
