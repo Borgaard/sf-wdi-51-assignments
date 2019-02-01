@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: url(images/racing-background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 55em;
+  margin-bottom: 8em;
+}
+
+body {
+  margin: 0 ;
+}
