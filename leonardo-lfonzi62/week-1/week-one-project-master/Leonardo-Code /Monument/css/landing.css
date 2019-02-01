@@ -165,21 +165,51 @@ display: -ms-flexbox;
 
 }
 
-.wrap-1 {
+.layout-1 {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
-  flex-direction: column;
-   margin: 1.5em;
+  flex-direction: row;
+  width: 30%;
+  margin-right: 5%;
+
+}
+.layout-2{
+ display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 30%;
+  margin-right: 5%;
 }
 
- .masonry img {
+.layout-3 {
+   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 10px;
+}
+.layout-3 img {
+  margin-bottom: 2px;
+}
+.masonry{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+}
+
+ ./*masonry img {
    width: 30%;
    max-width: 100%;
-  /* max-height: 300px;*/
    margin: 10px;
- }
+ }*/
 
  img:hover{
   opacity: 0.5;
@@ -232,15 +262,24 @@ footer .wrap {
 }
 
 
-.form-wrap {
+.form-wrap-columns {
   display: flex;
- justify-content: center;
- flex-wrap: wrap;
- margin-bottom: 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.col-3{
-width: 30%
+.form-wrap-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.col-3 {
+  margin-right: 10px;
+}
+.col-3:last-of-type {
+  margin-right: 0;
 }
 
 .form-wrap button {
@@ -249,7 +288,7 @@ width: 30%
 }
 
 form button {
- max-width: 100%;
+  width: 100%;
 }
 
 
@@ -329,6 +368,10 @@ IPAD MEDIA QUERY
 .wrap-1 {
   display: flex;
   justify-content: space-between;
+}
+.form-wrap-columns {
+  display: flex;
+  flex-direction: column;
 }
 
 
