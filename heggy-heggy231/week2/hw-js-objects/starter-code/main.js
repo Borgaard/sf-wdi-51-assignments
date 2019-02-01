@@ -6,34 +6,35 @@
 */
 var dog = {
 	name: 'dog',
-	noise: 'woof',
+	noise: 'mung',
 	makeNoise: function() {
+		// this points to dog obj 'this' binds to obj
+		//  it sees when it is first created inside method
 		console.log(this.noise);
-	}
+	},
 };
+
 
 var cat = {
 	name: 'cat',
-	noise: 'meow',
+	noise: 'yao',
 	makeNoise: function() {
 		console.log(this.noise);
-	}
+	},
 };
-
 var bird = {
 	name: 'bird',
-	noise: 'chirp',
+	noise: 'jakjak',
 	makeNoise: function() {
 		console.log(this.noise);
-	}
+	},
 };
-
 var mouse = {
 	name: 'mouse',
-	noise: 'squeak',
+	noise: 'jikjik',
 	makeNoise: function() {
 		console.log(this.noise);
-	}
+	},
 };
 
 /*
@@ -44,6 +45,16 @@ var mouse = {
 
 	Hint: Use the makeNoise() function for each animal in the array
 */
+dog.makeNoise();
+cat.makeNoise();
+bird.makeNoise();
+mouse.makeNoise();
+
+animals[0]; // dog
+animals[1]; // cat
+animals[2]; // bird
+animals[3]; // mouse
+
 var animals = [dog, cat, bird, mouse];
 
 for(var i = 0; i < animals.length; i++) {
@@ -62,7 +73,7 @@ for(var i = 0; i < animals.length; i++) {
 */
 for(var i = 0; i < animals.length; i++) {
 	animals[i].hunger = 10;
-	// or animals[i]['hunger'] = 10;
+	// animals[i]['hunger'] = 10;
 }
 
 /*
@@ -83,17 +94,21 @@ for(var i = 0; i < animals.length; i++) {
 
 	Hint: You will need the "this" keyword
 */
-for(var i = 0; i < animals.length; i++) {
+for(var i = 0; i < animals.length; i++){
 	animals[i].walk = function() {
+	// must use this key word so it can point to the current
+	//  obj this bound to
 		console.log(this.name + ' took a walk');
-		this.hunger--;
-	};
+		this.hunger--; 
+	}
 }
 
-console.log('dog is walking');
-dog.walk();
-console.log(dog.hunger);
 
+// console.log('dog is walking');
+dog.walk();
+// => dog took a walk
+console.log(dog.hunger);
+// => decreased from 10 to 9 since dog walked
 /*
 	Part 5: Now these animals can walk and talk by themselves, but they're quite lonely.
 	Let's add a "makeFriend" property to each animal. The "makeFriend" property will be a
