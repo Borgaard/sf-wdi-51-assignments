@@ -1,0 +1,51 @@
+<!-- 
+
+[] Create Structure HTML
+[] three buttons on your website, which represent different categories of items you can buy at the supermarket (for example, a button for cereal, meats, juices).
+[] When a category is clicked, your page should populate with at least five images of items related to that category (for example, clicking on the cereal button will show five different types of cereal).
+When I click on a specific shopping item, the item should be added to my shopping cart. The shopping list will show all of the items that the user has currently selected.
+Keep your code DRY.
+[] array of images and text add event handler cereal when click 
+- may use jQuery
+event handler add the items on the screen 
+- if there is repeat of code make a function
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- 2 divs assigned 50% categories shopping cart -->
+	<div class="categories">
+		<h2>Categories</h2>
+		<div class="categories-bttn">
+			<!-- every button id assign so I can target -->
+			<button id = "cereal">cereal</button>
+			<button id = "juices">juices</button>
+			<button id = "candy">candy</button>			
+		</div>
+		<div id="shopping-items">
+			<!-- images go here, ul > li -->
+			<ul>
+				<li class="shopping-item"></li>
+			</ul>
+
+		</div>
+	</div>
+	<div class="cart">
+		<h2>Shopping Cart</h2>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>

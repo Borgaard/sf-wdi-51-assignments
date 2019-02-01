@@ -50,12 +50,13 @@ cat.makeNoise();
 bird.makeNoise();
 mouse.makeNoise();
 
+var animals = [dog, cat, bird, mouse];
 animals[0]; // dog
 animals[1]; // cat
 animals[2]; // bird
 animals[3]; // mouse
 
-var animals = [dog, cat, bird, mouse];
+
 
 for(var i = 0; i < animals.length; i++) {
 	animals[i].makeNoise();
@@ -139,19 +140,24 @@ console.log(dog.hunger);
 for(var i = 0; i < animals.length; i++) {
 	animals[i].makeFriend = function(otherAnimal) {
 		this.friend = otherAnimal;
+		console.log(`${this.name} is friends with ${this.friend.name}`)
 	};
 }
 
-console.log('dog made friends with a cat');
 dog.makeFriend(cat);
+cat.makeFriend(bird);
+bird.makeFriend(mouse);
+mouse.makeFriend(dog);
+
+
 dog.friend.makeNoise();
 
 dog.friend.makeNoise = function(){
 	console.log(`${dog.noise} ${dog.friend.noise}`);
 }
-ƒ (){
-	console.log(`${dog.noise} ${dog.friend.noise}`);
-}
+// ƒ (){
+// 	console.log(`${dog.noise} ${dog.friend.noise}`);
+// }
 dog.friend.makeNoise();
 // mung yao
 
