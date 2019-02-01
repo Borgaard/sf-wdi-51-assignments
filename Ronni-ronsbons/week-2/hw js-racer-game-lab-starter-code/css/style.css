@@ -1,0 +1,66 @@
+/* Global
+============================================*/
+body {
+  /* Blends bgc and bg img */
+  background-blend-mode: luminosity;
+  background-color: #0E1C3E;
+  background-image: url("../images/cars3aerialcrowd.png");
+  background-repeat: no-repeat;
+  /* covers body, but doesn't work when maximized screen */
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+/* [X] TODO: need to style landing page */
+/* Header
+================================================*/
+header {
+  margin: 70px 0 40px;
+  text-align: center;
+}
+
+h1 {
+  color: #2E73FC;
+  filter: drop-shadow(.16em .16em .16em black);
+  font-family: "Bangers", sans-serif;
+  font-size: 60px;
+  margin: .16em auto;
+}
+
+/* Button
+================================================*/
+section {
+  margin: 120px 0;
+  text-align: center;
+}
+
+button {
+  background-color: #0E1C3E;
+  border: .06em solid white;
+  border-radius: .2em;
+  font-family: "Bangers", sans-serif;
+  font-size: 30px;
+  margin: .66em auto;
+  padding: .6em 1.33em;
+}
+
+button:hover {
+  background-color: #ED4C49;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer
+================================================*/
+footer {
+  color: #14280C;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4.16em 0;
+  text-align: center;
+}
