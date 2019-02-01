@@ -108,7 +108,7 @@ for(var i = 0; i < animals.length; i++){
 dog.walk();
 // => dog took a walk
 console.log(dog.hunger);
-// => decreased from 10 to 9 since dog walked
+// => decreased from 10 to 9 since dog walkedß
 /*
 	Part 5: Now these animals can walk and talk by themselves, but they're quite lonely.
 	Let's add a "makeFriend" property to each animal. The "makeFriend" property will be a
@@ -130,6 +130,12 @@ console.log(dog.hunger);
 	duck.friend.makeNoise();
 	// => "chirp quack"
 */
+
+
+// 	animals[i].friend.makeNoise = function(newAnimalFriend) {
+// 		console.log('${this.friend.noise} ${this.friend.noise}`);
+// 	}
+// }
 for(var i = 0; i < animals.length; i++) {
 	animals[i].makeFriend = function(otherAnimal) {
 		this.friend = otherAnimal;
@@ -140,7 +146,27 @@ console.log('dog made friends with a cat');
 dog.makeFriend(cat);
 dog.friend.makeNoise();
 
+dog.friend.makeNoise = function(){
+	console.log(`${dog.noise} ${dog.friend.noise}`);
+}
+ƒ (){
+	console.log(`${dog.noise} ${dog.friend.noise}`);
+}
+dog.friend.makeNoise();
+// mung yao
 
+for (var i = 0; i < animals.length; i++){
+	animals[i].friend.makeNoise = function() {
+		console.log(`${this.noise} ${this.friend.noise}`);
+	};
+}
+
+for (var i = 0; i < animals.length; i++){
+	animals[i].friend.makeNoise = function() {
+		animals[i].friend.makeNoise.bind(animals[i]);
+		console.log(`${this.noise} ${this.friend.noise}`);
+	};
+}
 
 /* BONUS
 This bonus will be a challenge! To complete this step, you'll need to do some Googling to look up things that have not yet been covered.
