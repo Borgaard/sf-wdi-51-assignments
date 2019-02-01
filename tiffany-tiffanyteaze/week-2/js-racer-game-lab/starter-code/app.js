@@ -1,20 +1,54 @@
-//Todo List:
-//[X] -start the game
-//[] -move box2
-//[] -move players
-//[] -check who won
-//[] -declare winner
-let startButton = document.querySelector(".start");
-startButton.addEventListener("click", startGame);
-
-function startGame (event) {
-  console.log("You started the game!");
-}
+const startButton = document.querySelector('.start');
+startButton.addEventListener('click', startGame);
 
 const playerOne = document.querySelector('#box1');
-
-function logKey(e) {
-  console.log("You pressed a key!");
-}
-
 playerOne.addEventListener('keydown', logKey);
+
+const playerTwo = document.querySelector('#box2');
+playerTwo.addEventListener('keydown', logKey);
+
+let playerOneStartPosition = 0;
+let playerTwoStartPosition = 0;
+
+function startGame (event) {
+  document.body.onkeyup = logKey;
+  document.body.onkeydown = logKey;
+};
+
+function movePlayerOne() {
+  checkWinner();
+  let newPosition = playerOneStartPosition += 40;
+  playerOne.style.left = newPosition + "px";
+};
+
+function movePlayerTwo() {
+  checkWinner();
+  let newPosition = playerTwoStartPosition += 40;
+  playerTwo.style.left = newPosition + "px";
+};
+
+function logKey(event) {
+  if (event.keyCode === 39) {
+    movePlayerOne();
+  }
+  else if (event.keyCode === 90) {
+    movePlayerTwo();
+  }
+};
+
+function checkWinner() {
+  if (playerOne.style.left >= "100px") {
+    //text declares the winner
+    // let appear = document.getElementById("playerOneWon");
+    // appear.style.display = "block";
+    //stops the players from moving
+    alert("Player One won!");
+  }
+  else if (playerTwo.style.left >= "10000px") {
+    //text declares the winner
+    // let appear = document.getElementById("playerTwoWon");
+    // appear.style.display = "block";
+    //stops the players from moving
+    alert("Player Two won!");
+  }
+};

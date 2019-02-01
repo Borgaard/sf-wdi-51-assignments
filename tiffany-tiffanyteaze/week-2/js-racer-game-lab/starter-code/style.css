@@ -4,9 +4,20 @@ body {
 
 p {
   font-family: monospace;
+}
+
+.player-wrapper p {
   text-align: center;
   position: relative;
   top: 30px;
+}
+
+#playerOneWon {
+  display: none;
+}
+
+#playerTwoWon {
+  display: none;
 }
 
 input[type=button] {
