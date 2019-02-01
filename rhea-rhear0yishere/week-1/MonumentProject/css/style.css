@@ -314,7 +314,7 @@ button:hover, .submit:hover, li:hover {
 
 
 
-/*@media only screen and (max-width: 790px){
+@media only screen and (max-width: 790px){
   div{
     display: block;
   }
@@ -369,21 +369,24 @@ div.col3{
 
   }
   input{
-    width:774px;
+    width:100%;
     margin-bottom: 10px;
 
   }
 
 
 
-  .submit{
-    background-color: #302F30;
-    color: white;
-  }
+
 
   div.comment3{
     margin-left: 0px ;
-    width: 764px;
+    width: 100%;
+}
+
+
+  div.comment1 {
+  margin-right: auto;
+  width: 100%;
 }
 form{
   width: 100%;
@@ -391,11 +394,11 @@ form{
 }
 
 }
-*/
 
 
 
-@media screen and (max-width: 380px) {
+
+@media screen and (max-width: 500px) {
   nav ul{
   display: none;
   }
@@ -507,5 +510,8 @@ h2, h3{
   font-size: 16px;
 }
 
+.archive img{
+  width: 100%;
+}
 }
 
