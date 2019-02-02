@@ -1,0 +1,57 @@
+/*-------------------------------
+Header*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: yellow;
+
+}
+
+ul {
+  display: flex;
+  list-style-type:  none;
+
+}
+
+li {
+  margin-right: 20px;
+}
+
+#checkOut {
+  margin-right:200px ;
+  display: flex;
+  width: 100%;
+/*===================================
+====Middle Container*/
+}
+
+.middleContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+section {
+  background: blue;
+}
+
+aside {
+  background: green;
+}
+
+p {
+  font-size: 30px;
+  margin: 0px 10px;
+}
+
+/*===================================
+Footer*/
+
+footer {
+  background: orange;
+  padding-bottom: 30px;
+}
+
+
