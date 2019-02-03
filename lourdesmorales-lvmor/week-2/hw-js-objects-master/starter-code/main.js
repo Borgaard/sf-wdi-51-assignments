@@ -98,6 +98,8 @@ for (var i = 0; i < animals.length; i++) {
 dog.walk();
 console.log(dog.hunger);
 
+
+add();
 /*
 	Part 5: Now these animals can walk and talk by themselves, but they're quite lonely.
 	Let's add a "makeFriend" property to each animal. The "makeFriend" property will be a

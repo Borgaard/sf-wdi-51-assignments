@@ -2,70 +2,95 @@
   box-sizing: border-box;
 }
 
-html {
-  background: url(images/racegamepage.jpg);
-/*  background-repeat: no-repeat;
-  background-size: auto;
-  object-fit: cover;*/
-/*  position: fixed;
-  width: 100%;
-  height: 100%;
-*/
+/* Start button*/
 
-/*  background-image: url("../images/home_header_bg.jpg");*/
-  background-size: cover;
-  background-attachment: fixed;
-  height: 55em;
-  margin-bottom: 8em;
+#wrapper {
+  text-align: center;
 }
 
-body {
-  margin: 0 ;
-}
-img {
- /* max-width: 100%;
-  display: block;
-  position: fixed;*/
-}
-
-.press{
-  z-index: 100;
-}
-
-#blueDiv, #yellowDiv {
-  position: absolute;
-  top: 11em;
-  left: 11.5em;
-  width: 37em;
-  height: 16em;
-
-}
-
-#yellowDiv {
-background-color: #d8a538;
-}
-
-#blueDiv {
-background-color: #2616dd;
-}
-
-
-/* Button */
-
-#myButton {
-  width: 50%;
-  float: center;
-  background-color: goldenrod;
+#startButton {
+  width: 10em;
   color: white;
-  padding: 30px 10px;
-  margin: 8px 0;
-  border: none;
+  font-size: 2em;
+  padding: 1em 2em;
+  background: linear-gradient(to top, red, orange);
   border-radius: 6em;
   cursor: pointer;
+  margin-top: 18em;
+  position: fixed;
 }
 
-#myButton:hover {
+#startButton:hover {
   background-color: white;
   opacity: .5;
   transition: all 300ms ease-out;
 }
+
+/* Landing Page Background*/
+.landingPageCont {
+  background: url(images/jungle-landing.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 55em;
+  margin-bottom: 8em;
+  margin-left: -20em;
+}
+
+/*Part 2*/
+
+.outside-border {
+  background: #f90254;
+  background-attachment: fixed;
+  margin: 0 5% 0 5%;
+}
+
+.racingBox {
+  background: url(images/racing-background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  width: 1250px;
+  height: 42em;
+  margin: 1%;
+}
+
+.redBox {
+  background-image: url(images/Krumm_looking_upwards.png);
+  width: 100px;
+  height: 120px;
+  position: absolute;
+  top: 19em;
+  margin: 1%;
+}
+
+.blueBox {
+  background-image: url(images/Oblina_Shrugging.png);
+  width: 100px;
+  height: 226px;
+  position: absolute;
+  top: 25em;
+  margin: 1%;
+}
+
+/*Media Query for tablet*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .racingBox {
+  background: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.redBox {
+  background-image: url(images/Krumm_looking_upwards.png);
+  width: 20%;
+  height: 20%;
+}
+
+.blueBox {
+  background-image: url(images/Oblina_Shrugging.png);
+  width: 20%;
+  height: 20%;
+}
+
