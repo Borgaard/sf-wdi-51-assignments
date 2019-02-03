@@ -10,7 +10,7 @@ body{
   border: 0 solid red;
   width: 10%;
   margin-bottom: 50px;
-  left: 0;
+  left: ;
   position: sticky;
 }
 .blue{
@@ -24,7 +24,7 @@ body{
   outline: 0 solid black;
   position: relative;
 }
-button{
+button, input{
 width: 100px;
 margin-right: 10px;
 margin-bottom: 40px;
@@ -35,8 +35,25 @@ img{
    height: 200px;
    margin: 0;
 }
-h1{
+ h2, h1{
   color:goldenrod;
   font-weight: bold;
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+h2{ margin-bottom: 25px;
+  padding: 0;
+  float: left;
+  width: 25%;
+}
+
+.instructions{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}s
+
+div h2 {
+  margin-right: 30%;
+  width: 100%;
 }
