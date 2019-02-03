@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  display: flex;
+}
+.first, .second{
+  width: 50%;
+  margin: auto;
+  margin-top: 0px;
+
+  text-align: center;
+  font-size: 30px;
+}
+
+h1{
+  background-color: navy;
+  color: white;
+}
+
+.second{
+   margin-top: 0px;
+}
+
+img{
+  height: 200px;
+  width: 200px;
+}
+
+.cerealImages{
+  display: none;
+}
+
+.candyImages{
+  display: none;
+}
+
+.juicesImages{
+  display: none;
+}
