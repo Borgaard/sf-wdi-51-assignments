@@ -1,0 +1,161 @@
+/*--------------------
+Layout
+---------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #757573;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  margin: 0 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+}
+
+#inner-section {
+  margin: 0 2em;
+  flex: 2;
+}
+
+#sidebar {
+  margin: 0 2em;
+  flex:1;
+}
+
+/*--------------------
+Header
+---------------------*/
+#home-page {
+  text-decoration: none;
+}
+.hero {
+  background-image: url("../images/blog_header_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+nav, h1 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: white;
+}
+
+/*--------------------
+Nav
+---------------------*/
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .85em;
+}
+
+li a {
+  list-style: circle;
+  text-decoration: one;
+  padding: 1em .5em;
+  color: lightgrey;
+  text-decoration: none;
+}
+
+
+
+
+/*--------------------
+Section
+---------------------*/
+p {
+  line-height: 1.5em;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+/*--------------------
+Anchors
+---------------------*/
+
+
+/*--------------------
+Images
+---------------------*/
+
+
+img {
+  max-width: 100%;
+
+}
+
+/*--------------------
+Buttons
+---------------------*/
+
+
+/*--------------------
+Forms
+---------------------*/
+
+
+/*--------------------
+Footer
+---------------------*/
+footer {
+  background-color: lightblue;
+  text-align: center;
+  bottom: 0;
+  left: 0 ;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.social {
+  border-bottom: 2px solid grey;
+}
+
+.social i {
+  margin: 0 .5em;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: grey;
+
+}
+/*--------------------
+Media Quieries
+---------------------*/
+@media only screen and (max-width: 800px) {
+  main {
+    margin: 0 .5em;
+    flex-wrap: wrap;
+  }
+}
+
