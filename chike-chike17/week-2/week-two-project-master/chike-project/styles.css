@@ -53,6 +53,10 @@ img {
   width: 50%;
 }
 
+.tower img, .plus, .minus, .checkout {
+  cursor:pointer;
+}
+
 .arrow {
   position: relative;
   top:165px;

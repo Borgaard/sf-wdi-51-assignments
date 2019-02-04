@@ -1,20 +1,20 @@
 let hero = document.getElementsByClassName('hero-icon')[0];
-console.log(hero, 'HHHHH')
 
 if (!hero) {
   let images = document.getElementsByTagName('img');
   for (var i = images.length - 1; i >= 0; i--) {
     images[i].addEventListener('click', (e) => {
-        let imageFile = e.srcElement['src'].substring(71, e.srcElement['src'].length);
+        let imagePath = e.srcElement['src'];
+        let imageFile = imagePath.substring(imagePath.indexOf('images'), imagePath.length);
         location.href = "./buy.html?data=" + imageFile;
     });
    }
 }
 
 if (hero){
-  let location = window.location.search
+  let location = window.location.search;
   let length = location.length;
-  let heroIm = window.location.search.substring(54, length)
+  let heroIm = location.substring(location.indexOf('images'), length)
   let newHero = document.getElementsByClassName('hero-icon')[0];
   newHero.src = heroIm;
 
