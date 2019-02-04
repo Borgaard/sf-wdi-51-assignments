@@ -17,7 +17,24 @@ body {
   background: var(--mainWhite);
   color: var(--mainBlack);
 }
-
+/* global styles */
+.btn-pink {
+  color: var(--mainPink) !important;
+  border-color: var(--mainPink) !important;
+}
+.btn-black {
+  color: var(--mainBlack) !important;
+  border-color: var(--mainBlack) !important;
+}
+.btn-black:hover {
+  color: var(--mainPink) !important;
+  background: var(--mainBlack) !important;
+}
+/* this style btn pink for cart */
+.btn-pink:hover {
+  color: var(--mainBlack) !important;
+  background: var(--mainPink) !important;
+}
 /* -------------- nav links -------------- */
 /* when click on the button of hamburger icon: I can see the blue outline around the box getting rid of that outline*/
 .navbar-toggler {
@@ -98,7 +115,7 @@ body {
   background-attachment: fixed;
   /* if background img is too small img may repeat to fill the rest of the viewport.  prevent it by no-repeat */
   background-repeat: no-repeat;
-  /* this is parent position setup for cart which is position absolute.   cart needs parent container (background .maxheight) */
+  /* this is parent position setup for cart whi ch is position absolute.   cart needs parent container (background .maxheight) */
   position: relative;
   /* at this point I see scroll bar which means nav and background img is taking up more than 100%.  how do we make them take up only 100%?  we will update the ming-height upthere!*/
 }
