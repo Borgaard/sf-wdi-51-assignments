@@ -1,5 +1,17 @@
 console.log("The Script is working!!");
 
+
+/* Event listeners */
+var cerealButton = document.querySelector('.Cereal');
+var juiceButton = document.querySelector('.juices');
+var candyButton = document.querySelector('.candy');
+
+
+// add event listeners to each of the category buttons
+cerealButton.addEventListener('click', addShoopingItemsCereal);
+juiceButton.addEventListener('click', addShoopingItemsJuice);
+candyButton.addEventListener('click', addShoopingItemsCandy);
+
 var cerealItems = [
   {
     img: './images/cereal/cheerios.jpg',
@@ -74,59 +86,109 @@ var candyItems = [
 function clearShoppingItems () {
    document.querySelector(".shopping-items").innerHTML = "";
 }
+// function for adding cereal items to the page
 
-function addShoopingItems (category) {
+function addShoopingItemsCereal () {
   clearShoppingItems();
 
+  var userItems = cerealItems;
 
-  var userItems;
-if (category == 'cereal')  {
-      userItems = cerealItems;
-}
- if(category == 'juices') {
-  userItems = juiceItems;
-}
-
-if (category == 'candy') {
-  userItems = candyItems;
-}
-
-var newCategoryList = document.querySelector('.shopping-items-present');
 for (var i = 0; i < userItems.length; i++) {
   var currentItem = userItems[i];
 
- newCategoryList.appendChild(
+
  var listHolder = document.createElement('li');
  var img = document.createElement('img');
  var para = document.createElement('p');
  var text = document.createTextNode(currentItem.name);
  var shoppingClass = listHolder.setAttribute('class', 'shopping-item');
  img.src = currentItem.img;
- para.appendChild(text); )  ;
-}
+ para.appendChild(text);
+ listHolder.appendChild(img);
+ listHolder.appendChild(para);
 
 var divContainer = document.querySelector('.shopping-items');
 
-divContainer.appendChild(newCategoryList);
+divContainer.appendChild(listHolder); }
+
+}
+
+function addShoopingItemsJuice () {
+  clearShoppingItems();
+
+  var userItems = juiceItems;
+
+
+for (var i = 0; i < userItems.length; i++) {
+  var currentItem = userItems[i];
+
+
+ var listHolder = document.createElement('li');
+ var img = document.createElement('img');
+ var para = document.createElement('p');
+ var text = document.createTextNode(currentItem.name);
+ var shoppingClass = listHolder.setAttribute('class', 'shopping-item');
+ img.src = currentItem.img;
+ para.appendChild(text);
+ listHolder.appendChild(img);
+ listHolder.appendChild(para);
+
+var divContainer = document.querySelector('.shopping-items');
+
+divContainer.appendChild(listHolder); }
+
+}
+
+function addShoopingItemsCandy () {
+  clearShoppingItems();
+
+  var userItems = candyItems;
+
+
+for (var i = 0; i < userItems.length; i++) {
+  var currentItem = userItems[i];
+
+
+ var listHolder = document.createElement('li');
+ var img = document.createElement('img');
+ var para = document.createElement('p');
+ var text = document.createTextNode(currentItem.name);
+ var shoppingClass = listHolder.setAttribute('class', 'shopping-item');
+ img.src = currentItem.img;
+ para.appendChild(text);
+ listHolder.appendChild(img);
+ listHolder.appendChild(para);
+
+var divContainer = document.querySelector('.shopping-items');
+
+divContainer.appendChild(listHolder); }
 
 }
 
 
-
-/* Event listeners */
-var cerealButton = document.querySelector('.cereal');
-var juiceButton = document.querySelector('.juice');
-var candyButton = document.querySelector('.candy');
-
-
-// add event listeners to each of the category buttons
-cerealButton.addEventListener('click', addShoopingItems('cereal'));
-juiceButton.addEventListener('click', addShoopingItems('juices'));
-candyButton.addEventListener('click', addShoopingItems('candy'));
-
 // add items from the categories section to user shopping cart
 
- var shoppingList = document.querySelectorAll('.shopping-item');
+ var shoppingList = document.querySelector('.shopping-item');
+ var divContainer = document.querySelector('.shopping-items');
+// when user clicks on img or p elements, adds the item to the shopping cart
+divContainer.addEventListener('click', function(e){
+  if (e.target.tagName.toLowerCase() == "img" || "p") {
+
+    var itemChosen = this.textContent;
+    var newItem  = document.createElement('li');
+    var text = document.createTextNode(itemChosen);
+    var shoppingClass = newItem.setAttribute('class', 'cart-item');
+    newItem.appendChild(text);
+    shoppingList.appendChild(newItem);
+
+  }
+
+})
+ var clickedImage = document.querySelectorAll('img');
+
+
+
+
 
 
 

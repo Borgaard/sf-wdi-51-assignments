@@ -7,10 +7,11 @@ body div {
 }
 
 .categories{
-  background-color: #232f3e;
+  background-color: goldenrod;
   color: white;
   padding: 10px;
   text-align: center;
+  width: 100%;
 }
 
 .categories > button {
@@ -23,13 +24,13 @@ body div {
   outline: none;
 }
 
-h1{
-  border: 5px blue solid;
-}
+
 
 .shopping-cart ul{
    list-style: none;
    padding: 0;
+   display: flex;
+   flex-wrap: wrap;
 }
 .shopping-cart {
   background-color: #f8f8f8;
@@ -41,10 +42,23 @@ img {
   width: 200px;
 }
 
+.shopping-items-present{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
 li{
   margin-bottom: 0;
   display: inline-block;
-  border: 10px purple solid;
+  border: 2px lightgrey solid;
 
+}
+
+.cart-item  {
+
+ text-align: center;
+   width:100%;
+   margin-bottom: 5%;
 }
 
