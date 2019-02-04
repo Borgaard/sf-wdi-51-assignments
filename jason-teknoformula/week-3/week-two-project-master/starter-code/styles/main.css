@@ -1,0 +1,151 @@
+* {
+  border-sizing: border-box;
+}
+
+html,body {
+  background-color: black;
+  color: black;
+  font-family: "Lato",sans-serif;
+  font-size: 14px;
+  font-size: 1em;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 2em;
+  padding-top: 0.25em;
+}
+
+h2 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 1.5em;
+  padding-top: 1em;
+}
+
+h3 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 1.5em;
+}
+
+
+li a {
+  color: black;
+}
+
+.nav-active {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.container {
+  background-color: white;
+}
+
+.header {
+  height: 20%;
+  background-image: url();
+}
+
+img {
+  display: flex;
+  height: 25%;
+  width: 25%;
+}
+
+.list-group-item {
+  with: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+
+  letter-spacing: 1.5px
+}
+
+.nav>li {
+  border: 3px solid rgb(255,255,255);
+  border-radius: 10px;
+  color: yellow;
+  margin: 0 1.0em;
+  padding: .75em;
+  text-transform: uppercase;
+}
+
+#cart {
+  background-color: #e5e5e5;
+  height: 80vh;
+  text-align: cnter;
+}
+
+#cart h2 {
+  text-decoration: underline;
+}
+
+#main {
+  height: 80vh;
+}
+
+#market {
+  background-color: lightgray;
+  height: 80vh;
+}
+
+#shopping-list li{
+  font-family: 'Major Mono Display', monospace;
+  font-size: 1.5em;
+  padding-top: 1em;
+  list-style-type: none;
+  text-align: left;
+  text-decoration: none !important;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 75%;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-item-hz-half {
+  background-color: blue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+
+}
+
+.grid-item-hz-full {
+  background-color: blue;
+  color: white;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.black {background-color: black; color: white;}
+
+.gray {background-color: gray; color: white;}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    display: flex;
+    flex-direction: column
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
