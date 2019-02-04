@@ -262,3 +262,38 @@ body {
 .footer-icon:hover {
   color: var(--mainPink);
 }
+/* cart */
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  /* cart to have bit of transparency */
+  background: rgba(255, 255, 255, 0.5);
+  /* cart needs to be on top right corner */
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  /* cart by default hidden */
+  width: 0;
+  overflow: hidden;
+}
+.show-cart {
+  /* width of cart window */
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+}
+.cart-item-remove {
+  color: var(--mainPink);
+  transition: all 1s ease-in-out;
+}
+.cart-item {
+  transition: all 2s ease-in-out;
+}
+.cart-item-remove:hover {
+  /* trashcan icon gets little bigger */
+  transform: scale(1.1);
+  color: var(--mainBlack);
+}
+.cart-item-price {
+  font-size: 0.8rem;
+}
