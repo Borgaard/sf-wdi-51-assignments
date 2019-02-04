@@ -12,7 +12,7 @@ var address = "00 minna street";
 var greeting = "Hello, I'm "  + name + " I'm " + age + " and live at " + address + ".";
 console.log(greeting);
 
-/*
+
 
 	Part 2: Create another variable called greeting2. This time, use the
 	new ES6 Syntax, string interpolation, to create the same greeting.
@@ -22,8 +22,12 @@ console.log(greeting);
 	Log this variable to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
 
+	var greeting2 = 'hello I'm' + 'Hello, I'm ''  + name + '' I'm '' + age + '' and live at '' + address + '.';
+console.log(greeting);
 
-/*
+
+
+
 	Part 3: Pythagorean theorem. We will be using the Math object we saw earlier
 	in the lesson for this problem.
 
@@ -45,7 +49,15 @@ console.log(greeting);
 
 	Log the side1, side2 and side3 variables to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
-*/
+
+
+var side1 = 5;
+var side2 = 7;
+
+var side3 = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2));
+
+console.log(side3);
+
 
 /*
 	Part 4: (No coding is needed for this part).
