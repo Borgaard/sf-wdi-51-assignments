@@ -13,3 +13,21 @@
     cart.classList.toggle('show-cart');
   });
 })();
+
+// add items to the cart by targeting span fontAwesome shopping cart add
+//  eventlistener!
+(function() {
+  // since more than 1 cart we will do querySelectorAll
+  const cartBtn = document.querySelectorAll('.store-item-icon');
+
+  // loop thru list of .store-item-icon button, passing button 
+  cartBtn.forEach(function(btn){
+    // let's investigate what we are clicking on; target exact button each and everytime as
+    //  I am looping thru the array.  as click anyone of cart icons > event will fire
+    btn.addEventListener('click', function (event) {
+      // event.target will let us know what element we are clicking on
+      console.log(event.target);
+    })
+
+  })
+})();
