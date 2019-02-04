@@ -1,22 +1,33 @@
-body {}
+
 .player1 {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   background-color: lightblue;
   display:block;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .player2 {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   background-color: goldenrod;
   display:block;
+  position: relative;
 }
 
 h1 {
   color: purple;
 }
 
+button {
+  background-color: pink;
+  padding:10px;
+  align-content: center;
+  margin:20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
