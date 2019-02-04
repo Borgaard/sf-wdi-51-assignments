@@ -16,8 +16,8 @@ for (let i = 0; i < ages.length; i++) {
 }
 
 //another solution
-let result = ages.filter(age => age >= 20)
-console.log(result);
+ let result = ages.filter(age => age >= 20)
+ console.log(result);
 
 /*
 	Part 2: Let's create a new variable, "younger", which holds an empty array.

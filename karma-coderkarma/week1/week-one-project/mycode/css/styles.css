@@ -86,8 +86,9 @@ img {
 }
 
 .magazine-article {
-    background: #eaeaea
+    background: lightblue;
 }
+
 
 .magazine-article h2,
 h4 {
@@ -105,10 +106,15 @@ article.magazine-article {
 }
 
 article.magazine-article p {
-
-    padding: 0 16em;
+    /* padding: 0 16em; */
     line-height: 1em;
     font-size: 1.1em;
+}
+
+@media screen and (max-width: 500px) {
+    article.magazine-article p {
+        padding: 0 1em;
+    }
 }
 
 /*  Giving padding  to second paragraph*/
@@ -167,7 +173,7 @@ article.column img.same-height {
     height: 500px;
 }
 
- 
+
 /*  decrease the height the second image */
 #flex-container>section.section-three>article:nth-child(1)>img:nth-child(2) {
     height: 300px;
@@ -195,6 +201,14 @@ section .section-four form {
     display: flex;
     justify-content: center;
 
+}
+
+/* giving height to textarea and input form  */
+#flex-container > section.section-four > form > textarea{
+    height: 150px;
+}
+input[type="submit"] {
+    height: 50px;
 }
 
 .section-four h2 {
@@ -270,7 +284,7 @@ footer hr {
 
 /* MEDIA QUERIES  */
 
-@media only screen and (max-width:1430px){
+@media only screen and (max-width:560px) {
     .first_section .column-wrapper {
         display: flex;
         flex-flow: row wrap;
