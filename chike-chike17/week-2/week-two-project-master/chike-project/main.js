@@ -1,4 +1,5 @@
 let hero = document.getElementsByClassName('hero-icon')[0];
+console.log(hero, 'HHHHH')
 
 if (!hero) {
   let images = document.getElementsByTagName('img');
@@ -13,7 +14,7 @@ if (!hero) {
 if (hero){
   let location = window.location.search
   let length = location.length;
-  let heroIm = window.location.search.substring(6, length)
+  let heroIm = window.location.search.substring(54, length)
   let newHero = document.getElementsByClassName('hero-icon')[0];
   newHero.src = heroIm;
 
