@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/*-------------------------------
+Header*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: blue;
+
+}
+
+ul {
+  display: flex;
+  list-style-type:  none;
+
+}
+
+li {
+  margin-right: 20px;
+}
+
+.food_dropDown a:hover {
+  background: red;
+}
+
+button {
+  background: orange;
+  cursor: pointer;
+}
+
+.dropdown_contents {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: white;
+  width: 80%;
+  height: 80%;
+  margin: 20px
+  position: absolute;
+
+}
+
+ .show {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: white;
+  width: 60%;
+  height: 60%;
+  margin: 20px;
+  position: absolute;
+}
+
+#checkOut a{
+  margin-right:63px;
+  display: flex;
+  width: 100%;
+  list-style: none;
+  color: white;
+}
+
+#checkOutItems {
+  background: yellow;
+  margin-left: -110px;
+}
+
+#dropDown_images {
+  height: 170px;
+  width: 170px;
+}
+
+#item_container{
+  position: relative;
+}
+
+#add_buttons {
+  position: absolute;
+  margin-left: 52px;
+  margin-top: -22px;
+  position: absolute;
+  background: green;
+  color: white;
+}
+
+#price {
+  position: absolute;
+  border:2px solid black;
+  margin-top: -4px;
+  margin-left: 62px;
+  background: yellow;
+}
+
+
+/*===================================
+====Middle Container*/
+
+.middleContainer {
+  display: flex;
+  width: 100%
+  z-index:0;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  width: 100%
+}
+
+
+
+p {
+  font-size: 30px;
+  margin: 0px 10px;
+}
+
+.mainPhoto {
+  width: 70%;
+  margin-left: 100px;
+}
+
+
+
+/*===================================
+Footer*/
+
+footer {
+  background: orange;
+  padding-bottom: 30px;
+}
+
+@media (max-width:700px) {
+  * {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #add_buttons {
+    margin-top: 124px;
+
+
+  }
+
+  #price {
+    margin-top: 141px;
+  }
+
+}
+
+
+
+
