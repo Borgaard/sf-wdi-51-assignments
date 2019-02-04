@@ -9,7 +9,7 @@ var candyButton = document.querySelector('.candy');
 
 // add event listeners to each of the category buttons
 cerealButton.addEventListener('click', addShoopingItemsCereal);
-juiceButton.addEventListener('click', addShoopingItemsJuice);
+juiceButton.addEventListener('click', addShoopingItemsJuice('juice'));
 candyButton.addEventListener('click', addShoopingItemsCandy);
 
 var cerealItems = [
@@ -101,7 +101,7 @@ for (var i = 0; i < userItems.length; i++) {
  var img = document.createElement('img');
  var para = document.createElement('p');
  var text = document.createTextNode(currentItem.name);
- var shoppingClass = listHolder.setAttribute('class', 'shopping-item');
+ var shoppingClass = listHolder.setAttribute('class', 'item');
  img.src = currentItem.img;
  para.appendChild(text);
  listHolder.appendChild(img);
@@ -113,10 +113,21 @@ divContainer.appendChild(listHolder); }
 
 }
 
-function addShoopingItemsJuice () {
+function addShoopingItemsJuice (category) {
   clearShoppingItems();
 
-  var userItems = juiceItems;
+
+  var userItems;
+if (category == 'cereal')  {
+      userItems = cerealItems;
+}
+ if(category == 'juices') {
+  userItems = juiceItems;
+}
+
+if (category == 'candy') {
+  userItems = candyItems;
+}
 
 
 for (var i = 0; i < userItems.length; i++) {
@@ -127,7 +138,7 @@ for (var i = 0; i < userItems.length; i++) {
  var img = document.createElement('img');
  var para = document.createElement('p');
  var text = document.createTextNode(currentItem.name);
- var shoppingClass = listHolder.setAttribute('class', 'shopping-item');
+ var shoppingClass = listHolder.setAttribute('class', 'item');
  img.src = currentItem.img;
  para.appendChild(text);
  listHolder.appendChild(img);
@@ -153,7 +164,7 @@ for (var i = 0; i < userItems.length; i++) {
  var img = document.createElement('img');
  var para = document.createElement('p');
  var text = document.createTextNode(currentItem.name);
- var shoppingClass = listHolder.setAttribute('class', 'shopping-item');
+ var shoppingClass = listHolder.setAttribute('class', 'item');
  img.src = currentItem.img;
  para.appendChild(text);
  listHolder.appendChild(img);
@@ -166,25 +177,31 @@ divContainer.appendChild(listHolder); }
 }
 
 
-// add items from the categories section to user shopping cart
 
- var shoppingList = document.querySelector('.shopping-item');
- var divContainer = document.querySelector('.shopping-items');
-// when user clicks on img or p elements, adds the item to the shopping cart
-divContainer.addEventListener('click', function(e){
-  if (e.target.tagName.toLowerCase() == "img" || "p") {
 
-    var itemChosen = this.textContent;
-    var newItem  = document.createElement('li');
-    var text = document.createTextNode(itemChosen);
-    var shoppingClass = newItem.setAttribute('class', 'cart-item');
-    newItem.appendChild(text);
-    shoppingList.appendChild(newItem);
 
-  }
 
-})
- var clickedImage = document.querySelectorAll('img');
+
+  // add items from the categories section to user shopping cart
+  var shoppingList = document.querySelector('.shopping-item');
+  var divContainer = document.querySelector('.shopping-items');
+
+  // when user clicks on img or p elements, adds the item to the shopping cart
+  divContainer.addEventListener('click', function(e){
+
+    if (e.target.matches('.item')) {
+      debugger;
+      var itemChosen = e.target.textContent;
+      var newItem  = document.createElement('li');
+      var text = document.createTextNode(itemChosen);
+      var shoppingClass = newItem.setAttribute('class', 'cart-item');
+      newItem.appendChild(text);
+      shoppingList.appendChild(newItem);
+
+    }
+
+  })
+  var clickedImage = document.querySelectorAll('img');
 
 
 
