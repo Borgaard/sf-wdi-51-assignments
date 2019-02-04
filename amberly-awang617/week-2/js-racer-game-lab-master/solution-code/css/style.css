@@ -1,0 +1,83 @@
+#container {
+	background-image: url(../imgs/RBa2EX.png);
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	font-family: 'Bangers', cursive;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-size: 90px;
+	margin: 0;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+p {
+	display: inline-block;
+	padding: 15px;
+	font-size: 25px;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#homer-instructions {
+	float: left;
+}
+
+#peter-instructions {
+	float: right;
+}
+
+input {
+	padding: 10px;
+	margin: 0 5px;
+	border-radius: 5px;
+	background-color: white;
+	font-size: 20px;
+}
+
+input:focus {
+	outline : 0;
+}
+
+img {
+	display: block;
+}
+
+.race {
+	position: relative;
+
+}
+#peter {
+	position: relative;
+	left: 0px;
+	top: 15px;
+	width: 170px;
+	//padding-left: 48px;
+}
+
+#homer {
+	position: relative;
+	left: 0px;
+	top: -150px;
+	width: 170px;
+}
+
+#chicken {
+	position: relative;
+	width: 100px;
+	left: 0px;
+	top: -75px;
+}
+
+#dinner {
+	position: absolute;
+	width: 400px;
+	top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
