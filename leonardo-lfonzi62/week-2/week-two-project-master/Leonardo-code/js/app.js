@@ -139,7 +139,7 @@ divContainer.appendChild(listHolder); }
 
 }
 
-function addShoopingItemsCandy () {
+ function addShoopingItemsCandy () {
   clearShoppingItems();
 
   var userItems = candyItems;
