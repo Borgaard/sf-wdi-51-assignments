@@ -140,9 +140,25 @@ video by https://github.com/john-smilga
     </nav>
     <!-- end of nav -->
     <!-- banner -->
-    
-  </header>
+    <div class="container-fluid"></div>
+    <!-- max-height contains 100% of viewport, in bootstrap: .row by default flexbox parent container 
+          add 2 classes to center horizontally (justify-content-center) and 
+           vertically (align-items-center)
+    -->
+      <div class="row max-height justify-content-center align-items-center">
+        <!-- for small screen, take up 10 columns (.col-10), 
+              margin left right: auto (mx-auto) -->
+        <div class="col-10 mx-auto banner text-center">
+          <h1 class="text-capitalize">
+            welcome to <strong class="banner-title">grandma's</strong>
+          </h1>
+        </div>
+      </div>
 
+    <!-- end of banner -->
+
+  </header>
+<!-- end of header -->
 
   <!-- jquery -->
   <script src="js/jquery-3.3.1.min.js"></script>
