@@ -163,3 +163,50 @@ body {
   top: 0;
   left: 0;
 }
+/* store */
+.store {
+  background: var(--mainGrey);
+}
+.search-box {
+  background: var(--mainPink);
+  color: var(--mainBlack);
+}
+/* store item img with shopping cart  */
+.single-item {
+  transition: all 0.3 linear;
+}
+/* add box shadow when hovering box-shadow: x-val y-val blur:15px whatColor?black 000*/
+.single-item:hover {
+  box-shadow: 0 10px 15px rgb(0, 0, 0);
+}
+/* img that is holding the store item card and shopping cart (img container mom > cart is kid)*/
+.img-container {
+  position: relative;
+  /* when img zooms in we make sure it stays inside the img container. hide the overflowing img */
+  overflow: hidden;
+  cursor: pointer;
+}
+/* store-img is inside of img-container */
+.store-img {
+  transition: all 1s ease-in-out;
+}
+/* when hovering over img-container I want to zoom in store-img and make it happen over time (above transition is doing the easing) */
+.img-container:hover .store-img{
+  /* scale( <1:minimizing, >1:zoom-in make it big!) */
+  transform: scale(1.2);
+}
+.store-item-icon {
+  /* icon is relatively position to the parent img-container */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainYellow);
+  /* round the corner of icon box top left */
+  border-top-left-radius: 1rem;
+  /* shopping cart icon appears over time */
+  transition: all 1s ease-in-out;
+  /* hide the cart until user hovers over the img container */
+  /* translate 100% move cart right, down 100% this shifts icon out of the screen */
+  /* transform: translate(100%, 100%); */
+}
