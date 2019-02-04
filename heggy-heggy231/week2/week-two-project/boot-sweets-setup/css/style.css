@@ -245,3 +245,20 @@ body {
   /* space btwn words */
   word-spacing: 0.5rem;
 }
+/* footer */
+.footer-title {
+  background: var(--mainBlack);
+}
+.footer-contact {
+  background: var(--mainGrey);
+}
+.footer-icon {
+  /* icon bigger! */
+  font-size: 1.5rem;
+  /* font color white */
+  color: var(--mainWhite);
+  transition: all 0.4 ease-in-out;
+}
+.footer-icon:hover {
+  /* color: var(--mainPink); */
+}
