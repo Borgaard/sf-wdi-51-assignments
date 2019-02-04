@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+}
+
+#shoppingcart {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #A7CDBB;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+
+.nav ul {
+  list-style: none;
+  background-color: #55828B;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+  display: inline-block;
+  margin-right: -4px;
+}
+
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button:hover {
+  background-color: #005f5f;
+}
+
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+img {
+  width: 50%;
+}
+
+#items ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+#items li {
+  border: 2px solid #55828B;
+  cursor: pointer;
+  text-align: center;
+}
+
+#shoppingcart ul {
+  list-style: none;
+  padding: 0;
+}
+
+#shoppingcart li {
+  color: red;
+  font-size: 21px;
+  margin-bottom: 16px;
+}
+
+  .items p {
+  font-size: 24px;
+}
+
+
