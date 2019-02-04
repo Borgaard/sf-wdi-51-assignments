@@ -70,3 +70,53 @@ body {
 .cart-info:hover .cart-info__icon {
   color: var(--mainWhite);
 }
+/* background photo */
+.max-height {
+  /* centering the banner text  
+      min-height: regardless screen sz 
+        make it at least this screen size 100vh (viewheight) 
+      viewheight: we can set % of the window
+        which is responsive unit
+  */
+  /* min-height: 100vh; */
+  /* when calc function always put space inbtn operator minus otherwise doens't work! */
+  /* 100vh minus nav bar height (when you click on entire nav navbar navbar-expand-lg px-4, you can see it is 76px) */
+  min-height: calc(100vh - 76px);
+  /* 50%vh only take up 50% view height*/
+  /* min-height: 50vh;  */ 
+  /* add background to see the effect*/
+  /* linear-gradient(top > bottom)  for same color for all it which top or bottomr doesn't matter 
+      first color: yellowTrans 
+  */
+  background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url(../img/headerBcg.jpeg);
+  background-position: center;
+  /* cover: regardless of parent container bckgnd img will cover */
+  background-size: cover;
+  /* contain: img will be smaller I see it repeating */
+  /* background-size: contain;  */
+  /* background photo to be fixed make it parallax effect */
+  background-attachment: fixed;
+  /* if background img is too small img may repeat to fill the rest of the viewport.  prevent it by no-repeat */
+  background-repeat: no-repeat;
+  /* this is parent position setup for cart which is position absolute.   cart needs parent container (background .maxheight) */
+  position: relative;
+  /* at this point I see scroll bar which means nav and background img is taking up more than 100%.  how do we make them take up only 100%?  we will update the ming-height upthere!*/
+}
+.banner {
+  color: var(--mainWhite);
+  /* margin-top: -4rem; */
+}
+.banner-title {
+  color: var(--mainPink);
+  font-size: 4rem;
+}
+.banner-link {
+  font-size: 1.5rem;
+  color: var(--mainBlack);
+  border: 0.2rem solid var(--mainBlack);
+}
+/* .bnner-link is button in bootstrap which has default hover effect */
+.banner-link:hover {
+  background: var(--mainBlack);
+  color: var(--mainPink);
+}
