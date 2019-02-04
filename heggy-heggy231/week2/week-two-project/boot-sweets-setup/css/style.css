@@ -1,7 +1,7 @@
 /* main fonts Kaushan Script from google font by clicking on import tab @IMPORT*/
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
 
-/* setting custom property for color */
+/* setting custom property for color; all color we are referring it as variable var(--mainPink)*/
 :root {
   --mainPink: #ef7998;
   --mainYellow: rgb(249, 228, 148);
@@ -18,5 +18,55 @@ body {
   color: var(--mainBlack);
 }
 
-/* nav links */
-/* when click on the hamburger icon: I can see the blue outline the box getting rid of that outline*/
+/* -------------- nav links -------------- */
+/* when click on the button of hamburger icon: I can see the blue outline around the box getting rid of that outline*/
+.navbar-toggler {
+  /* since button click outline is coming from bootstrap
+  I need to add !important to override it */
+  outline: none !important;
+}
+/* actual hamburger from the font awesome */
+.toggler-icon {
+
+  font-size: 2.5rem; /* 1 rem = 16 px (2.5 rem * 16 px = 40px */
+  /* Note about rem values: when user uses 18px for root font in their browser; my website is responsive! we are adjusting to the user's value*/
+  /* color name from custom property of top of this file */
+  color: var(--mainPink);
+}
+.nav-link { /* link for home, about, store, services, order */
+  color: var(--mainPink);
+  /* transition: all 1s ease-in-out; */
+  transition: 1s;
+  font-size: 1.5rem;
+}
+/* we hover over each links */
+.nav-link:hover {
+  color: var(--mainBlack);
+}
+
+/* ---------- cart styles ------------ */
+/* icon of cart only */
+.cart-info__icon {
+  color: var(--mainBlack);
+  /* when hover over cart I want finger pointing */
+  cursor: pointer;
+}
+.cart-info {
+  /* border: width type of border colors */
+  border: 0.1rem solid var(--mainBlack);
+  color: var(--mainBlack);
+  /* rounded box border */
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+.cart-info:hover {
+  /* when hover border, background turns color */
+  background: var(--mainPink);
+  border-color: var(--mainPink);
+  color: var(--mainWhite);
+}
+/* turn cart icon color to white */
+.cart-info:hover .cart-info__icon {
+  color: var(--mainWhite);
+}
