@@ -1,0 +1,207 @@
+/* ==========================================================================
+   Global Overrides
+  ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Author's custom styles
+  ========================================================================== */
+
+/* Global
+   ================================================================ */
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 54px;
+  color: #444;
+  border-left: 6px solid #ddd;
+  background: #fff;
+}
+
+/* Layout
+   ================================================================ */
+#main {
+  display: flex;
+  flex-direction: row;
+}
+
+#main section {
+  width: 66.6666%;
+  padding-right: 35px;
+}
+
+#sidebar {
+  width: 33.33333%;
+  margin-top: 108px;
+  color: #888;
+}
+
+.wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+
+
+/* Headings
+   ================================================================ */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 54px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+h2 a {
+  color: inherit;
+}
+h2 a:hover {
+  color: #888;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+}
+
+
+
+/* Text Styles
+   ================================================================ */
+.more {
+  font-weight: bold;
+  text-align: right;
+}
+
+a {
+  -webkit-transition: all 300ms;
+  text-decoration: none;
+  color: #f8ce78;
+}
+
+a:hover {
+  color: #caa55b;
+}
+
+
+p {
+  margin: 27px 0 0;
+  padding: 0;
+}
+
+
+
+
+/* Header
+   ================================================================ */
+header h1 {
+  display: inline;
+  margin-right: 27px;
+}
+
+header h2 {
+  font-size: 27px;
+  display: inline;
+  margin-bottom: 13.5px;
+  color: #888;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Footer
+   ================================================================ */
+footer {
+  clear: both;
+  color: #bbb;
+}
+
+
+/* Navigation
+   ================================================================ */
+header ul {
+  display: flex;
+}
+
+header li {
+  width: 16.66667%;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  font-size: 22.5px;
+  display: block;
+  border-right: 1px solid white;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  background: #b0b6bb;
+}
+
+header nav a:hover {
+  color: white;
+  background: #8b8f93;
+}
+
+
+/* Articles
+   ================================================================ */
+article {
+  margin: 54px 0;
+}
+
+article p:first-of-type:first-letter {
+  font-size: 108px;
+  line-height: 1;
+  float: left;
+  margin: -10px 10px 0 -8px;
+  color: #ddd;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-top: 27px;
+}
+
+/* Sidebar
+   ================================================================ */
+.module {
+  padding: 27px 0;
+  border-bottom: 1px solid #ddd;
+}
+.module:last-of-type {
+  border: none;
+}
+
+.ad img {
+  margin: auto;
+}

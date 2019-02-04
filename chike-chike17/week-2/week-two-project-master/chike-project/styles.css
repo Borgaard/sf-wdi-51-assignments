@@ -1,0 +1,194 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Francois One', sans-serif;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+section {
+  display:flex;
+}
+
+h1{
+  padding: 70px;
+  text-align: center;
+  border: 1px solid grey;
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+}
+footer {
+  background-color: black;
+  color: white;
+  height: 100px;
+  text-align: center;
+  padding-top: 20px;
+  width: 100%;
+}
+
+p {
+  width:100%;
+  margin-bottom:10px;
+  text-align: center;
+  padding-right: 25%;
+  padding-left: 25%;
+}
+
+
+a {
+  text-align:center;
+  color:black;
+  bottom: 50px;
+}
+img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.tower img, .plus, .minus, .checkout {
+  cursor:pointer;
+}
+
+.arrow {
+  position: relative;
+  top:165px;
+}
+.checkout {
+  width: 100%;
+  height: 85px;
+  background-color: black;
+  color:white;
+  text-align:center;
+  padding-top: 25px;
+  margin-top: 110px;
+}
+.head-container {
+  display: flex;
+  justify-content: space-between
+}
+.back-icon{
+  margin-right:75%;
+}
+
+.detail {
+  color: grey;
+}
+.choice {
+  color: grey;
+}
+
+.total {
+  margin-top: 60px;
+  font-size: 15px;
+}
+
+.cat {
+  margin-bottom: 35px;
+}
+
+.cat-div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.cat-sect {
+  padding-bottom: 20px;
+  color: grey;
+}
+
+.mini-descrip{
+  margin-top: 120px;
+}
+
+.large-descrip {
+  padding-bottom: 90px;
+  color: grey;
+}
+
+.add-item-container {
+  display: flex;
+  justify-content: space-around;
+}
+.unit-num {
+  display:inline;
+  font-size: 60px;
+}
+.tower1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+}
+
+.tower2 {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black;
+  flex: 1;
+}
+
+.p-target {
+  margin-bottom: 70px;
+}
+.hero-icon {
+  margin-top: 20px;
+}
+
+.compound {
+}
+
+.buy-page {
+  margin-top: 40px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.tower1, .tower2 {
+  padding-bottom: 130px;
+  padding-top: 30px;
+}
+
+.tower1 {
+  margin-left: 10%;
+}
+
+.tower2 {
+  margin-right: 10%;
+}
+
+
+.nav{
+  flex: 1;
+}
+
+.tower {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-top: 25px;
+}
+.choose-div {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 30px;
+  margin-top: 60px;
+}
+.art-items{
+  display: flex;
+  justify-content: space-around;
+  flex:5;
+}
+
+
