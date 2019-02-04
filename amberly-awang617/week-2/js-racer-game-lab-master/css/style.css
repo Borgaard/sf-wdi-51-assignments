@@ -4,9 +4,10 @@ body {
   flex-direction: column;
   font-family: "Alegreya", serif;
   font-size: 15px;
-  margin: 0 15%;
+  margin: 0 15% 5% 15%;
   max-height: 100%;
   width: auto;
+  text-align: center;
 }
 
 header {
@@ -25,11 +26,15 @@ button {
   border: none;
   color: #2b110;
   font-family: "Alegreya", serif;
-  margin: 0 .5em;
+  margin: .5em;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: .9em;
+}
+
+button:hover {
+  text-decoration: underline;
 }
 
 .container {
@@ -54,7 +59,8 @@ button {
 
 #piece-1 {
   top: 25%;
-  width: 10%;
+  left: 1%;
+  width: 9%;
 }
 
 #piece-2 {
@@ -96,4 +102,3 @@ button {
   left: 85%;
   position: absolute;
 }
-

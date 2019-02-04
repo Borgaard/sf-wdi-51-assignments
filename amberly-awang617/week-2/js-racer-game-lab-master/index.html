@@ -7,34 +7,42 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Race To The Finish!</h1>
-    <p>Use left and right arrow keys to move the Villager!</p>
-    <button id="start">Start</button>
-    <button id="stop">Pause</button>
-    <button id="restart">Restart</button>
-  </header>
-  <div class="container">
-    <img src="image/background.jpg" class="background">
-    <div id="piece-1">
-      <img src="image/villager.png" alt="Hi! I'm Villager!">
-    </div>
-    <div id="piece-2">
-      <img src="image/isabelle.png" alt="I'm Isabelle!">
-    </div>
-    <div class="message isabelle">
-      <h1>Isabelle Wins!</h1>
-      <img src="image/isabelle-wins.gif">
-      <p>Press Restart to play again.</p>
-    </div>
-    <div class="message villager">
-      <h1>Villager Wins!</h1>
-      <img src="image/villager-win.gif">
-      <p>Press Restart to play again.</p>
-    </div>
-    <div id="finish"></div>
+
+<header>
+  <h1>Race To The Finish!</h1>
+  <p>Use left &#8592; and right &#8594; arrow keys to move the Villager!</p>
+  <button id="start">Start</button>
+  <button id="stop">Pause</button>
+  <button id="restart">Restart</button>
+</header>
+<div class="container">
+  <img src="image/background.jpg" class="background">
+  <div id="piece-1">
+    <img src="image/villager.png" alt="Hi! I'm Villager!">
+  </div>
+  <div id="piece-2">
+    <img src="image/isabelle.png" alt="I'm Isabelle!">
+  </div>
+  <div class="message isabelle">
+    <h1>Isabelle Wins!</h1>
+    <img src="image/isabelle-wins.gif">
+    <p>Press Restart to play again!</p>
+  </div>
+  <div class="message villager">
+    <h1>Villager Wins!</h1>
+    <img src="image/villager-win.gif">
+    <p>Press Restart to play again!</p>
+  </div>
+  <div id="finish"></div>
+</div>
+  <div class="modeButtons">
+    <p>Try to beat Isabelle in different modes!</p>
+    <button class="gameModes" id="easy">Easy</button>
+    <button class="gameModes" id="normal">Normal</button>
+    <button class="gameModes" id="hard">Hard</button>
   </div>
 
   <script src="js/app.js"></script>
+
 </body>
 </html>
