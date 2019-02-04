@@ -16,13 +16,16 @@ function startGame (event) {
 };
 
 function movePlayerOne() {
-  checkWinner();
+  //checkWinner();
   let newPosition = playerOneStartPosition += 40;
   playerOne.style.left = newPosition + "px";
 };
 
 function movePlayerTwo() {
-  checkWinner();
+  //checkWinner();
+  if (playerTwo.style.left === 80) {
+    console.log("Player two won.");
+  }
   let newPosition = playerTwoStartPosition += 40;
   playerTwo.style.left = newPosition + "px";
 };
@@ -36,19 +39,19 @@ function logKey(event) {
   }
 };
 
-function checkWinner() {
-  if (playerOne.style.left >= "100px") {
-    //text declares the winner
-    // let appear = document.getElementById("playerOneWon");
-    // appear.style.display = "block";
-    //stops the players from moving
-    alert("Player One won!");
-  }
-  else if (playerTwo.style.left >= "10000px") {
-    //text declares the winner
-    // let appear = document.getElementById("playerTwoWon");
-    // appear.style.display = "block";
-    //stops the players from moving
-    alert("Player Two won!");
-  }
-};
+// function checkWinner() {
+//   if (playerOne.style.left === 80) {
+//     //text declares the winner
+//     // let appear = document.getElementById("playerOneWon");
+//     // appear.style.display = "block";
+//     //stops the players from moving
+//     alert("Player One won!");
+//   }
+//   else if (playerTwo.style.left === 80) {
+//     //text declares the winner
+//     // let appear = document.getElementById("playerTwoWon");
+//     // appear.style.display = "block";
+//     //stops the players from moving
+//     alert("Player Two won!");
+//   }
+// };
