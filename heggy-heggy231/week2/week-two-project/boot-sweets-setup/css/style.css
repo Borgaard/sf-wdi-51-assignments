@@ -234,5 +234,14 @@ body {
     /* if background img is too small img may repeat to fill the rest of the viewport.  prevent it by no-repeat */
     /* background-repeat: no-repeat; 
   */
-  background: url('../img/servicesBcg.jpeg')center/cover fixed no-repeat;
+  /* rgba( last value is transparency. if 1 = not transparent opague) and don't forget the comma after the linear-gradient!!! */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/servicesBcg.jpeg')center/cover fixed no-repeat;
+}
+.service-title {
+  /* space btwn each letter */
+  letter-spacing: 0.5rem;
+}
+.service-text {
+  /* space btwn words */
+  word-spacing: 0.5rem;
 }
