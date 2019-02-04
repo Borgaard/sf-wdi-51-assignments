@@ -1,0 +1,55 @@
+body {
+  background: #EAFAF1;
+}
+
+p {
+  font-family: monospace;
+}
+
+.player-wrapper p {
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+
+#playerOneWon {
+  display: none;
+}
+
+#playerTwoWon {
+  display: none;
+}
+
+input[type=button] {
+  cursor: pointer;
+  border: 1px solid #000000;
+  background: #F0F3F4;
+  padding: 40px 27px;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px 0;
+}
+
+#box1 {
+  background: #52BE80;
+  border: 1px solid #000000;
+  position: relative;
+}
+
+#box2 {
+  background: #A9DFBF;
+  border: 1px solid #000000;
+  position: relative;
+}
+
+#box3 {
+  background: #DAF7A6;
+  border: 1px solid #000000;
+  position: relative;
+}
