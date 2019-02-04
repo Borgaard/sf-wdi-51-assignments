@@ -1,21 +1,21 @@
-// document.addEventListener('keydown',red)
-
-// function blueFunction(){
-//   console.log("blueMove")
-// }
-
-var redBoxPosition = 0;
-var blueBoxPosition = 0;
+var lebronPosition = 0;
+var curryPosition = 0;
 
 function keyFunction(e){
   if(e.keyCode == 39){
-      redBoxPosition +=10;
-      redbox.style.left = redBoxPosition + 'px';
+      lebronPosition +=10;
+      lebron.style.left = lebronPosition + '2px';
     }
    if(e.keyCode == 90){
-      blueBoxPosition +=10;
-      bluebox.style.left = blueBoxPosition + 'px';
+      curryPosition +=10;
+      curry.style.left = curryPosition + '2px';
     }
-}
+};
 
 document.onkeydown = keyFunction;
+
+// function winner(event){
+//   if (lebron.style.left = "1000px"){
+//     alert("lebron is the winner");
+//   }
+// };

@@ -1,27 +1,25 @@
-body{
-  background-color: lightgreen;
+body {
 }
 
 #field {
-  position: relative;
-  height:auto;
-  width:auto;
+  background-image: url(images/court.jpeg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
 
-#redbox {
+#lebron {
   position: absolute;
-  background-color: red;
-  width: 100px;
-  height: 100px;
-  top:100px;
+  width: 200px;
+  height: 200px;
+  top:50px;
   left: 0;
 }
 
-#bluebox {
+#curry {
   position:absolute;
-  background-color: blue;
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   top: 350px;
   left:0;
 }
