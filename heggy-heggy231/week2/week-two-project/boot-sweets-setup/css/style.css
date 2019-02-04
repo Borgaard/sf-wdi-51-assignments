@@ -120,3 +120,29 @@ body {
   background: var(--mainBlack);
   color: var(--mainPink);
 }
+/* about section */
+.about-img__container {
+  /* setting position rel. so outline pseudo element could position itself on this parent container */
+  position: relative;
+}
+.about-img__container::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  /* show up right side if you put positive */
+  /* left: 1.7rem; */
+  left: -1.7rem;
+  /* be responsive add 100% */
+  width: 100%;
+  height: 100%;
+  /* display outline of the about img 
+    outline is similar to border except it can outline outside of img (neg position) 
+  */
+  outline: 0.5rem solid var(--mainYellow);
+  z-index: -1;
+  transition: all 1s linear;
+}
+.about-img__container:hover:before {
+  top: 0;
+  left: 0;
+}
