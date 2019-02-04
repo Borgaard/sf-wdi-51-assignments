@@ -1,0 +1,152 @@
+<!-- 
+[ ] structure your html
+[ ] follow the video 
+https://youtu.be/iggMxE7y6Uk
+
+https://www.youtube.com/watch?v=YeFzkC2awTM&t=176s
+
+https://youtu.be/q_TZhCWbS3I
+
+video by https://github.com/john-smilga
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>Grandma's Project</title>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <!-- icons -->
+  <!-- 
+    https://www.iconfinder.com/icons/2427887/dessert_donut_doughnut_fat_sweets_icon
+    Creative Commons (Attribution 3.0 Unported);
+    https://www.iconfinder.com/korawan_m
+         -->
+  <!-- 
+    https://www.iconfinder.com/icons/2427860/baguette_bread_bread_loaf_food_toast_icon
+    Creative Commons (Attribution 3.0 Unported);
+    https://www.iconfinder.com/korawan_m
+         -->
+  <!-- 
+    https://www.iconfinder.com/icons/2427875/cup_cupcake_dessertice_cream_yogurt_icon
+    Creative Commons (Attribution 3.0 Unported);
+    https://www.iconfinder.com/korawan_m
+         -->
+  <!-- 
+    https://www.iconfinder.com/icons/2671457/candy_sweets_treat_trick_icon
+    Creative Commons (Attribution 3.0 Unported);
+    https://www.iconfinder.com/bluelabelicons
+         -->
+  <!--end of icons icons -->
+  <header id="header">
+    <!-- desktop big screen navbar will expand px-4 4 padding: 4px right/left of the nav bar -->
+    <nav class="navbar navbar-expand-lg px-4">
+        <!-- logo icon inside of the link
+    https://www.iconfinder.com/icons/2427887/dessert_donut_doughnut_fat_sweets_icon
+    Creative Commons (Attribution 3.0 Unported);
+    https://www.iconfinder.com/korawan_m
+          -->
+      <!-- # href isn't going anywhere but add class -->
+      <a href="#" class="navbar-brand">
+        <img src="img/logo.svg" alt="main donut logo" title="main donut logo">
+      </a>
+          <!-- hamburger button toggles the navbar
+              when toggle to collapse > myNavBar will show up! -->
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+        <span class="toggler-icon">
+          <!-- font awesome hamburger bars https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-bars -->
+          <i class="fas fa-bars"></i>
+        </span>
+      </button>
+      <!-- add bootstrap grouping and hiding navbar contents by a parent breakpoint. https://getbootstrap.com/docs/4.0/components/navbar/ hamburger fa-bars button data-target must match this id myNavbar-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <!-- navbar links is always going to auto margin centered -->
+        <ul class="navbar-nav text-capitalize mx-auto">
+          <!-- when hovering pink color will conver to black -->
+          <li class="nav-item active">
+            <!-- home section which is header > jump to header section -->
+            <a href="#header" class="nav-link">home</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#about" class="nav-link">about</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#store" class="nav-link">store</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#services" class="nav-link">services</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#cakes" class="nav-link">order</a>
+          </li>
+        </ul>
+        <!-- phone icon, cart button: display (d) none in small but display in (lg)large screen with flexbox
+              I went phone and cart to appear only in large screen size
+        -->
+        <div class="nav-info-items d-none d-lg-flex">
+          <!-- single info:
+               * Apply flex in kid element and justify margin x(left, right) auto
+               https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp
+               * d-flex flex direction with justify content between equal spacing
+               https://getbootstrap.com/docs/4.1/utilities/flex/
+               * 5 - sets margin or padding to 3rem (48px if font-size is 16px)
+               Goal: all my nav info items divs eqaually align spaced with button
+          -->
+          <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+            <!-- info-icon, nav-info-items, nav-info are our custom css 
+                 only on lg (large) screen there will be 3 - sets margin left,right (mx) to 1rem (16px if font-size is 16px)
+            -->
+            <span class="info-icon mx-lg-3">
+              <!-- https://fontawesome.com/icons?d=gallery&q=phone&c=communication search phone -->
+              <i class="fas fa-phone"></i>
+            </span>
+            <!-- margin bottom 0 to ensure there is no issue with flexbox -->
+            <p class="mb-0">+ 123 456 7853</p>
+          </div>
+          <!-- single info: 
+                * shopping car
+          -->
+          <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+            <!-- my own class .cart-info__icon with bootstarp margin right (mr) only in large screen with 1rem (3) -->
+            <span class="cart-info__icon mr-lg-3">
+              <!-- use fontawesome shpping cart https://fontawesome.com/icons/shopping-cart?style=solid -->
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <!-- p tag margin-bottom (mb):0, this gets rid of default bootstrap margin, capitalize text -->
+            <p class="mb-0 text-capitalize">
+              <span id="item-count">2</span>
+              items - $
+              <span class="item-total">
+                10.49
+              </span>
+            </p>
+          </div> <!-- end of flex cart-info -->
+        </div>
+      </div> <!-- navbar div ends -->
+    </nav>    
+  </header>
+
+
+  <!-- jquery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- [ ] understand data- attribute
+starter https://jsbin.com/juwuhub/1/edit?html,js,output
+
+finished https://codepen.io/heggy231/pen/exWojy?editors=1111
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>html5 dataType</title>
+  <style>
+    body {
+      font-family: helvetica, sans-serif;
+      font-size: 12px;
+    }
+    /* game player pic */
+    .sprite {
+      background: url(http://vxresource.files.wordpress.com/2010/02/char113.png);
+      /* avatar height and width */
+      height: 33px;
+      width: 30px;
+      /* position it relative the parent container body */
+      position: relative;
+      /* add 50 from top, add 50 from left side remember from the body */
+      top: 50px;
+      left: 50px;
+      font-size: 20px;
+    }
+    /* data attribute in action! score */
+    .sprite::before {
+      content: attr(data-score);
+      position: absolute;
+      top: -24px;
+      left: -14px;
+      /*   hide it */
+      opacity: 0;
+      /*   ease in/out */
+      transition: 2s;
+
+    }
+    /* The ::after selector inserts something after the content of each selected element(s). */
+    .sprite:hover::before {
+      opacity: 1;
+    }
+    /* once player if data-score hits 10 then change text color from black to red */
+    .sprite[data-score='10']::before {
+      color: #c00; /* score red */
+    }
+  </style>
+</head>
+<body>
+  <!-- https://emojipedia.org/fire/ 🔥  -->
+  <div class="sprite" data-score="100🔥"></div>
+
+  <script>
+    var gameScore = document.querySelector(".sprite");
+
+    // any score can be set 10 or 30
+    gameScore.dataset.score = 10;
+
+    // alert score when window loads
+    alert(`Player's score: ${gameScore.dataset.score}`);
+  </script>
+</body>
+</html>
+
+<!-- https://youtu.be/On_WyUB1gOk
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+
+JavaScript:
+Reading the values of these attributes out in JavaScript is also very simple. You could use getAttribute() with their full HTML name to read them, but the standard defines a simpler way: a DOMStringMap you can read out via a dataset property.
+
+CSS:
+To get a data attribute through the dataset object, get the property by the part of the attribute name after data- (note that dashes are converted to camelCase).
+
+
+Note that, as data attributes are plain HTML attributes, you can even access them from CSS. For example to show the parent data on the article you can use generated content in CSS with the attr() function:
+-->
