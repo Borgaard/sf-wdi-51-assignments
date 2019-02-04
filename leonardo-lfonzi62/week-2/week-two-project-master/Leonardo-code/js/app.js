@@ -9,7 +9,7 @@ var candyButton = document.querySelector('.candy');
 
 // add event listeners to each of the category buttons
 cerealButton.addEventListener('click', addShoopingItemsCereal);
-juiceButton.addEventListener('click', addShoopingItemsJuice('juice'));
+juiceButton.addEventListener('click', addShoopingItemsJuice);
 candyButton.addEventListener('click', addShoopingItemsCandy);
 
 var cerealItems = [
@@ -113,21 +113,10 @@ divContainer.appendChild(listHolder); }
 
 }
 
-function addShoopingItemsJuice (category) {
+function addShoopingItemsJuice () {
   clearShoppingItems();
 
-
-  var userItems;
-if (category == 'cereal')  {
-      userItems = cerealItems;
-}
- if(category == 'juices') {
-  userItems = juiceItems;
-}
-
-if (category == 'candy') {
-  userItems = candyItems;
-}
+  var userItems = juiceItems;
 
 
 for (var i = 0; i < userItems.length; i++) {
