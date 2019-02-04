@@ -219,3 +219,20 @@ body {
 .store-item-icon:hover {
   color: var(--mainWhite);
 }
+/* services */
+.services {
+  /* font color tobe white */
+  color: var(--mainWhite);
+  /*
+  short hand for:
+    /* cover: regardless of parent container bckgnd img will cover */
+    /* background-size: cover; */
+    /* contain: img will be smaller I see it repeating */
+    /* background-size: contain;  */
+    /* background photo to be fixed make it parallax effect */
+    /* background-attachment: fixed; */
+    /* if background img is too small img may repeat to fill the rest of the viewport.  prevent it by no-repeat */
+    /* background-repeat: no-repeat; 
+  */
+  background: url('../img/servicesBcg.jpeg')center/cover fixed no-repeat;
+}
