@@ -1,0 +1,64 @@
+/*layout*//*layout*//*layout*/
+/*layout*//*layout*//*layout*/
+
+body{
+	display: flex;
+	justify-content: center;
+}
+
+.container-fluid{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	border: 1px solid black;
+	background-color: rgba(0,0,0,.03);
+	padding: 0px !important; 
+	
+
+}
+
+nav{
+	width: 100%;
+}
+
+header{
+	
+}
+
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	
+}
+
+.col{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	
+}
+
+section{
+	border: 1px solid green;
+	width: 100%;
+}
+footer{
+	
+}
+
+/*styles*//*styles*//*styles*/
+/*styles*//*styles*//*styles*/
+h1{
+	
+}
+
+/*images*//*images*//*images*/
+/*images*//*images*//*images*/
+nav img {
+	height: 20px;
+}

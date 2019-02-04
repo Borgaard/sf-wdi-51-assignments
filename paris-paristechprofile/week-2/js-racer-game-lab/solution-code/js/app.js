@@ -106,3 +106,4 @@ function setWinState(player){
   document.getElementsByTagName("h1")[0].innerText = player.name + " Wins!!!!";
   player.audio.play();
 }
+

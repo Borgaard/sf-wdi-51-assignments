@@ -1,0 +1,131 @@
+
+/*harry styles*//*harry styles*/
+/*harry styles*//*harry styles*/
+
+h1,h2{
+	color: skyblue;
+	margin: 0em;
+	/*height: 57px;*/
+}
+h2{
+	height: 28px;
+}
+/*layout*//*layout*//*layout*/
+/*layout*//*layout*//*layout*/
+body{
+	background-image: url("../assets/tronFloor.png");
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-color: black;
+	align-items: center;
+}
+header{
+	margin-top: 5%;
+}
+img{
+	width: 14em;
+}
+.container {
+  	display: flex;
+	flex-direction: row;
+}
+
+.button-area{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+}
+
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	box-sizing: border-box;
+  	height: auto;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.track{
+	
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	width: 95%;
+}
+
+.finish{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: skyblue;
+	color: black;
+  	width: auto;
+  	height: 30%;
+  	writing-mode: tb-rl;
+  	z-index: 0;
+}
+
+/*boxes*//*boxes*//*boxes*/
+/*boxes*//*boxes*//*boxes*/
+
+.redBox{
+	background-image: "../assets/motorcycle.png";
+	display: flex;
+	color: red;
+	justify-content: center;
+	align-items: center;
+	height: 75px;
+	margin-left: 0 15px;
+	width: 226px;
+	position: relative;
+	z-index: 1;
+}
+
+.blueBox{
+	display: flex;
+	color: blue;
+	justify-content: center;
+	align-items: center;
+	height: 75px;
+	margin-left: 0 15px;
+	width: 226px;
+	position: absolute;
+	z-index: 2;
+}
+
+/*button*//*button*//*button*/
+/*button*//*button*//*button*/
+
+.ready{
+	width: 6em;
+}
+
+
+/*media*//*media*//*media*/
+/*media*//*media*//*media*/
+
+@media (min-width: 400px) {
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+}
