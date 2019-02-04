@@ -208,5 +208,14 @@ body {
   transition: all 1s ease-in-out;
   /* hide the cart until user hovers over the img container */
   /* translate 100% move cart right, down 100% this shifts icon out of the screen */
-  /* transform: translate(100%, 100%); */
+  /* cart icon as default is unshifted out of screen */
+  transform: translate(100%, 100%);
+}
+/* when I hover over img container I want to unshift the cart icon into the img container */
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+/* change the icon color when hover */
+.store-item-icon:hover {
+  color: var(--mainWhite);
 }
