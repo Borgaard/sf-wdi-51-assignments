@@ -1,0 +1,118 @@
+/* html reset */
+html {
+  margin: 0;
+  padding: 0;
+}
+/* set css box-sizing */
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 1.67em;
+  color: #393740; /* charcoal */
+  margin: 72px 54px;
+}
+/* No underline to all anchor tags */
+a {
+  text-decoration: none;
+  color: #F4C569;
+}
+
+/* https://www.w3schools.com/css/css3_transitions.asp slowly color transitions when hovering 
+https://css-tricks.com/almanac/properties/t/transition/
+*/
+a:hover {
+  color: #A39C7E; /*light wood*/
+  -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
+  transition: 2s ease-out;
+}
+/* https://www.w3schools.com/css/css_combinators.asp 
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+
+this is descendant selector
+*/
+header nav a {
+  font-size: 23px;
+  margin-right: 6px;
+  border-bottom: solid thin;
+  color: #CFD1CD; /* light grey */
+}
+/* descendant selector */
+footer {
+  color: #CFD1CD;
+}
+
+/* horizontal line */
+article {
+  border-bottom: #CFD1CD solid 0.6px;
+  margin-bottom: 55px;
+}
+
+article h2 {
+  font-size: 37px;
+  margin-top: -14px;
+
+}
+article h2 a {
+  color: #393740;
+}
+
+article h2 a:hover {
+  color: #F4C569; 
+}
+
+/* headers width thinner look*/
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 58px;
+}
+
+h3 {
+  font-size: 38px;
+  color: #c1c3bf; /* darker light grey*/
+}
+h4 {
+  /* float: right; */
+  text-align: right;
+}
+header {
+  margin-bottom: 66px;
+}
+
+/* 
+CSS3 way (no extra markup)https://www.w3schools.com/cssref/sel_firstletter.asp 
+https://stackoverflow.com/questions/43522547/css-first-letter-selector-breaks-line-spacing
+
+https://css-tricks.com/snippets/css/drop-caps/
+*/
+article p::first-letter {
+	float: left;
+	font-size: 7em;
+	line-height: 106px;
+  color: #CFD1CD; /* light grey */
+  padding-right: 17px;
+  padding-bottom: 14px;
+}
+
+/* responsive image Udacity
+http://udacity.github.io/responsive-images/examples/1-07/singleImageMaxWidth100pc/
+https://classroom.udacity.com/courses/ud882/lessons/3520939843/concepts/34916696730923
+
+*/
+img {
+  margin: -8px 0px;
+  max-width: 100%; /* responsive img gracefully to a larger viewport*/
+}
+
+/* color picker adobe
+
+https://color.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=4&name=smooth&mode=rgb&rgbvalues=0.3254901960784314,0.2980392156862745,0.6196078431372549,0.8392156862745098,0.8196078431372549,0.803921568627451,0.39744093592840907,0.41,0.3245900701348492,0.5875310675356029,0.5250065887489479,0.71,0.64,0.6126542749750786,0.4933126023258187&swatchOrder=0,1,2,3,4
+
+*/

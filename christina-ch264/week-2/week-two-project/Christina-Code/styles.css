@@ -1,0 +1,104 @@
+/* Todo
+[x] 3 Buttons on website that represent 3 categories of items you can buy at the supermarket
+e.g. cereal, meats, juices
+[x] when category is clicked, populate page with 5 images related to that category
+[] when click on shopping item, add item to shopping cart
+*/
+
+/*
+Having trouble attaching event handlers to your
+shopping list items? When we add event listeners
+to our DOM objects, they are only added to elements that exist on the page at the point of time that the code runs. How would we add event listeners to elements that are created dynamically? Look at event delegation.
+
+
+/*Navigation Bar
+==============================================*/
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+div {
+  width: 100%;
+}
+
+.nav-wrapper {
+/*  background-color: darkblue;*/
+  color: black;
+  padding-top: 2em;
+}
+
+button {
+  border-radius: 30px;
+}
+
+nav li {
+  display: inline-block;
+}
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+.gallery1, .gallery2, .gallery3 {
+/*  background-color: lightblue;*/
+width: 15em;
+height: 15em;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+
+}
+
+h1 {
+  color: blue;
+}
+
+div {
+margin-top: 0;
+
+}
+
+.container {
+ /* border: 4px dotted blue;*/
+  width: 80em;
+  height: 70em;
+  display: inline-block;
+}
+
+
+.col-6 p: {
+/* background-color: pink;*/
+}
+
+.col-6 h1 {
+ color: black;
+}
+
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+
+/*  width: 400px;
+  height: 400px;*/
+
+}
+.gallery1 {
+   width: 8em;
+}
+
+/*Shopping Cart
+=====================================================*/
+
+.cart {
+  background-color: lightgrey;
+  padding-top: 1em;
+}

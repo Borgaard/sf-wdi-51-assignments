@@ -1,0 +1,59 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  display: flex;
+}
+
+p{
+  font-size: 12px;
+  display: inline-block;
+
+}
+
+.first, .second{
+  /*width: 50%;*/
+  margin: auto;
+  margin-top: 0px;
+
+  text-align: center;
+  font-size: 30px;
+}
+
+h1{
+  background-color: navy;
+  color: white;
+
+
+}
+
+.first{
+  width: 70%;
+}
+.second{
+   margin-top: 0px;
+  background-color: lightblue;
+  height: 900px;
+  overflow: scroll;
+  width: 30%;
+
+}
+
+img{
+  height: 200px;
+  width: 200px;
+}
+
+.cerealImages{
+  display: none;
+}
+
+.candyImages{
+  display: none;
+}
+
+.juicesImages{
+  display: none;
+}

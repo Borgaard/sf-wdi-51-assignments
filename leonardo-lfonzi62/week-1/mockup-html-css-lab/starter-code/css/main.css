@@ -1,0 +1,82 @@
+* {
+  font-family: lato;
+}
+
+
+h1{
+   color: #dfc12a;
+   font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #dfc12a;
+}
+
+nav a {
+  margin: 8px;
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #D3D3D3;
+  /*Using Border property instead of | in HTML to create space btw the nav items*/
+  /*border-right: 1px solid black ;*/
+  /*margin: 10px;*/
+}
+ h3{
+ color: #D3D3D3;
+ font-size: 40px;
+ font-weight: normal;
+ margin-bottom: 0;
+
+}
+
+h2 {
+ font-weight: normal;
+ color: black;
+ font-size: 40px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+}
+p::first-letter{
+  font-size: 80px;
+   color: #D3D3D3;
+   margin-right: 5px;
+    line-height: 80px;
+}
+article p {
+  font-size: 20px;
+}
+
+
+
+h2 a {
+ font-weight: normal;
+ color: black;
+ font-size: 50px;
+}
+footer nav a {
+  color: #dfc12a;
+ }
+ h4 {
+  float: right;
+  margin: 0;
+ }
+
+ hr{
+   border-bottom: 1px solid  #D3D3D3;;
+   margin-top: 50px;
+   margin-bottom: 45px;
+ }
+
+  footer p {
+    content:  &#169;
+  font-size: 15px;
+  color: #D3D3D3;
+
+ }
+
+
+ nav :hover{
+  color: blue;
+ }
+

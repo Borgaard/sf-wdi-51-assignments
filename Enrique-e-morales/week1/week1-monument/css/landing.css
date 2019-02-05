@@ -1,0 +1,282 @@
+/*--------------------
+Fonts
+---------------------*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:600');
+
+
+/*--------------------
+Styles
+---------------------*/
+header, section, article {
+  margin-bottom: 20px;
+}
+
+body {
+  text-align: center;
+  font-family: Lato, sans-serif;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: Raleway, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+
+h2 {
+  font-size: 1em;
+}
+
+h1,h1 + h2 {
+  letter-spacing: .5em;
+  color:white;
+}
+
+.center h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: .1em;
+  font-size: 1.2em;
+}
+
+h3 {
+  color: black;
+}
+
+.center p {
+  margin: .5em 3em;
+}
+
+/*--------------------
+Responsive Images
+---------------------*/
+img {
+  max-width:100%;
+}
+img:hover {
+  filter: opacity(.7);
+  transition: all .5s ease;
+
+
+}
+
+/*--------------------
+Layout
+---------------------*/
+/*--------------------
+Nav
+---------------------*/
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display:flex;
+  justify-content: space-around;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: grey;
+}
+
+nav li {
+    display: inline;
+    margin: 0 2em;
+}
+
+nav a:hover {
+  padding: .2em;
+  background: black;
+  color: white;
+  transition: all 1s ease;
+}
+/*--------------------
+Header
+---------------------*/
+#hero {
+  background-image: url("../images/home_header_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*--------------------
+Articles
+---------------------*/
+.col-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.post {
+  margin: 0 1.5em;
+  flex: 1;
+}
+
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  background-color: lightblue;
+}
+
+.center {
+  margin: auto;
+}
+
+/*--------------------
+Gallery
+---------------------*/
+.masonry {
+  column-count: 3;
+  width: 100%;
+  margin: 64px 0 0;
+  margin: 4rem 0 2rem;
+  padding-bottom: 0;
+}
+
+.masonry img:hover {
+  -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
+  filter: blur(3px);
+  transition: all .5s ease;
+}
+
+/*--------------------
+Buttons
+---------------------*/
+button.read-more, .form-button {
+  border: 2px solid black;
+  color: black;
+  padding: .5em 1.5em;
+  font-size: .75em;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  letter-spacing: .05em;
+  transition: all 1s ease;
+  margin: 10px;
+}
+
+.form-button:hover {
+  background-color: white;
+  color: black;
+}
+
+button:hover, .form-button {
+  background: black;
+  color: white;
+}
+
+
+
+/*--------------------
+Forms
+---------------------*/
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+input {
+  margin: 1em;
+  flex-grow: 1;
+}
+
+textarea, .form-button, input {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 1em;
+
+}
+
+input::placeholder, textarea::placeholder {
+  text-align: center;
+  opacity: .5;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/*--------------------
+Footer
+---------------------*/
+footer {
+  background-color: lightblue;
+  text-align: center;
+  bottom: 0;
+  left: 0 ;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.social {
+  border-bottom: 2px solid grey;
+}
+
+.social i {
+  margin: 0 .25em;
+  font-size: 1.75em;
+  text-decoration: none;
+  color: black;
+  padding: .5em;
+}
+
+.social i:hover {
+  opacity: .5;
+  transition: all 1s ease;
+}
+
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 5em;
+}
+
+/*--------------------
+Media Quieries
+---------------------*/
+@media only screen and (max-width: 770px){
+  .col-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+}
+
+
+
+

@@ -1,0 +1,112 @@
+/* [X] TODO: need to style game page. */
+/* Global
+================================================*/
+
+
+/* Header
+================================================*/
+header {
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+h3 {
+  color: #12398C;
+  filter: drop-shadow(4px 4px 4px white);
+  font-family: "Montserrat", sans-serif;
+  margin: 10px auto;
+}
+
+button {
+  border: .03em solid #14280C;
+  color: white;
+  padding: .2em 1.33em;
+}
+
+
+/* [X] TODO: add flexbox to build a grid system.
+For the game area?
+===============================================*/
+.gamePlay {
+  background-image: url("../images/cars3track.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 16px solid #0E1C3E;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80vw;
+}
+
+
+/* Game Pieces
+==============================================*/
+.red {
+  /*background-color: red;*/
+  /*border-radius: 50%;*/
+  flex: 1;
+  height: 100px;
+  margin: 40px 0 80px 20px;
+  position: relative;
+  width: 100px;
+}
+
+.red img {
+  filter: drop-shadow(-10px 10px 10px #fff);
+  height: 60%;
+  margin: 20px 0;
+  position: absolute;
+}
+
+.blue {
+  /*background-color: blue;*/
+  flex: 1;
+  height: 100px;
+  margin: 40px 0 80px 20px;
+  position: relative;
+  width: 100px;
+}
+
+.blue img {
+  filter: drop-shadow(-10px 10px 10px #fff);
+  height: 80%;
+  margin: 10px 0;
+  position: absolute;
+}
+
+
+/* Footer
+===============================================*/
+
+
+
+
+/* [X] TODO: add media query for tablet size (768px)
+===============================================*/
+@media screen and (max-width: 768px) {
+  .red {
+    /*background-color: red;*/
+    height: 70px;
+    width: 70px;
+  }
+
+  .red img {
+    filter: drop-shadow(-6px 6px 10px #fff);
+  }
+
+  .blue {
+    /*background-color: blue;*/
+    height: 70px;
+    width: 70px;
+  }
+
+  .blue img {
+    filter: drop-shadow(-6px 6px 10px #fff);
+  }
+}
+
+
+
+
+

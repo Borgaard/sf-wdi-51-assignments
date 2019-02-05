@@ -1,0 +1,98 @@
+/* Layout
+===========================*/
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2.86em /*40px*/ auto;
+  width: 900px;
+}
+
+article {
+  margin-right: 4.29em /*60px*/;
+  width: 70%;
+}
+
+aside {
+  width: 30%;
+}
+
+
+/* Headings
+===========================*/
+.head-background {
+  background-image: url("../images/blog_header_bg.jpg");
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 350px;
+  padding-top: 60px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 2.57em /*36px*/;
+  letter-spacing: 0.5em;
+}
+
+
+/* Aside
+=============================*/
+aside {
+  margin-top: 3.57em /*50px*/;
+}
+
+aside a {
+  font-family: "Lato", sans-serif;
+}
+
+
+/* Media Queries
+===============================*/
+@media screen and (max-width: 807px) {
+  .main {
+    display: block;
+    width: 90%;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  aside {
+    display: none;
+  }
+}
+
+
+
+@media screen and (max-width: 679px) {
+  .head-background {
+    height: 350px;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+  }
+
+  h1 {
+    font-size: 2.43em /*34px*/;
+  }
+
+  .main {
+    display: block;
+    width: 90%;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  aside {
+    display: none;
+  }
+}
+
+
+
+

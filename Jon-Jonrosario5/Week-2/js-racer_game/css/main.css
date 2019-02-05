@@ -1,0 +1,78 @@
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  background-image: url("http://i.imgur.com/TT5rye5.jpg");
+  background-size: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+}
+
+.main_row {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: 100%;
+width: 80%;
+}
+
+
+
+#start_button {
+  border:2px solid black;
+  width: 100px;
+  height: 50px;
+  top:50px;
+  background:red;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+.active1 {
+  background-image: url('https://banner2.kisspng.com/20180402/zpe/kisspng-rick-sanchez-morty-smith-drawing-television-show-rick-and-morty-5ac21f4e6ad6e1.0925391315226714384376.jpg');
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  background-position: center;
+}
+
+
+.active2{
+  background-image: url('https://i.ebayimg.com/images/g/nXEAAOSwXJFasbtl/s-l300.jpg');
+  width: 50px;
+  height: 100px;
+  background-size: 100%;
+  background-position:center;
+}
+
+
+.racer_table td {
+  background-color: transparent;
+  height: 150px;
+  width: 150px;
+
+}
+
+@media screen and (min-width: 800px) {
+
+  td {
+  height: 50px;
+  width: 50px;
+
+  }
+
+}
+
+
