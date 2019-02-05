@@ -1,0 +1,249 @@
+* {
+    font-size: 24px;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-image: url("./images/index_bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Luckiest Guy';
+    letter-spacing: .5rem;
+    color: white;
+    text-shadow:.1em .1em .3em rgba(0,0,0,.5);
+    animation: header 5s ease-in-out infinite;
+}
+
+footer {
+    position: relative;
+}
+
+footer p {
+    margin: 0px auto;
+    color: white;
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+div {
+    background-color: rgba(255,255,255, .7);
+    text-align: center;
+    border: 4px solid rgba(0,0,0,.4)
+}
+
+h2 {
+    margin: 0em;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+ul {
+    display: flex;
+    align-content: center;
+}
+
+.hair-store {
+    display: none;
+}
+
+.tusk-store {
+    display: none;
+}
+
+.skin-store {
+    display: none;
+}
+
+.food-store {
+    display: none;
+}
+
+ul li {
+    border: 1px solid black;
+    width: 23%;
+    margin: 0px 1%;
+    background: white;
+}
+
+/* IMAGES */
+
+img {
+    width: 80%;
+    margin: 1%;
+}
+
+.logo {
+    margin: auto;
+    width: 6em;
+    background: linear-gradient(to bottom right, white, rgba(169, 169, 169, 0.76));
+    padding: .5rem;
+    border-radius: 50%;
+    border: .1em solid black;
+    background-color: linear-gradient(gray, darkgray);
+    animation: spinner 120s linear infinite;
+}
+
+/* GRID STUFF */
+
+.store-grid {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.shop-list {
+    width: 50%;
+}
+
+.store-wrapper {
+    width: 50%;
+}
+
+
+/* FORMATTING */
+
+
+.store-wrapper {
+    display: flex;
+    height: 460px;
+    margin: 0px auto;
+    flex-direction: column;
+}
+
+.store-items {
+    width: 100%;
+    height: 420px;
+    margin: none;
+    background-color: transparent;
+}
+
+.cart-wrapper {
+    display: flex;
+    height: 460px;
+}
+
+li {
+    font-size: .75em;
+    list-style: none;
+    text-align: center;
+}
+
+
+
+/* NAV */
+
+button {
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background: rgba(0,0,0,.5);
+    border-radius: 2em;
+    font-size: 1em;
+    display: inline-block;
+    width: 20%;
+    padding-bottom: 4px;
+}
+
+button:hover {
+    animation: hovering 5s linear infinite;
+}
+
+/* Animations and Effects */
+
+@keyframes header {
+    0% {
+        text-shadow:.1em .1em .3em rgba(0,0,0,.5);
+    }
+    50% {
+        text-shadow:.1em .1em .5em rgba(0,0,0,.5);
+    }
+
+}
+
+@keyframes hovering {
+    33% {
+        background-color: rgba(125,0,125,.6)
+    }
+    66% {
+        background-color: rgba(55, 55, 209, 0.6)
+    }
+}
+
+@keyframes spinner {
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* media queries */
+@media screen and (max-width: 1000px) {
+    * {
+        font-size: 12px;
+    }
+    
+    .store-grid {
+        flex-direction: column;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        right: 10%;
+    }
+    header {
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    header h1 {
+        position: absolute;
+        right: 10%;
+        top: 32px;
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .store-grid div {
+        width: 80vw;
+        margin: .5em auto;
+    }
+    a {
+        font-size: 1.5em;
+        padding: .25em 5vw;
+    }
+    .logo {
+        position: absolute;
+        left: 10%;
+        width: 64px;
+        top: 32px;
+    }
+}
