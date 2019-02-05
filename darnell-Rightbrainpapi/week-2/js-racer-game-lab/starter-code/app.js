@@ -9,11 +9,13 @@
 
 
 
+// document.querySelector('button').addEventListener("click", function(e) {
+//   debugger;
+// });
 
 
-
-var q = document.querySelector(".circle1");
-var p = document.querySelector(".circle2");
+var q = document.querySelector(".balloon1");
+var p = document.querySelector(".balloon2");
 
 
 
@@ -46,11 +48,13 @@ var ppacer = 5
 
 function moverFunction (e) {
   // console.log(e);
+  // debugger;
   if (qpacer == 25)  {
-    alert("Player 1 wins!")
+    alert("Goldstandard wins!")
+
   }
   else if (ppacer == 25)  {
-    alert("Player 2 wins!")
+    alert("Kingfisher wins!")
   }
  else if (e.keyCode === 81)  {
     mover += 1
@@ -62,6 +66,7 @@ function moverFunction (e) {
     ppacer += 1
     p.style.marginBottom= `${mover}em`;
     }
+    console.log("this is counting")
 }
 
 

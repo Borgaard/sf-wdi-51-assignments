@@ -38,20 +38,20 @@ section {
   align-self: flex-end;
 }
 
-.circle1 {
-  width: 75px;
-  height: 75px;
+.balloon1 {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background-color: green;
+/*  background-color: green;*/
   margin: 1em;
   margin-bottom: 3em;
   align-self: flex-end;
 }
-.circle2 {
-  width: 75px;
-  height: 75px;
+.balloon2 {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background-color: orange;
+  /*background-color: orange;*/
   margin: 1em;
   margin-bottom: 3em;
   align-self: flex-end;
