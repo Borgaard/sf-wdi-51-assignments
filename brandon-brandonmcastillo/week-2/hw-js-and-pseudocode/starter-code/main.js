@@ -94,6 +94,8 @@ for (var i = 0; i < numbers.length; i++) {
 	highestNumber = (numbers[i]);
 };
 console.log(`The highest number is ${highestNumber}`);
+
+
 // Steps:
 // - First create a variable highestNumber and give it a value of the number 0.
 // - Then use a for loop(https://www.w3schools.com/js/js_loop_for.asp) to loop through the numbers array. 

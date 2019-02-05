@@ -22,8 +22,14 @@ body {
 
 #gallery {
     display: flex;
+    
 }
 
+    .art {display: flex;
+              flex-wrap: wrap;
+          align-content: center;
+
+      }
 img {
     max-width: 100%;
     padding: .5em;
@@ -345,6 +351,10 @@ footer input {
         display: flex;
         flex-direction: column;
     }
+
+    .art {display:flex;
+          justify-content: center;
+          flex-wrap: wrap;}
 
     .col-half {
         width: 100%;
