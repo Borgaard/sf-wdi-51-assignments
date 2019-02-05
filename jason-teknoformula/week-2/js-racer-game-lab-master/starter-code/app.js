@@ -26,13 +26,13 @@ function startGame(){
 function movePiece(piece) {
   let currentPosition = parseInt(piece.style.left);
     if (currentPosition <= 760) {
-      currentPosition += 40;
+      currentPosition += Math.floor(21 * Math.random() + 20);
       piece.style.left = `${currentPosition}px`;
     }
     winGame();
 
   function winGame() {
-    if (currentPosition >= 800 && currentPosition < 825) {
+    if (currentPosition >= 800 && currentPosition < 900) {
       document.querySelector('body').style.backgroundImage = "url('https://images-na.ssl-images-amazon.com/images/I/61yoTtDxuiL._SX425_.jpg')";
       let victory = document.createElement('h1');
       victory.textContent = `${piece.id} is the true kween`;
