@@ -14,6 +14,7 @@ let image = document.querySelectorAll('img');
 let buttons = document.querySelectorAll('button');
 let p = document.querySelectorAll('p');
 
+ // take getAttribute with alt value and append to <ul>
 
 const move = function() {
   // and then displays them in the image container
@@ -55,8 +56,8 @@ for (var i = 0; i < buttons.length; i++) {
 // reference DOM Elements to use further on
 // cannot use querySelectorAll here because it returns a static node list that does not support eventlisteners
 let imageParent = document.getElementById('gallery-wrapper');
-let list = document.querySelectorAll(".list")
-let ul = document.querySelectorAll('ul');
+let list = document.querySelectorAll(".list");
+let ul = document.querySelector('ul');
 
 
 //https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
@@ -68,6 +69,9 @@ let newLi = (text) => {
   li.innerHTML = text;
   // add the ul to the newly created li
   ul.appendChild(li);
+
+  // on top append the listItem into the list?
+  document.getElementsbyClassName('list')[0].append(li);
 }
 
 
@@ -87,7 +91,7 @@ imageParent.addEventListener("click", function(e) {
    localStorage.setItem('image', "sushi1");
    newLi(image.value);
    image.value = "";
-   // newLi.value = "";
+   newLi.value = "";
    }
 });
 
@@ -133,7 +137,7 @@ imageParent.addEventListener("click", function(e) {
 
 
 
-
+// when click on button display in cart. created 3 divs and when click on one button, display none for other
 
 
 
