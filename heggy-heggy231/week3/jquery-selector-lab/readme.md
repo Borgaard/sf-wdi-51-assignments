@@ -23,10 +23,10 @@ In the second part of this lab session, you'll work on building out an interacti
 #### Requirements
 
 ##### Part 1
-1. Go to `style.css` and find the `fun` class (at the end of the document).
-      - Style that class with your choice of background-color and text color.
+[x] 1. Go to `style.css` and find the `fun` class (at the end of the document).
+      [x] - Style that class with your choice of background-color and text color.
 
-2. Using jQuery, add the `fun` class to the elements with the class `.box`.
+[x] 2. Using jQuery, add the `fun` class to the elements with the class `.box`.
 
 3. When `#box2` is clicked on:
 

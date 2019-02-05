@@ -193,7 +193,7 @@ button {
   background-color: #6AF5E3;
 }
 
-.circles  button {
+.circles button {
   display: inline-block;
   margin: 0 10px 30px;
 }
@@ -204,10 +204,10 @@ button {
 }
 
 
-
-
 /* Your CSS goes here!
    ================================================================ */
 .fun {
-  /* Add your styles here! background-color and color for fonts (and other styles if you'd like!) */
+  font-weight: bold;
+  color: #fff;
+  background-color: #b6d9ac;
 }
