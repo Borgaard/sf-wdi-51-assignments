@@ -19,20 +19,35 @@
  //start button to begin game
  // var button = document.querySelector("button");
 
- //Adding event listeners
- player1.addEventListener("keydown", movePlayer);
- player2.addEventListener("keydown", movePlayer);
+ //Adding event listeners to the entire document
+ document.addEventListener("keydown", movePlayer);
+ //player2.addEventListener("keydown", movePlayer);
 
  function movePlayer (e){
-  if (e.keyCode === 9){
+  console.log(e);
+  if (e.keyCode === 65){
     mover1++;
-    player1.style.marginLeft= `${mover}em`;
+    player1.style.marginLeft= `${mover1}em`;
   } else if (e.keyCode === 16){
     mover2++;
-    player2.style.marginLeft = `${mover}em`
+    player2.style.marginLeft = `${mover2}em`;
   }
 console.log("we're are racing");
+raceWinner();
  }
- movePlayer(16);
+ //player who won should be alerted screen
+ function raceWinner(){
+ if (mover1 == 50){
+    alert('Player1 won!');
+  }
+}
+//   }else {
+//     alert('Player2 won');
+//   }
+// }
+// // raceWinner();
+
+
+
 
 
