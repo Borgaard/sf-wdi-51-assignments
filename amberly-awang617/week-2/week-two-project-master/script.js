@@ -31,7 +31,6 @@ let appear = function() {
     emptyImages[i].addEventListener('click', showName);
     itemNames[i].addEventListener('click', showName);
     if (this.getAttribute('id') === "tea") {
-      // debugger;
       emptyImages[i].src = teaImages[i];
       itemNames[i].innerText = teaNames[i];
       imageSources = teaImages;
@@ -67,6 +66,7 @@ let showName = function() {
   } else if (this.getAttribute('src') === imageSources[5] || this.innerText === namesForCart[5]) {
     newListItem.innerHTML = namesForCart[5];
   }
+  //for (var i=0; i < imageSources.length)
   cartList.appendChild(newListItem);
 }
 
