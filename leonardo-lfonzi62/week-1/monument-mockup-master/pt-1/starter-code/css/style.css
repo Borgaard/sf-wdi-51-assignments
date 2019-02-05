@@ -1,0 +1,24 @@
+/* My previous code */
+
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img{
+  width: 1000px;
+  height: 500px;
+}
+
+p {
+  width: 500px;
+}
+
+/*____________*/
+
+
+
