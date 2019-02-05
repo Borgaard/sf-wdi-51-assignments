@@ -32,9 +32,12 @@ let loadProduct = function(prod) {
 };
 
 let displayProducts = function(prodArray) {
-  for (let i = 0; i < prodArray.length; i++) {
-    loadProduct(prodArray[i]);
-  };
+  return function() {
+    clearProducts();
+    for (let i = 0; i < prodArray.length; i++) {
+      loadProduct(prodArray[i]);
+    };
+  }
 };
 
 let clearProducts = function() {
@@ -43,27 +46,28 @@ let clearProducts = function() {
   };
 };
 
-let displayCandies = function() {
-  clearProducts();
-  displayProducts(candies);
-  };
+// let displayCandies = function() {
+//   clearProducts();
+//   displayProducts(candies);
+//   };
 
-let displayCereal = function() {
-  clearProducts();
-  displayProducts(cereals);
-  };
+// let displayCereal = function() {
+//   clearProducts();
+//   displayProducts(cereals);
+//   };
 
-let displayJuice = function() {
-  clearProducts();
-  displayProducts(juices);
-  };
+// let displayJuice = function() {
+//   clearProducts();
+//   displayProducts(juices);
+//   };
 
 let candyCat = document.querySelector('#candy');
-  candyCat.addEventListener('click',displayCandies);
+  // candyCat.addEventListener('click',displayCandies);
+  candyCat.addEventListener('click', displayProducts(candies));
 let cerealCat = document.querySelector('#cereal');
-  cerealCat.addEventListener('click',displayCereal);
+  cerealCat.addEventListener('click',displayProducts(cereals));
 let juiceCat = document.querySelector('#juice');
-  juiceCat.addEventListener('click',displayJuice);
+  juiceCat.addEventListener('click',displayProducts(juices));
 
 /* Shopping Cart */
 
