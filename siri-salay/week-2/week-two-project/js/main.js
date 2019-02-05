@@ -1,34 +1,78 @@
 
+$(document).ready(function() {
+    console.log("Everything is ready, let's dooooooooooo");
+
+$("#delete").on("click", function(){
+
+$('#itemList li:last-child').remove();
+});
+
+$("#empty").on("click", function(){
+$('#itemList').empty();
+
+});
+
+  });
+
 /* if user clicks on plush toys
     make the images appear in the display
 
-    /* make the object have 2 keys. the image id and the description you want
+    make the object have 2 keys. the image id and the description you want
     to display on the shopping car */
 
-  var plush1 = {imageId: "plush1", description: "Teddy Bear with Plaid Bowtie"}
-  var plush2 = {imageId: "plush2", description: "Owl Plush Toy"}
-  var plush3 = {imageId: "plush3", description: "Melt-Resistant Snowman"}
-  var plush4 = {imageId: "plush4", description: "Teddy Bear with Book"}
-  var plush5 = {imageId: "plush5", description: "Beige Monkey Plush Toy"}
-  var plush6 = {imageId: "plush6", description: "Easter Bunny Plush Toy"}
+//make a constructor!
 
-  var onesie1 = {imageId:"onesie1", description: "Fox Onesie"}
-  var onesie2 = {imageId:"onesie2", description: "Shark Onesie"}
-  var onesie3 = {imageId:"onesie3", description: "Elephant Onesie"}
-  var onesie4 = {imageId:"onesie4", description: "Panda Onesie"}
-  var onesie5 = {imageId:"onesie5", description: "Rainbow Unicorn Onesie"}
-  var onesie6 = {imageId:"onesie6", description: "Kangaroo Onesie"}
+class essential {
+  constructor(description, price) {
+    this.description = description;
+    this.price = price;
+  }
+}
 
-  var pillow1 = {imageId: "pillow1", description: "Reversible Golden Retriever Pillow"}
-  var pillow2 = {imageId: "pillow2", description: "Reversible Bulldog Pillow"}
-  var pillow3 = {imageId: "pillow3", description: "Reversible Grey Cat Pillow"}
-  var pillow4 = {imageId: "pillow4", description: "Unicorn Sequin Pillow"}
-  var pillow5 = {imageId: "pillow5", description: "Black Cat Sequin Pillow"}
-  var pillow6 = {imageId: "pillow6", description: "Baby Red Dragon Sequin Pillow"}
+  let plush1 = new essential("Teddy Bear with Plaid Bowtie", 28);
+
+
+
+  // var plush1 = {description: "Teddy Bear with Plaid Bowtie", price: 28}
+  var plush2 = {description: "Owl Plush Toy", price: 29}
+  var plush3 = {description: "Melt-Resistant Snowman", price: 25}
+  var plush4 = {description: "Teddy Bear with Book", price: 18}
+  var plush5 = {description: "Beige Monkey Plush Toy", price: 24}
+  var plush6 = {description: "Easter Bunny Plush Toy", price: 22}
+
+  var onesie1 = {description: "Fox Onesie", price: 22}
+  var onesie2 = {description: "Shark Onesie", price: 18}
+  var onesie3 = {description: "Elephant Onesie", price: 18}
+  var onesie4 = {description: "Panda Onesie", price: 18}
+  var onesie5 = {description: "Rainbow Unicorn Onesie", price: 18}
+  var onesie6 = {description: "Kangaroo Onesie", price: 18}
+
+  var pillow1 = {description: "Reversible Golden Retriever Pillow", price: 22}
+  var pillow2 = {description: "Reversible Bulldog Pillow", price: 22}
+  var pillow3 = {description: "Reversible Grey Cat Pillow", price: 22}
+  var pillow4 = {description: "Unicorn Sequin Pillow", price: 22}
+  var pillow5 = {description: "Black Cat Sequin Pillow", price: 22}
+  var pillow6 = {description: "Baby Red Dragon Sequin Pillow", price: 22}
 
   var plushies = [plush1, plush2, plush3, plush4, plush5, plush6]
   var onesies = [onesie1, onesie2, onesie3, onesie4, onesie5, onesie6]
   var pillows = [pillow1, pillow2, pillow3, pillow4, pillow5, pillow6]
+
+/// *****YOU ACTUALLY DONT NEED THESE 3 FUNCTIONS*****
+  for(i=0; i<plushies.length; i++){
+   plushies[i].imageId = "plush" + (i+1);
+  }
+
+   for(i=0; i<onesies.length; i++){
+   onesies[i].imageId = "onesie" + (i+1);
+  }
+
+   for(i=0; i<pillows.length; i++){
+   pillows[i].imageId = "pillow" + (i+1);
+  }
+
+
+  console.log(plushies);
 
   /* could potentially have done it this way? :
   for(i=0; i<pillows.length; i++){
@@ -57,11 +101,19 @@ var pillowButton = document.getElementById("pillows");
 
 
 var addPlushImages = function(){
+  //loops through the array
   for (var i=0; i<plushies.length; i++) {
+    //this gets the img tag in the html - this is where we want to display the
+    //selected image at index i in the array.
+
+    //this code below is to get that img tag
   var loadingImage = document.querySelectorAll("#display img")[i];
+  //ignore this for now
   var imageDescription = document.querySelectorAll("#display h3")[i];
   imageDescription.innerHTML = plushies[i].description;
   var a = i+1;
+
+  //this sets the attribute src in the image tag
   loadingImage.src= "./images/plush" + a + ".png";
   loadingImage.alt= plushies[i].description;
   //loadingImage.setAttribute("onclick", "putInCart()");
@@ -80,6 +132,20 @@ var addOnesieImages = function(){
   loadingImage.alt= onesies[i].description;
   //loadingImage.setAttribute("onclick", "putInCart()");
   loadingImage.addEventListener("click", putInCart);
+
+/*
+
+
+  //create an h2 element
+  var newPriceItem = document.createElement('h3');
+  //create price variable as an int
+  var price = onesies[i].price;
+  newPriceItem.innerHTML = "$" + price;
+  document.querySelectorAll('.price')[i].appendChild(newPriceItem);
+  //set the price
+  //when clicked put in cart and get total.
+
+*/
     }
 }
 

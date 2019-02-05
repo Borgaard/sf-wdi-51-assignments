@@ -54,6 +54,11 @@ button {
   margin: 2em 2.4em .7em 3.8em;
 }
 
+#delete, #empty {
+  margin-left: 15%;
+  color: teal;
+}
+
 
 @media only screen and (max-width: 1500px){
 

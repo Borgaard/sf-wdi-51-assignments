@@ -11,29 +11,28 @@ let courageRight = -2;
 let eustaceRight = -8;
 
 function moveEustace() {
-      eustaceRight ++;
-      eustace.style.right = eustaceRight + '%';
-      checkIfWon();
+  eustaceRight++;
+  eustace.style.right = eustaceRight + '%';
+  checkIfWon();
 }
 
-var timer
+var timer;
 
 function startGame() {
- timer = setInterval(moveEustace, 200);
-      start.disabled = true;
-      pauseGame.disabled = false;
+  eustace.style.right = '-8%';
+  timer = setInterval(moveEustace, 150);
+  start.disabled = true;
+  pauseGame.disabled = false;
 
   document.onkeydown = moveDog;
 }
 
 pauseGame = function() {
-
-      eustace.style.right = eustaceRight + '%';
-      // var beginning = -8;
-      // eustace.style.right = beginning + '%';
-      clearTimeout(timer);
-      start.disabled = false;
-      pauseGame.disabled = true;
+  // var beginning = -8;
+  // eustace.style.right = beginning + '%';
+  clearTimeout(timer);
+  start.disabled = false;
+  pauseGame.disabled = true;
 
   document.onkeydown = null;
 }
@@ -41,44 +40,27 @@ pauseGame = function() {
 var pauseIt = pauseGame;
 
 function restartGame() {
-    pauseIt;
-    courage.style.right = '-2%';
-    eustace.style.right = '-8%';
+  pauseIt();
+  courageRight = -2;
+  eustaceRight = -8;
+  courage.style.right = courageRight + '%';
+  eustace.style.right = eustaceRight + '%';
+
 }
 
-// var changeCourage = function(){
-//   courageRight++;
-//   courage.style.right = courageRight + '%';
-//   checkIfWon();
-// }
-
-// var changeEustace = function(){
-//   eustaceRight++;
-//   eustace.style.right = eustaceRight + '%';
-//   checkIfWon();
-// }
-
-
-// courageButton.addEventListener('click', changeCourage);
-// eustaceButton.addEventListener('click', changeEustace);
-
 start.addEventListener('click', startGame)
-
 pause.addEventListener('click', pauseGame)
-
 restart.addEventListener('click', restartGame)
 
-function checkIfWon(){
-   if(courageRight === 54){
+function checkIfWon() {
+  if(courageRight === 54) {
     alert("Courage Won!!!");
-
-   }
-   else if(eustaceRight === 54){
+  } else if(eustaceRight === 54) {
     alert("Eustace Won!!!");
+    clearInterval(timer)
+  }
 
-   }
-
-   //to do: make clear div not clear and remove the characters
+  //to do: make clear div not clear and remove the characters
 }
 
  moveCourage = function(e){
@@ -92,10 +74,35 @@ function checkIfWon(){
 
    var moveDog = moveCourage;
 
-//math.randommath.floor*10 var num
 
-/*onkeydown
+
+
+
+//math.randommath.floor*10 var num to move a random number of spaces
+
+/*
+Resets all your global variables
+Removes all your EventListeners ( seeing you have two you don't really have to make a list to loop through all of them )
+Calls the main game function when the player is ready to start again
+
+
+var changeCourage = function(){
+  courageRight++;
+  courage.style.right = courageRight + '%';
+  checkIfWon();
+}
+
+var changeEustace = function(){
+  eustaceRight++;
+  eustace.style.right = eustaceRight + '%';
+  checkIfWon();
+}
 */
+
+
+// courageButton.addEventListener('click', changeCourage);
+// eustaceButton.addEventListener('click', changeEustace);
+
 
 
 

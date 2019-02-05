@@ -15,7 +15,6 @@ var animal = function(name, noise) {
 
 
 
-
 var dog = {
 	name: "dog",
 	noise:"woof!",
