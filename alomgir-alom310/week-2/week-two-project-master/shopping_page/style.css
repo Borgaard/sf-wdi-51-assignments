@@ -67,4 +67,28 @@ button img{
   flex-wrap: wrap;
 }
 
+#garage li img{
+  width: 200px;
+  margin:0 auto;
+  display: block;
+}
+
+#garage li{
+  list-style: none;
+  text-align: center;
+}
+
+#gButton {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gButton button{
+  width:100px;
+  padding:1px;
+  font-size: 20px;
+  border: none;
+  display: none;
+}
 
