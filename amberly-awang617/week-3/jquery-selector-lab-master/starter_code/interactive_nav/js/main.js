@@ -19,6 +19,8 @@ $('#main-nav a').on('click', function () {
     // commented parts are solution code that works for some reason but I don't know why?
     // $('#main-nav a').removeClass('active');
     // $(this).addClass('active');
+
+    // This part makes sense but it looks kinda clunky
     $('.nav-panel').hide();
     $('#subnav').slideDown();
     $('#'+thisPanel).fadeIn();
