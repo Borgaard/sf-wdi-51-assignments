@@ -14,6 +14,6 @@ $('#main-nav a').on('click', function () {
     $('.nav-panel').hide();
     //show the nav-panel menu
     let sectionToShow = $(this).data('related-panel');
-    $('#' + sectionToShow).show();
+    $(`${sectionToShow}`).show();
   }
 });
