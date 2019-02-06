@@ -99,7 +99,8 @@ var onesieButton = document.getElementById("onesies");
 var pillowButton = document.getElementById("pillows");
 
 
-
+//IMPORTANT
+//adds the images to the div when button is clicked
 var addPlushImages = function(){
   //loops through the array
   for (var i=0; i<plushies.length; i++) {
