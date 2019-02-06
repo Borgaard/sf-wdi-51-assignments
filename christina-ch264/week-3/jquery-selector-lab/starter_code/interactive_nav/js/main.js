@@ -18,7 +18,8 @@
 // If the subnav is already showing and the user clicks on a different anchor than they had previously clicked on, hide the current panel and fade in the related panel with subnav options for that category.
 // If the subnav is showing and the user clicks on the category that is already showing, slide up the subnav.
 $(document).ready(function(){
-
+  let subnav = $('#subnav');
+  console.log(subnav);
   // When the user clicks on an anchor in the main nav:
   $('#main-nav a').on('click', function(){
     // declare the data related sub nav
@@ -29,6 +30,10 @@ $(document).ready(function(){
 
       // if nav a has been clicked, show subnav
       if ($(this).hasClass('active')) {
+        // Check if any subnav elements have display: block style attr
+          // what is the jquery method for getting children
+          // what is the jquery method for checking style attributes
+        // If yes, use .hide()
             $('#' + subSection).show();
           }
       // remove class active from nav a when other nav a is clicked
