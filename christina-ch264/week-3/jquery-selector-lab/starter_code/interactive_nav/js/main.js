@@ -30,16 +30,22 @@ $(document).ready(function(){
 
       // if nav a has been clicked, show subnav
       if ($(this).hasClass('active')) {
+
         // Check if any subnav elements have display: block style attr
+        if ($('#subnav').children().css('display') === 'block') {
           // what is the jquery method for getting children
+          // $(.subnav).children();
           // what is the jquery method for checking style attributes
-        // If yes, use .hide()
+        // // If yes, use .hide()
+            $('#' + subSection).hide();
+          }
             $('#' + subSection).show();
           }
       // remove class active from nav a when other nav a is clicked
       $('#main-nav a').removeClass('active');
       // add class active to the currently clicked nav a
       $(this).addClass('active');
+
       // now you should hide the other subSections. STUCK
       // $('#' + subSection).hide();
 

@@ -25,41 +25,44 @@ var giffyUrl = "https://api.giphy.com/v1/gifs/search?";
 var key = 'Gf2zWMUcvwe2Ot0FzFTFeG2BddE9xTrF';
 
 console.log("1");
+$(document).ready(function() {
+  $('form').on('submit', function(e){
+    e.preventDefault();
+    console.log("2");
+    // get value of city input and store it in a variable
+    // var giffyName = $('#q').val();
+    var giffyName = $('.gif-input').val();
 
-$('form').on('submit', function(e){
-  e.preventDefault();
-  console.log("2");
-  // get value of city input and store it in a variable
-  var giffyName = $('#q').val();
 
+    // access ajax method
+    $.ajax({
+           method: 'GET',
+           // combine url with other information + your key. look at documentation what is included, appid in this case
+           // you can pass in unit to &appid,
+           // limit is default 25;
+           url: giffyUrl + "q=" + giffyName + "&api_key=" + key,
+           // first test: log to consol to see response, the function has a placeholder argument that will always represent the response
+           success: function(data){
+            console.log(data);
+            // then click on main in the object in the console.log
+            // debugger;
 
-  // access ajax method
-  $.ajax({
-         method: 'GET',
-         // combine url with other information + your key. look at documentation what is included, appid in this case
-         // you can pass in unit to &appid,
-         // limit is default 25;
-         url: giffyUrl + "q=" + giffyName + "&api_key=" + key,
-         // first test: log to consol to see response, the function has a placeholder argument that will always represent the response
-         success: function(data){
-          console.log(data);
-          // then click on main in the object in the console.log
-          // debugger;
+            let giffy = data.data[0].images.downsized_large.url;
+            let giffyList = `
+                              <img src="${giffy}">
+                              `
 
-          let giffy = data.data[0].images.url;
-          let giffyList = `<li>
-                            <img src="${'#'}">
-                            </li>`
+            $('.gif-gallery').append(giffyList);
 
-          ('.gif-gallery').append(giffyList);
+           },
 
-         },
+           error: function(error) {
+            console.log(error);
+           }
+        })
+  });
 
-         error: function(error) {
-          console.log(error);
-         }
-      })
-});
+})
 
 console.log("3");
 
