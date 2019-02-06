@@ -41,7 +41,6 @@
 	            <p class="card-text">${fruit.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${fruit.price}</small></p>
 	          </div>
-	        </a>
 	        </div>
 		`)
 	})
@@ -57,7 +56,6 @@
 	            <p class="card-text">${veggies.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${veggies.price}</small></p>
 	          </div>
-	        </a>
 	        </div>
 		`)
 	})
@@ -72,51 +70,40 @@
 	            <p class="card-text">${seafood.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${seafood.price}</small></p>
 	          </div>
-	        </a>
 	        </div>
 		`)
-	});
+	})
 
 	//listen for a click on the card, add it to the cart
 	// retrieve info from the card object and add it to the cart descriptions
 	// I want to retrieve the same values from above to the cart
-
+	//if clicked item equals id in stock array then append with data
+	let cartList = $(`#toCart`);
 	let addItem = document.getElementById("card-columns-fruit");
-		addItem.addEventListener("click", addToCart, false)
-
-
-	function addToCart(fruit) {
-		let fruitCart = $('#cart');
+		addItem.addEventListener("click", function(){
 		
-		if (e.target !== e.currentTarget) {
-			let clickedItem = e.target.id;
-			console.log(target.id);
-			
-			//if clicked item equals id, then append with data
 
-
-			/*fruitCart.append(`
-				<tr>
-	              <td data-th="Product">
-	                <div class="row">
-	                  <div class="col-lg-3 hidden-xs"><img src="" alt="..." class="img-responsive"/></div>
-	                  <div class="col-lg-9">
-	                    <h4 class="nomargin">${clickedItem}</h4>
-	                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
-	                  </div>
-	                </div>
-	              </td>
-	              <td data-th="Price">$1.99</td>
-	              <td data-th="Quantity">
-	                <input type="number" class="form-control text-center" value="1">
-	              </td>
-	              <td data-th="Subtotal" class="text-center">1.99</td>
-	              <td class="actions" data-th="">
-	                <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-	                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>                
-	              </td>
-	            </tr>
-	        `)*/
-		}
-		e.stopPropagation();
-	};
+	/*cartList.append(`
+			<tr>
+              <td data-th="">
+                <div class="row">
+                  <div class="col-lg-3 hidden-xs"><img src="" alt="..." class="img-responsive"/></div>
+                  <div class="col-lg-9">
+                    <h4 class="nomargin"></h4>
+                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+              </td>
+              <td data-th="Price">$1.99</td>
+              <td data-th="Quantity">
+                <input type="number" class="form-control text-center" value="1">
+              </td>
+              <td data-th="Subtotal" class="text-center">1.99</td>
+              <td class="actions" data-th="">
+                <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>                
+              </td>
+            </tr>
+        `)
+	e.stopPropagation();
+})*/

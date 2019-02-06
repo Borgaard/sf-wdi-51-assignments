@@ -5,8 +5,11 @@
 	For example, "Hello, I'm Anthony, I'm 20 years old and live in 100 Main St."
 	Log this variable to the console (console.log(yourVariableName)). 
 	Check the console to make sure you're getting the desired result.
-
 */
+var name = "Anthony";
+var age = 20;
+var address = "100 Main St."; 
+var greeting = "Hello, I'm Anthony, I'm 20 years old and live in 100 Main St."
 
 /*
 	Part 2: Create another variable called greeting2. This time, use the
@@ -16,9 +19,8 @@
 
 	Log this variable to the console (console.log(yourVariableName)). 
 	Check the console to make sure you're getting the desired result.
-
 */
-
+var greeting2 = "Hello, I'm " + ${name} + ", I'm " + ${age} + " years old and I live in " + ${address} "."
 /*
 	Part 3: Pythagorean theorem. We will be using the Math object we saw earlier
 	in the lesson for this problem.
@@ -42,8 +44,15 @@
 	Log the side1, side2 and side3 variables to the console (console.log(yourVariableName)). 
 	Check the console to make sure you're getting the desired result.
 */
+var side1 = 2; 
+var side2 = 3;
 
+
+var side3 = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2)); 
+
+console.log(side3);
 /*
+z
 	Part 4: (No coding is needed for this part).
 	We are given a list of 20 numbers. We have to go through the list and find the
 	largest number.
@@ -56,7 +65,9 @@
 
 	Bonus: What would the pseudocode look like if you also had to find the smallest number?
 */
-
+// set a variable called highestNumber to zero. For 20 numbers loop through i<numbers.length, using i++ to iterate through the for
+// loop. Then compare each number in the array to the variable 
+// numbers[i] > highestNumber { highestNumber = numbers [i]}
 
 /* Bonus
 Take a look at the numbers array below. Use the pseudo code you wrote above to find the largest number and log it to the console in the following format: `"The highest number is #"`.
