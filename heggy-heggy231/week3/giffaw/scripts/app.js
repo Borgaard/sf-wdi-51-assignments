@@ -44,12 +44,21 @@ $(document).ready(function() {
         debugger;
         // => what type is my url?  => string
         // typeof(response.data[0].images.downsized.url)
-        
+
+        // [X]check if I am getting 25 gif
+        // response.data.length
+
         // go through each element look up img>downsized>url
         response.data.forEach(function(element){
           console.log(element.images.downsized.url);
           // => https://media1.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif
-        })
+          
+          var newGif = element.images.downsized.url;
+            // '<img src="https://media1.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif">'
+
+          $('.gif-gallery').append(`<img src=${newGif}></img>`);
+          
+        });
       },
       error: function(error) {
         console.log(error);
