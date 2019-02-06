@@ -63,7 +63,7 @@ Troubleshooting Git:
 --------------------
 
 ### Submodules != folders
-#### The problem:
+#### Submodule problem:
 Submodules are Git's way of treating a project within a project as a separate entity. Explanation from [git-scm's][git-scm] documentation: 
 > Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
 
@@ -71,8 +71,7 @@ Submodules are Git's way of treating a project within a project as a separate en
 
 ![submodule](nicole-Borgaard/submodule-example.png)
 
-When commits are made in `sf-wdi-51-assignments` (root directory) with a child `.git` folder nested within, a Submodule is created. 
- so ensure you remove `.git` folders in projects you clone _before_ committing in root. 
+When commits are made in `sf-wdi-51-assignments` (root directory) with a child `.git` folder nested within, a Submodule is created, so ensure you remove `.git` folders in projects you clone _before_ committing in root. 
 
 #### Submodule Fix    
 The student's local personal folder needs to be uncached, which will remove the Submodule.
@@ -104,3 +103,4 @@ Here are some common issues:
 [resources]: https://git.generalassemb.ly/sf-wdi-51
 [1o1]: https://docs.google.com/spreadsheets/d/1IhDQLiCeZlOCLve4EEAzfwL1a22KipC6gaSTj_xQacc/edit#gid=0
 [git-scm]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[submodule]: README.md#troubleshooting-git
