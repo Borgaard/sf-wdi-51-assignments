@@ -1,8 +1,8 @@
-/*PARIS'S LATEST ATTEMPT*/
-/*PARIS'S LATEST ATTEMPT*/
-/*PARIS'S LATEST ATTEMPT*/
-/*PARIS'S LATEST ATTEMPT*/
-/*PARIS'S LATEST ATTEMPT*/
+/*PARIS'S ORIGINAL CODE*/
+/*PARIS'S ORIGINAL CODE*/
+/*PARIS'S ORIGINAL CODE*/
+/*PARIS'S ORIGINAL CODE*/
+/*PARIS'S ORIGINAL CODE*/
 
 //grocery stock as objects 
 	var stock = {
@@ -34,7 +34,8 @@
 
 	stock.fruit.forEach(fruit => {
 		masonaryFruit.append(`
-			<div id="${fruit.id}" class="card">
+			<div class="card">
+			<a class="card-link" id="${fruit.id}" href="#"">
 	          <img src=${fruit.image} class="card-img-top" alt="...">
 	          <div class="card-body ${fruit.name}>
 	            <h5 class="card-title">${fruit.name}</h5>
@@ -47,7 +48,6 @@
 	})
 
 	let masonaryVeggies = $('#card-columns-veggies');
-
 	stock.veggies.forEach(veggies => {
 		masonaryVeggies.append(`
 			<div id="${veggies.id}" class="card">
@@ -57,12 +57,11 @@
 	            <p class="card-text">${veggies.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${veggies.price}</small></p>
 	          </div>
-	        </a>
 	        </div>
 		`)
 	})
-	let masonarySeafood = $('#card-columns-seafood');
 
+	let masonarySeafood = $('#card-columns-seafood');
 	stock.seafood.forEach(seafood => {
 		masonarySeafood.append(`
 			<div id="${seafood.id}" class="card">
@@ -72,7 +71,6 @@
 	            <p class="card-text">${seafood.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${seafood.price}</small></p>
 	          </div>
-	        </a>
 	        </div>
 		`)
 	});
@@ -90,14 +88,14 @@
 		
 		if (e.target !== e.currentTarget) {
 			let clickedItem = e.target.id;
-			console.log(${fruit.id});
+			console.log(clickedItem);
 			
 			//if clicked item equals id, then append with data
 
 
-			/*fruitCart.append(`
+			fruitCart.append(`
 				<tr>
-	              <td data-th="Product">
+	              <td data-th="Producct">
 	                <div class="row">
 	                  <div class="col-lg-3 hidden-xs"><img src="" alt="..." class="img-responsive"/></div>
 	                  <div class="col-lg-9">
@@ -116,7 +114,7 @@
 	                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>                
 	              </td>
 	            </tr>
-	        `)*/
+	        `)
 		}
 		e.stopPropagation();
 	};
