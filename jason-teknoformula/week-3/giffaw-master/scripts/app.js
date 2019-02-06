@@ -1,7 +1,7 @@
 $(document).ready(function(){
   //constant variables to be used in AJAX Call
   const apiSearchUrl = "http://api.giphy.com/v1/gifs/search?q=";
-  const apiKey = "&api_key=j944CKWHBOqEo6JNjjPJKFDJirF42Zux&limit=10";
+  const apiKey = "&api_key=j944CKWHBOqEo6JNjjPJKFDJirF42Zux&limit=25";
 
 
   $('form').on('submit', function(e){
@@ -15,9 +15,13 @@ $(document).ready(function(){
     $.ajax({
       method: 'GET',
       url: apiSearchUrl+searchTerm+apiKey,
-      success: function(data) {
-        console.log(data);
-        debugger
+      success: function(response) {
+        console.log(response);
+        for (let i=0; i<response.length; i++) {
+          let gifUrl = response.data[i].images.original.url;
+          console.log(gifUrl);
+          $('.gif-gallery').append(`<img src='${gifUrl}'>`);
+        }
       }
     });
   })
