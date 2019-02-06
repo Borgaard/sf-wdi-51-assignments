@@ -85,12 +85,12 @@
 		addItem.addEventListener("click", addToCart, false)
 
 
-	function addToCart(e) {
+	function addToCart(fruit) {
 		let fruitCart = $('#cart');
 		
 		if (e.target !== e.currentTarget) {
 			let clickedItem = e.target.id;
-			console.log(${fruit.id});
+			console.log(target.id);
 			
 			//if clicked item equals id, then append with data
 
