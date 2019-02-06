@@ -1,5 +1,7 @@
 // Drop Down Section
 
+// Add a function that replaces the 5 below
+
 function showDropDown() {
   document.getElementById("cereal").classList.toggle("show");
 }
