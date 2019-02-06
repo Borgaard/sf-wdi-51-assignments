@@ -35,10 +35,11 @@
 console.log("we're are racing");
 raceWinner();
  }
- //player who won should be alerted screen
+ //player who won should be alerted on screen
  function raceWinner(){
  if (mover1 == 50){
     alert('Player1 won!');
+
   }
 }
 //   }else {
