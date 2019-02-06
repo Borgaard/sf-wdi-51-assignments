@@ -2,7 +2,7 @@ $(() => {
 // Initial Image Load
     $.ajax({
       method: 'GET',
-      url: `http://api.giphy.com/v1/gifs/search?q=doberman&api_key=${apiKey}&limit=25`,
+      url: `http://api.giphy.com/v1/gifs/search?q=trending&api_key=${apiKey}&limit=25`,
       success: res => {
         console.log(res);
         console.log(res.data);
@@ -10,7 +10,6 @@ $(() => {
           let newGif = `<img src="${index.images.downsized.url}">`;
           $(".gif-gallery").append(newGif);
         })
-
       },
       error: err => console.log(err)
     })
