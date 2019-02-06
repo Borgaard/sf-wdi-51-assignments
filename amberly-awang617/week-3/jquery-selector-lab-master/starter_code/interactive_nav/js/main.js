@@ -15,14 +15,15 @@
 
 $('#main-nav a').on('click', function () {
   var thisPanel = $(this).attr('data-related-panel')
+
   if ($('#'+thisPanel).is(':hidden')) {
-    // commented parts are solution code that works for some reason but I don't know why?
+    // This is even more broken now...
     // $('#main-nav a').removeClass('active');
     // $(this).addClass('active');
-
-    // This part makes sense but it looks kinda clunky
-    $('.nav-panel').hide();
     $('#subnav').slideDown();
+    $('#'+thisPanel).fadeIn();
+  } else if ($('.nav-panel').attr('id') !== thisPanel){
+    $('.nav-panel').hide();
     $('#'+thisPanel).fadeIn();
   } else {
     $(this).removeClass('active')
