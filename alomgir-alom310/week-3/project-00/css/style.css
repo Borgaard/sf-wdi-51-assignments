@@ -1,0 +1,38 @@
+#headwrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+#header{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+
+}
+
+li{
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#welcomepic{
+  height: 400px;
+}
+
+.col{
+  width: 30%
+}
+
+h2{
+  position: relative;
+  margin-left: 47%;
+  margin-top:150px;
+}
