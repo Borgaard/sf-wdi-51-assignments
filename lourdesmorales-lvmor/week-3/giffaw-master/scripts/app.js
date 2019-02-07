@@ -17,7 +17,7 @@ $("form").on("submit", function(e){
       console.log("success got data", response);
       var giphyData = response.data;
 
-      for(i in giphyData){
+      for(var i in giphyData){
         $(".gif-gallery").append(`<img src="${giphyData[i].images.original.url}"/>`);
       }
     }
@@ -27,5 +27,6 @@ $("form").on("submit", function(e){
     // }
   });
 });
+
 
 
