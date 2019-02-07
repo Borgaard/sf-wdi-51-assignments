@@ -43,12 +43,28 @@ function functionBoat() {
   }
 };
 
+$('#cars button').on('click',function () {
+  var spec = $(this).html();
+  $('#garage').append('<li>' + spec + '</li>');
+  $('#gButton button').show()
+});
 
+$('#planes button').on('click',function () {
+  var spec = $(this).html();
+  $('#garage').append('<li>' + spec + '</li>');
+  $('#gButton button').show()
+});
 
+$('#boats button').on('click',function () {
+  var spec = $(this).html();
+  $('#garage').append('<li>' + spec + '</li>');
+  $('#gButton button').show()
+});
 
-
-
-
+$('#garage button').on('click', function(){
+  $('#garage li').remove();
+  $('#gButton button').hide()
+});
 
 
 

@@ -14,8 +14,4 @@ function keyFunction(e){
 
 document.onkeydown = keyFunction;
 
-// function winner(event){
-//   if (lebron.style.left = "1000px"){
-//     alert("lebron is the winner");
-//   }
-// };
+
