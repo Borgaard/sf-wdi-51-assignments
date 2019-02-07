@@ -1,0 +1,222 @@
+
+h3{
+  font-size:11px;
+}
+h1{
+  font-size:25px;
+  letter-spacing:1px;
+}
+/*--------------------
+Top Bar
+--------------------*/
+#top-bar {
+    text-align:center;
+  height:8em;
+  padding-top:22px;
+
+}
+.row1{
+  padding-right: 15em;
+  padding-top:1em;
+}
+
+.row2 {
+  padding-left: 15em;
+  padding-top:1em;
+}
+.row2 ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  list-style: none;
+  color: black;
+
+}
+ .row2 ul a {
+  color: black;
+   margin:auto 3px;
+   list-style: none;
+   border-right: 1px solid black;
+   padding-right:7px;
+
+}
+/*----------------------
+Header
+-----------------------*/
+header{
+  background-image:url('img/heronnnn.jpg');
+  background-size:cover;
+  width: 100%;
+  height:40em;
+  text-align: center;
+}
+h3{
+  font-size:11px;
+}
+h1{
+  font-size:25px;
+  letter-spacing:1px;
+}
+
+/*----------------------
+Quote
+----------------------*/
+#quote
+{
+    height:500px;
+    margin:50px;
+    padding:50px;
+    top:0;
+    left:0;
+    transition: 5s;
+
+}
+.quote {
+  text-align: center;
+  height: 14em;
+  padding-top: 4em;
+}
+.quote h1 {
+  font-size: 3em;
+}
+.quote p {
+font-family: 'Caveat', cursive;
+font-size: 1.5em;
+}
+
+#gallery {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 8rem;
+
+
+}
+ .pics {
+  padding-left:60px;
+
+
+}
+.pics img{
+  margin:5px;
+}
+
+/*-----------------------
+Merch Area
+------------------------*/
+#merch{
+
+  height: 50em;
+  display:flex;
+  flex-direction:row;
+
+
+}
+
+img {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+/*-----------------------
+Shopping Items
+------------------------*/
+
+
+.shopping-items{
+  width:600px;
+  height:650px;
+  background-color: grey;
+   margin-right:15px;
+}
+
+.topbar {
+  height: 70px;
+  text-align: center;
+  padding-top:3px;
+  background-color: orange;
+  font-size: 20px;
+  border-bottom: 5px solid black;
+
+
+}
+.topbar ul {
+display: flex;
+flex-direction: row;
+justify-content: center;
+list-style: none;
+border:none;
+text-align: center;
+}
+
+
+
+.topbar a {
+  margin:15px;
+  color: black;
+  padding-top:10;
+}
+
+#in-menu {
+  height:575px;
+
+}
+/*-----------------------
+Shopping Cart
+------------------------*/
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#shoppingcart {
+  height:450px;
+  width:350px;
+  background-color: grey;
+  margin-bottom: 65px;
+}
+.topcart {
+  height: 70px;
+  text-align: center;
+  padding-top:3px;
+  background-color: orange;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-size: 45px;
+  border-bottom: 5px solid black;
+}
+#inside {
+  height:380px;
+  width: 100%;
+
+}
+/*-----------------------
+Footer
+------------------------*/
+
+
+.social-links a {
+  font-size: 30px;
+  font-size: 2rem;
+  padding: 15px;
+  padding: 1rem;
+  margin-bottom: 25px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  color: #44545E;
+}
+footer .wrap {
+
+ padding-top: 15px;
+}
+footer p {
+  text-align: center;
+  background-color: black;
+  color:white;
+}
+footer {
+  height:100%;
+  background-color: orange;
+}
+
+

@@ -1,0 +1,50 @@
+*{
+  font-family: Merriweather;
+  color: #AFAFAF;
+}
+
+
+body {
+  background-color: #444444;
+  margin: auto 12%;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2em;
+  color: #9197AB;
+}
+.form {
+width: 40em;
+
+}
+.flex-message {
+display: flex;
+
+
+}
+  .message{
+    display: flex
+    justify-content: flex-end;
+    float:right;
+    padding: 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
