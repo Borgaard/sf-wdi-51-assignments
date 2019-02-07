@@ -17,6 +17,9 @@ let teaNames = ["Lavender Tea", "Black Tea", "Green Tea", "White Tea", "Blue Tea
 let floweringTeaNames = ["Jasmine Lotus Flowering Tea", "Blueberry Flowering Tea", "Harmony Flowering Tea", "Rising Flower Flowering Tea", "Lychee Flowering Tea", "Milky Flowering Tea"];
 let teaSetNames = ["Vintage Blue Rose Tea Set","Black Magic Tea Set", "Black and White Tea Set", "Blue Porcelain Tea Set", "Butterfly Tea Set", "Flamingo Tea Set"];
 
+// Prices
+
+
 // Empty p tags and ul tag to fill in with image names
 let itemNames = document.querySelectorAll(".pictures button")
 let cartList = document.querySelector(".shoppingList");
@@ -53,20 +56,11 @@ let appear = function() {
 // Adds a list item to the shopping list
 let showName = function() {
   var newListItem = document.createElement('li');
-  if (this.getAttribute('src') === imageSources[0] || this.innerText === namesForCart[0]) {
-    newListItem.innerHTML = namesForCart[0];
-  } else if (this.getAttribute('src') === imageSources[1] || this.innerText === namesForCart[1]) {
-    newListItem.innerHTML = namesForCart[1];
-  } else if (this.getAttribute('src') === imageSources[2] || this.innerText === namesForCart[2]) {
-    newListItem.innerHTML = namesForCart[2];
-  } else if (this.getAttribute('src') === imageSources[3] || this.innerText === namesForCart[3]) {
-    newListItem.innerHTML = namesForCart[3];
-  } else if (this.getAttribute('src') === imageSources[4] || this.innerText === namesForCart[4]) {
-    newListItem.innerHTML = namesForCart[4];
-  } else if (this.getAttribute('src') === imageSources[5] || this.innerText === namesForCart[5]) {
-    newListItem.innerHTML = namesForCart[5];
+  for (var i=0; i < imageSources.length; i++) {
+    if (this.getAttribute('src') === imageSources[i] || this.innerText === namesForCart[i]) {
+    newListItem.innerHTML = namesForCart[i];
+    };
   }
-  //for (var i=0; i < imageSources.length)
   cartList.appendChild(newListItem);
 }
 
