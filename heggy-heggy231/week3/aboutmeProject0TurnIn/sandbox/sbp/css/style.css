@@ -1,5 +1,8 @@
 /* Color Palette 
 #333    - Very dark gray
+#fff    - white
+#337ab7 - blue
+#eee    - grey
 #F7FC71 - Yellow
 #C8AAEF - light purple
 rgb(141, 70, 235) - dark purple
@@ -47,4 +50,47 @@ p {
   width: 100%;
 }
 /* Header */
-/* main header has 2 container col-left, col-right  */
+/* main header has 3 class: col-left, col-right, btn classes  */
+.col-left {
+  /* 63% of single row */
+  width: 63%;
+}
+/* img on col left */
+.col-left img {
+  width: 100%;
+  /* rounded corner of photo */
+  border-radius: 6px;
+}
+.col-right {
+  width: 32%;
+}
+
+.col-left, .col-right {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* style button inside header */
+.btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 28px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #337ab7;
+  /* remove underline default style of anchor tag */
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+}
+/* keep the rest of the content out of header section */
+.clear-fix {
+  clear: both;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
