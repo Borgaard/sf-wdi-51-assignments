@@ -14,6 +14,7 @@ $('form').on('submit', function(e) {
     success: function( data){
       debugger;
       console.log(data);//data was an object
+      debugger;
       let temp = data.main.temp;
       $('#temp').text(temp);
 
