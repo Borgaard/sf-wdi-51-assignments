@@ -1,0 +1,49 @@
+section {
+  font-size: 16px;
+  padding: 0 .20em;
+  max-width: 100%
+}
+
+h2 {
+  font-family: 'Cinzel' , sans-serif;
+  font-size: 2em;
+  padding: .5em 0;
+  border-bottom: .2em solid #000;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.618em;
+  max-width: 100%;
+  margin: 1.1618 0;
+  font-family: 'VT323';
+
+}
+
+.carbon {
+  font-family: 'CarbonType';
+}
+
+@media screen and (max-width: 500px){
+  section {
+    font-size: 18px;
+    padding: 0 10em;
+  }
+  h2, p, {
+    font-family: 'Cinzel';
+  
+  }
+}
+
+@font-face {
+  font-family: 'Cinzel', serif;
+  font-family: 'VT323' monospace;
+  src: url("https://fonts.googleapis.com/css?family=Cinzel|VT323");
+
+}
+
+
+@font-face {
+  font-family: 'CarbonType';
+  src: local( "C:\users\lukazphelps\desktop\CarbonType";
+}

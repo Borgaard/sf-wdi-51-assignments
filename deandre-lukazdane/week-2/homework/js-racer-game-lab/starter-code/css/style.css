@@ -1,0 +1,78 @@
+#container {
+	/*background-image: url(../imgs.png);*/
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	font-family: 'Bangers', cursive;
+	background-color: white;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-size: 90px;
+	margin: 0;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+p {
+	display: inline-block;
+	padding: 15px;
+	font-size: 25px;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#1-instructions {
+	float: left;
+}
+
+#2-instructions {
+	float: right;
+}
+
+input {
+	padding: 10px;
+	margin: 0 5px;
+	border-radius: 5px;
+	background-color: white;
+	font-size: 20px;
+}
+
+input:focus {
+	outline : 0;
+}
+
+img {
+	display: block;
+}
+
+.race {
+	position: relative;
+
+}
+#1 {
+	position: relative;
+	left: 0px;
+	top: 15px;
+	width: 170px;
+	//padding-left: 48px;
+}
+
+#2 {
+	position: relative;
+	left: 0px;
+	top: -150px;
+	width: 170px;
+}
+
+
+#winner {
+	position: absolute;
+	width: 400px;
+	top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
