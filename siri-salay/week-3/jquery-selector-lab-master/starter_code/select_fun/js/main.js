@@ -49,10 +49,14 @@ $("#box1").on('click', function(){
 
 // 6. Hide the item with the id #menu
 
+$("#menu").hide();
 
 // 7. When the element with the id #trigger is clicked,
 	// a) slide toggle #menu
 
+$("#trigger").on('click', function(){
+	$("#menu").slideToggle();
+})
 
 
 /**
@@ -63,25 +67,35 @@ $("#box1").on('click', function(){
 
 // 8. Hide the item with the id #answer2
 
+$("#answer2").hide();
 
 // 9. Show the item with the id #answer1
 
+$("#answer1").show();
+
+
 
 // 10. When #question2 is clicked:
+$("#question2").on('click', function(){
 	// a) Slide down #answer2
+$("#answer2").slideDown();
 	// b) Slide up #answer1
+$("#answer1").slideUp();
 	// c) Remove the active class from all list items
+$("li").removeClass("active");
 	// d) Add the active class to #question2
-
+$("#question2").addClass("active");
+})
 
 // 11. When #question1 is clicked:
-	// a) Slide down #answer1
-	// b) Slide up #answer2
+$("#question1").on('click', function(){
+$("#answer1").slideDown();
+$("#answer2").slideUp();
 	// c) Remove the active class from all list items
+$("li").removeClass("active");
 	// d) Add the active class to #question1
-
-
-
+$("#question1").addClass("active");
+})
 
 /**
 *
@@ -93,6 +107,15 @@ $("#box1").on('click', function(){
 
 
 // 1. When the button "Show Only Yellow" is clicked, only show circles with the CLASS .yellow should show
-
+$("#filterYellow").on('click', function(){
+	$(".yellow").show();
+	$(".blue").hide();
+});
 
 // 2. When the button "Show Only Blue" is clicked, only show circles with the CLASS .blue should show
+$("#filterBlue").on('click', function(){
+	$(".blue").show();
+	$(".yellow").hide();
+});
+
+

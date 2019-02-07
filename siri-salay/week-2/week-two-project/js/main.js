@@ -58,6 +58,7 @@ class essential {
   var onesies = [onesie1, onesie2, onesie3, onesie4, onesie5, onesie6]
   var pillows = [pillow1, pillow2, pillow3, pillow4, pillow5, pillow6]
 
+/*
 /// *****YOU ACTUALLY DONT NEED THESE 3 FUNCTIONS*****
   for(i=0; i<plushies.length; i++){
    plushies[i].imageId = "plush" + (i+1);
@@ -70,6 +71,8 @@ class essential {
    for(i=0; i<pillows.length; i++){
    pillows[i].imageId = "pillow" + (i+1);
   }
+
+  */
 
 
   console.log(plushies);
@@ -134,20 +137,16 @@ var addOnesieImages = function(){
   //loadingImage.setAttribute("onclick", "putInCart()");
   loadingImage.addEventListener("click", putInCart);
 
-/*
 
-
-  //create an h2 element
-  var newPriceItem = document.createElement('h3');
-  //create price variable as an int
-  var price = onesies[i].price;
-  newPriceItem.innerHTML = "$" + price;
-  document.querySelectorAll('.price')[i].appendChild(newPriceItem);
-  //set the price
-  //when clicked put in cart and get total.
-
-*/
-    }
+  // // //create an h2 element
+  // // var newPriceItem = document.createElement('h3');
+  // // //create price variable as an int
+  // // var price = onesies[i].price;
+  // // newPriceItem.innerHTML = "$" + price;
+  // // document.querySelectorAll('.price')[i].appendChild(newPriceItem);
+  // // //set the price
+  // // //when clicked put in cart and get total.
+}
 }
 
 var addPillowImages = function(){
