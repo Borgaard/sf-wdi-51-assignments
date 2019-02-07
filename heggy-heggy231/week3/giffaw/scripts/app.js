@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 // 1) make your own api key abd giphyURL
   // http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=25"
 
@@ -13,8 +12,7 @@ $(document).ready(function() {
   var key = '&api_key=USeXS2PI5TP0Fvdy2AnCaSsT7HuzSTcL';
   // var limit = '&limit=5';
 /*
-
-
+  
 <input type="text" class="form-control gif-input" name="q" value="cats" placeholder="search gifs">
 
 [x] make sure event is firing
