@@ -1,0 +1,292 @@
+/* universal selector */
+/* default font size is 16px */
+
+body {
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', 'Raleway', sans-serif;
+}
+
+/* Making the entire container a display fex*/
+#flex-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*  Navbar  */
+nav ul {
+    display: flex;
+    height: 2em;
+    justify-content: center;
+    padding-top: 1em;
+    font-size: 1.375em;
+    /* target px / base = em     22 / 16 = 1.375em */
+}
+
+/* Setting Li equally */
+nav ul li {
+    list-style-type: none;
+    margin-right: 1em;
+
+}
+
+/*  Target all the sections */
+section {
+    display: flex;
+    flex-flow: column wrap
+        /* change all section to column in flexbox */
+}
+
+/* Setting up hero image in the background */
+#hero_image {
+    background-image: url("https://images.unsplash.com/photo-1474476782206-48c6d5461aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    /* in flex column align-items uses the horzontal or x axis  and  justify-content uses the vertical or y axis*/
+    align-items: center;
+
+}
+
+/*  Setting up image widht and height */
+img {
+    width: 400px;
+    height: 400px;
+}
+
+/*  Column wrapper */
+.first_section {
+    margin-top: 4em;
+}
+
+/*  setting the display flex */
+#column-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+/*  */
+#column-wrapper div.column {
+    display: flex;
+    flex-flow: column wrap;
+    width: 500px;
+    padding: 2em 2em 2em 3em;
+
+
+}
+
+/*  Setting columm items equally */
+.column {
+    flex: 1;
+    align-items: center;
+}
+
+.magazine-article {
+    background: lightblue;
+}
+
+
+.magazine-article h2,
+h4 {
+    text-align: center;
+
+}
+
+article.magazine-article h2 {
+    padding-top: 3em;
+}
+
+article.magazine-article {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+article.magazine-article p {
+    /* padding: 0 16em; */
+    line-height: 1em;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 500px) {
+    article.magazine-article p {
+        padding: 0 1em;
+    }
+}
+
+/*  Giving padding  to second paragraph*/
+article.magazine-article:last-child {
+    padding-bottom: 5em;
+
+}
+
+/*  Parenet flex element for .section there column*/
+.section-three {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Making columns for 6 images  */
+.section-three .column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*  headings for photos */
+section.heading {
+    align-items: center;
+    font-size: 1.5em;
+    padding-top: 3em;
+}
+
+section.heading h6 {
+    font-size: 1em;
+}
+
+section.section-three {
+    width: 86%;
+    margin: 0 auto;
+}
+
+/* Targeting all the first images in each colunn in section three */
+section.section-three .column img:nth-child(1) {
+    padding-bottom: 1em;
+}
+
+/*  */
+#flex-container>section.section-three>div {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* Child  of article wrapper */
+#flex-container>section.section-three>div>div {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* increase the height of first and third images */
+article.column img.same-height {
+    height: 500px;
+}
+
+
+/*  decrease the height the second image */
+#flex-container>section.section-three>article:nth-child(1)>img:nth-child(2) {
+    height: 300px;
+}
+
+#flex-container>section.section-three>article:nth-child(2)>img:nth-child(2) {
+    height: 500px;
+}
+
+/*  */
+#flex-container>section.section-three>article:nth-child(3)>img:nth-child(1) {
+    height: 300px;
+}
+
+/* Form section */
+
+section .section-four form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*  aligning the input form  */
+.section-four form div .input-form {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* giving height to textarea and input form  */
+#flex-container > section.section-four > form > textarea{
+    height: 150px;
+}
+input[type="submit"] {
+    height: 50px;
+}
+
+.section-four h2 {
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+}
+
+
+form div.input-form input {
+    font-size: 1.4em;
+}
+
+.section-four {
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+}
+
+.section-four form {
+    display: flex;
+    flex-flow: column;
+}
+
+
+#flex-container>section.section-four>form>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    display: flex;
+    flex-flow: column;
+    background: lightblue;
+    padding-top: 2em;
+}
+
+/* for social links */
+#flex-container>footer>div {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+/* Targeting the footer and giving padding */
+#flex-container>footer>div>i.fab {
+    padding-right: 2em;
+    font-size: 3em;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer hr {
+    width: 100%;
+}
+
+/*  Hovering effects on the buttons */
+
+.column button {
+    font-size: 1.3em;
+}
+
+.column button:hover {
+    font-size: 1.3em;
+    background: lightblue;
+    transition: all 1.ms;
+}
+
+
+
+/* MEDIA QUERIES  */
+
+@media only screen and (max-width:560px) {
+    .first_section .column-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
