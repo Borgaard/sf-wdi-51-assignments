@@ -1,0 +1,62 @@
+*{
+  font-family: Georgia, serif;
+  text-decoration: none;
+  padding: 17px;
+  margin: auto;
+  color: lightgray;
+}
+
+h1 a {
+  color: navajowhite;
+  font-size: 60px;
+}
+h2 {
+      color: black;
+      font-size: 20px;
+}
+
+h3 {
+    color: lightgrey;
+    font-size: 30px
+}
+
+h2 a {
+color: black;
+font-size: 35px;
+padding: 5px;}
+
+.subhead::first-letter {
+  color: lightgray;
+  float: left;
+  font-size: 5em;
+  margin: 0 .2em 0 0;
+}
+/* found first letter solution here: https://webdesign.tutsplus.com/tutorials/better-css-drop-caps-with-initial-letter--cms-26350*/
+/*then i made a class on the html*/
+.subhead{color:black;}
+
+
+nav a{
+  color: lightgray;
+  text-decoration: underline;
+  font-size: 20px;
+  padding: 5px;
+
+}
+
+h4 a{
+  color:orange;
+  display: block;
+  text-align: right;
+
+}
+
+footer a {
+  color: orange;
+}
+
+a {
+  font-family: serif;
+}
+
+/*.hline { width:100%; height:1px; background: blue }*/

@@ -1,0 +1,61 @@
+#container {
+  background-image: url(images/background.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0em 10px -7em 10px;
+}
+
+
+h1 {
+  font-family: ;
+  font-size: 40px;
+ /* color: navajowhite;*/
+  text-shadow: -1px 0 navajowhite, 0 1px navajowhite, 1px 0 navajowhite, 0 -1px navajowhite;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  /*color: navajowhite;*/
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+
+/*p {
+  font: Sarabun;
+}*/
+
+section {
+  display: flex;
+  align-self: flex-end;
+}
+
+.balloon1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+/*  background-color: green;*/
+  margin: 1em;
+  margin-bottom: 3em;
+  align-self: flex-end;
+}
+.balloon2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /*background-color: orange;*/
+  margin: 1em;
+  margin-bottom: 3em;
+  align-self: flex-end;
+}
+
+
+

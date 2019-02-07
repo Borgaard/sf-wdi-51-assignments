@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Week 2 Day 2 - Homework</title>
+</head>
+<body>
+	<script src="./main.js"></script>
+
+<!-- Answer to Part 1 -->
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+
+for (let i = 0; i < ages.length; i +=1 ){
+console.log(ages[i])
+}
+
+<!-- Answer to Part 2 -->
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+
+// for (let i = 0; i < ages.length; i +=1 ){
+// console.log(ages[i])
+// }
+
+var younger = [];
+
+for (let i = 0; i < ages.length; i += 1){
+  if (ages[i] <= 20){
+    younger.push(ages[i]);
+  }
+}
+ console.log(younger)
+
+ <!-- Answer to Part 3 -->
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+
+// for (let i = 0; i < ages.length; i +=1 ){
+// console.log(ages[i])
+// }
+
+var younger = [];
+
+for (let i = 0; i < ages.length; i += 1){
+  if (ages[i] <= 20){
+    younger.push(ages[i]);
+  }
+}
+ console.log(younger.reverse())
+
+ <!-- Answer to Part 4.1 -->
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+var i = 1
+while (i < ages.length) {
+  console.log(ages[i]);
+  i +=1;
+}
+ <!-- Answer to Part 4.2 -->
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+var younger = [];
+var i = 0
+while (i < ages.length) {
+    if (ages[i] <= 20){
+      younger.push(ages[i]);
+    }
+  i +=1
+}
+console.log(younger)
+
+<!-- Answer to Part 4.3 -->
+var ages = [28, 30, 17, 14, 12, 20, 13, 36, 68, 49, 37, 55, 56, 26];
+var younger = [];
+var i = 0
+while (i < ages.length) {
+    if (ages[i] <= 20){
+      younger.push(ages[i]);
+    }
+  i +=1
+}
+console.log(younger())
+
+<!-- Answer to Part 5 -->
+var getDayOfWeek = function (dayNumber){
+  // var dayNumber = 1;
+  switch (dayNumber) {
+    case 0:
+      day = 'Sunday';
+      break;
+    case 1:
+      day = 'Monday';
+      break;
+    case 2:
+     day = 'Tuesday';
+     break;
+    case 3:
+     day = 'Wednesday';
+     break;
+    case 4:
+     day = 'Thursday';
+     break;
+    case 5:
+     day = 'Friday';
+     break;
+    case 6:
+    day = 'Saturday';
+    break;
+  default:
+    day = null;
+   alert('Please enter a valid day of the week');
+  }
+  console.log(day)
+}
+
+getDayOfWeek(1);
+
+</body>
+</html>
+
+
