@@ -40,6 +40,17 @@ footer p {
     text-align: center;
 }
 
+a {
+    margin: 0px auto;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans';
+    text-align: center;
+    font-size: .8em;
+    word-wrap: break-word;
+    width: 100%;
+}
+
 div {
     background-color: rgba(255,255,255, .7);
     text-align: center;
@@ -80,6 +91,10 @@ ul li {
     background: white;
 }
 
+ol {
+    margin: 0px auto;
+}
+
 /* IMAGES */
 
 img {
@@ -106,9 +121,6 @@ img {
     justify-content: space-evenly;
 }
 
-.shop-list {
-    width: 50%;
-}
 
 .store-wrapper {
     width: 50%;
@@ -132,9 +144,11 @@ img {
     background-color: transparent;
 }
 
-.cart-wrapper {
+.list-wrapper {
     display: flex;
     height: 460px;
+
+    width: 50%;
 }
 
 li {
