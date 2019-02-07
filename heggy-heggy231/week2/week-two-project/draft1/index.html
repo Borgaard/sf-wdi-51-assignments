@@ -1,0 +1,785 @@
+<!-- 
+[ ] structure your html
+[ ] follow the video 
+https://youtu.be/iggMxE7y6Uk
+
+https://www.youtube.com/watch?v=YeFzkC2awTM&t=176s
+
+https://youtu.be/q_TZhCWbS3I
+
+video by https://github.com/john-smilga
+
+https://www.youtube.com/watch?v=0I1TorcXFP0
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>Grandma's Bakery App</title>
+  <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2Fcake-2.jpeg?1549289410222"/>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+
+  <header id="header">
+    <!-- desktop big screen navbar will expand px-4 4 padding: 4px right/left of the nav bar -->
+    <nav class="navbar navbar-expand-lg px-4">
+        <!-- logo icon inside of the link
+    https://www.iconfinder.com/icons/2427887/dessert_donut_doughnut_fat_sweets_icon
+    Creative Commons (Attribution 3.0 Unported);
+    https://www.iconfinder.com/korawan_m
+          -->
+      <!-- # href isn't going anywhere but add class -->
+      <a href="#" class="navbar-brand">
+        <img src="img/logo.svg" alt="main donut logo" title="main donut logo">
+      </a>
+          <!-- hamburger button toggles the navbar
+              when toggle to collapse > myNavBar will show up! -->
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+        <span class="toggler-icon">
+          <!-- font awesome hamburger bars https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-bars -->
+          <i class="fas fa-bars"></i>
+        </span>
+      </button>
+      <!-- add bootstrap grouping and hiding navbar contents by a parent breakpoint. https://getbootstrap.com/docs/4.0/components/navbar/ hamburger fa-bars button data-target must match this id myNavbar-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <!-- navbar links is always going to auto margin centered -->
+        <ul class="navbar-nav text-capitalize mx-auto">
+          <!-- when hovering pink color will conver to black -->
+          <li class="nav-item active">
+            <!-- home section which is header > jump to header section -->
+            <a href="#header" class="nav-link">home</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#about" class="nav-link">about</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#store" class="nav-link">store</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#services" class="nav-link">services</a>
+          </li>
+          <li class="nav-item active">
+            <a href="#cakes" class="nav-link">order</a>
+          </li>
+        </ul>
+        <!-- phone icon, cart button: display (d) none in small but display in (lg)large screen with flexbox
+              I went phone and cart to appear only in large screen size
+        -->
+        <div class="nav-info-items d-none d-lg-flex">
+          <!-- single info:
+               * Apply flex in kid element and justify margin x(left, right) auto
+               https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp
+               * d-flex flex direction with justify content between equal spacing
+               https://getbootstrap.com/docs/4.1/utilities/flex/
+               * 5 - sets margin or padding to 3rem (48px if font-size is 16px)
+               Goal: all my nav info items divs eqaually align spaced with button
+          -->
+          <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+            <!-- info-icon, nav-info-items, nav-info are our custom css 
+                 only on lg (large) screen there will be 3 - sets margin left,right (mx) to 1rem (16px if font-size is 16px)
+            -->
+            <span class="info-icon mx-lg-3">
+              <!-- https://fontawesome.com/icons?d=gallery&q=phone&c=communication search phone -->
+              <i class="fas fa-phone"></i>
+            </span>
+            <!-- margin bottom 0 to ensure there is no issue with flexbox -->
+            <p class="mb-0">+ 123 456 7853</p>
+          </div>
+          <!-- single info: 
+                * shopping car
+          -->
+          <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+            <!-- my own class .cart-info__icon with bootstarp margin right (mr) only in large screen with 1rem (3) -->
+            <span class="cart-info__icon mr-lg-3">
+              <!-- use fontawesome shpping cart https://fontawesome.com/icons/shopping-cart?style=solid -->
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <!-- p tag margin-bottom (mb):0, this gets rid of default bootstrap margin, capitalize text -->
+            <p class="mb-0 text-capitalize">
+              <span id="item-count">2</span>
+              items - $
+              <span class="item-total">
+                10.49
+              </span>
+            </p>
+          </div> <!-- end of flex cart-info -->
+        </div>
+      </div> <!-- navbar div ends -->
+    </nav>
+    <!-- end of nav -->
+    <!-- banner -->
+    <div class="container-fluid"></div>
+    <!-- max-height contains 100% of viewport, in bootstrap: .row by default flexbox parent container 
+          add 2 classes to center horizontally (justify-content-center) and 
+           vertically (align-items-center)
+    -->
+      <div class="row max-height justify-content-center align-items-center">
+        <!-- for small screen, take up 10 columns (.col-10), 
+              margin left right: auto (mx-auto) -->
+        <div class="col-10 mx-auto banner text-center">
+          <h1 class="text-capitalize">
+            welcome to <strong class="banner-title">grandma's</strong>
+          </h1>
+          <!-- my-2: margin vertically up|down https://getbootstrap.com/docs/4.1/utilities/spacing/ -->
+          <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
+        </div>
+        <!-- cart -->
+        <!-- we put it in row direct chid of banner so it lines up within the banner row and position relative -->
+        <div class="cart" id="cart">
+
+          <!-- *** cart item *** -->
+          <!-- creating single item which will be flexbox parent container, push away the item far away from eachother  -->
+          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <!-- img cart 50x50 smaller, img-fluid; img fits responsive, rounded-circle: img rounded -->
+            <img src="./img-cart/cake-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+            <div class="item-text">
+              <p id="cart-item-title" class="font-weight-bold mb-0">
+                cart item
+              </p>
+              <span>$</span>
+              <span id="cart-item-price" class="cart-item-price mb-0">12.00</span>
+            </div>
+            <a href="#" id="cart-item-remove" class="cart-item-remove">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+          <!-- *** end of cart item *** -->
+
+          <!-- total -->
+          <!-- *** cart item *** -->
+          <!-- creating single item which will be flexbox parent container, push away the item far away from eachother  -->
+          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <!-- img cart 50x50 smaller, img-fluid; img fits responsive, rounded-circle: img rounded -->
+            <img src="./img-cart/cupcake-1.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+            <div class="item-text">
+              <p id="cart-item-title" class="font-weight-bold mb-0">
+                cart item
+              </p>
+              <span>$</span>
+              <span id="cart-item-price" class="cart-item-price mb-0">12.00</span>
+            </div>
+            <a href="#" id="cart-item-remove" class="cart-item-remove">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+          <!-- *** end of cart item *** -->
+          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>total</h5>
+            <h5>$ <strong id="cart-total" class="font-weight-bold"> </strong>24.00</h5>
+          </div>
+          <!-- end of total -->
+          <!-- cart buttons -->
+          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="#" id="clear-cart" class="btn btn-black text-uppercase">clear cart</a>
+            <a href="#" id="clear-cart" class="btn btn-pink text-uppercase">checkout</a>
+          </div>
+        </div>
+      </div>
+    <!-- end of banner -->
+  </header>
+  <!-- end of header -->
+  <!-- about -->
+  <!-- py-5 padding of 5 -->
+  <section class="about py-5" id="about">
+    <div class="container">
+      <!-- remember row in bootstrap default flexbox -->
+      <div class="row">
+        <!-- small screen sz col-10 margin auto to center; for bigger size screen add padding-->
+        <!-- remember bootstrap total column equal 12 (col-md-6 + 6 = 12!) -->
+        <div class="col-10 mx-auto col-md-6 my-5">
+          <hi class="text-capitalize">about <strong class="banner-title">us</strong></hi>
+          <!-- margin top bottom, text light grey, width 75% of its column -->
+          <!-- emoji directly to html https://emojipedia.org/clinking-glasses/ -->
+          <p class="my-4 text-muted w-75">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, id vitae officia recusandae iste expedita! 💕
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, aliquam. 🥂
+          </p>
+          <!-- button style: btn-outline-secondary from bootstrap.  now we use btn-black my custom css-->
+          <a href="#" class="btn btn-black text-uppercase">explore</a>
+        </div>
+        <!-- apply flex property align-self-center -->
+        <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+          <div class="about-img__container">
+            <!-- in bootstrap img to be responsive add .img-fluid -->
+            <img src="./img/sweets-1.jpeg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- end of about section -->
+<!-- store section -->
+<section id="store" class="store py-5">
+  <div class="container">
+    <!-- section title -->
+    <div class="row">
+      <div class="col-10 mx-auto col-sm-6 text-center">
+        <hi class="text-capitalize">our <strong class="banner-title">store</strong></hi>
+      </div>
+    </div>
+    <!-- end of section title -->
+    <!-- filter buttons -->
+    <!-- remember row in bootstrap gets default flex -->
+    <div class="row">
+  <!-- justify-content-around even space around element sinc 5 btn will span out, add flex to parent div -->
+      <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
+        <!-- data-filter="all" is for js each filtering looks the value of data-filter
+        btn-blck style is my styling under global
+        -->
+        <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">all</a>
+        <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="cakes">cakes</a>
+        <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="cupcakes">cupcakes</a>
+        <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="sweets">sweets</a>
+        <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="doughnuts">doughnuts</a>
+      </div>
+    </div>
+    <!-- end of filter buttons -->
+    <!-- search box -->
+    <div class="row">
+      <!-- for sm screen col-10 center, md size screen col-,md-6 mx-auto applies for all sizes.  but if no mx-auto it will be on left hand side -->
+      <div class="col-10 mx-auto col-md-6">
+        <form>
+          <!-- margin bottom -->
+          <div class="input-group mb-3">
+            <!-- put icon search infront of input field -->
+            <div class="input-group-prepend">
+              <!-- search icon using font awesome -->
+              <span class="input-group-text search-box" id="search-icon">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="item..." id = "search-item">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end of search box -->
+    <!-- store items -->
+    <div class="row store-items" id="store-items">
+      <!-- single item -->
+      <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+        data-item will be used for javascript
+      -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+        <div class="card single-item">
+          <!-- within image card there is a cart img
+          -->
+          <div class="img-container">
+            <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+            <img src="./img/sweets-1.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+            <!-- add the shopping cart onto img  -->
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div> <!-- end of img container-->
+          <div class="card-body">
+            <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">sweet item</h5>
+              <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of single item -->
+      <!-- single item -->
+      <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+        data-item will be used for javascript
+      -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+        <div class="card single-item">
+          <!-- within image card there is a cart img
+          -->
+          <div class="img-container">
+            <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+            <img src="./img/cupcake-1.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+            <!-- add the shopping cart onto img  -->
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div> <!-- end of img container-->
+          <div class="card-body">
+            <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name">cupcake item</h5>
+              <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of single item -->
+      <!-- single item -->
+      <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+        data-item will be used for javascript
+      -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+          <div class="card single-item">
+            <!-- within image card there is a cart img
+            -->
+            <div class="img-container">
+              <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+              <img src="./img/cake-1.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+              <!-- add the shopping cart onto img  -->
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div> <!-- end of img container-->
+            <div class="card-body">
+              <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">cake item</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+      <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+        data-item will be used for javascript
+      -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+          <div class="card single-item">
+            <!-- within image card there is a cart img
+            -->
+            <div class="img-container">
+              <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+              <img src="./img/doughnut-1.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+              <!-- add the shopping cart onto img  -->
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div> <!-- end of img container-->
+            <div class="card-body">
+              <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">doughnut item</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of single item -->  
+        <!-- single item -->
+      <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+        data-item will be used for javascript
+      -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+          <div class="card single-item">
+            <!-- within image card there is a cart img
+            -->
+            <div class="img-container">
+              <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+              <img src="./img/sweets-2.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+              <!-- add the shopping cart onto img  -->
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div> <!-- end of img container-->
+            <div class="card-body">
+              <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">sweet item</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+          data-item will be used for javascript
+        -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+            <div class="card single-item">
+              <!-- within image card there is a cart img
+              -->
+              <div class="img-container">
+                <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+                <img src="./img/cupcake-2.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+                <!-- add the shopping cart onto img  -->
+                <span class="store-item-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+              </div> <!-- end of img container-->
+              <div class="card-body">
+                <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+                <div class="card-text d-flex justify-content-between text-capitalize">
+                  <h5 id="store-item-name">cupcake item</h5>
+                  <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of single item -->
+          <!-- single item -->
+        <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+          data-item will be used for javascript
+        -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+            <div class="card single-item">
+              <!-- within image card there is a cart img
+              -->
+              <div class="img-container">
+                <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+                <img src="./img/cake-2.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+                <!-- add the shopping cart onto img  -->
+                <span class="store-item-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+              </div> <!-- end of img container-->
+              <div class="card-body">
+                <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+                <div class="card-text d-flex justify-content-between text-capitalize">
+                  <h5 id="store-item-name">cake item</h5>
+                  <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of single item -->
+          <!-- single item -->
+        <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+          data-item will be used for javascript
+        -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+            <div class="card single-item">
+              <!-- within image card there is a cart img
+              -->
+              <div class="img-container">
+                <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+                <img src="./img/doughnut-2.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+                <!-- add the shopping cart onto img  -->
+                <span class="store-item-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+              </div> <!-- end of img container-->
+              <div class="card-body">
+                <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+                <div class="card-text d-flex justify-content-between text-capitalize">
+                  <h5 id="store-item-name">doughnut item</h5>
+                  <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of single item -->  
+        <!-- single item -->
+        <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+          data-item will be used for javascript
+        -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+          <div class="card single-item">
+            <!-- within image card there is a cart img
+            -->
+            <div class="img-container">
+              <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+              <img src="./img/sweets-3.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+              <!-- add the shopping cart onto img  -->
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div> <!-- end of img container-->
+            <div class="card-body">
+              <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">sweet item</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+          data-item will be used for javascript
+        -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+          <div class="card single-item">
+            <!-- within image card there is a cart img
+            -->
+            <div class="img-container">
+              <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+              <img src="./img/cupcake-3.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+              <!-- add the shopping cart onto img  -->
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div> <!-- end of img container-->
+            <div class="card-body">
+              <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">cupcake item</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+          data-item will be used for javascript
+        -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+          <div class="card single-item">
+            <!-- within image card there is a cart img
+            -->
+            <div class="img-container">
+              <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+              <img src="./img/cake-3.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+              <!-- add the shopping cart onto img  -->
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div> <!-- end of img container-->
+            <div class="card-body">
+              <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">cake item</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of single item -->
+        <!-- single item -->
+        <!-- small single col, sm 6and 6 2 columns, large 4 columns each taking 1/3 of 12 total center (mx-auto) my-3 margin of top|bottom 3
+          data-item will be used for javascript
+        -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item-"sweets">
+          <div class="card single-item">
+            <!-- within image card there is a cart img
+            -->
+            <div class="img-container">
+              <!-- without bootstrap class .card-img-top image is huge.  note: store-img is our css -->
+              <img src="./img/doughnut-3.jpeg" class="card-img-top store-img" alt="three colorful macaroons">
+              <!-- add the shopping cart onto img  -->
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div> <!-- end of img container-->
+            <div class="card-body">
+              <!-- add flex: I want text to side by side justify-content-between (push in betwn item) -->
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">doughnut item</h5>
+                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">15</strong></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of single item -->  
+  </div>
+</section>
+<!-- end of store section -->
+<!-- icons -->
+  <!-- 
+  https://www.iconfinder.com/icons/2427887/dessert_donut_doughnut_fat_sweets_icon
+  Creative Commons (Attribution 3.0 Unported);
+  https://www.iconfinder.com/korawan_m
+  -->
+  <!-- 
+  https://www.iconfinder.com/icons/2427887/dessert_donut_doughnut_fat_sweets_icon
+  Creative Commons (Attribution 3.0 Unported);
+  https://www.iconfinder.com/korawan_m
+  -->
+<!--end of icons icons -->
+<!-- services -->
+<!-- services section add padding top|bottom-5 -->
+<section id="services" class="services py-5">
+  <div class="container">
+    <div class="row">
+      <!-- single service -->
+      <div class="col-md-4 text-center my-3">
+        <!-- 
+        https://www.iconfinder.com/icons/2427860/baguette_bread_bread_loaf_food_toast_icon
+        Creative Commons (Attribution 3.0 Unported);
+        https://www.iconfinder.com/korawan_m
+        -->
+        <img src="./img/bread-icon.png" alt="bread icon">
+        <h6 class="text-uppercase my-3 service-title">bread</h6>
+        <p class="w-75 mx-auto text-left service-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam dolor ab neque explicabo quibusdam aperiam reiciendis maxime aspernatur officiis porro.
+        </p>
+      </div>
+      <!-- end of single service -->
+      <!-- single service -->
+      <div class="col-md-4 text-center my-3">
+      <!-- 
+      https://www.iconfinder.com/icons/2427875/cup_cupcake_dessertice_cream_yogurt_icon
+      Creative Commons (Attribution 3.0 Unported);
+      https://www.iconfinder.com/korawan_m
+      -->
+        <img src="./img/cupcake-icon.png" alt="bread icon">
+        <h6 class="text-uppercase my-3 service-title">cupcakes</h6>
+        <p class="w-75 mx-auto text-left service-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam dolor ab neque explicabo quibusdam aperiam reiciendis maxime aspernatur officiis porro.
+        </p>
+      </div>
+      <!-- end of single service -->
+      <!-- single service -->
+      <div class="col-md-4 text-center my-3">
+      <!-- 
+      https://www.iconfinder.com/icons/2671457/candy_sweets_treat_trick_icon
+      Creative Commons (Attribution 3.0 Unported);
+      https://www.iconfinder.com/bluelabelicons
+      -->
+        <!-- icons are small 64X64 -->
+        <img src="./img/candy-icon.png" alt="bread icon">
+        <h6 class="text-uppercase my-3 service-title">candy</h6>
+        <p class="w-75 mx-auto text-left service-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam dolor ab neque explicabo quibusdam aperiam reiciendis maxime aspernatur officiis porro.
+        </p>
+      </div>
+      <!-- end of single service -->
+    </div>
+  </div>
+</section>
+<!-- end of services -->
+<!-- cakes -->
+<section id="cakes" class="cakes py-5">
+  <div class="container">
+    <!-- section title -->
+    <div class="row">
+      <div class="col-10 mx-auto col-sm-6 text-center">
+        <hi class="text-capitalize">order<strong class="banner-title">cake</strong></hi>
+      </div>
+    </div>
+    <!-- end of section title -->
+  </div>
+</section>
+<!-- end of cakes -->
+<div class="row">
+  <!-- single cake -->
+  <!-- sm screen column 11 wide, center it; once it reaches medium sz, once reaches lg screen, it will be 4-col wide; for small screen margin top|bottom 4  -->
+  <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+    <h3 class="py-3">birthday cake</h3>
+    <!-- make text greyish color -->
+    <div class="text-muted">
+      <p class="my-3">birthday with name</p>
+      <p class="my-3">custom ingredients</p>
+      <p class="my-3">custom size</p>
+      <p class="my-3">custom design</p>
+      <button type="button" class="btn btn-pink  text-capitalize">order now</button>
+      <!-- margin bottom:4 -->
+      <p class="text-lowercase my-4">starting at $5</p>
+      <!-- for img remember to add img-fluid to be responsive -->
+      <img src="./img/trans-cake.png" class="img-fluid" alt="rainbow birthday cake">
+    </div>
+  </div>
+  <!-- end of single cake -->
+    <!-- single cake -->
+  <!-- sm screen column 11 wide, center it; once it reaches medium sz, once reaches lg screen, it will be 4-col wide; for small screen margin top|bottom 4  -->
+  <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+      <h3 class="py-3">custom cake</h3>
+      <!-- make text greyish color -->
+      <div class="text-muted">
+        <p class="my-3">any occasion cake with name</p>
+        <p class="my-3">custom ingredients</p>
+        <p class="my-3">custom size</p>
+        <p class="my-3">custom design</p>
+        <button type="button" class="btn btn-pink  text-capitalize">order now</button>
+        <!-- margin bottom:4 -->
+        <p class="text-lowercase my-4">starting at $5</p>
+        <!-- for img remember to add img-fluid to be responsive -->
+        <img src="./img/trans-custom.png" class="img-fluid" alt="blue pink heart sprinkle cake">
+      </div>
+    </div>
+    <!-- end of single cake -->
+      <!-- single cake -->
+  <!-- sm screen column 11 wide, center it; once it reaches medium sz, once reaches lg screen, it will be 4-col wide; for small screen margin top|bottom 4  -->
+  <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+      <h3 class="py-3">wedding cake</h3>
+      <!-- make text greyish color -->
+      <div class="text-muted">
+        <p class="my-3">bride &amp; groom's name</p>
+        <p class="my-3">custom ingredients</p>
+        <p class="my-3">custom size</p>
+        <p class="my-3">custom design</p>
+        <button type="button" class="btn btn-pink  text-capitalize">order now</button>
+        <!-- margin bottom:4 -->
+        <p class="text-lowercase my-4">starting at $5</p>
+        <!-- for img remember to add img-fluid to be responsive -->
+        <img src="./img/trans-wedding.png" class="img-fluid" alt="white 3 tier cake">
+      </div>
+    </div>
+    <!-- end of single cake -->
+</div>
+<!-- footer -->
+<footer>
+  <div class="container-fluid">
+    <!-- add row, wrap footer elements inside of it; otherwise you see the empty space left/right -->
+    <div class="row"><!-- start of row wrapper for footer-->
+      <!-- add footer title -->
+      <div class="col-md-6 footer-title py-5">
+        <h1 class="text-capitalize text-center">
+          <strong class="banner-title">grandma's</strong>
+        </h1>
+        <!-- display flex: icons tobe side by side  space around so icons have equal space left/right, for small screen: flex-wrap (if not enough space: icon will wrap next line -->
+        <div class="footer-icon mt-3 d-flex justify-content-around flex-wrap">
+          <a href="#" class="footer-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#" class="footer-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="footer-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="footer-icon">
+            <i class="fab fa-google-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 footer-contact text-center text-capitalize p-5">
+        <h3 class="mb-5">contact</h3>
+        <p class="d-flex flex-wrap">
+          <span class="mr-4 footer-icon">
+            <i class="fas fa-map"></i>
+          </span>
+          <span>
+            344 bush street, san francisco, CA 90431
+          </span>
+        </p>
+        <p class="d-flex flex-wrap">
+          <span class="mr-4 footer-icon">
+            <i class="fas fa-phone"></i>
+          </span>
+          <span>
+            +415-456-6677
+          </span>
+        </p>
+        <p class="d-flex flex-wrap">
+          <span class="mr-4 footer-icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>
+            cake@gmail.com
+          </span>
+        </p>
+      </div>
+    </div> <!-- ending div for .row footer-->
+  </div>
+</footer>
+  <!-- jquery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
