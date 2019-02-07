@@ -36,3 +36,15 @@ p {
   line-height: 21px;
   margin-bottom: 20px;
 }
+/* container global styles */
+.main-container {
+  /* 100% of browser */
+  width: 100%;
+  margin: 0 auto;
+}
+.single-row {
+  /* child container of main container 100% */
+  width: 100%;
+}
+/* Header */
+/* main header has 2 container col-left, col-right  */
