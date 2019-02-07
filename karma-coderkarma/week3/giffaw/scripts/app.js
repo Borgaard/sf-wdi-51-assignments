@@ -4,7 +4,6 @@ $(document).ready(function () {
 
     $("form").on("submit", (e) => {
         e.preventDefault();
-        alert("event firing");
         let $gifgallary = $(".gif-gallery");
 
 
@@ -16,7 +15,7 @@ $(document).ready(function () {
             success: (response) => {
                 console.log(response.data);
                 response.data.map(ele => {
-                    let newGif = `<img src="${ele.images.downsized.url }">`;
+                    let newGif = `<img src="${ele.images.downsized.url}">`;
                     $gifgallary.append(newGif)
                 })
 
