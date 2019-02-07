@@ -1,0 +1,38 @@
+
+/* To do list*/
+/*[] - Sticky Header*/
+/*[]-use flexbox for a two column setup*/
+
+article{
+  margin:25px 60px;
+}
+header > nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+
+}
+
+
+}
+nav {
+  display: inline-flex;
+
+  flex-direction: row;
+  padding: 12px 150px;
+  margin:10px 15px;
+}
+h1{
+  background-image: url("images/blog_header_bg.jpg");
+  height:250px;
+  text-align: center;
+  background-size: cover;
+  padding-top:180px;
+  font-size: 37.5px;
+}
+
+
+footer {
+  background-color: #CDF3F6;
+  overflow: auto;
+}

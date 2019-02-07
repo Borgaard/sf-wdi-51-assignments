@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+}
+
+}
+body {
+  background-image: url("marsBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+ #world {
+  margin-top: 500px;
+ }
