@@ -1,0 +1,80 @@
+/*Overall style items on line 1*/
+/*TO-DO
+-Complete columns on page using flex with columns with right spacing and margins
+-Select google font for entire page
+-Style all necessary elements
+-Make site fully responsive using query media for final styling
+
+
+*/
+
+.flex-container {
+  display: flex;
+
+}
+
+.brand-header {
+
+}
+.market-name {
+
+}
+.market-message {
+
+}
+
+h1 {
+  color: blue;
+}
+
+}
+h2 {
+  text-align: center;
+
+}
+p {
+
+}
+.categories{
+
+}
+button {
+  padding:20px;
+}
+ul li {
+  list-style: none;
+}
+.carousel {
+
+}
+.gallery {
+
+}
+.food-item {
+
+}
+.shopping-cart {
+
+}
+footer p {
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
