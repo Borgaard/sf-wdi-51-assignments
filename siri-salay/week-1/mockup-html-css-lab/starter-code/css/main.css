@@ -1,0 +1,124 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  padding: 2em 3em;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 40em;
+  }
+
+header {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 3em;
+    color:  #F8CE78;
+   font-size: 3em;
+   font-weight: lighter;
+   line-height: 20px;
+}
+
+a {
+  color: inherit; /* inherits from h1 I think? */
+  text-decoration: inherit; /* no underline */
+  font-size: inherit;
+}
+
+h2, h3{
+  font-size: 2em;
+  font-weight: lighter;
+}
+
+
+h3 {
+    font-size: 2em;
+    font-weight: normal;
+    color: #CCC;
+    padding: 20px 0px 0px 0px;
+}
+
+header nav a {
+    display: inline-block;
+    font-size: 1.25em;
+    margin-right: .75em;
+    color: #DDD;
+    border-bottom: 2px solid #EEE;
+}
+
+    header h2 {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+article h3 {
+  line-height:18px;
+}
+article h2 {
+  line-height: 4px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+    }
+
+p:first-letter {
+    float: left;
+    font-size: 6em;
+    line-height: 1;
+    color: #DDD;
+    margin: -10px 16px 0 0;
+}
+
+footer nav {
+    padding-top: 20px;
+}
+
+footer nav a {
+    color: #F8CE78;
+    text-decoration: none;
+  }
+
+footer {
+    color: #BBB;
+    padding-bottom: 30px;
+}
+
+footer div {
+  padding-top: 30px;
+}
+
+a {
+    color: #F8CE78;
+    text-decoration: none;
+}
+
+h4 {
+    text-align: right;
+    font-weight: bold;
+}
+
+h2 a{
+    padding-top: 15px;
+    color: black;
+}
+
+/*why does h3 + h2 {
+padding-top: 15px;
+    color: black;
+} NOT work?*/
+
+img {
+  width: 40em;
+  height: auto;
+}
+
+article {
+  border-bottom: 1px solid #ddd;
+}
