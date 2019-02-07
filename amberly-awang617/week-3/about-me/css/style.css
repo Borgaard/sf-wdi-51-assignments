@@ -1,0 +1,56 @@
+body {
+	background: gray;
+	font-family: helvetica, sans-serif;
+	margin: 0 auto;
+	/*padding: 30px;*/
+	text-align: center;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  z-index: 2;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  display:inline-block ;
+}
+
+img {
+  width: 100%;
+}
+
+
+p {
+	text-align: justify;
+}
+
+#testimonials {
+  background-color: teal;
+  margin: 0;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    /*padding: 0 15px;*/
+  }
+	article {
+  		margin: 0 50px 0 50px;
+  }
+  footer {
+  		margin: 0 50px 0 50px;
+  }
+}
