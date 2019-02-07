@@ -15,13 +15,11 @@ $(document).on('click','.btn', function(e) {
     method:"GET",
     url:myUrl + search + key,
     success: function(res){
-      console.log(res.data);
-
 
       for (let i=0;i < res.data.length;i++){
         var gifs = res.data[i];
 
-        var addGifs = $('.gif-gallery').append(`<img src="${gifs.images.downsized.url}">`);
+        $('.gif-gallery').append(`<img src="${gifs.images.downsized.url}">`);
       }
     }
   })
