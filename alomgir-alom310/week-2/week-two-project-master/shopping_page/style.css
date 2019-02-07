@@ -37,7 +37,7 @@ nav li{
 
 nav a{
   text-decoration: none;
-  padding:50px;
+  padding:0 50px;
 }
 button{
   padding:1em;
