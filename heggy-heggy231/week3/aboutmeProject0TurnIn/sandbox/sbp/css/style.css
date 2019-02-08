@@ -4,6 +4,9 @@
 #337ab7 - blue
 #eee    - light grey
 #cecece - darker grey
+#e63636 - red
+#adadad  - lighter grey
+
 #F7FC71 - Yellow
 #C8AAEF - light purple
 rgb(141, 70, 235) - dark purple
@@ -111,7 +114,7 @@ hr {
   display: inline-block;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 2px;
+  line-height: 21px;
   font-weight: normal;
   cursor: pointer;
   border: 1px solid #cecece; /* darker grey*/
@@ -119,4 +122,16 @@ hr {
   border-radius: 4px;
   text-decoration: none;
   color: #333; /* 80% black */
+}
+/* add hover on btn info section */
+.btn-info:hover {
+  color: #333; /* 80% black */
+  background-color: #e63636; /* red */
+  border-color: #adadad; /* lighter grey */
+}
+/* footer */
+/* for footer I added clear-fix to feature */
+.col-footer {
+  /* padding top|botton(30) left|right(0) */
+  padding: 30px 0;
 }
