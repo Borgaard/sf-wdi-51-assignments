@@ -1,8 +1,9 @@
 /* Color Palette 
-#333    - Very dark gray
+#333    - Very dark gray 80% black
 #fff    - white
 #337ab7 - blue
-#eee    - grey
+#eee    - light grey
+#cecece - darker grey
 #F7FC71 - Yellow
 #C8AAEF - light purple
 rgb(141, 70, 235) - dark purple
@@ -21,7 +22,7 @@ rgb(210, 210, 210) - light olive
 body {
   padding-top: 100px;
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #333; /* Very dark gray 80% black */
 }
 h1 {
   font-size: 36px;
@@ -77,7 +78,7 @@ p {
   line-height: 28px;
   border-radius: 6px;
   color: #fff;
-  background-color: #337ab7;
+  background-color: #337ab7; /* blue */
   /* remove underline default style of anchor tag */
   text-decoration: none;
   display: inline-block;
@@ -103,4 +104,19 @@ hr {
   float: left;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+/* button for more info */
+.btn-info {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 2px;
+  font-weight: normal;
+  cursor: pointer;
+  border: 1px solid #cecece; /* darker grey*/
+  /* rounded corder */
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333; /* 80% black */
 }
