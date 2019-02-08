@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box
+}
+
 img {
   width:100%;
   height:100%;
@@ -13,7 +17,6 @@ body {
 
 h1{
   text-align: center;
-  color: rgb(38,38,38);
 }
 
 nav {
@@ -29,7 +32,13 @@ nav {
 
 li{
   list-style-type:none;
+  text-orientation: none;
   font-size: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 .navy {
@@ -60,17 +69,13 @@ li{
   font-size: 30px;
 }
 
-.projects-container {
+.skills-container {
   position: relative;
   text-align: center;
   color: white;
 }
 
-.keyboard {
-   opacity: .6;
- }
-
-.project-title{
+.skills-title{
   position: absolute;
   top: 3%;
   left: 50%;
@@ -81,6 +86,43 @@ li{
   color:white;
 }
 
+.aboutme-container {
+  position: relative;
+  text-align: center;
+}
+
+.aboutme-title {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  z-index:1;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+}
+
+.experience-container {
+  position: relative;
+  text-align: center;
+}
+
+.experience-title {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  z-index:1;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color:black;
+}
+
+.keyboard {
+   opacity: .6;
+ }
+
+
 .projects {
   height: 900px;
   width: 100%;
@@ -88,24 +130,30 @@ li{
   background-color: rgb(38,38,38);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.project {
-  display: flex;
   justify-content: space-around;
+  padding-bottom: 80px;
 }
 
-.projectshot {
-  border: 1px solid white;
-  height: 160px;
-  flex: 1;
+
+.project-title {
+  color: white;
+  font-size: 60px;
+  margin-bottom: 60px;
 }
 
-.contact {
-  height: 350px;
+.testimonials {
+  height: 600px;
   width: 100%;
-  background-color: rgb(38,38,38);
+  color: rgb(38,38,38);
+  background-color: rgb(192,192,192);
+}
+
+.test-text {
+  color: white;
+  font-size: 60px;
+  margin-top: 0px;
+  padding-top: 15px;
+  color: black;
 }
 
 .contact2 {
@@ -114,13 +162,54 @@ li{
   background-color: rgb(192,192,192);
 }
 
-h3 {
-  flex: 1
+
+.project {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
+.projectshot {
+  border: 1px solid white;
+  height: 110px;
+  flex: 3;
+}
 
+.ptextcontainer {
+  flex: 1;
+}
 
+.project1text, .project3text, .project5text {
+  text-align:left;
+  margin: 25px;
+  margin-top: 0px;
+  flex: 1;
+}
 
+.project2text, .project4text {
+  text-align:right;
+  margin: 25px;
+  margin-top: 0px;
+  flex: 1;
+}
+
+.projectshot1, .projectshot3, .projectshot5{
+  text-align: right;
+  flex: 1;
+}
+
+.projectshot2, .projectshot4 {
+  text-align: left;
+  flex: 1;
+}
+
+p {
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
 
 
 
