@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fruit Racer XTREME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="race">
+  <h1>Fruit Racer XTREME</h1>
+
+  <button onclick="move()">Let's Race!</button>
+  <!-- <input type="button" value="Let's Race!" id="go"> -->
+  <input type="button" value="Reset" id="reset">
+
+  <div id="racetrack">
+    <img src="http://pngimg.com/uploads/apple/apple_PNG12458.png" alt="apple" id="apple" class="fruit">
+    <img src="https://webstockreview.net/images/orange-clipart-1.png" alt="orange" id="orange" class="fruit">
+  </div>
+
+  <div id="raceInfoContainer" class="clearfix">
+    <h2>Results</h2>
+    <div id="raceInfo1" class="raceInfo">Apple<span></span></div>
+    <div id="raceInfo2" class="raceInfo">Orange<span></span></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
