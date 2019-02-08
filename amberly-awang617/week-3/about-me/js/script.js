@@ -14,8 +14,8 @@ let fadeBack = function() {
   $('.testimony').fadeIn("slow");
 }
 
-setInterval(fadeAway, 10000);
-setInterval(fadeBack, 10050);
+// setInterval(fadeAway, 10000);
+// setInterval(fadeBack, 10050);
 
 document.querySelector("button").addEventListener('click', clearForm)
 
