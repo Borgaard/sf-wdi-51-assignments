@@ -41,11 +41,7 @@ function logKey(event) {
 
 // function checkWinner() {
 //   if (playerOne.style.left === 80) {
-//     //text declares the winner
-//     // let appear = document.getElementById("playerOneWon");
-//     // appear.style.display = "block";
-//     //stops the players from moving
-//     alert("Player One won!");
+//     let appear = document.getElementById("playerOneWon");
 //   }
 //   else if (playerTwo.style.left === 80) {
 //     //text declares the winner
