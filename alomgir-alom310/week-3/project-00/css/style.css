@@ -1,5 +1,9 @@
 body{
-  background-color:;
+  background-image: url("../images/AH.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 html{
@@ -25,31 +29,14 @@ html{
   margin-top:125px;
 }
 
-a{
-  text-decoration: none;
-  color:black;
-}
-
-li{
-  list-style: none;
-}
-
-nav a{
-  display: inline-block;
-  padding:1em;
-}
-
-
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding:0;
   justify-content: space-around;
-}
 
-#welcomepic{
-  height: 400px;
 }
 
 .col{
@@ -62,11 +49,61 @@ nav a{
 
 h2{
   text-align: center;
+  font-family: raleway;
 }
 
-h1{
+#headwrap h1{
   padding:0 20px;
-  font-family: pacifico;
+  font-family: raleway;
+
+}
+/* ----------------------------------------
+Nav
+------------------------------------------- */
+
+a{
+  text-decoration: none;
+  color:black;
+  font-family: raleway;
+  font-weight: 900;
+}
+
+li{
+  list-style: none;
+}
+
+nav a{
+  display: inline-block;
+  padding:1em;
+}
+
+.menu {
+  display: none;
+}
+
+.sidenav {
+  display:none;
+}
+
+/* ----------------------------------------
+Welcome Section
+------------------------------------------- */
+
+#welcomepic{
+  height: 400px;
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcome h1{
+  font-family:Raleway;
+  text-shadow: 0 0 10px black;
+  color: white;
+  letter-spacing: .5em;
 }
 
 /* ----------------------------------------
@@ -85,7 +122,13 @@ input, textarea{
   margin-bottom: 12px;
   padding: 10px 10px;
   outline:0;
-  background-color: transparent;
+  background-color: #00000050;
+  color:white;
+}
+
+::placeholder{
+  color:white;
+  font-family: raleway;
 }
 
 /* ----------------------------------------
@@ -104,6 +147,7 @@ button {
   font-size: 1em;
   letter-spacing: .5em;
   transition: all .3s ease-in-out;
+  font-family: raleway;
 }
 
 button:hover {
@@ -149,14 +193,84 @@ Scroll
     border-bottom-color:#ffffff;
 }
 #scroll:hover {
-    background-color:#e74c3c;
+    background-color: deepskyblue;
     opacity:1;filter:"alpha(opacity=100)";
     -ms-filter:"alpha(opacity=100)";
+    box-shadow: 0 0 10px black;
 }
 
+/* ----------------------------------------
+Media queries
+------------------------------------------- */
+
+@media only screen and (max-width: 675px){
+  #mediaAbout{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col{
+    width: 75%
+  }
+
+  #about {
+    height: auto;
+  }
+
+  #headwrap h1{
+    font-size: 30px;
+  }
+
+  nav{
+    display: none;
+  }
+
+  .menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .sidenav {
+    display: none;
+    z-index: 1;
+  }
+
+  .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  background-color: #00bfff;
+}
+
+  .sidenav a:hover {
+    color: white;
+  }
 
 
-
+}
 
 
 
