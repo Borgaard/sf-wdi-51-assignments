@@ -1,24 +1,70 @@
-body {
-	background: gray;
-	font-family: helvetica, sans-serif;
-	margin: 0 auto;
-	/*padding: 30px;*/
-	text-align: center;
+/* Styles for main document items */
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  /*background: gray;*/
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0 auto;
+  /*padding: 30px;*/
+  text-align: center;
+  background-size: cover;
+}
+
+/* Adjusting the page to make room for the nav*/
+main{
+  padding-top: 40px;
+}
+
+/*Styles for main page blocks */
+
+
+article, section {
+  padding: 80px 0;
+}
+
+footer {
+  background: #4AD1CB;
+  padding: 30px;
+}
+
+/*article {
+  background-image: url("../images/sky.jpg");
+  background-size: cover;
+}*/
+
+/* Navigation bar styling */
 .nav {
-  position: fixed;
-  top: 0;
+  border-bottom: 2px solid white;
+  /*position: fixed;*/
+  padding: 10px;
+  /*top: 0;*/
   left: 0;
-  background: white;
+  background: #4AD1CB;
   width: 100%;
   z-index: 2;
+  margin-bottom: 20px;
 }
 
+a {
+  color: white;
+  padding-bottom: 0;
+}
+
+a:hover {
+  color: white;
+  background: gray;
+  transition: background 1s;
+}
+
+/* Content/text styles */
 h1 {
   text-align: center;
-  font-family: 'Cabin Sketch', cursive;
   font-size: 60px;
+  margin-top: 20px;
+  color: #FEB6A8;
 }
 
 h2 {
@@ -27,22 +73,40 @@ h2 {
   display:inline-block ;
 }
 
-img {
-  width: 100%;
-}
-
-
 p {
 	text-align: justify;
 }
 
+#succulent{
+  height: 70vh;
+  width: 100%;
+}
+
+#succulent img{
+  max-height: 100%;
+  border: none;
+}
+
+
+img {
+  width: 100%;
+}
+
+/*#gallery img:hover {
+  opacity: .5;
+}*/
+
 #testimonials {
-  background-color: teal;
+  height: 500px;
+  color: white;
+  background-color: #4AD1CB;
   margin: 0;
   width: 100%;
 }
 
 
+
+/* Media Queries */
 @media (max-width: 768px) {
   body {
     /*padding: 0 15px;*/
