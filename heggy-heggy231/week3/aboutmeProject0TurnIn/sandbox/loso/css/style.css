@@ -44,4 +44,10 @@ p {
   /* keep the img fixed makes parallax effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
+  /* 2 background-position values: horizontal, vertical position.  */
+  background-position: 50% 50%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
