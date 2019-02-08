@@ -94,3 +94,13 @@ hr {
   border: 0;
   border-top: 1px solid #eee;
 }
+
+/* Features */
+/* features has 3 col */
+.col-1, .col-2, .col-3 {
+  /* each col should take up only 30% of parent:single-row */
+  width: 30%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
