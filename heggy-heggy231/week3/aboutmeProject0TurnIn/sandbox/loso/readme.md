@@ -21,6 +21,8 @@ how my grid system will be styled:
       // content goes here!
 col-# number total up to 12 for each table
 https://getbootstrap.com/docs/3.3/css/#grid
+- version of bootstrap 3.3 documentation
+[v3.3 bootstrap](https://getbootstrap.com/docs/3.3/css/#buttons)
 
 ### What Is Bootstrap Framework?
 Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
