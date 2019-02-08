@@ -2,21 +2,30 @@ html {
   box-sizing: border-box;
 }
 
-/*CSS NAV COLORS
-#24292d#233darkslategrayhsl(206,11,15)rgb(36,41,45)
+body {
+  line-height: 1.5
+}
 
-*/
 nav {
   background: #24292d;
 }
 
-nav, a:hover {
+nav a:hover {
   color: limegreen;
+  text-shadow: 0 1px 2vw limegreen;
 }
 
 .nav-items {
   display: flex;
   justify-content: space-around;
+}
+
+.banner {
+  height: 60vh;
+  padding: 1rem;
+  background: url(../images/backgroundbanner.jpg);
+  background-color: grey;
+  background-size: cover;
 }
 
 .banner-inner{
@@ -34,15 +43,22 @@ h1 {
 
 h3 {
   color: white;
-  text-shadow: 0 1px 2vw limegreen;
+  text-shadow: 0 1px 2vw #24292d;
 }
 
 .photo {
   grid-column: 1 / 5;
+  height: auto;
 }
 
 .intro {
+  font-size: 1.5rem;
+  padding: 0 4rem;
   grid-column: 5 / 13;
+}
+
+.intro a {
+  color: limegreen;
 }
 
 .code {
@@ -53,6 +69,7 @@ h3 {
 }
 
 .code h2 {
+  text-align: center;
   padding-left: 2rem;
   color: white;
   text-shadow: 0 1px 2vw limegreen;
@@ -62,19 +79,27 @@ h3 {
   grid-column: 1 / 7;
 }
 
+.miscellaneous h2 {
+  text-align: center;
+  padding-left: 2rem;
+  color: white;
+  text-shadow: 0 1px 2vw limegreen;
+}
+
+.contact {
+  grid-column: 7 / 12;
+}
+
+.contact h2 {
+  text-align: center;
+  padding-left: 2rem;
+  color: white;
+  text-shadow: 0 1px 2vw #24292d;
+}
+
 .main-content{
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   position: relative;
-}
-
-
-
-.banner {
-  height: 85vh;
-  padding: 1rem;
-  background: url(../images/backgroundbanner.jpg);
-  background-color: grey;
-  background-size: cover;
 }
