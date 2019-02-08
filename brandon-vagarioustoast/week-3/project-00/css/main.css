@@ -10,13 +10,38 @@ nav {
   background: #24292d;
 }
 
+nav, a:hover {
+  color: green;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.photo {
+  grid-column: 1 / 5;
+}
+
+.banner-inner{
+  position:relative;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px #24292d;
+}
+
 .main-content{
   display: grid;
   grid-gap: 1rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  position: relative;
 }
 
 .banner {
-  height: 60vh;
+  height: 85vh;
   padding: 1rem;
   background: url(../images/backgroundbanner.jpg);
   background-color: grey;
