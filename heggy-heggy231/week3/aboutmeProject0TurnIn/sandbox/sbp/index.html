@@ -5,32 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SBP</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <!-- download uncompressed development jQuery https://code.jquery.com/jquery-3.3.1.js -->
     <script src="./js/jquery.js"></script>
     <!-- get stable bootstrap v 3.37 vhttps://getbootstrap.com/docs/3.3/ 
     https://getbootstrap.com/docs/3.3/getting-started/#download
     documentation: https://getbootstrap.com/docs/3.3/css/#grid
     -->
-
+    <script src="./js/bootstrap.min.js"></script>
 </head>
 <body>
     <!-- header -->
     <header>
+        <!-- Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. -->
+
         <!-- header main container -->
-        <div class="main-container">
+        <div class="container">
             <!-- single row -->
-            <div class="single-row">
+            <!-- Predefined grid classes .row and .col-xs-4 are available for quickly making grid layouts 
+            * row has total 12 col: col-md-8
+            -->
+            <div class="row">
                 <!-- col-left -->
-                <div class="col-left">
-                    <img src="images/home.jpg" alt="mountain">
+                <!-- https://getbootstrap.com/docs/3.3/css/#grid-example-basic -->
+                <div class="col-md-8">
+                    <!-- bootstrap img responsive: https://getbootstrap.com/docs/3.3/css/#images-responsive 
+                    
+                    img corner rounded
+                    https://getbootstrap.com/docs/3.3/css/#images-shapes
+                    -->
+
+                    <img class="img-responsive img-rounded" src="images/home.jpg" alt="sbp ski slope mountain">
                 </div>
                 <!-- col-right -->
-                <div class="col-right">
+                <div class="col-md-4">
                     <h1>LoSo</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quia ea eum impedit enim beatae fugit id quibusdam. Praesentium laboriosam possimus voluptas, quibusdam dolore quod molestias esse quisquam voluptate voluptates!</p>
                     <!-- # will take me to the same page -->
-                    <a href="#" class="btn">Take a tour</a>
+                    <!-- add bootstrap btn-primary https://getbootstrap.com/docs/3.3/css/#buttons-options 
+                    btn-lg https://getbootstrap.com/docs/3.3/css/#buttons-sizes
+                    -->
+                    <a href="#" class="btn btn-primary btn-lg">Take a tour</a>
                 </div>
 
             </div>
