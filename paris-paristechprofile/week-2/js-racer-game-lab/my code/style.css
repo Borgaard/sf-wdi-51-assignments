@@ -30,6 +30,7 @@ img{
 .container {
   	display: flex;
 	flex-direction: row;
+	
 }
 
 .button-area{
@@ -39,6 +40,7 @@ img{
 	align-items: center;
 	align-content: center;
 	text-align: center;
+
 }
 
 .row{
@@ -48,18 +50,21 @@ img{
 	align-content: center;
 	box-sizing: border-box;
   	height: auto;
+  
 }
 
 .column{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	
 }
 .track{
 	
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: row;
+
 	width: 95%;
 }
 
@@ -69,6 +74,7 @@ img{
 	justify-content: center;
 	align-content: center;
 	align-items: center;
+
 	text-align: center;
 	background-color: skyblue;
 	color: black;

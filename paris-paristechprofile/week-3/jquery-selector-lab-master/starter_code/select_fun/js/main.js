@@ -9,20 +9,29 @@
 
 // 2. Using jQuery, add the fun class to the elements with the class .box
 
+$(`.boxn`).addClass(`fun`)
 // 3. When #box2 is clicked on
 	// a) Remove the crazy class from all the items with a class of .box
 	// b) Add the crazy class to the h1
 	// c) Slide toggle #box3
-
+$(`#box2`).on(`click`, function(){
+	$(`.box`).remove(`crazy`);
+	$(`h1`).addClass(`crazy`);
+	$(`#box3`).slideToggle();
+});
 
 // 4. When any .box is clicked, change the text in the header's h1 tag to read "jQuery Ninja"
-
+$(`.box`).on(`click`, function(){
+	$(`header`).find(`h1`).html(`jQuery Ninga`);
+});
 
 // 5. When #box1 is clicked on
 	// a) Run the following line of code: $(".moto").attr("src", "images/moto.jpg");
 	// b) Write a JavaScript comment with a description
 	// of what happened (to get practice writing a comment)
-
+$(`#box1`).on(`click`, function(){
+	$(".moto").attr("src", "images/moto.jpg");//give the moto class an image (an attribute of source and image link)
+});
 
 
 /**

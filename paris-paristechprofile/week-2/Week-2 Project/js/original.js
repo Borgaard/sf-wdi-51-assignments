@@ -34,17 +34,18 @@
 
 	stock.fruit.forEach(fruit => {
 		masonaryFruit.append(`
-			<div class="card">
-			<a class="card-link" id="${fruit.id}" href="#"">
+			<div id="${fruit.id}" class="card">
 	          <img src=${fruit.image} class="card-img-top" alt="...">
-	          <div class="card-body ${fruit.name}>
+	          <div class="card-body" ${fruit.name}>
 	            <h5 class="card-title">${fruit.name}</h5>
 	            <p class="card-text">${fruit.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${fruit.price}</small></p>
-	          </div>
-	        </a>
+	          </div>	      
 	        </div>
 		`)
+		let addItem = $(`#${fruit.id}`);
+		/*debugger;*/
+		addItem[0].addEventListener("click", addToCart)
 	})
 
 	let masonaryVeggies = $('#card-columns-veggies');
@@ -52,7 +53,7 @@
 		masonaryVeggies.append(`
 			<div id="${veggies.id}" class="card">
 	          <img src=${veggies.image} class="card-img-top" alt="...">
-	          <div class="card-body ${veggies.name}>
+	          <div class="card-body" ${veggies.name}>
 	            <h5 class="card-title">${veggies.name}</h5>
 	            <p class="card-text">${veggies.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${veggies.price}</small></p>
@@ -66,7 +67,7 @@
 		masonarySeafood.append(`
 			<div id="${seafood.id}" class="card">
 	          <img src=${seafood.image} class="card-img-top" alt="...">
-	          <div class="card-body ${seafood.name}>
+	          <div class="card-body" ${seafood.name}>
 	            <h5 class="card-title">${seafood.name}</h5>
 	            <p class="card-text">${seafood.description}</p>
 	            <p class="card-text price"><small class="text-muted">$${seafood.price}</small></p>
@@ -79,28 +80,19 @@
 	// retrieve info from the card object and add it to the cart descriptions
 	// I want to retrieve the same values from above to the cart
 
-	let addItem = document.getElementById("card-columns-fruit");
+	/*let addItem = document.getElementById("card-columns-fruit");
 		addItem.addEventListener("click", addToCart, false)
+*/
 
-
-	function addToCart(e) {
-		let fruitCart = $('#cart');
-		
-		if (e.target !== e.currentTarget) {
-			let clickedItem = e.target.id;
-			console.log(clickedItem);
-			
-			//if clicked item equals id, then append with data
-
-
+	function addToCart() {
+		let fruitCart = $('#cart');	
 			fruitCart.append(`
 				<tr>
-	              <td data-th="Producct">
+	              <td data-th="Product">
 	                <div class="row">
-	                  <div class="col-lg-3 hidden-xs"><img src="" alt="..." class="img-responsive"/></div>
-	                  <div class="col-lg-9">
-	                    <h4 class="nomargin">${clickedItem}</h4>
-	                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+	                  <div class="col-lg-3 hidden-xs"><img src="${this.getAttribute('img')}" alt="..." class="img-responsive"/></div>
+	                  <div class="col-lg-9">${this.getAttribute('id')}</h4>
+	                    <p>${this.getAttribute('id')}</p>
 	                  </div>
 	                </div>
 	              </td>
@@ -116,5 +108,3 @@
 	            </tr>
 	        `)
 		}
-		e.stopPropagation();
-	};

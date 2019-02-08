@@ -117,6 +117,4 @@ Here's a screenshot of what your game page could look like:
 ![](assets/chicken.png)
 
 ## Additional Resources
-- JavaScript [Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
-- An [excellent resource](https://developer.mozilla.org/en-US/docs/Web/Events) for working with the DOM in Vanilla JavaScript.
-- [Should you learn DOM manipulation in JavaScript before jQuery?](https://www.reddit.com/r/javascript/comments/3hpm1v/should_i_learn_dom_manipulation_with_raw/)
+- 

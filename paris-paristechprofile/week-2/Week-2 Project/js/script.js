@@ -43,6 +43,8 @@
 	          </div>
 	        </div>
 		`)
+		let addItem = $(`#${fruit.id}`);
+		addItem.addEventListener("click", function(){
 	})
 
 	let masonaryVeggies = $('#card-columns-veggies');
@@ -58,6 +60,7 @@
 	          </div>
 	        </div>
 		`)
+
 	})
 	let masonarySeafood = $('#card-columns-seafood');
 
@@ -79,8 +82,7 @@
 	// I want to retrieve the same values from above to the cart
 	//if clicked item equals id in stock array then append with data
 	let cartList = $(`#toCart`);
-	let addItem = document.getElementById("card-columns-fruit");
-		addItem.addEventListener("click", function(){
+	
 		
 
 	/*cartList.append(`
