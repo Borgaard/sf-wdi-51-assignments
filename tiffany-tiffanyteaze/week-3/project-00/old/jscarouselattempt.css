@@ -1,0 +1,89 @@
+/* ----------------------------------------
+Carousel
+------------------------------------------- */
+/*.carousel {
+  position: relative;
+  height: 600px;
+  width 80%;
+  margin 0 auto;
+}
+
+.carousel-button {
+  position: absolute;
+  height: 24px;
+  z-index: 2;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.button-left {
+  left: -75px;
+  top: 240px;
+}
+
+.button-right {
+  top: 240px;
+  left: 750px;
+}
+
+.carousel-button img {
+  width: 12px;
+}
+
+.carousel-slide img {
+  width: 100%;
+}
+
+.carousel-track-container {
+  margin: 0 10%;
+  height: 100%;
+  position: relative;
+
+}
+
+.carousel-track-container ul {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#image3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.carousel-pages-button {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(176,170,192,.3);
+  margin: 0 10px;
+}
+
+.carousel-pages-button.current-slide {
+  background: rgba(176,170,192,.75);
+}*/

@@ -12,9 +12,9 @@ p {
   top: 30px;
 }
 
-#playerOneWon {
+/*#playerOneWon {
   display: none;
-}
+}*/
 
 #playerTwoWon {
   display: none;
