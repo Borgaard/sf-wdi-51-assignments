@@ -1,26 +1,51 @@
+body{
+  background-color:;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: arial;
+}
+
 #headwrap{
   display: flex;
   justify-content: space-between;
 }
 
-#header{
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
+#about, #test{
+  background-color: deepskyblue;
+  padding:auto 0;
+  height:500px;
+}
+
+#about h2, #test h2{
+  margin-top:125px;
 }
 
 a{
   text-decoration: none;
-
+  color:black;
 }
 
 li{
   list-style: none;
 }
 
+nav a{
+  display: inline-block;
+  padding:1em;
+}
+
+
 .wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding:0;
+  justify-content: space-around;
 }
 
 #welcomepic{
@@ -28,11 +53,118 @@ li{
 }
 
 .col{
-  width: 30%
+  width: 35%
+}
+
+#col-test{
+  width:75%;
 }
 
 h2{
-  position: relative;
-  margin-left: 47%;
-  margin-top:150px;
+  text-align: center;
 }
+
+h1{
+  padding:0 20px;
+  font-family: pacifico;
+}
+
+/* ----------------------------------------
+Form
+------------------------------------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin:0 100px;
+}
+
+input, textarea{
+  border: 2px solid deepskyblue;
+  margin-bottom: 12px;
+  padding: 10px 10px;
+  outline:0;
+  background-color: transparent;
+}
+
+/* ----------------------------------------
+Button
+------------------------------------------- */
+
+button {
+  cursor: pointer;
+  outline: 0;
+  border: 2px solid deepskyblue;
+  color: black;
+  padding: 8px 25px;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: .5em;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  background-color: deepskyblue;
+  color: white;
+  font-weight: 600;
+}
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+footer{
+  background-color: deepskyblue;
+  margin-top:50px;
+}
+
+/* ----------------------------------------
+Scroll
+------------------------------------------- */
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color:black;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:#e74c3c;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

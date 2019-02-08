@@ -2,48 +2,109 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Alomgir Hossain</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+      <a href="#" id="scroll" style="display: none;"><span></span></a>
       <header id="headwrap">
-        <div id="header">Welcome</div>
-
+        <h1 id="#">Welcome</h1>
         <nav>
           <ul>
             <li>
-                <a href="">About</a>
-                <a href="">Projects</a>
-                <a href="">Testimonials</a>
-                <a href="">Contact</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#test">Testimonials</a>
+                <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
      </header>
 
-    <section class="wrapper">
+    <section id="welcome" class="wrapper">
       <img id="welcomepic" src="images/xholder.png">
     </section>
 
-    <section>
-      <h2>About</h2>
+    <section id="about">
+      <dir class="wrapper">
+        <h2>About</h2>
+      </dir>
+
       <div class="wrapper">
         <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi distinctio qui error dolores impedit amet atque sapiente, alias quam repudiandae sed ad tempora eos quia explicabo est quis aliquid adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deserunt maxime iusto. Quo voluptatibus aliquam quia nemo, non fuga magni earum at vel reprehenderit eius alias eum illum, quasi perspiciatis?</p>
         <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatum facilis repellat recusandae corporis voluptas adipisci itaque non fugiat molestias, odit optio nulla quidem, possimus tempore consequuntur eligendi accusantium. Non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi distinctio tenetur dolor qui aliquid quidem animi ullam suscipit similique possimus quisquam necessitatibus, quam modi commodi officia praesentium adipisci rem tempora?</p>
       </div>
     </section>
 
+    <section id="projects" class="wrapper">
+      <div class="container">
+        <h2>Projects</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
 
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active" align="middle">
+              <img src="images/640x360.png" alt="#" style="width:75%;">
+            </div>
 
+            <div class="item" align="middle">
+              <img src="images/640x360.png" alt="#" style="width:75%;">
+            </div>
 
+            <div class="item" align="middle">
+              <img src="images/640x360.png" alt="#" style="width:75%;">
+            </div>
+          </div>
 
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section id="test">
+      <dir class="wrapper">
+        <h2>Testimonials</h2>
+      </dir>
 
+      <div class="wrapper">
+        <p id="col-test"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam qui veniam enim, perferendis iusto eius sunt nobis placeat dicta non aperiam. Iure ad facere adipisci. Delectus ut minus, officia architecto!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt suscipit maxime natus recusandae saepe odio, aperiam, quod, pariatur minus eos cumque possimus, ad doloribus? Tenetur nostrum, harum odit. Modi, nemo.</p>
+      </div>
+    </section>
 
+    <section id="contact" class="wraper">
+       <h2>Get in touch</h2>
+        <form>
+          <input type="text" name="name" placeholder="Name">
+          <input type="email" name="name" placeholder="Email">
+          <textarea name="comment_body" rows="10" placeholder="Comment"></textarea>
+          <button type="subimt">Submit</button>
+        </form>
+    </section>
 
-
-
-
+    <footer >
+      <div class="wrapper">
+        <p class="copyright">&copy;2019 Alomgir Hossain</p>
+      </div>
+    </footer>
 
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
