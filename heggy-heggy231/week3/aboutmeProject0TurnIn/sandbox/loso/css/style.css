@@ -21,16 +21,19 @@ rgb(210, 210, 210) - light olive
 #474240 - Very dark grayish orange
 #323031 - JET
 */
-
-body {
-  padding-top: 100px;
-  font-family: Arial, sans-serif;
-  color: #333; /* Very dark gray 80% black */
+/* for all elements: *  */
+* {
+  margin: 0;
+  padding: 0;
 }
-
-/* footer */
-/* for footer I added clear-fix to feature */
-#footer-p {
-  /* padding top|botton(30) left|right(0) */
-  padding: 30px 0;
+body {
+  font-family: 'Raleway', sans-serif;
+  /* when content overflows vertically (overflow-y) add scroll bar  */
+  overflow-y: scroll;
+  /* hide content if overflow horizontally */
+  overflow-x: hidden;
+}
+p {
+  /* note bootstrap is doing margin for you > no need to worry about spacing */
+  font-size: 14px;
 }
