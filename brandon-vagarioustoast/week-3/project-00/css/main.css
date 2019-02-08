@@ -11,7 +11,7 @@ nav {
 }
 
 nav, a:hover {
-  color: green;
+  color: limegreen;
 }
 
 .nav-items {
@@ -19,18 +19,47 @@ nav, a:hover {
   justify-content: space-around;
 }
 
+.banner-inner{
+  position: relative;
+  top: 10rem;
+  left: 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 1vw #24292d;
+}
+
+h3 {
+  color: white;
+  text-shadow: 0 1px 2vw limegreen;
+}
+
 .photo {
   grid-column: 1 / 5;
 }
 
-.banner-inner{
-  position:relative;
+.intro {
+  grid-column: 5 / 13;
 }
 
-h1 {
-  text-transform: uppercase;
+.code {
+  height: 20rem;
+  background: #24292d;
+  grid-column: 1 / 13;
+  position: relative;
+}
+
+.code h2 {
+  padding-left: 2rem;
   color: white;
-  text-shadow: 0 2px #24292d;
+  text-shadow: 0 1px 2vw limegreen;
+}
+
+.miscellaneous {
+  grid-column: 1 / 7;
 }
 
 .main-content{
@@ -39,6 +68,8 @@ h1 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   position: relative;
 }
+
+
 
 .banner {
   height: 85vh;
