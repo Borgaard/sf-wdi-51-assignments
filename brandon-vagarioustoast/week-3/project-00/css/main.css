@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+/*CSS NAV COLORS
+#24292d#233darkslategrayhsl(206,11,15)rgb(36,41,45)
+
+*/
+nav {
+  background: #24292d;
+}
+
+.main-content{
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.banner {
+  height: 60vh;
+  padding: 1rem;
+  background: url(../images/backgroundbanner.jpg);
+  background-color: grey;
+  background-size: cover;
+}
