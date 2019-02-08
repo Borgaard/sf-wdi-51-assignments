@@ -1,0 +1,24 @@
+/* [] style landing page
+	[] add media query
+	[] use flexbox to build a grid system
+	[] backgound/player images */
+
+
+
+
+.red {
+	width: 250px;
+	height: 250px;
+	background-color: red;
+	margin: 50px;
+	margin-left: 2em;
+
+}
+.blue {
+	width: 250px;
+	height: 250px;
+	background-color: blue;
+	margin: 50px;
+	margin-left: 2em;
+
+}
