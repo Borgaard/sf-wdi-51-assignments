@@ -28,7 +28,9 @@
             -->
             <div class="row">
                 <!-- col-left -->
-                <!-- https://getbootstrap.com/docs/3.3/css/#grid-example-basic -->
+                <!-- https://getbootstrap.com/docs/3.3/css/#grid-example-basic 
+                Using a single set of .col-md-* grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any .row.
+                -->
                 <div class="col-md-8">
                     <!-- bootstrap img responsive: https://getbootstrap.com/docs/3.3/css/#images-responsive 
                     
@@ -53,48 +55,51 @@
         </div><!-- end header main container -->
     </header>
     <!-- keep the rest of the content out of header -->
+    <!-- clear-fix is also bootstrap class 
+    * https://getbootstrap.com/docs/3.3/css/#helper-classes-clearfix
+    -->
     <div class="clear-fix"></div>
     <!-- separator -->
     <section>
         <!-- main container -->
-        <div class="main-container">
+        <div class="container">
             <!-- single row  -->
-            <div class="single-row">
-
+            <div class="row">
                 <!-- col full -->
                 <div>
                     <!-- horizontal rule will separate thing visually -->
                     <hr> 
                 </div>
-
             </div>
-
         </div><!-- end of main container -->
 
     </section>
     <!-- features -->
     <section>
         <!-- main feature container -->
-        <div class="main-container">
+        <div class="container">
+            <!-- remember for bootstrap to work .container > .row > .col total 12 -->
             <!-- single row -->
-            <div class="single-row">
+            <!-- there are 3 col. To make it 12 total divide 12 by 3 = col-4 -->
+            <div class="row">
                 <!-- col 1 -->
-                <div class="col-1">
+                <div class="col-md-4">
                     <h2>RETINA READY</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore consequatur dignissimos non error! Reiciendis, ut. Cumque tenetur necessitatibus ipsa fugiat magnam quibusdam quas temporibus labore? Eum, esse quisquam. Est.</p>
-                    <a href="#" class="btn-info">More info</a>
+                    <!-- .btn .btn-default https://getbootstrap.com/docs/3.3/css/#buttons-tags -->
+                    <a href="#" class="btn btn-default">More info</a>
                 </div>
                 <!-- col 2 -->
-                <div  class="col-2">
+                <div  class="col-md-4">
                     <h2>MOBILE READY</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore consequatur dignissimos non error! Reiciendis, ut. Cumque tenetur necessitatibus ipsa fugiat magnam quibusdam quas temporibus labore? Eum, esse quisquam. Est.</p>
-                    <a href="#" class="btn-info">More info</a>
+                    <a href="#" class="btn btn-default">More info</a>
                 </div>
                 <!-- col 3 -->
-                <div  class="col-3">
+                <div  class="col-md-4">
                     <h2>EASY LAYOUT</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore consequatur dignissimos non error! Reiciendis, ut. Cumque tenetur necessitatibus ipsa fugiat magnam quibusdam quas temporibus labore? Eum, esse quisquam. Est.</p>
-                    <a href="#" class="btn-info">More info</a>
+                    <a href="#" class="btn btn-default">More info</a>
                 </div>
             </div>
         </div><!-- end main feature container -->
