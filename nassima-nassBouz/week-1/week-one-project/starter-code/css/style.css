@@ -1,0 +1,242 @@
+/*----------------Base styles--------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  text-align: center;
+  color: #44545E;
+}
+
+p{
+  text-transform: none;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+}
+
+img:hover{
+  opacity: 0.5;
+}
+/*------------------image ------------------*/
+/*.fixed-bg {
+  background-image: url('../images/home_header_bg.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+/*----------------nav ------------------------*/
+ul a {
+  text-transform: none;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: block;
+  text-align: left;
+}
+
+/*-------------header-------------------------*/
+header {
+  padding-top: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  letter-spacing: .05rem;
+  padding: 3px 60px;
+  padding: .2rem 4rem;
+  display: inline-block;
+  border-bottom: none;
+  text-transform: uppercase;
+  color: grey;
+}
+
+.hamburger {
+  display: none;
+}
+
+.vertical-center h3, h1{
+  color: white;
+  margin-top: 50px;
+  }
+/*------------layout--------------------------*/
+section {
+  padding: 105px 30px;
+  padding: 7rem 2rem;
+}
+
+.wrap {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-third {
+  width: 32%;
+}
+
+.vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap:  wrap;
+      flex-wrap:  wrap;
+}
+
+
+
+/*----------------Footer-------------------------*/
+footer {
+  background-color: #CDF3F6;
+  overflow: auto;
+}
+
+footer .wrap {
+  padding: 30px 15px;
+  padding: 2rem 1rem;
+}
+
+.social-links a {
+  font-size: 30px;
+  font-size: 2rem;
+  padding: 15px;
+  padding: 1rem;
+  margin-bottom: 30px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  color: #44545E;
+}
+
+.copyright {
+  border-top: 2px solid #44545E;
+  padding: 15px 0 3px;
+  padding: 1rem 0 .2rem;
+}
+/*--------------------------  buttons ----------------------*/
+button {
+  cursor: pointer;
+  outline: 0;
+  border: 2px solid #44545E;
+  color: #44545E;
+  padding: 8px 25.5px;
+  padding: 8px 1.7rem;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12.299px;
+  font-size: .82rem;
+  letter-spacing: 1.2px;
+  letter-spacing: .08rem;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  background-color: #44545E;
+  color: white;
+  font-weight: 600;
+}
+
+.articles button {
+  margin-top: 30px;
+  margin-top: 2rem;
+}
+
+/*-----------------theparag ------------------------*/
+.theparag {
+  max-width: 1000px;
+  width: 100%;
+  margin: 30px;
+  margin: 2rem;
+  background-color: #CDF3F6;
+  display: inline-block;
+}
+
+/*----------commmment---------------------------------*/
+.commentss input[type=email]{
+  width: 33%;
+  margin-right: auto;
+  margin-left:0;
+  display: inline-block;
+}
+input[type=text],textarea ,input[type=email]{
+  padding: 12px; /* Some padding */
+  border: 2px solid #44545E;
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: none; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+.commentss input[type=text]{
+  width: 33%;
+  margin-right: auto;
+  margin-left:0;
+  display: inline-block;
+}
+textarea{
+  height:200px;
+  width: 100%;
+  display: block;
+}
+
+.commentss button {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #44545E;
+}
+
+
