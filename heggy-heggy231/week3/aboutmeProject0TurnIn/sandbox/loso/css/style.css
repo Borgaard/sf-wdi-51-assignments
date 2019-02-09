@@ -5,7 +5,10 @@
 #eee    - light grey
 #cecece - darker grey
 #e63636 - red
-#adadad  - lighter grey
+#adadad - lighter grey
+rgba(31, 31, 31, 0.75) - graphite grey
+#129CF3 - BLUE
+#A9ADB0 - GREY
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -50,4 +53,80 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
+}
+
+.header-overlay {
+  /* add modern looking overlay adding greyish overlay */
+  background-color: rgba(31, 31, 31, 0.75); /* graphite grey with bit of opacity */
+}
+.header-iphone img {
+  /* fit whole img width */
+  width: 100%;
+}
+.logo {
+  padding-bottom: 50px;
+}
+.header-text h1 {
+  color: #fff; /* white */
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 45px;
+  padding-top: 30px;
+  text-transform: uppercase; 
+}
+.header-text p {
+  color: #fff; /* text white */
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.header-btns {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+.btn-download,
+.btn-download:focus,
+.btn-download:active, 
+.btn-download:visited
+{
+  background: transparent;
+  border-color: #129CF3; /* BLUE*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 19px;
+  text-transform: uppercase; 
+  /* rounded corner */
+  border-radius: 3px;
+  /* add transition to button */
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.btn-download:hover {
+  background-color: #129CF3; /* BLUE*/
+  color: #fff; /* white text */
+}
+.btn-tour,
+.btn-tour:focus,
+.btn-tour:active, 
+.btn-tour:visited {
+  color: #A9ADB0; /* GREY */
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 500;
+  /* button is see through */
+  background: transparent;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.btn-tour:hover {
+  color: #fff;
 }
