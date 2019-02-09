@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.top-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.top-nav-li {
+  margin: 2%;
+}
+
+.bg-img-wrapper {
+  height: 100vh;
+  width: inherit;
+  display: flex;
+}
+
+.bg-img {
+  background: url("../images/mt_fuji.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+}
+
+
+.about-wrapper {
+  width: inherit;
+  margin: 0 auto;
+  height: 600px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+
+}
+
+.about-box {
+  background-color: #aaa;
+  height: 600px;
+  width: 50%;
+}
