@@ -253,5 +253,7 @@ p {
 /* overlay make the site img modern having a little tint */
 .testimonial-overlay {
   background-color: rgba(31, 31, 31, .75);/* grey 12 dark almost black with transparency very little */
+  /* padding top|bottom 80px */
+  padding: 80px 0;
 
 }
