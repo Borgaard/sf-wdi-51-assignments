@@ -1,0 +1,25 @@
+*{
+	background:yellow;
+	border:2px solid black;
+
+}
+
+ul {
+	list-style: none;
+	display: flex; /*stretches out*/
+	justify-content: flex-end; /*pushes right*/
+}
+
+li {
+	margin: 20px;
+	font-size: 25px;
+}
+
+.row1 {
+	display: flex;
+} 
+
+.journey {
+	display: flex;
+	font-size: 15px;
+}
