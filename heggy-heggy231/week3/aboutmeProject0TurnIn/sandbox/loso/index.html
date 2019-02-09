@@ -145,9 +145,28 @@ instagram sanfrancisgross look for img there
 
     </section>
     <!-- Testimonials -->
+    <!-- add bootstrap carousel components https://getbootstrap.com/docs/3.3/examples/carousel/
+    
+    https://getbootstrap.com/docs/3.3/javascript/#carousel
+    -->
     <section class="testimonial">
         <div class="testimonial-overlay">
-            
+    <!-- structure for bootstrap: container > row > col-total to 12 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- https://getbootstrap.com/docs/3.3/javascript/#carousel-examples -->
+                        <div id="carousel-testimonial" class="carousel slide" data-ride="carousel">
+                            <!-- indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -162,4 +181,5 @@ instagram sanfrancisgross look for img there
     -->
     <script src="./js/bootstrap.min.js"></script>
 </body>
+<!-- resource: https://www.udemy.com/build-responsive-website-using-html5-css3-js-and-bootstrap/learn/v4/t/lecture/5304760?start=0 -->
 </html>

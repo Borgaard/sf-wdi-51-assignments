@@ -187,6 +187,7 @@ p {
   /* mom gets position relative for adding line underneath */
   position: relative;
 }
+/* adding the custom underline */
 .choose-us-title h2:after {
   content: "";
   position: absolute;

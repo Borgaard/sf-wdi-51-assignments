@@ -29,3 +29,8 @@ Bootstrap is the most popular HTML, CSS, and JS framework for developing respons
 Bootstrap Grid Is Made Up of 3 Things: Container > Rows > Columns  (Basic Structure of Bootstrap Grid)
 
 - Font-awesome 4.7: https://fontawesome.com/v4.7.0/
+
+- resource: https://www.udemy.com/build-responsive-website-using-html5-css3-js-and-bootstrap/learn/v4/t/lecture/5304760?start=0
+
+- carousel bootstrap javascript: https://getbootstrap.com/docs/3.3/javascript/#carousel
+[carousel bootstrap javascript](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-02-08%20at%208.12.17%20PM.png?1549685573991)
