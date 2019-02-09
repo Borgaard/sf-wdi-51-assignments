@@ -11,6 +11,7 @@ rgba(31, 31, 31, 0.75) - graphite grey
 #A9ADB0 - GREY
 #343434 - Very dark gray
 #727272 - grey lighter
+rgba(31, 31, 31, .75) - grey 12 dark almost black with transparency very little
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -234,4 +235,23 @@ p {
 .choose-us-item p {
   color: #727272; /* grey lighter */
   font-size: 15px;
+}
+/* Testimonial */
+.testimonial {
+  /* add back ground img */
+  background-image: url("../images/testimonial-bg.jpg");
+  /* parallax effect use fixed */
+  background-attachment: fixed;
+  /* incase img too small prevent img from repeating */
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: 50% 50%;
+}
+/* overlay make the site img modern having a little tint */
+.testimonial-overlay {
+  background-color: rgba(31, 31, 31, .75);/* grey 12 dark almost black with transparency very little */
+
 }
