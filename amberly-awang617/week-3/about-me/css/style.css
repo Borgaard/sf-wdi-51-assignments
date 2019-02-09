@@ -12,6 +12,10 @@ body {
   background-size: cover;
 }
 
+main {
+  position: relative;
+}
+
 /*Styles for main page blocks */
 header {
   margin-bottom: 60px;
@@ -40,6 +44,11 @@ article, section {
   margin-bottom: 20px;
 }
 
+.navbar-brand {
+  font-family: 'Marck Script', cursive;
+  font-size: 30px
+}
+
 a {
   color: white;
   padding-bottom: 0;
@@ -52,7 +61,7 @@ a:hover {
   transition: all 2s;
 }
 
-.hamburger {
+#hamburger {
   display: none;
 }
 
@@ -68,6 +77,7 @@ h2 {
   border-bottom: 2px solid black;
   display:inline-block ;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 p {
@@ -85,9 +95,37 @@ p {
   border: none;
 }
 
+.gallery-image {
+  position: relative;
+}
+
+.gallery-image button {
+  outline: none;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #a2ddef;
+  /*color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;*/
+}
+
+.gallery-image button:hover {
+  background-color: #a2ddef;
+}
 
 img {
   width: 100%;
+}
+
+.modal-dialog {
+  max-width: 800px;
 }
 
 /*#gallery img:hover {
@@ -97,20 +135,18 @@ img {
 #testimonials {
   background-image: url("../images/succulent-bg.png");
   background-size: cover;
+  height: 500px;
   position: relative;
   margin: 0;
   width: 100%;
   color: black;
 }
 
-/*#testimonials img {
-  position: absolute;
-  max-height: 400px;
-  opacity: .3;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}*/
+.quote {
+  display: none;
+}
+
+
 
 /* Footer styling */
 footer {
@@ -136,15 +172,24 @@ footer {
   		/*margin: 0 50px 0 50px;*/
   }
 
-  .navbar-brand {
-    /*display: none;*/
+  .navbar {
+    justify-content: flex-start;
   }
 
-  .hamburger {
+  .nav-item {
+    display: none;
+  }
+
+  .dropdown-toggle {
+    /*position: absolute;*/
+  }
+
+  #hamburger {
     display: block;
-    color: #fff;
-    font-size: 1.7rem;
-    left: 10px;
-    position: absolute;
+    position: relative;
+    /*color: #fff;*/
+    /*font-size: 1.7rem;*/
+    /*left: 55px;*/
+    /*position: absolute;*/
   }
 }
