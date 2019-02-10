@@ -70,7 +70,7 @@ h3 {
 }
 
 #code {
-  height: 20rem;
+  /*height: 100%;*/
   opacity: .99;
   background: #24292d;
   grid-column: 1 / 13;
