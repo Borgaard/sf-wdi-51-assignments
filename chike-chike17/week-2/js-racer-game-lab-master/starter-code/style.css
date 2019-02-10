@@ -1,0 +1,71 @@
+.inside {
+  background-image:url("./imgs/RBa2EX.png");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Bangers', cursive;
+}
+
+.bowser-chase {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bowser {
+  position: relative;
+  left: -40px;
+  top: 235px;
+  width: 170px;
+  padding-left: 48px;
+}
+
+.mario {
+  position: relative;
+  left: 0px;
+  top: 170px;
+  width: 170px;
+}
+
+.mario-pic {
+  height: 45%;
+  width: 45%;
+}
+
+.luidgi {
+  position: relative;
+  width: 100px;
+  left: 0px;
+  top: 310px;
+}
+
+.characters {
+  margin-top: 40px;
+}
+
+
+.buttons {
+  text-align: center;
+}
+
+.characters {
+  margin-top: 275px;
+}
+
+
+h1 {
+  font-size: 40px;
+}
+
+input {
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 20px;
+}
+img {
+  display: block;
+  height: 70%;
+  width: 70%;
+}
+
