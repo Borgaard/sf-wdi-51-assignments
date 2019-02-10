@@ -12,10 +12,12 @@ rgba(31, 31, 31, 0.75) - graphite grey
 #343434 - Very dark gray
 #727272 - grey lighter
 rgba(31, 31, 31, .75) - grey 12 dark almost black with transparency very little
+rgba(0, 0, 0, .4) - black with lot of transparency
 #D8D8D8 - light grey 
 #1a1a1a - Gray10
 #1274B1 - darker blue
 #316B90 - more darker blue
+#D7DADB - light gray
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -403,4 +405,46 @@ p {
 .btn-purchase-now:hover {
   background-color: #1274B1; /* darker blue */
   border-color: #316B90; /* more darker blue */
+}
+/* ======= Counter ======= */
+.counter {
+  background-image: url("../images/counter-bg.jpg");
+  background-repeat: no-repeat;
+  /* parallax effect */
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: 50% 50%;
+}
+.counter-overlay {
+  /* show more of background photo */
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: rgba(0, 0, 0, .4); /* black with lot of transparency */
+}
+/* fontAweseom icon for .counter-item */
+.counter-item i {
+  color: #129CF3; /* blue */
+  font-size: 60px;
+
+}
+.counter-item h2 {
+  /* google font */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #D7DADB; /* light gray */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-top: 15px;
+  margin-bottom: 1px;
+}
+.counter-item p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #D7DADB; /* light gray */
+  font-size: 20px;
+  margin-top: 0px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
