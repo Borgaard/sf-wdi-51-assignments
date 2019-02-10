@@ -149,8 +149,7 @@ form {
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  margin:0 100px;
-  max-width: 1200px;
+  margin:50px;
 }
 
 input, textarea{
@@ -304,7 +303,18 @@ Media queries
   .sidenav a:hover {
     color: white;
   }
+}
 
+
+@media only screen and (min-width:675px){
+
+  form {
+  align-items: center;
+}
+
+input, textarea, button{
+  width:650px;
+}
 
 }
 
