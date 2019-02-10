@@ -1,7 +1,14 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
   console.log( "ready!" );
-
+  var texts = ['example1', 'example2', 'example3'];
+  var count = 0;
+  function changeText() {
+      $("#example").text(texts[count]);
+      count < 2 ? count++ : count = 0;
+  }
+  debugger;
+  setInterval(changeText, 2000);
 
 });
 /*
