@@ -79,6 +79,7 @@ p {
   text-align: center;
   margin-top: 45px;
 }
+
 /* ======= Header ======= */
 .header {
   /* add background img in header element */
@@ -237,6 +238,7 @@ p {
   color: #727272; /* grey lighter */
   font-size: 15px;
 }
+
 /* Testimonial */
 .testimonial {
   /* add back ground img */
@@ -296,4 +298,75 @@ p {
   color: #D8D8D8; /* light grey */
   font-size: 27px;
   padding-top: 50px;
+}
+
+/* ======= Features ======= */
+.features-inner-wrapper {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+.left-feature-item {
+  position: relative;
+  padding-right: 90px;
+  margin-bottom: 35px;
+  /* text align to right */
+  text-align: right;
+}
+.left-feature-item-icon {
+  /* position icon is anchor to its parent div left-feature-item */
+  position: absolute;
+  right: 0;
+  /* bring the icon bit higher than the text */
+  top: -8px; 
+  font-size: 40px;
+  color: #129CF3; /* blue */
+  width: 90px;
+  height: 90px;
+  text-align: center;
+}
+.left-feature-item h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 21px;
+  color: #333; /* Very dark gray 80% black */
+}
+.left-feature-item p {
+  color: #333; /* Very dark gray 80% black */
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.feature-iphone img {
+  width: 100%;
+}
+.right-feature-item {
+  position: relative;
+  padding-left: 90px;
+  margin-bottom: 35px;
+  /* margin-top: 35px; */
+  text-align: left;
+}
+.right-feature-item-icon {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  font-size: 40px;
+  color: #129CF3; /* blue */
+  width: 90px;
+  height: 90px;
+  text-align: center;
+}
+.right-feature-item h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 21px;
+  color: #333;
+}
+.right-feature-item p {
+  color: #333; /* Very dark gray 80% black */
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
 }
