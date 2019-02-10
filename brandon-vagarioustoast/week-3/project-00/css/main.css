@@ -7,7 +7,6 @@ body {
 }
 
 nav {
-  position: fixed;
   background: #24292d;
 }
 
@@ -70,7 +69,6 @@ h3 {
 }
 
 #code {
-  /*height: 100%;*/
   opacity: .99;
   background: #24292d;
   grid-column: 1 / 13;
@@ -88,8 +86,11 @@ h3 {
 }
 
 .carousel .carousel-item {
-    top: -4rem;
+    top: -7rem;
+}
 
+img {
+  border: solid 1px limegreen;
 }
 
 #miscellaneous {
@@ -114,11 +115,9 @@ h3 {
   text-shadow: 0 2px 2vw limegreen;
 }
 
-
 form {
   padding-top: 1rem;
 }
-
 
 .submit-button button {
   margin-top: 2rem;

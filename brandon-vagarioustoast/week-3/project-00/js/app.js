@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let carouselImages = document.querySelectorAll('.carousel');
 
     let instances = M.Materialbox.init(elems);
-    let carouselInstance = M.Carousel.init(carouselImages);
-
-
-
-})
+    let carouselInstance = M.Carousel.init(carouselImages, {
+      autoplay: true,
+    })
+  })
