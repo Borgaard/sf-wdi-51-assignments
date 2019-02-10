@@ -36,7 +36,6 @@ html{
   flex-wrap: wrap;
   padding:0;
   justify-content: space-around;
-
 }
 
 .col{
@@ -55,8 +54,40 @@ h2{
 #headwrap h1{
   padding:0 20px;
   font-family: raleway;
-
 }
+
+.carousel-indicators li{
+  display:inline-block;
+  background-color: deepskyblue;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  text-indent: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: deepskyblue;
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.carousel-indicators .active {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  background-color: black;
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrap a {
+  font-size: 30px;
+  padding:10px;
+}
+
 /* ----------------------------------------
 Nav
 ------------------------------------------- */
@@ -83,6 +114,10 @@ nav a{
 
 .sidenav {
   display:none;
+}
+
+.sidenav a{
+  display: none;
 }
 
 /* ----------------------------------------
@@ -115,6 +150,7 @@ form {
   flex-direction: column;
   align-content: space-between;
   margin:0 100px;
+  max-width: 1200px;
 }
 
 input, textarea{
