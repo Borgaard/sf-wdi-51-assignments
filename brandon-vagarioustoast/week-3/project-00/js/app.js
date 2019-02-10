@@ -2,10 +2,10 @@ console.log(`We're online.`);
 
 document.addEventListener('DOMContentLoaded', () => {
     let elems = document.querySelectorAll('.materialboxed');
-    let instances = M.Materialbox.init(elems);
+    let carouselImages = document.querySelectorAll('.carousel');
 
-    // var elemsCarousel = document.querySelectorAll('.carousel');
-    // var instancesCarousel = M.Carousel.init(elemsCarousel);
+    let instances = M.Materialbox.init(elems);
+    let carouselInstance = M.Carousel.init(carouselImages);
 
 
 

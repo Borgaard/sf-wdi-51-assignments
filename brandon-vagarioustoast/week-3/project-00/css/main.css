@@ -83,6 +83,15 @@ h3 {
   text-shadow: 0 1px 2vw limegreen;
 }
 
+.carousel {
+  padding-bottom: 2rem;
+}
+
+.carousel .carousel-item {
+    top: -4rem;
+
+}
+
 #miscellaneous {
   grid-column: 1 / 6;
 }
@@ -95,15 +104,13 @@ h3 {
 }
 
 #contact {
-  background: #24292d;
-  opacity: .85;
   grid-column: 7 / 13;
 }
 
 #contact h2 {
   text-align: center;
   padding-left: 2rem;
-  color: white;
+  color: black;
   text-shadow: 0 2px 2vw limegreen;
 }
 
