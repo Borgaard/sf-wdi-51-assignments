@@ -14,6 +14,8 @@ rgba(31, 31, 31, 0.75) - graphite grey
 rgba(31, 31, 31, .75) - grey 12 dark almost black with transparency very little
 #D8D8D8 - light grey 
 #1a1a1a - Gray10
+#1274B1 - darker blue
+#316B90 - more darker blue
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -394,4 +396,11 @@ p {
   border-radius: 3px;
   padding: 15px 35px;
   text-transform: uppercase;
+  /* button hover ease in out fading rate */
+  transition: all 1s;
+}
+/* change background-color when hover btn */
+.btn-purchase-now:hover {
+  background-color: #1274B1; /* darker blue */
+  border-color: #316B90; /* more darker blue */
 }
