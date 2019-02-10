@@ -12,6 +12,7 @@ rgba(31, 31, 31, 0.75) - graphite grey
 #343434 - Very dark gray
 #727272 - grey lighter
 rgba(31, 31, 31, .75) - grey 12 dark almost black with transparency very little
+#D8D8D8 - light grey 
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -255,5 +256,44 @@ p {
   background-color: rgba(31, 31, 31, .75);/* grey 12 dark almost black with transparency very little */
   /* padding top|bottom 80px */
   padding: 80px 0;
-
+}
+.carousel-indicators {
+  /* bring the 3 dots for slider down away from the text */
+  bottom: -30px;
+}
+.carousel-inner .item img {
+  border: 2px solid #129CF3; /* blue remember solid is required for border */
+  /* Make testimonial photo circle!! (it used to be square: boring!!)
+  border-radius: 50%; is short hand for following
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%; */
+  border-radius: 50%;
+  padding: 3px;
+}
+.testimonial-caption {
+  padding-bottom: 80px;
+}
+.testimonial-caption h2 {
+  /* name of testimonial giver  */
+  color: #129CF3; /* blue name */
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+  margin-top: 25px;
+}
+.testimonial-caption h4 {
+  color: #129CF3; /* blue name */
+}
+/* position name */
+.testimonial-caption h4 span {
+  color: #D8D8D8; /* light grey */
+  font-style: italic; 
+  font-weight: 300;
+}
+.testimonial-caption p {
+  color: #D8D8D8; /* light grey */
+  font-size: 27px;
+  padding-top: 50px;
 }
