@@ -13,6 +13,7 @@ rgba(31, 31, 31, 0.75) - graphite grey
 #727272 - grey lighter
 rgba(31, 31, 31, .75) - grey 12 dark almost black with transparency very little
 #D8D8D8 - light grey 
+#1a1a1a - Gray10
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -369,4 +370,28 @@ p {
   font-size: 16px;
   font-weight: 300;
   line-height: 25px;
+}
+
+/* ======= Purchase Now ======= */
+.purchase-now {
+  background-color: #1a1a1a; /* Gray10 */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.purchase-now p {
+  color: #dfdfdf;
+  font-size: 18px;
+  font-weight: 300;
+}
+.btn-purchase-now, 
+.btn-purchase-now:active,
+.btn-purchase-now:focus,
+.btn-purchase-now:visited
+{
+  background-color: #129CF3; /* blue */
+  border: 1px solid #129CF3; /* blue */
+  color: #fff; /* white */
+  border-radius: 3px;
+  padding: 15px 35px;
+  text-transform: uppercase;
 }
