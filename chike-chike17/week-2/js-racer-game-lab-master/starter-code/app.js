@@ -1,7 +1,6 @@
 let intervalCode;
 let windowPosition = window.innerWidth -20;
 let startGo;
-let go;
 
 let mario = document.getElementsByClassName('mario');
 mario = mario[0];
@@ -25,7 +24,9 @@ let playStop = function () {
         bowser.style.left = parseInt(bowser.style.left) + 20 + 'px';
         bowserPosition = bowser.offsetWidth + parseInt(bowser.style.left) -5;
         if (bowserPosition > windowPosition ) {
-           alert('Bowser Won!!!!');
+          alert('Bowser Won!!!!');
+          start++;
+          return;
         }
       }, 100);
 }

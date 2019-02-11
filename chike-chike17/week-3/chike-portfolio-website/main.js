@@ -1,5 +1,5 @@
 
-$("nav").find("a").click(function(e) {
+$("ul").find("a").click(function(e) {
     e.preventDefault();
     var section = $(this).attr("href");
     $("html, body").animate({
