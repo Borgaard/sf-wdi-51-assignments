@@ -1,4 +1,20 @@
-goal: make this iste
+goal: make this site 
+technology used: 
+1) grid 
+2) box model
+3) flex to screen sizing
+4) smooth scrolling
+5) hamburger menu
+6) bootstrap
+7) fix navbar
+8) font-awesome
+9) google font
+10) jQuery to hide show menu vertical scrolltop
+11) css animate
+12) javascript to make the menu item active on click event
+13) photo carousel
+14) automatic photo slider on timer
+
 
 http://www.idynxschool.com/loso/#
 - requirement: https://git.generalassemb.ly/sf-wdi-51/project-00
@@ -93,4 +109,46 @@ https://getbootstrap.com/docs/3.3/components/#navbar
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+```
+
+- smooth scrolling to menu bar
+https://css-tricks.com/snippets/jquery/smooth-scrolling/#article-header-id-1
+
+```javascript
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
 ```
