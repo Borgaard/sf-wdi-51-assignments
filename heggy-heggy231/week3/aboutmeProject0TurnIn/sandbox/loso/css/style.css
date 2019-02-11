@@ -587,3 +587,8 @@ p {
   -moz-transition: all 1s;
   -o-transition: all 1s;
 }
+.submit-btn:hover {
+  background: #129CF3; /* blue backgroun submit button when hovering*/
+  color: #fff; /* white font submit text*/
+  border-color: #129CF3;
+}
