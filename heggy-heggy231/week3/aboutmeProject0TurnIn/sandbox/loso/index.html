@@ -22,6 +22,8 @@ instagram sanfrancisgross look for img there
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- BX slider css -->
+    <link rel="stylesheet" type="text/css" href="./css/jquery.bxslider.css">
 </head>
 <body>
     <!-- header -->
@@ -362,20 +364,26 @@ instagram sanfrancisgross look for img there
             </div><!-- end of row-->
         </div><!-- end of container-->
             <div class="screen-slider">
-                <div class="carousel">
-                    <div class="item">
-                        <img src="./images/screen-01.png" width="60" height="60" alt="screen">
-                    </div>
-                    <div class="item">
-                        <img src="./images/screen-02.png" width="60" height="60" alt="screen">
-                    </div>
-                    <div class="item">
-                        <img src="./images/screen-03.png" width="60" height="60" alt="screen">
-                    </div>
-                    <div class="item">
-                        <img src="./images/screen-04.png" width="60" height="60" alt="screen">
-                    </div>
-                </div><!-- end of carousel -->
+                <div class="container">
+                    <div class="row">
+                        <!-- bxSlider HTML -->
+                        <div class="bxslider">
+                    <!-- following https://bxslider.com/install/ documentation -->
+                            <div class="item">
+                                <img src="./images/screen-01.png" alt="screen">
+                            </div>
+                            <div class="item">
+                                <img src="./images/screen-02.png" alt="screen">
+                            </div>
+                            <div class="item">
+                                <img src="./images/screen-03.png" alt="screen">
+                            </div>
+                            <div class="item">
+                                <img src="./images/screen-04.png" alt="screen">
+                            </div>
+                        </div><!-- end of bxslider -->
+                    </div><!-- end of row -->
+                </div><!-- end of container bx slider -->
             </div>
 
     </section>
@@ -565,6 +573,8 @@ instagram sanfrancisgross look for img there
     documentation: https://getbootstrap.com/docs/3.3/css/#grid
     -->
     <script src="./js/bootstrap.min.js"></script>
+    <!-- Bx Slider JS -->
+    <script src="./js/jquery.bxslider.js"></script>
     <!-- my own js functions -->
     <script src="js/custom.js"></script>
 </body>

@@ -144,3 +144,17 @@ $(document).ready(function() {
   // add time interval 10 is smallest milisec
   }, 10);
 });
+
+// Add bxSlider to photo slider section
+// Initialize the slider note from https://bxslider.com/install/ doc
+$(document).ready(function(){
+  $('.bxslider').bxSlider({
+    // https://bxslider.com/options/ use slide fixed width option
+    slideWidth: 292.5,
+    auto: true,
+    minSlides: 1,
+    maxSlides: 3,
+    sliderMargin: 50 // margin btwn the slides > 50px
+  });
+
+});

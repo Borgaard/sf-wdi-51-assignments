@@ -13,7 +13,7 @@ technology used:
 11) css animate
 12) javascript to make the menu item active on click event
 13) photo carousel
-14) automatic photo slider on timer
+14) automatic photo slider using https://bxslider.com/
 
 
 http://www.idynxschool.com/loso/#
