@@ -22,6 +22,7 @@ rgba(0, 0, 0, .4) - black with lot of transparency
 #B5B5B5 - medium grey
 #0F1217 - dark black
 #555    - Davy's Grey
+#9d9d9d - 
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -591,4 +592,48 @@ p {
   background: #129CF3; /* blue backgroun submit button when hovering*/
   color: #fff; /* white font submit text*/
   border-color: #129CF3;
+}
+.social-icons {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+/* position social-icons in the middle of the page */
+.social-icons ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* get rid of the ul bullet default styles: list-style */
+.social-icons ul li {
+  /* omit bullet listing style */
+  list-style: none;
+  /* social icons line up horizontally */
+  display: inline;
+  padding-left: 10px;
+}
+.social-icons ul li a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #9d9d9d; /* light grey */
+  border-radius: 3px;
+  width: 45px;
+  height: 45px; /* size similar to form fields but just a bit smaller */
+  line-height: 49px;
+  color: #9d9d9d; /* light grey */
+  /* add easing in/out transition  */
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.social-icons ul li a:hover {
+  background-color: #129CF3; /* blue */
+  border: 1px solid #129CF3;
+  color: #fff; /* white */
+}
+/* font awesome icon resize bigger! */
+.social-icons ul li a i {
+  font-size: 25px;
 }
