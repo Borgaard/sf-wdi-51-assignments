@@ -15,14 +15,11 @@
 
 $('#main-nav a').on('click', function () {
   var thisPanel = $(this).attr('data-related-panel')
-
-  if ($('#'+thisPanel).is(':hidden')) {
-    // This is even more broken now...
-    // $('#main-nav a').removeClass('active');
-    // $(this).addClass('active');
+  debugger;
+  if (!$(this).hasClass('active')) {
+    $('#main-nav a').removeClass('active');
+    $(this).addClass('active');
     $('#subnav').slideDown();
-    $('#'+thisPanel).fadeIn();
-  } else if ($('.nav-panel').attr('id') !== thisPanel){
     $('.nav-panel').hide();
     $('#'+thisPanel).fadeIn();
   } else {

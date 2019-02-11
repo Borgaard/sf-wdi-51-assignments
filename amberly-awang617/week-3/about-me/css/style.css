@@ -7,7 +7,6 @@ body {
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
   margin: 0 auto;
-  /*padding: 30px;*/
   text-align: center;
   background-size: cover;
 }
@@ -16,7 +15,7 @@ main {
   position: relative;
 }
 
-/*Styles for main page blocks */
+/*Styles for page blocks */
 header {
   margin-bottom: 60px;
 }
@@ -85,6 +84,10 @@ p {
 }
 
 /* Image modifications */
+img {
+  width: 100%;
+}
+
 #succulent{
   height: 70vh;
   width: 100%;
@@ -93,6 +96,10 @@ p {
 #succulent img{
   max-height: 100%;
   border: none;
+}
+
+.carousel-item img {
+  max-height: 800px;
 }
 
 .gallery-image {
@@ -107,21 +114,8 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #a2ddef;
-  /*color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  background-color: #a2c0ef;
   border: none;
-  cursor: pointer;
-  border-radius: 5px;*/
-}
-
-.gallery-image button:hover {
-  background-color: #a2ddef;
-}
-
-img {
-  width: 100%;
 }
 
 .modal-dialog {
@@ -162,15 +156,6 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  body {
-    /*padding: 0 15px;*/
-  }
-  article {
-      /*margin: 0 50px 0 50px;*/
-  }
-  footer {
-  		/*margin: 0 50px 0 50px;*/
-  }
 
   .navbar {
     justify-content: flex-start;
@@ -191,5 +176,9 @@ footer {
     /*font-size: 1.7rem;*/
     /*left: 55px;*/
     /*position: absolute;*/
+  }
+
+  .gallery-image img {
+
   }
 }
