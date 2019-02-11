@@ -18,8 +18,7 @@ $(document).ready(function(){
       success: function(response) {
         console.log(response);
         for (let i=0; i<response.length; i++) {
-          let gifUrl = response.data[i].images.original.url;
-          console.log(gifUrl);
+          let gifUrl = response.data[i].images.original.urls;
           $('.gif-gallery').append(`<img src='${gifUrl}'>`);
         }
       }
