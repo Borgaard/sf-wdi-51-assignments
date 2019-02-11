@@ -1,19 +1,19 @@
-goal: make this site 
-technology used: 
-1) grid 
-2) box model
-3) flex to screen sizing
-4) smooth scrolling
-5) hamburger menu
-6) bootstrap
-7) fix navbar
-8) font-awesome
-9) google font
-10) jQuery to hide show menu vertical scrolltop
-11) css animate
-12) javascript to make the menu item active on click event
-13) photo carousel
-14) automatic photo slider using https://bxslider.com/
+# goal: make this site 
+## technology used: 
+* 1) grid 
+* 2) box model
+* 3) flex to screen sizing
+* 4) smooth scrolling
+* 5) hamburger menu
+* 6) bootstrap
+* 7) fix navbar
+* 8) font-awesome
+* 9) google font
+* 10) jQuery to hide show menu vertical scrolltop
+* 11) css animate
+* 12) javascript to make the menu item active on click event
+* 13) photo carousel
+* 14) automatic photo slider using https://bxslider.com/
 
 
 http://www.idynxschool.com/loso/#
