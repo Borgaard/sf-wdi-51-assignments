@@ -56,7 +56,6 @@ document.onkeydown = function (event) {
  }
   let luidgiPosition = luidgi.offsetWidth + parseInt(luidgi.style.left) -10;
   let marioPosition = mario.offsetWidth + parseInt(mario.style.left) -10;
-  // if (parseInt(luidgi.style.left) + parseInt(luidgi.style.offsetWidth) + 'px' === window.innerWidth - 70+ 'px') {
   if (marioPosition > windowPosition ) {
      alert('Mario Won!!!!');
   }
