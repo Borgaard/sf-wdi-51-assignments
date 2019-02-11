@@ -637,3 +637,19 @@ p {
 .social-icons ul li a i {
   font-size: 25px;
 }
+/* ======= Footer ======= */
+.footer {
+  background-color: #1a1a1a; /* jet black */
+  padding-bottom: 35px;
+  padding-top: 35px;
+  border-bottom: 3px solid #129CF3; /* blue */
+}
+#copyright {
+  width: 50%;
+}
+#copyright p {
+  color: #8C8B8A; /* light grey */
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+}
