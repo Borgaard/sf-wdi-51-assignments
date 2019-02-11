@@ -30,8 +30,8 @@ nav a:hover {
 
 .banner-inner{
   position: relative;
-  top: 10rem;
-  left: 2rem;
+  top: 15rem;
+  left: 4rem;
 }
 
 h1 {
@@ -55,12 +55,18 @@ h3 {
 
 .photo {
   grid-column: 1 / 5;
+}
+
+.photo img {
+  margin-left: 2rem;
+  width: 100%;
   height: auto;
+  border: none;
 }
 
 #intro {
-  font-size: 1.2rem;
-  padding: 0 4rem;
+  font-size: 1.1rem;
+  padding: 2rem 4rem;
   grid-column: 5 / 13;
 }
 
@@ -69,7 +75,6 @@ h3 {
 }
 
 #code {
-  opacity: .99;
   background: #24292d;
   grid-column: 1 / 13;
 }
@@ -86,22 +91,26 @@ h3 {
 }
 
 .carousel .carousel-item {
-    top: -7rem;
+  top: -7rem;
 }
 
 img {
   border: solid 1px limegreen;
 }
 
-#miscellaneous {
+#testimonials {
   grid-column: 1 / 6;
 }
 
-#miscellaneous h2 {
+#testimonials h2 {
   text-align: center;
   padding-left: 2rem;
   color: black;
   text-shadow: 0 1px 2vw limegreen;
+}
+
+.testimonial {
+  margin-left: 2rem;
 }
 
 #contact {
@@ -110,13 +119,17 @@ img {
 
 #contact h2 {
   text-align: center;
-  padding-left: 2rem;
+  padding-left: 1rem;
   color: black;
   text-shadow: 0 2px 2vw limegreen;
 }
 
 form {
   padding-top: 1rem;
+}
+
+#contact .row {
+  width: 80%;
 }
 
 .submit-button button {
@@ -139,7 +152,7 @@ footer p {
 }
 
 .footer {
-  margin-top: 10rem;
+  margin-top: 6rem;
   padding-top: .5rem;
   display: flex;
   align-items: ;
@@ -163,9 +176,70 @@ footer p {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 689px){
+
+
+  .banner{
+    height: 30vh;
+  }
+
+  .banner-inner {
+    top: 5rem;
+    left: 2.3rem;
+  }
+
+  h1 {
+    margin-bottom: -1rem;
+  }
+
+  h1, h3 {
+    font-size: 2.3rem;
+  }
+
+
+  figure {
+    display: block;
+    grid-column: 1 / 13;
+  }
+
+  .photo img {
+   display: none;
+  }
+
+  #intro {
+    grid-column: 1 / 13
+  }
 
 
 
+
+/*Collapse bottom divs*/
+  #testimonials {
+    float: none;
+    display: block;
+    grid-column: 1 / 13;
+    border-bottom: solid black 2px;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  #contact {
+    margin-top: .5rem;
+    display: block;
+    grid-column: 1 / 13;
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 430px){
+
+  #intro {
+    height: 40%;
+  }
+}
 
 
 
