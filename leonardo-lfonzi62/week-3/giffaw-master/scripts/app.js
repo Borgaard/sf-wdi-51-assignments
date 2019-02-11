@@ -17,7 +17,7 @@ var searchTerm = $(`.form-control`).val();
     for (var i = 0; i < jiffs.length; i++) {
        $(`.gif-gallery`).append(`<img src= "${jiffs[i].images.original.url}"/>`);
     }
-// adding height and width to gif images
+// adjusting height and width of gif images
 $(`img`).height(150).width(150);
 // emptying out user text
 $(`.form-control`).val(" ");
