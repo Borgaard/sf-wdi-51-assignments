@@ -98,3 +98,49 @@ $(document).ready(function() {
   color: #129CF3
 }
 */
+
+// automatically highlight menu item when user scroll 
+$(document).ready(function() {
+  'use strict';
+  $(window).scroll(function() {
+    $("section").each(function(){
+      'use strict';
+      // target the id of each section ex: ABOUT, CONTACT, D/L
+      var targetSection = $(this).attr("id");
+      // outerHeight() http://api.jquery.com/outerheight/ include padding, border
+      var myheight = $(this).outerHeight();
+      // $(this).offset() retrieve the current position > then we get the top position then we take off 70
+      var grttop= $(this).offset().top - 70;
+
+      // scrollTop() returns the vertical scroll bar position
+      if($(window).scrollTop() > grttop && $(window).scrollTop() < grttop + myheight) {
+        // .navbar-nav li a[href='#ABOUT']
+        $(".navbar-nav li a[href='#" + targetSection + "']").parent().addClass("active");
+      } else {
+        $(".navbar-nav li a[href='#" + targetSection + "']").parent().removeClass("active");
+      }
+    });
+  });
+});
+
+// add auto padding to header
+$(document).ready(function() {
+  'use strict';
+  setInterval(function() {
+    'use strict';
+    // returns height of browser window
+    var windowHeight = $(window).height();
+    // get the height of the header container
+    var containerHeight = $(".header-container").height()
+
+    // calc the padding top
+    var padTop = windowHeight - containerHeight;
+
+    $(".header-container").css({
+      // divide by 2 so it gets equal spacing 
+      'padding-top': Math.round(padTop / 2) + 'px',
+      'padding-bottom': Math.round(padTop / 2) + 'px'
+    });
+  // add time interval 10 is smallest milisec
+  }, 10);
+});
