@@ -43,32 +43,6 @@ $(document).ready(function () {
     });
 
     var num = 1;
-    
-    // some vestigial code from when I decided an interval loop wouldnt work. turns out I was wrong.
-    // setInterval(function() {
-    //     switch (num) {
-    //         case 1:
-    //             $(`#quote1`).hide();
-    //             $(`#quote2`).fadeToggle(1000);
-    //             num++;
-    //             break;
-    //         case 2:
-    //             $(`#quote2`).hide();
-    //             $(`#quote3`).fadeToggle(1000);
-    //             num++;
-    //             break;
-    //         case 3:
-    //             $(`#quote3`).hide();
-    //             $(`#quote4`).fadeToggle(1000);
-    //             num++;
-    //             break;
-    //         case 4:
-    //             $(`#quote4`).hide();
-    //             $(`#quote1`).fadeToggle(1000);
-    //             num = 1;
-    //             break;
-    //         }                
-    //     },6000);
 
     setInterval(function() {
         if (num <= 3) {
@@ -80,18 +54,104 @@ $(document).ready(function () {
             $(`#quote1`).delay(750).fadeToggle(1250);
             num = 1;
         }
-    },5000);
+    },7000);
 
-// setInterval(function() {
-//     var num = 0;
-//     // var one = 1;
-//     console.log("outside if loop")
-//     if (num <= 3) {
-//         console.log("inside if loop")
-//         $(`#quote${num}`).hide();
-//         $(`#quote${num + 1}`).show();
-//         num++
-//     }
-// },2500);
-    
+    photoNum = 1;
+    let photoCarousel = setInterval(function() {
+        if (photoNum <= 4) {
+            $('.photos').children().slideUp(625)
+            $(`#photo${photoNum +1}`).delay(1250).slideDown(1250);
+            $(`#button${photoNum}`).removeClass("activeButton")
+            $(`#button${photoNum + 1}`).addClass("activeButton")
+            photoNum++
+        } else {
+            $('.photos').children().slideUp(625)
+            $(`#photo1`).delay(1250).slideDown(1250);
+            $(`#button${photoNum}`).removeClass("activeButton")
+            $(`#button1`).addClass("activeButton")
+            photoNum = 1;
+        }
+    },8000);
+
+    $('#button1').on("click",function() {
+        $('#photoSelector').children().removeClass("activeButton");
+        $('#button1').addClass("activeButton")
+        $('.photos').children().slideUp()
+        $('#photo1').delay(500).slideDown();
+        clearInterval(photoCarousel);
+    });
+
+    $('#button2').on("click",function() {
+        $('#photoSelector').children().removeClass("activeButton");
+        $('#button2').addClass("activeButton")
+        $('.photos').children().slideUp()
+        $('#photo2').delay(500).slideDown();
+        clearInterval(photoCarousel);
+    });
+
+    $('#button3').on("click",function() {
+        $('#photoSelector').children().removeClass("activeButton");
+        $('#button3').addClass("activeButton")
+        $('.photos').children().slideUp()
+        $('#photo3').delay(500).slideDown();
+        clearInterval(photoCarousel);
+    });
+
+    $('#button4').on("click",function() {
+        $('#photoSelector').children().removeClass("activeButton");
+        $('#button4').addClass("activeButton")
+        $('.photos').children().slideUp()
+        $('#photo4').delay(500).slideDown();
+        clearInterval(photoCarousel);
+    });
+
+    $('#button5').on("click",function() {
+        $('#photoSelector').children().removeClass("activeButton");
+        $('#button5').addClass("activeButton")
+        $('.photos').children().slideUp()
+        $('#photo5').delay(500).slideDown();
+        clearInterval(photoCarousel);
+    });
+
+    $('.photo-box').on("click", function() {
+        $(this).toggleClass('fullscreen');
+        clearInterval(photoCarousel);  
+    });
 });
+
+// Challenges :
+// Header Z position
+// The stupid quote carousel
+// Hamburger related issues
+
+
+    // let photos = [
+    //     {
+    //         name: "Havok",
+    //         img: "images/photo1.jpg"
+    //     },
+    //     {
+    //         name: "Behemoth",
+    //         img: "images/photo2.jpg"
+    //     },
+    //     {
+    //         name: "Amon Amarth",
+    //         img: "images/photo3.jpg"
+    //     },
+    //     {
+    //         name: "Alestorm",
+    //         img: "images/photo4.jpg"
+    //     },
+    //     {
+    //         name: "Slayer",
+    //         img: "images/photo5.jpg"
+    //     }
+    // ]
+
+
+    // for (i=0;i<photos.length;i++) {
+    //     $('.photos').append(`<div class="photo-box">
+    //                             <h5>${photos[i].name}</h5>
+    //                             <img sec=${photos[i].img}>
+    //                         </div>`)
+    // }

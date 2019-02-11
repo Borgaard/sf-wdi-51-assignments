@@ -13,7 +13,7 @@
     <!-- Things I want:
         [x] Sticky header with scalable responsive design
         [x] sticky footer with copywrite nonsense, remove in lower width applications
-        [] click nav header
+        [x] click nav header
         [x] fancy colors
         [x] 4 sections - About me, Projects/portfolio, testimonials, contact form
         [] photo carosel with zoomy fullscreeny thing -->
@@ -53,7 +53,40 @@
             </section>
             <section class="projectsSection" id="projectsScroll">
                     <!-- projects carousel goes here -->
+                    <h3>Projects (Actually concerts I really liked)</h3>
                 <div class="photos">
+                    <div class="photo-box" id="photo1">
+                        <h5>Havok</h5>
+                        <img src="images/photo1.jpg" alt="Havok">
+                    </div>
+                    <div class="photo-box" id="photo2">
+                        <h5>Behemoth</h5>
+                        <img src="images/photo2.jpg" alt="Behemoth">
+                    </div>
+                    <div class="photo-box" id="photo3">
+                        <h5>Amon Amarth</h5>
+                        <img src="images/photo3.jpg" alt="Amon Amarth">
+                    </div>
+                    <div class="photo-box" id="photo4">
+                        <h5>Alestorm</h5>
+                        <img src="images/photo4.jpg" alt="Alestorm">
+                    </div>
+                    <div class="photo-box" id="photo5">
+                        <h5>Slayer</h5>
+                        <img src="images/photo5.jpg" alt="Slayer">
+                    </div>
+                </div>
+                <div id="photoSelector">
+                    <div class="photoButton activeButton" id="button1">
+                    </div>
+                    <div class="photoButton" id="button2">
+                    </div>
+                    <div class="photoButton" id="button3">
+                    </div>
+                    <div class="photoButton" id="button4">
+                    </div>
+                    <div class="photoButton" id="button5">
+                    </div>
                 </div>
 
             </section>
@@ -68,8 +101,19 @@
                     </div>
             </section>
             <section class="contactSection" id="contactScroll">
+                <h4>Get in touch with me</h4>
                     <div class="contact">
-                        
+                        <form class="contactWrapper">
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" name="email" placeholder="Email Address">
+                            <input type="text" name="phone" placeholder="Phone Number">
+                        </form>
+                        <form class="messageWrapper">
+                            <input type="textarea" name="message" placeholder="Message" cols="50" rows="4" wrap="hard">
+                        </form>
+                        <form class="submitWrapper">
+                            <input type="submit" value="Send">
+                        </form>
                     </div>
             </section>
         </main>
