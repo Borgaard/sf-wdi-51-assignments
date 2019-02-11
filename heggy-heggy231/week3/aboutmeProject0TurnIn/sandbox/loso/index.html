@@ -24,7 +24,8 @@ instagram sanfrancisgross look for img there
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
+    <!-- header -->
+    <header class="header" id="HOME">
         <!-- Navigation -->
         <!-- add navbar-fixed-top so navbar sticky on top of page -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -34,6 +35,7 @@ instagram sanfrancisgross look for img there
                 <div class="navbar-header">
                     <!-- 1) update the target to #loso data-target="#loso-navbar-collapse-1"-->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
+                        <!-- when screen size sm navbar becomes icon-bars -->
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -50,12 +52,13 @@ instagram sanfrancisgross look for img there
                 <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
                     <!-- move nav bar to right when collapse -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="nav-item">HOME</a></li>
-                        <li><a href="#" class="nav-item">ABOUT</a></li>
-                        <li><a href="#" class="nav-item">FEATURES</a></li>
-                        <li><a href="#" class="nav-item">SCREENS</a></li>
-                        <li><a href="#" class="nav-item">DOWNLOAD</a></li>
-                        <li><a href="#" class="nav-item">CONTACT</a></li>
+                        <!-- when user clicks on home it will look for the id=HOME up top header  <header class="header" id="HOME"> -->
+                        <li><a href="#HOME" class="nav-item">HOME</a></li>
+                        <li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
+                        <li><a href="#FEATURES" class="n av-item">FEATURES</a></li>
+                        <li><a href="#SCREENS" class="nav-item">SCREENS</a></li>
+                        <li><a href="#DOWNLOAD" class="nav-item">DOWNLOAD</a></li>
+                        <li><a href="#CONTACT" class="nav-item">CONTACT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -235,7 +238,7 @@ instagram sanfrancisgross look for img there
         </div>
     </section>
     <!-- Features -->
-    <section class="features">
+    <section class="features" id="FEATURES">
         <!-- for bootstrap add class of container -->
         <div class="container">
             <div class="row">
@@ -346,7 +349,7 @@ instagram sanfrancisgross look for img there
         </div>
     </section><!-- Purchase Now -->
     <!-- Screens -->
-    <section class="screens">
+    <section class="screens" id="SCREENS">
         <div class="container">
             <div class="row">
     <!-- To center column use <div class="col-md-6 col-md-offset-3"> | <div class="col-md-10 col-md-offset-1"> https://tutorialzine.com/2015/10/learn-the-bootstrap-grid-in-15-minutes-->
@@ -417,7 +420,7 @@ instagram sanfrancisgross look for img there
         </div>
     </section>
     <!-- Download-Now -->
-    <section class="download-now">
+    <section class="download-now" id="DOWNLOAD">
         <!-- centered 1 column  -->
         <div class="container">
             <div class="row">
@@ -489,7 +492,7 @@ instagram sanfrancisgross look for img there
         </div>
     </section><!-- end of available-on -->
     <!-- Contact Us -->
-    <section class="contact-us">
+    <section class="contact-us" id="CONTACT">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -543,7 +546,8 @@ instagram sanfrancisgross look for img there
                 <!-- add anchor quick link back upto top -->
                 <div class="col-md-6">
                     <div class="scroll-top">
-                        <a href="#"><i class="fa fa-angle-up"></i></a>
+                        <!-- QUICK JUMP LINKED by the id=Home -->
+                        <a href="#HOME"><i class="fa fa-angle-up"></i></a>
                     </div>
                 </div>
             </div>
