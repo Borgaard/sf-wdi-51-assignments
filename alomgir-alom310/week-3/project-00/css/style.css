@@ -17,6 +17,7 @@ html{
 #headwrap{
   display: flex;
   justify-content: space-between;
+  background-color: deepskyblue;
 }
 
 #about, #test{
@@ -25,9 +26,14 @@ html{
   height:500px;
 }
 
-#about h2, #test h2{
+#about h2{
   margin-top:125px;
 }
+
+ #test h2{
+  margin-top:75px;
+ }
+
 
 .wrapper {
   display: flex;
@@ -43,7 +49,9 @@ html{
 }
 
 #col-test{
-  width:75%;
+  width:35%;
+  font-style:italic;
+  padding-bottom: 25px
 }
 
 h2{
@@ -97,10 +105,17 @@ a{
   color:black;
   font-family: raleway;
   font-weight: 900;
+  transition: all .3s ease-in-out;
+  font-size: 16px;
+}
+
+a:hover{
+  color:white;
 }
 
 li{
   list-style: none;
+  padding-top: 12px;
 }
 
 nav a{
@@ -125,7 +140,8 @@ Welcome Section
 ------------------------------------------- */
 
 #welcomepic{
-  height: 400px;
+  width: 675px;
+  height: 450px;
 }
 
 #welcome {
@@ -200,6 +216,44 @@ footer{
 }
 
 /* ----------------------------------------
+Testimonials
+------------------------------------------- */
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 500px;
+margin: 0.25em 0;
+padding: 0.35em 40px;
+line-height: 1.45;
+position: relative;
+color: #383838;
+border-left: 0;
+}
+
+blockquote:before {
+display: block;
+padding-left: 10px;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: -20px;
+top: -20px;
+color: #000000;
+}
+
+blockquote cite {
+color: #000000;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+
+blockquote cite:before {
+content: "\2014 \2009";
+}
+
+/* ----------------------------------------
 Scroll
 ------------------------------------------- */
 #scroll {
@@ -248,7 +302,7 @@ Media queries
     width: 75%
   }
 
-  #about {
+  #about, #test {
     height: auto;
   }
 
@@ -297,12 +351,25 @@ Media queries
   color: black;
   display: block;
   transition: 0.3s;
-  background-color: #00bfff;
+  background-color: #00000060;
 }
 
   .sidenav a:hover {
     color: white;
   }
+
+}
+
+@media only screen and (max-width:1025px){
+  blockquote {
+  font-size: 14px;
+  }
+
+  blockquote:before {
+  font-size: 50px;
+  margin-left: 10px;
+  }
+
 }
 
 
