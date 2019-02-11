@@ -642,6 +642,7 @@ p {
   background-color: #1a1a1a; /* jet black */
   padding-bottom: 35px;
   padding-top: 35px;
+  /* add bule line at the bottom of footer */
   border-bottom: 3px solid #129CF3; /* blue */
 }
 #copyright {
@@ -652,4 +653,24 @@ p {
   font-weight: 600;
   font-size: 15px;
   text-transform: uppercase;
+}
+/* style the brand */
+#copyright p a {
+  /* rid of anchor default style */
+  text-decoration: none;
+  color: #129CF3; /* blue */
+}
+/* move the angle-up arrow right side, scroll-top brings user back to beginning of page */
+.scroll-top {
+  text-align: right;
+}
+.scroll-top a {
+  background-color: #129CF3; /* blue */
+  /* clickable area to get bigger */
+  padding: 25px;
+}
+/* style the fontAwesome icon */
+.scroll-top a i {
+  color: #fff;
+  font-size: 25px;
 }
