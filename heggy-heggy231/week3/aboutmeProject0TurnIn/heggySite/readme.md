@@ -15,6 +15,8 @@
 * 13) photo carousel
 * 14) automatic photo slider using https://bxslider.com/
 
+## demo of site
+[AboutMe](https://heggy231.github.io/Aboutme/)
 
 http://www.idynxschool.com/loso/#
 - requirement: https://git.generalassemb.ly/sf-wdi-51/project-00
