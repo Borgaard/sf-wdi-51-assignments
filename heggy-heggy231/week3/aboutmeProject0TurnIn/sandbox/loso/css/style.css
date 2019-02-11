@@ -18,6 +18,8 @@ rgba(0, 0, 0, .4) - black with lot of transparency
 #1274B1 - darker blue
 #316B90 - more darker blue
 #D7DADB - light gray
+#B5B5B5 - medium grey
+#0F1217 - dark black
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -447,4 +449,84 @@ p {
   margin-top: 0px;
   font-weight: 300;
   text-transform: uppercase;
+}
+/* ======= Download-Now ======= */
+/* fix the img to fit better by picking the main section of download now section */
+.download-now img {
+  width: 100%;
+}
+.available-on {
+  background-color: #1a1a1a; /* Gray10 */
+  /* neg margin bring the available-on section and download-now section closer together */
+  margin-top: -8px;
+  position: relative;
+}
+.available-title {
+  padding-top: 75px;
+}
+.available-title h2 {
+  color: #fff; /* white */
+  font-size: 30px;
+}
+.available-title p {
+  color: #B5B5B5; /* medium grey */
+}
+/* get rid of padding for icons */
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.available-on-item {
+  text-align: center;
+  border-left: 1px solid #0F1217; /* dark black */
+  min-height: 230px;
+  padding-bottom: 15px;
+  position: relative;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.available-on-item:hover {
+  background-color: #121212;
+}
+/* styling font awesome icons */
+.available-on-item i {
+  color: #129CF3; /* blue */
+  text-align: center;
+  opacity: 1;
+  font-size: 40px;
+  padding-top: 90px;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.available-on-item:hover i {
+  /* when hovering font awesome icons disappears */
+  opacity: 0;
+}
+.available-on-inner {
+  position: absolute;
+  /* bring down text h2 to same level as icon */
+  bottom: 93px;
+  width: 100%;
+  /* hide the text normally */
+  opacity: 0;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.available-on-inner h2 {
+  text-align: center;
+  font-weight: 300;
+  color: #D7DADB; /* light grey */
+  font-size: 16px;
+}
+.available-on-item:hover div.available-on-inner {
+  opacity: 1;
 }
