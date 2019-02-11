@@ -3,6 +3,7 @@
 #fff    - white
 #337ab7 - blue
 #eee    - light grey
+#aeaeae - lighter grey
 #cecece - darker grey
 #e63636 - red
 #adadad - lighter grey
@@ -20,6 +21,7 @@ rgba(0, 0, 0, .4) - black with lot of transparency
 #D7DADB - light gray
 #B5B5B5 - medium grey
 #0F1217 - dark black
+#555    - Davy's Grey
 
 #F7FC71 - Yellow
 #C8AAEF - light purple
@@ -529,4 +531,59 @@ p {
 }
 .available-on-item:hover div.available-on-inner {
   opacity: 1;
+}
+/* ======= Contact Us ======= */
+/* spacing out name, email, subjt fields */
+.contact-us-form .form-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #555; /* Davy's Grey */
+  /* form text border default is blue > change to light grey, background-color of the form field transparent */
+  background-color: transparent;
+  border: 1px solid #aeaeae; /* lighter grey*/
+  /* rounded box */
+  border-radius: 3px;
+  /* give spacing btwn form fields */
+  margin-bottom: 15px;
+  /* form outline and texts gets bit lighter */
+  opacity: 0.8;
+  /* ease in/out of outline of field */
+  outline: 0px !important;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+#message {
+  /* text input area bigger give height */
+  height: 117px;
+  /* user can't make the text input area bigger */
+  resize: none;
+}
+.submit-btn, 
+.submit-btn:hover,
+.submit-btn:focus,
+.submit-btn:visited {
+  background-color: transparent;
+  border: 1px solid #129CF3; /* blue */
+  border-radius: 4px; /* rounded corners */
+  /* button width to take up its col-md-8 containder width */
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 18px;
+  /* font color is blue */
+  color: #129CF3; /* blue */
+  /* ease in/out of outline of field  when clicking the color blue goes away and default grey color shows*/
+  outline: 0px !important;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
 }
