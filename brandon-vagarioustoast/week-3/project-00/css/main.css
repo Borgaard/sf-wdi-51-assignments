@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 nav {
@@ -113,6 +113,11 @@ img {
   margin-left: 2rem;
 }
 
+.slider .slides {
+    background: #24292d;
+    margin-left: 2rem;
+  }
+
 #contact {
   grid-column: 7 / 13;
 }
@@ -178,7 +183,6 @@ footer p {
 
 @media screen and (max-width: 689px){
 
-
   .banner{
     height: 30vh;
   }
@@ -196,7 +200,6 @@ footer p {
     font-size: 2.3rem;
   }
 
-
   figure {
     display: block;
     grid-column: 1 / 13;
@@ -209,9 +212,6 @@ footer p {
   #intro {
     grid-column: 1 / 13
   }
-
-
-
 
 /*Collapse bottom divs*/
   #testimonials {
@@ -237,7 +237,7 @@ footer p {
 @media screen and (max-width: 430px){
 
   #intro {
-    height: 40%;
+    max-height: 40%;
   }
 }
 

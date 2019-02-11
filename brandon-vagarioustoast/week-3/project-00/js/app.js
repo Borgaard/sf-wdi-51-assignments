@@ -1,27 +1,24 @@
-console.log(`We're online.`);
-
 document.addEventListener('DOMContentLoaded', () => {
     // Materialize Methods
 
-    let elems = document.querySelectorAll('.materialboxed');
-    let carouselImages = document.querySelectorAll('.carousel');
-    let sideNavElem = document.querySelectorAll('.sidenav');
+    const boxedElems = document.querySelectorAll('.materialboxed');
+    const carouselImages = document.querySelectorAll('.carousel');
+    const sideNavElem = document.querySelectorAll('.sidenav');
+    const slideElems = document.querySelectorAll('.slider');
 
-    let instances = M.Materialbox.init(elems);
+    // Materialize Methods
+
+    let sliderInstance = M.Slider.init(slideElems);
+    let boxInstances = M.Materialbox.init(boxedElems);
     let carouselInstance = M.Carousel.init(carouselImages, {
       autoplay: true,
     });
     let sideNavInstance = M.Sidenav.init(sideNavElem);
 
-
-
     // Disable Submit For Now
+
     let submitButton = document.querySelector('.submit-button');
     submitButton.addEventListener('click', (e)=>{
       e.preventDefault();
     })
-
-
-
-
   })
