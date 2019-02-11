@@ -456,7 +456,7 @@ p {
 }
 /* ======= Counter ======= */
 .counter {
-  background-image: url("../images/counter-bg.jpg");
+  background-image: url("../images/counter-bg1.jpg");
   background-repeat: no-repeat;
   /* parallax effect */
   background-attachment: fixed;
@@ -718,6 +718,7 @@ p {
   font-size: 25px;
 }
 /* make bx slider to center */
-div .bx-viewport {
+div .bx-viewport, div .bx-controls {
   margin-left: 137px;
 }
+
