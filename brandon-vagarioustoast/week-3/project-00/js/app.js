@@ -21,4 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.addEventListener('click', (e)=>{
       e.preventDefault();
     })
-  })
+  });
