@@ -136,7 +136,7 @@ p {
 /* ======= Header ======= */
 .header {
   /* add background img in header element */
-  background-image: url("../images/header-bg.jpg");
+  background-image: url("../images/header-bg1.jpg");
   /* keep the img fixed makes parallax effect */
   background-attachment: fixed;
   background-repeat: no-repeat;

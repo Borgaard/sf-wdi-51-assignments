@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!-- using  v3.3 bootstrap documentation https://getbootstrap.com/docs/3.3/css/#grid 
+instagram sanfrancisgross look for img there
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- very important to add name="viewport" content="width=device-width tag for responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AboutMe - Responsive Website</title>
+    <!-- Google Fonts -->
+    <!-- font-family: 'Raleway', sans-serif;
+         font-family: 'Source Sans Pro', sans-serif;
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500i,600,600i,700,700i,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600i,700,900" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="./images/favicon.png">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- BX slider css -->
+    <link rel="stylesheet" type="text/css" href="./css/jquery.bxslider.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="HOME">
+        <!-- Navigation -->
+        <!-- add navbar-fixed-top so navbar sticky on top of page -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <!-- update it so container not container-fluid -->
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- 1) update the target to #loso data-target="#loso-navbar-collapse-1"-->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
+                        <!-- when screen size sm navbar becomes icon-bars -->
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <!-- 2) add your own sm size logo -->
+                        <img src="./images/logo-small.png" alt="logo">
+                    </a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- 3) update id="loso-example-navbar-collapse-1" to your website name loso -->
+                <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
+                    <!-- move nav bar to right when collapse -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- when user clicks on home it will look for the id=HOME up top header  <header class="header" id="HOME"> -->
+                        <li><a href="#HOME" class="nav-item">HOME</a></li>
+                        <li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
+                        <li><a href="#FEATURES" class="n av-item">FEATURES</a></li>
+                        <li><a href="#SCREENS" class="nav-item">SCREENS</a></li>
+                        <li><a href="#DOWNLOAD" class="nav-item">DOWNLOAD</a></li>
+                        <li><a href="#CONTACT" class="nav-item">CONTACT</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- custom class for adding modern looking overlay -->
+        <div class="header-overlay">
+            <!-- note: we can put multip rows inside of single container -->
+            <div class="container header-container">
+                <!-- first row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo takes up the entire width of the viewport -->
+                        <!-- bootstrap class that aligns center viewport -->
+                        <div class="logo text-center">
+                            <img src="./images/logo.png" alt="my logo">
+                        </div>
+                    </div>
+                </div>
+                <!-- second row -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="header-text">
+                            <!-- title & description -->
+                            <h1>A clean and modern looking responsive website</h1>
+                            <p>Built with great love!</p>
+                        </div>
+                        <div class="header-btns">
+                            <!-- Header buttons bootstrap -->
+                            <!-- bootstrap btn https://getbootstrap.com/docs/3.3/css/#buttons -->
+                            <a href="" class="btn btn-download">Download</a>
+                            <a href="" class="btn btn-tour">Take A Tour
+                            <!-- add button using font awesome https://fontawesome.com/v4.7.0/icon/angle-down  
+                            web accessibility: aria-hidden="true" to hide icons used purely for decoration -->
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div> <!-- end of col-md-8 -->
+                    <!-- adding offset of col-1 margin-left to give some room -->
+                    <div class="col-md-3 col-md-offset-1">
+                        <div class="header-iphone">
+                            <!-- header iphone img -->
+                            <img src="./images/iphone-header.png" alt="header iphone">
+                        </div>
+                    </div><!-- end of col-md-4 -->
+                </div><!-- end of row-->
+            </div>
+        </div>
+    </header>
+    <!-- About Us -->
+    <section id="ABOUT"> 
+        <div class="container">
+            <div class="row">
+                <!-- first col is 10, have offset column adds margin-left col-10  
+                https://getbootstrap.com/docs/3.3/css/#grid-offsetting
+                -->
+                <div class="col-md-10 col-md-offset-1">
+                    <!-- About us Title & description -->
+                    <div class="section-title">
+                        <h2> About Us </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nostrum expedita illum quis perspiciatis porro consectetur, esse, accusamus aspernatur excepturi quas enim et beatae sint inventore harum tempora vero nobis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="choose-us-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- About iphone -->
+                        <div class="about-iphone">
+                            <img src="./images/about-iphone.png" alt="iphone">
+                        </div>
+                    </div><!-- end of col-md-6 -->
+                    <div class="col-md-6">
+                        <!-- Why choose us title -->
+                        <div class="choose-us-title">
+                            <h2>Why Choose Us?</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A voluptatem quia molestiae nihil distinctio eveniet facilis vel amet velit at! Similique labore voluptate earum quos maiores assumenda nulla aut necessitatibus?</p>
+                        </div>
+                        <!-- Why choose us description -->
+                        <div class="choose-us-des">
+                            <!-- choose us item 1 -->
+                            <div class="choose-us-item">
+                                <!-- choose us item icon
+                                 use fontAwesome icon https://fontawesome.com/v4.7.0/icons/ 
+                                https://fontawesome.com/v4.7.0/icon/bolt
+                                -->
+                                <div><i class="fa fa-bolt"></i></div>
+                                <!-- choose us item title & des -->
+                                <h3>LET IT PICK US</h3>
+                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dignissimos modi, quod cupiditate repudiandae culpa libero dolor. Laboriosam, totam error eligendi dolore id, ex deleniti neque dolorum magnam ea perferendis?</P>
+                            </div><!-- end of choose us item 1 -->
+                            <!-- choose us item 2 -->
+                            <div class="choose-us-item">
+                                <!-- choose us item icon
+                                    use fontAwesome icon https://fontawesome.com/v4.7.0/icons/ 
+                                https://fontawesome.com/v4.7.0/icon/bullhorn
+                                -->
+                                <div><i class="fa fa-bullhorn"></i></div>
+                                <!-- choose us item title & des -->
+                                <h3>DAD MOM TOGETER</h3>
+                                <P>If you give a man a fish he will eat for a day. But if you teach a man to fish he will buy an ugly hat. And if you talk about fish to a starving man then you are a consultant. 63% of all statistics are made up</P>
+                            </div><!-- end of choose us item 2 -->
+                            <!-- choose us item 3 -->
+                            <div class="choose-us-item">
+                                <!-- choose us item icon
+                                 use fontAwesome icon https://fontawesome.com/v4.7.0/icons/ 
+                                https://fontawesome.com/v4.7.0/icon/flag-o
+                                -->
+                                <div><i class="fa fa-flag-o"></i></div>
+                                <!-- choose us item title & des -->
+                                <h3>ICE CREAM TRUCK</h3>
+                                <P>That is our word. You have no right to use it. Huck Griffin: Hey hey hey, I'm cool, I'm cool, no problem! [pause] Huck Griffin: So, could you pass me the oar, 'n-word Jim'?</P>
+                            </div><!-- end of choose us item 3 -->
+                        </div>
+                    </div><!-- end of col-md-6 -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Testimonials -->
+    <!-- add bootstrap carousel components https://getbootstrap.com/docs/3.3/examples/carousel/
+    
+    https://getbootstrap.com/docs/3.3/javascript/#carousel
+    -->
+    <section class="testimonial">
+        <div class="testimonial-overlay">
+    <!-- structure for bootstrap: container > row > col-total to 12 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- https://getbootstrap.com/docs/3.3/javascript/#carousel-examples -->
+                        <div id="carousel-testimonial" class="carousel slide" data-ride="carousel">
+                            <!-- indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-testimonial" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-testimonial" data-slide-to="1"></li>
+                                <li data-target="#carousel-testimonial" data-slide-to="2"></li>
+                            </ol>
+                            <!-- wrapper for slides -->
+                            <div class="carousel-inner">
+                                <!-- item 01 -->
+                                <!-- keep only item 01 (just one) active state -->
+                                <div class="item active text-center">
+                                    <img src="./images/client01.jpg" alt="testimonial" class="center-block">
+                                    <div class="testimonial-caption">
+                                        <h2>Daniel Homes</h2>
+                                        <h4><span>Sr. Software Engineer</span>Blue Gyms</h4>
+                                        <p>There we were in the park when suddenly some old lady says I stole her purse. I chucked the professor at her but she kept coming. So I had to hit her with this purse I found.</p>
+                                    </div>
+                                </div><!-- end of item 01 -->
+                                <!-- item 02 -->
+                                <div class="item text-center">
+                                    <img src="./images/client02.jpg" alt="testimonial" class="center-block">
+                                    <div class="testimonial-caption">
+                                        <h2>James Dean</h2>
+                                        <h4><span>Marketing Manager, </span>Twitch</    h4>
+                                        <p>There we were in the park when suddenly some old lady says I stole her purse. I chucked the professor at her but she kept coming. So I had to hit her with this purse I found.</p>
+                                    </div>
+                                </div><!-- end of item 02 -->
+                                <!-- item 03 -->
+                                <div class="item text-center">
+                                    <img src="./images/client03.jpg" alt="testimonial" class="center-block">
+                                    <div class="testimonial-caption">
+                                        <h2>Katie Jones</h2>
+                                        <h4><span>CEO, </span>RuRu Kitchen</h4>
+                                        <p>There we were in the park when suddenly some old lady says I stole her purse. I chucked the professor at her but she kept coming. So I had to hit her with this purse I found.</p>
+                                    </div>
+                                </div><!-- end of item 03-->               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features -->
+    <section class="features" id="FEATURES">
+        <!-- for bootstrap add class of container -->
+        <div class="container">
+            <div class="row">
+            <!-- first col is 10, have offset of 1 column adds margin-left of col-10  
+                https://getbootstrap.com/docs/3.3/css/#grid-offsetting 
+            
+            https://tutorialzine.com/2015/10/learn-the-bootstrap-grid-in-15-minutes
+            -->
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+        <!-- on section-title h2:after style gives ist underline -->
+                        <h2>Features</h2>
+                        <p>No! Don't jump! Yes! In your face, Gandhi! Too much work. Let's burn it and say we dumped it in the sewer. I just want to talk. It has nothing to do with mating. Fry, that doesn't make sense. They're like sex, except I'm having them!</p>
+                    </div>
+                </div><!-- col-md-10 col-md-offset-1-->
+            </div> <!-- end of row -->
+        </div><!-- end of container-->
+
+        <div class="features-inner-wrapper">
+            <div class="container">
+                <div class="row">
+                    <!-- add 3 item vertically stacked -->
+                    <div class="col-md-4">
+                        <!-- left feature item 01 -->
+                        <div class="left-feature-item">
+                            <!-- Icon -->
+                            <div class="left-feature-item-icon">
+                                <i class="fa fa-desktop"></i>
+                            </div>
+                            <!-- feature item title & description -->
+                            <h3>RETINA READY</h3>
+                            <P>By default, columns stick to each other without leaving any space, floating to the left. </P>
+                        </div>
+                        <!-- left feature item 02 -->
+                        <div class="left-feature-item">
+                            <!-- Icon -->
+                            <div class="left-feature-item-icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <!-- feature item title & description -->
+                            <h3>MOBILE READY</h3>
+                            <P>To create margins on the left of columns we can use the offset classes.</P>
+                        </div>
+                        <!-- left feature item 03 -->
+                        <div class="left-feature-item">
+                            <!-- Icon -->
+                            <div class="left-feature-item-icon">
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <!-- feature item title & description -->
+                            <h3>EASY LAYOUT</h3>
+                            <P>To create margins on the left of columns we can use the offset classes.</P>
+                        </div>                         
+                    </div> <!-- end of col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="feature-iphone">
+                            <img src="./images/iphone-02.png" alt="feature iphone">
+                        </div>
+                    </div> <!-- end of col-md-4 -->
+                    <!-- 3 item under this last col with 3 items -->
+                    <div class="col-md-4">
+                        <!-- right feature item 01 -->
+                        <div class="right-feature-item">
+                            <!-- Icon -->
+                            <div class="right-feature-item-icon">
+                                <i class="fa fa-certificate"></i>
+                            </div>
+                            <!-- feature item title and description -->
+                            <h3>CERTIFIed SOLUTION</h3>
+                            <p>We must develop knowledge optimization initiatives to leverage our key learnings.</p>
+                        </div><!-- end of right feature item 01-->
+                        <!-- right feature item 02 -->
+                        <div class="right-feature-item">
+                            <!-- Icon -->
+                            <div class="right-feature-item-icon">
+                                <i class="fa fa-rss"></i>
+                            </div>
+                            <!-- feature item title and description -->
+                            <h3>CONSTANT FEED</h3>
+                            <p>We must develop knowledge optimization initiatives to leverage our key learnings.</p>
+                        </div><!-- end of right feature item 02-->
+                        <!-- right feature item 03 -->
+                        <div class="right-feature-item">
+                            <!-- Icon -->
+                            <div class="right-feature-item-icon">
+                                <i class="fa fa-database"></i>
+                            </div>
+                            <!-- feature item title and description -->
+                            <h3>SECURE DATA</h3>
+                            <p>We must develop knowledge optimization initiatives to leverage our key learnings.</p>
+                        </div><!-- end of right feature item 03-->
+                    </div><!-- end of col-md-4 -->
+                </div>
+            </div>
+        </div><!-- end of features-inner-wrapper-->
+    </section>
+    <!-- Purchase Now -->
+    <section class="purchase-now">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <p>Then we'll go with that data file! And yet you haven't said what I told you to say! How can any of us trust you?</p>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="btn btn-primary btn-purchase-now">Purchase Now</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- Purchase Now -->
+    <!-- Screens -->
+    <section class="screens" id="SCREENS">
+        <div class="container">
+            <div class="row">
+    <!-- To center column use <div class="col-md-6 col-md-offset-3"> | <div class="col-md-10 col-md-offset-1"> https://tutorialzine.com/2015/10/learn-the-bootstrap-grid-in-15-minutes-->
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+                        <h2>Screens</h2>
+                        <p>Guess again. For the last time, I don't like lilacs! Your 'first' wife was the one who liked lilacs! Well, then good news!</p>
+                    </div>
+                </div><!-- end of col-md-10 col-md-offset-1-->
+            </div><!-- end of row-->
+        </div><!-- end of container-->
+            <div class="screen-slider">
+                <div class="container">
+                    <div class="row">
+                        <!-- bxSlider HTML -->
+                        <div class="bxslider">
+                    <!-- following https://bxslider.com/install/ documentation -->
+                            <div class="item">
+                                <img src="./images/screen-01.png" alt="screen">
+                            </div>
+                            <div class="item">
+                                <img src="./images/screen-02.png" alt="screen">
+                            </div>
+                            <div class="item">
+                                <img src="./images/screen-03.png" alt="screen">
+                            </div>
+                            <div class="item">
+                                <img src="./images/screen-04.png" alt="screen">
+                            </div>
+                        </div><!-- end of bxslider -->
+                    </div><!-- end of row -->
+                </div><!-- end of container bx slider -->
+            </div>
+
+    </section>
+    <!-- Counters -->
+    <section class="counter">
+        <div class="counter-overlay">
+            <!-- text-center from bootstrap https://getbootstrap.com/docs/3.3/css/#type-alignment -->
+            <div class="row text-center">
+                <!-- counter item 01 -->
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div><i class="fa fa-cloud-download"></i></div>
+                        <h2><span class="counter-num">1588</span><span>+</span></h2>
+                        <p>Downloads</p>
+                    </div>
+                </div><!-- end of counter item 01 -->
+                <!-- counter item 02 -->
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div><i class="fa fa-gift"></i></div>
+                        <h2><span class="counter-num">3500</span><span>+</span></h2>
+                        <p>Awards</p>
+                    </div>
+                </div><!-- end of counter item 02 -->
+                <!-- counter item 03 -->
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div><i class="fa fa-heart-o"></i></div>
+                        <h2><span class="counter-num">199</span><span>+</span></h2>
+                        <p>Likes</p>
+                    </div>
+                </div><!-- end of counter item 03 -->
+                <!-- counter item 04 -->
+                <div class="col-md-3">
+                    <div class="counter-item">
+                        <div><i class="fa fa-check"></i></div>
+                        <h2><span class="counter-num">2000</span><span>+</span></h2>
+                        <p>Recommended</p>
+                    </div>
+                </div><!-- end of counter item 04 -->
+            </div>
+        </div>
+    </section>
+    <!-- Download-Now -->
+    <section class="download-now" id="DOWNLOAD">
+        <!-- centered 1 column  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+                        <h2>Download Now</h2>
+                        <P>Tubby tomorry suspicious aloysius no ones pinching his legs bovine university malparkage impy & chimpy eedily tromboner.</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- this combo col-md-8 col-md-offset-2 also centers img col in the middle -->
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="./images/download-screen.png" alt="download screen">
+                </div>
+            </div>
+        </div>
+    </section><!-- end of download-now -->
+    <!-- Available on -->
+    <section class="available-on">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="available-title">
+                        <h2>Available On</h2>
+                        <p>d'oh! glavin lamarella megacide microcalifragilistics</p>
+                    </div>
+                </div><!-- end of col-md-6-->
+                <div class="col-md-6">
+                    <div class="row">
+                        <a href="#">
+                            <!-- bootstrap class: col-md-4 nested inside of a tag, no-padding is our custom css -->
+                            <div class="col-md-4 no-padding">
+                                <div class="available-on-item">
+                                    <i class="fa fa-apple"></i>
+                                    <div class="available-on-inner">
+                                        <h2>iOS</h2>
+                                    </div>
+                                </div>
+                            </div><!-- end of ol-md-4 no-padding -->
+                        </a>
+                        <a href="#">
+                            <!-- bootstrap class: col-md-4 no-padding nested ow  -->
+                            <div class="col-md-4 no-padding">
+                                <div class="available-on-item">
+                                    <i class="fa fa-android"></i>
+                                    <div class="available-on-inner">
+                                        <h2>android</h2>
+                                    </div>
+                                </div>
+                            </div><!-- end of ol-md-4 no-padding -->
+                        </a>
+                        <a href="#">
+                            <!-- bootstrap class: col-md-4 no-padding nested ow  -->
+                            <div class="col-md-4 no-padding">
+                                <div class="available-on-item">
+                                    <i class="fa fa-windows"></i>
+                                    <div class="available-on-inner">
+                                        <h2>windows</h2>
+                                    </div>
+                                </div>
+                            </div><!-- end of ol-md-4 no-padding -->
+                        </a>
+                    </div>
+                </div><!-- end of col-md-6-->
+            </div>
+        </div>
+    </section><!-- end of available-on -->
+    <!-- Contact Us -->
+    <section class="contact-us" id="CONTACT">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+                        <h2>Contact Us</h2>
+                        <p>Sunblocker megacide megacide silicon chips and such sunblocker swishifying land cow smendler garbagewater nincompoop just.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-us-form">
+            <div class="container">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="col-md-8">
+                            <textarea class="form-control" name="" id="message" cols="10" rows="25" placeholder="Message Here..."></textarea>
+                            <button type="button" class="btn btn-default submit-btn form_submit">SEND</button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- end of contact-us-form-->
+        <!-- Social icons -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="copyright"><p>Copyright &copy 2019 <a href="#"> - Heggy </a></p></div>
+                </div>
+                <!-- add anchor quick link back upto top -->
+                <div class="col-md-6">
+                    <div class="scroll-top">
+                        <!-- QUICK JUMP LINKED by the id=Home -->
+                        <a href="#HOME" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <!-- move javascript script tag to increase page load speed logic done after DOM page has been painted -->
+    <!-- download uncompressed development jQuery https://code.jquery.com/jquery-3.3.1.js -->
+    <script src="./js/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <!-- get stable bootstrap v 3.37 vhttps://getbootstrap.com/docs/3.3/ 
+    https://getbootstrap.com/docs/3.3/getting-started/#download
+    documentation: https://getbootstrap.com/docs/3.3/css/#grid
+    -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- Bx Slider JS -->
+    <script src="./js/jquery.bxslider.js"></script>
+    <!-- my own js functions -->
+    <script src="js/custom.js"></script>
+</body>
+<!-- resource: https://www.udemy.com/build-responsive-website-using-html5-css3-js-and-bootstrap/learn/v4/t/lecture/5304760?start=0 -->
+</html>
