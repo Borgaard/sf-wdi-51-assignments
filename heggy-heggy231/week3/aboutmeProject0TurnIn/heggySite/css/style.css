@@ -500,6 +500,7 @@ p {
 /* fix the img to fit better by picking the main section of download now section */
 .download-now img {
   width: 100%;
+  border-radius: 16px;
 }
 .available-on {
   background-color: #1a1a1a; /* Gray10 */
@@ -720,5 +721,9 @@ p {
 /* make bx slider to center */
 div .bx-viewport, div .bx-controls {
   margin-left: 137px;
+}
+.bx-wrapper img {
+  padding: 0 15px;
+  border-radius: 24px;
 }
 
