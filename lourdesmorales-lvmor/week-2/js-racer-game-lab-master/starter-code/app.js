@@ -7,7 +7,7 @@ let redBoxPosition = 0;
 let blueBoxPosition = 0;
 
 
-//Press key down
+//Press key down to move redBox and blueBox in racing game
 
 var racingBox = document.querySelector(".racingBox");
 var redBox = document.querySelector(".redBox");
