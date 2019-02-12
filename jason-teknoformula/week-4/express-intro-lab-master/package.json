@@ -1,0 +1,19 @@
+{
+  "name": "express-intro-lab-master",
+  "version": "1.0.0",
+  "description": "express intro lab ",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "J Se",
+  "license": "ISC"
+}
