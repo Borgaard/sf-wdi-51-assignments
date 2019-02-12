@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 });
 
   app.use(express.static('public'));
-
+  app.use(express.static('vendor'));
 
 // Waits for requests that match the specified path, in this case /, and performs the specified function, in this case send the HTTP response "Hello World"
 app.get('/', (req, res) => {
