@@ -8,6 +8,7 @@
 
   //middleware
   app.use(express.static('public'));
+  app.use(express.static('vendor'));
 
   //seed data
   const albums = [
