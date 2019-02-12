@@ -216,6 +216,7 @@ p {
 
 blockquote {
   margin-bottom: 75px;
+  border-left: none;
 }
 
 /*Carousel*/
