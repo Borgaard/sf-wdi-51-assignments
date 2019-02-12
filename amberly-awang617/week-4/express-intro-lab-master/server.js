@@ -22,6 +22,12 @@ const albums = [
     }
   ];
 
+  const taquerias = [
+    { name: "La Taqueria" },
+    { name: "El Farolito" },
+    { name: "Taqueria Cancun" }
+  ];
+
 // Allow CORS: we'll use this today to reduce security so we can more easily test our code in the browser.
 // This function executes every time a request is made
 app.use((req, res, next) => {
@@ -47,6 +53,8 @@ app.get('/', (req, res) => {
 app.get('/api/albums', (req, res) => {
   res.json(albums);
 })
+
+app.get('/api/taquerias', (req, res) => res.json(taquerias));
 
 // Listens for connections on the specified port and host, so in this case, use the production port in production, or use port 3000
 app.listen(process.env.PORT || 3000,  () => console.log('Example app listening at http://localhost:3000/'));

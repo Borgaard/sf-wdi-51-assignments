@@ -10,10 +10,27 @@ $(document).ready(() => {
   }
 
   const handleError = (xhr, status, errorThrown) => console.log('uh oh');
+
+  const onSuccess = function(json) {
+    console.log(json);
+    json.forEach(function(obj) {
+      $('.container').append(`<p>${obj.name}</p>`)
+    });
+  }
+
+  const onError = (xhr, status, errorThrown) => console.log('uh oh');
+
   $.ajax({
      method: 'GET',
      url: 'http://localhost:3000/api/albums',
      success: handleSuccess,
      error: handleError
+   });
+
+  $.ajax({
+     method: 'GET',
+     url: 'http://localhost:3000/api/taquerias',
+     success: onSuccess,
+     error: onError
    });
 });
