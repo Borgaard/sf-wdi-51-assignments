@@ -1,5 +1,5 @@
-p{
-color: red;
+h2,p{
+color: white;
 }
 
 h1{
@@ -8,4 +8,10 @@ background-color: goldenrod;
 
 .tacos{
     margin-bottom: 30px;
+}
+
+body{
+background-image: url("../images/lake-merrit.jpg");
+background-attachment: fixed;
+
 }
