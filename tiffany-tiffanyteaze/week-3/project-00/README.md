@@ -1,11 +1,11 @@
 *Technologies used.*
-Carousel = Bootstrap
-Carousel Lightbox = Bootstrap
-Nav Links jump to page content = HTML
-Scroll highlights section of page in nav = jQuery
-Testimonials rotate in and out = quovolver jQuery plugin
-Hamburger mobile nav = Bootstrap
-Contact form = Bootstrap
+1. Carousel = Bootstrap
+2. Carousel Lightbox = Bootstrap
+3. Nav Links jump to page content = HTML
+4. Scroll highlights section of page in nav = jQuery
+5. Testimonials rotate in and out = quovolver jQuery plugin
+6. Hamburger mobile nav = Bootstrap
+7. Contact form = Bootstrap
 
 *Your process/approach.*
 There are so many resources online for the requirements of the project, so my approach was to find tutorials and examples of each component and build from that. For the scroll highlights, I reached out for help from Leo.
