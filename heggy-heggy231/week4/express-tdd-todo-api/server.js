@@ -62,19 +62,6 @@ app.get('/api/todos', (req, res) => {
   // 1) the JSON object should have one key-value pair. The key should be called "data". The value should be the hardcoded array of todos
   res.json({ "data": todos });
   // console(req.params._id);
-  /*
-  todos.forEach(todo => {
-    if(todoId === todo._id) {
-      let matchingTodo = todo;
-      return matchingTodo;
-    }
-    return matchingTodo;
-  })
-
-  console.log(matchingTodo);
-  res.json({todos: todos});
-  */
- 
 });
 
 // Create
@@ -82,9 +69,16 @@ app.post('/api/todos', (req, res) => {
   /* This endpoint will add a todo to our "database"
    * and respond with the newly created todo.
    */
+  // res.send("Hello World");
+  // Where does the data for the new todo live?
+  var newTodo = req.body;
+  newTodo._id = 19;
+  todos.push(newTodo);
+  res.json(newTodo);
 });
 
 // Show
+// http://localhost:3000/api/todos/7 put the id in there
 app.get('/api/todos/:id', (req, res) => {
   /* This endpoint will return a single todo with the
    * id specified in the route parameter (:id)
@@ -93,10 +87,25 @@ app.get('/api/todos/:id', (req, res) => {
   // GET /api/todos/:id (show)
       // 1) "before all" hook
   // res.json({ "data" : todos }); // pass todos array with key of data
-  res.json({"data" : todos})
-  let todoId = req.params.id;
-  console.log(todoId); // gives me the number of __id like 47
-  /*
+  // res.json({"data" : todos})
+  var todoId = parseInt(req.params.id);
+  console.log(todoId);
+  console.log('is this number?', typeof(todoId));
+  // console.log(todoId[0]);
+  // this function founTodo is fetching the id to my /api/todos/:id
+
+  var foundTodo = todos.filter(function (todo) {
+    console.log('Todo._id:', todo._id);
+    return todo._id == todoId;
+  })[0]; // filter item that matches on return stmt.
+  // returning the id number
+  res.json(foundTodo);
+
+  // What are you going to send back to the client?
+
+  console.log('todoID: ',todoId);
+  console.log('FoundToDo: ',foundTodo);
+
 });
 
 // Update
