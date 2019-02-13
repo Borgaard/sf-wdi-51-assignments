@@ -1,0 +1,184 @@
+/* Styles for main document items */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  background-size: cover;
+}
+
+main {
+  position: relative;
+}
+
+/*Styles for page blocks */
+header {
+  margin-bottom: 60px;
+}
+
+article, section {
+  padding: 90px 0;
+}
+
+#about-me {
+  background-color: #a2ddef;
+}
+
+/* Navigation bar styling */
+.navbar {
+  background-image: linear-gradient(to right, #076e70 , #a2ddef);
+  border-bottom: 3px solid #fcd876;
+  position: -webkit-sticky;
+  /*position: sticky;*/
+  padding: 10px;
+  /*top: 0;*/
+  left: 0;
+  /*background: #4AD1CB;*/
+  width: 100%;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-family: 'Marck Script', cursive;
+  font-size: 30px
+}
+
+a {
+  color: white;
+  padding-bottom: 0;
+  transition: color 2s;
+}
+
+a:hover {
+  color: #fcd876;
+  /*background: gray;*/
+  transition: all 2s;
+}
+
+#hamburger {
+  display: none;
+}
+
+/* Content/text styles */
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  display:inline-block ;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Image modifications */
+img {
+  width: 100%;
+}
+
+#succulent{
+  height: 70vh;
+  width: 100%;
+}
+
+#succulent img{
+  max-height: 100%;
+  border: none;
+}
+
+.carousel-item img {
+  max-height: 800px;
+}
+
+.gallery-image {
+  position: relative;
+}
+
+.gallery-image button {
+  outline: none;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #a2c0ef;
+  border: none;
+}
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+/*#gallery img:hover {
+  opacity: .5;
+}*/
+
+#testimonials {
+  background-image: url("../images/succulent-bg.png");
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  color: black;
+}
+
+.quote {
+  display: none;
+}
+
+
+
+/* Footer styling */
+footer {
+  background-image: linear-gradient(to left, #076e70 , #a2ddef);
+  border-top: 3px solid #fcd876;
+  padding: 10px;
+}
+
+.social-links a {
+  font-size: 1.7rem;
+  padding: 0 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .dropdown-toggle {
+    /*position: absolute;*/
+  }
+
+  #hamburger {
+    display: block;
+    position: relative;
+    /*color: #fff;*/
+    /*font-size: 1.7rem;*/
+    /*left: 55px;*/
+    /*position: absolute;*/
+  }
+
+  .gallery-image img {
+
+  }
+}
