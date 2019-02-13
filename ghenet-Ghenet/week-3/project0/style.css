@@ -1,0 +1,434 @@
+html{
+        scroll-behavior: smooth;
+            overflow-y: scroll;
+            
+}
+*{
+box-sizing: border-box;
+}
+body{
+    margin:20px;
+    padding:0;
+    background:url(http://allhdwallpapers.com/wp-content/uploads/2015/06/San-Francisco-3.jpg) no-repeat;
+    background-size: cover;
+    }
+
+    /* <--------header styling---------> */
+header{
+    /* display: flex; */
+    position: absolute;
+    top:0;
+    left: 0; 
+    /* padding: 0 60px; */
+    line-height: 10px;
+    background:  #262626;
+    width: 100%;
+    box-sizing: border-box;
+}
+header h1 {
+    float: left;
+ } 
+ header nav {
+   float: right;
+} 
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul li a:hover,
+header nav ul li a:active{
+color: #fff;
+background:#a8d0f0;
+font-size: 25px;
+}
+.menu-toggle{
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+/* .toggle{
+    width: 100%;
+    padding: 10px 20px;
+    background: #001f44;
+    text-align: right;
+    box-sizing: border-box;
+    color:#fff;
+    font-size: 30px;
+    display: none;
+} */
+    .box{
+    width: 450px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 2%;
+    padding:40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    color: white;
+    font-family:'Century Gothic',sans-serif;
+    }
+    .box img{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    }
+    .box h1{
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    text-decoration: none;
+    }
+    .box h5{
+    font-size: 20px;
+    letter-spacing:1px;
+    font-weight:100;
+    }
+    .box p{
+    text-align: justify;
+    }
+    ul{
+    margin:0;
+    padding:0;
+    }
+    .box li{
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+    }
+    .box li a{
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    transition: all ease-in-out 250ms;
+    }
+    .box li a:hover{
+    color: #b9b9b9;
+    }
+    /* <-----styling the main section------> */
+    main{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    
+    }
+    .angle-down{
+        text-decoration: none;
+    }
+    .fa-angle-down{
+        color:white;
+        position: relative;
+        bottom:10px;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-decoration: none;
+    }
+    section{
+        background-color: rgba(128, 109, 109, 0.7);
+        display: flex;
+        flex-direction: column;
+        /* height: 40%; */
+        margin: 20px;
+       
+    }
+    section h1{
+        text-align: center;
+        font-weight: 800;
+        text-decoration: underline;
+        }
+
+/*  */
+.intro{
+    background:url(images/sf.gif) no-repeat;
+    background-size: cover;
+}
+        /* <---------------Styling About Section-----------------------> */
+ .about-container {
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    }
+ .about h1{
+     text-align: center;
+ }
+
+    article p{
+    padding:  15px; 
+     }
+
+article img{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: #001f44;
+    align-content: center;
+     }
+article img:hover{
+    box-shadow: 0 28px 26px -2px black;
+}
+     /* <-------------Styling the Portfolio section -------------------> */
+       
+     #portfolio #container{
+         margin: 20 auto;
+         /* margin-top: 20px; */
+         position: relative;
+         width: 90%;
+         height: 0;
+         padding-bottom: 35%;
+         border: solid 1px #f8eeee28;
+     }
+     .slide_img{
+         position: absolute;
+         width: 100%;
+         height:100%;
+     }
+    .slide_img img{
+        width: 100%;
+        height: 100%;
+     }
+        #i1,#i2, #i3{
+            display: none;
+        }
+ 
+        .pre, .nxt{
+            width: 7%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: rgba(88, 88, 88, 0.4);
+            z-index: 99;
+            cursor: pionter;
+        }
+        .pre{
+            left:0;
+        }
+        .nxt{
+            right:0;
+        }
+        .nav{
+          width: 100%;
+          height: 11px;
+          bottom: 12%;
+          position: absolute;
+          text-align: center;
+          z-index: 99;
+        }
+        .dots{
+            top: -5px;
+            width: 18px;
+            height: 18px;
+            margin: 0 4px;
+            position: relative;
+            border-radius: 50%;
+            display: inline-block;
+            background: rgba(0,0,0,.4);
+        }
+        .slide_img{
+            z-index: -1;
+        }
+
+        #i1:checked ~ #one,
+        #i2:checked ~ #two,
+        #i3:checked ~ #three{
+            z-index: 9;
+        }
+        #i1:checked ~ .nav #dot1,
+        #i2:checked ~ .nav #dot2,
+        #i3:checked ~ .nav #dot3{
+            background: #fff;
+        }
+
+  /* <----------Styling contacts section-----------------> */
+
+    .contacts{
+      display:flex;
+      /* margin: auto 0; */
+      padding: 20px;
+    }
+    .contacts #contactform{
+        width: 80%;
+        margin: 10px 30px;
+        padding: 20px;
+
+    }
+    #contactform #name{
+        width: 100%;
+        padding: 10px;
+    }
+    #contactform #email{
+        width: 100%;
+        padding: 10px;
+    }
+    #contactform #phonenumber{
+        width: 100%;
+        padding: 10px;
+    }
+    #contactform #msg{
+        width: 100%;
+        padding: 10px;
+       
+    }
+    #contactform ::placeholder{
+        font-size: 16px;
+    }
+    #btn{
+        padding:10px;
+        background-color: green;
+        margin: 15px;
+        width: 20%;
+       
+    }
+    /* <-----------styling the footer ------------> */
+    footer{
+    background-color: rgba(5, 36, 46 ,.7);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+  
+    
+    }
+    footer ul {
+        display: flex;
+        padding: 25px;
+        justify-content: center;
+       
+    }
+    
+    footer li{
+        list-style: none;
+        justify-content: center;
+    }
+
+    footer li a{
+       
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        margin: 25px;
+        transition: all ease-in-out 250ms;
+
+        }
+        /* <---------to top scrolling link-----------> */
+    .to-top{
+            position: relative;
+            bottom:10px;
+            font-size: 20px;
+            right:-220px;
+            /* background: rgb(16, 2, 141); */
+            color:rgb(158, 157, 240);
+            padding: 0px 0px;
+            margin:70px 0 0 -5px;
+            border-radius: 20%;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+            
+        }
+        footer p{
+            text-align: center;
+            margin:70px 20px 0 auto;
+        }
+
+        /* <----------media query for the hamburger button------> */
+        @media(max-width:768px){
+            header{
+                padding: 0 20px;
+            }
+            header h1{
+                text-align: center;
+            }
+            header nav{
+                /* display: block; */
+                position: absolute;
+                width:100%;
+                height: calc(100vh - 50px);
+                background: #333;
+                left: 50px;
+                left:-100%;
+                transition: 0.5s;
+            }
+          .menu-toggle{
+                display: block;
+            }
+           header nav ul{
+              /* width:100%; */
+              display:block;
+              text-align: center;
+          }
+        header nav ul li a{
+              border-bottom: 2px solid rgba(0,0,0,.3);
+          }
+        header nav .active{
+              left:0;
+          }
+         .box{ 
+          width: 250px;
+          background: rgba(0,0,0,0.4);
+          border-radius: 2%;
+          padding:10px;
+          text-align: center;
+          margin: auto;
+          margin-top: 1%;
+          color: white;
+          font-family:'Century Gothic',sans-serif;
+    }
+          .box{
+            display: flex;
+            flex-wrap: wrap;
+             display: block; 
+          }
+          .box img{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            align-items: center; 
+            }
+         
+            .about-container {
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 7px;
+                }
+
+                #btn{
+                    padding:10px;
+                    background-color: green;
+                    margin: 15px;
+                    width: 50%;
+                   
+                }
+               footer{
+                    
+                    padding: 20px 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-items: center;
+                } 
+                .to-top{
+                    position: relative;
+                    bottom:10px;
+                    font-size: 18px;
+                    right: -150px;
+                    margin:70px 0 0 -5px;
+                    border-radius: 20%;
+                    }
+             footer p{
+                 /* text-align: center; */
+                 right: -250px;
+             }
+    }
