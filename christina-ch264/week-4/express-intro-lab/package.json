@@ -1,0 +1,19 @@
+{
+  "name": "week-4",
+  "version": "1.0.0",
+  "description": "hw 02/11",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "lab",
+    "intro"
+  ],
+  "author": "Christina Hastenrath",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

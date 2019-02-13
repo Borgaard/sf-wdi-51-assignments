@@ -12,83 +12,90 @@ let itemNameCake = ["cake1", "cake2", "cake3", "cake4", "cake5", "cake6"];
 // reference empty container in HTML
 let image = document.querySelectorAll('img');
 let buttons = document.querySelectorAll('button');
-let p = document.querySelectorAll('p');
+// let p = document.querySelectorAll('p');
 
 
-const move = function() {
-  // and then displays them in the image container
-  if (this.getAttribute('id') === "button1") {
-    // loops through an array of images in a folder
-    for (i = 0; i < image.length; i++) {
-      image[i].src = sushi[i];
-      image[i].alt = itemNameSushi[i];
-    }
-  } else if (this.getAttribute('id') === "button2") {
+
+  const move = function() {
+    // and then displays them in the image container
+    if (this.getAttribute('id') === "button1") {
+      // loops through an array of images in a folder
       for (i = 0; i < image.length; i++) {
-      image[i].src = pasta[i];
-      image[i].alt = itemNamePasta[i];
+        image[i].src = sushi[i];
+        image[i].alt = itemNameSushi[i];
       }
-  } else if (this.getAttribute('id') === "button3") {
-      for (i = 0; i < image.length; i++) {
-      image[i].src = cake[i];
-      image[i].alt = itemNameCake[i];
+    } else if (this.getAttribute('id') === "button2") {
+        for (i = 0; i < image.length; i++) {
+        image[i].src = pasta[i];
+        image[i].alt = itemNamePasta[i];
+        }
+    } else if (this.getAttribute('id') === "button3") {
+        for (i = 0; i < image.length; i++) {
+        image[i].src = cake[i];
+        image[i].alt = itemNameCake[i];
+        }
       }
-    }
-    document.getElementById("gallery-wrapper").style.display = "flex";
-};
+      document.getElementById("gallery-wrapper").style.display = "inline-table";
+  };
 
 
-// for loop to add addEventListenerto all buttons
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', move);
-};
+  // for loop to add addEventListenerto all buttons
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', move);
+  };
 
-// ============================================================
-
-// hide and show title p, depending on which button is clicked
-
-// use that p to push to local storage and to add it to the shopping cart
-
-// =============================================================
+  // reference DOM Elements to use further on
+  // cannot use querySelectorAll here because it returns a static node list that does not support eventlisteners
+  let imageParent = document.getElementById('gallery-wrapper');
+  let list = document.querySelectorAll(".list");
+  let ul = document.querySelector('ul');
 
 
-// reference DOM Elements to use further on
-// cannot use querySelectorAll here because it returns a static node list that does not support eventlisteners
-let imageParent = document.getElementById('gallery-wrapper');
-let list = document.querySelectorAll(".list")
-let ul = document.querySelectorAll('ul');
+  //https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
+  // function that creates a list element
+  let newLi = (text) => {
+    //create new element
+    let li = document.createElement('li');
+    // give new Element content
+    li.innerHTML = text;
+    // add the ul to the newly created li
+    ul.appendChild(li);
+
+    // on top append the listItem into the list?
+    document.getElementsByClassName('list')[0].append(li);
+  }
 
 
-//https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
-// function that creates a list element
-let newLi = (text) => {
-  //create new element
-  let li = document.createElement('li');
-  // give new Element content
-  li.innerHTML = text;
-  // add the ul to the newly created li
-  ul.appendChild(li);
-}
+  // let altImage = document.getAttribute('alt');
 
-
-// Event Delegation: add eventlistener to Parent element which makes all its children listen to the event
-imageParent.addEventListener("click", function(e) {
+  // Event Delegation: add eventlistener to Parent element which makes all its children listen to the event
+  imageParent.addEventListener("click", function(e) {
     // e.target is the clicked element
-   if (e.target && e.target.matches("img")) {
+    if (e.target && e.target.matches("img")) {
     console.log("image clicked");
 
-    // when image is clicked combine both arrays to display the list on the cart page?
-    for (let j = 0; j < sushi.length; j++) {
-    var listItemSushi = sushi.concat(itemNameSushi);
-    console.log(listItemSushi[6]);
-   }
+    // call newLi function to append alt value from image to list when image is clicked
+    // var altImage = document.image.getAttribute('alt');
+    newLi(image[0].alt);
 
-   //store items in local storage
-   localStorage.setItem('image', "sushi1");
-   newLi(image.value);
-   image.value = "";
-   // newLi.value = "";
-   }
+
+
+  // for (var j = 0; j < image[j].length; j++) {
+  //   newLi(image[j]);
+  // };
+
+  // store items in local storage (set key and value)
+  // localStorage.setItem('image', 'alt');
+  // newLi(alt.value);
+  // image.value = "bye";
+  // newLi.value = "hi";
+
+  // to get the value that was stored with the key from local storage: (this will return a string)
+  // window.localStorage.getItem('image');
+
+    };
+
+
 });
 
 
@@ -133,7 +140,7 @@ imageParent.addEventListener("click", function(e) {
 
 
 
-
+// when click on button display in cart. created 3 divs and when click on one button, display none for other
 
 
 
