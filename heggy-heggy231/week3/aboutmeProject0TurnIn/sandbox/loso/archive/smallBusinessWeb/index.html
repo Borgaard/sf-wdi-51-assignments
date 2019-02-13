@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SBP</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- download uncompressed development jQuery https://code.jquery.com/jquery-3.3.1.js -->
+    <script src="./js/jquery.js"></script>
+    <!-- get stable bootstrap v 3.37 vhttps://getbootstrap.com/docs/3.3/ 
+    https://getbootstrap.com/docs/3.3/getting-started/#download
+    documentation: https://getbootstrap.com/docs/3.3/css/#grid
+    -->
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. -->
+
+        <!-- header main container -->
+        <div class="container">
+            <!-- single row -->
+            <!-- Predefined grid classes .row and .col-xs-4 are available for quickly making grid layouts 
+            * row has total 12 col: col-md-8
+            -->
+            <div class="row">
+                <!-- col-left -->
+                <!-- https://getbootstrap.com/docs/3.3/css/#grid-example-basic 
+                Using a single set of .col-md-* grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any .row.
+                -->
+                <div class="col-md-8">
+                    <!-- bootstrap img responsive: https://getbootstrap.com/docs/3.3/css/#images-responsive 
+                    
+                    img corner rounded
+                    https://getbootstrap.com/docs/3.3/css/#images-shapes
+                    -->
+
+                    <img class="img-responsive img-rounded" src="images/home.jpg" alt="sbp ski slope mountain">
+                </div>
+                <!-- col-right -->
+                <div class="col-md-4">
+                    <h1>LoSo</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quia ea eum impedit enim beatae fugit id quibusdam. Praesentium laboriosam possimus voluptas, quibusdam dolore quod molestias esse quisquam voluptate voluptates!</p>
+                    <!-- # will take me to the same page -->
+                    <!-- add bootstrap btn-primary https://getbootstrap.com/docs/3.3/css/#buttons-options 
+                    btn-lg https://getbootstrap.com/docs/3.3/css/#buttons-sizes
+                    -->
+                    <a href="#" class="btn btn-primary btn-lg">Take a tour</a>
+                </div>
+
+            </div>
+        </div><!-- end header main container -->
+    </header>
+    <!-- keep the rest of the content out of header -->
+    <!-- clear-fix is also bootstrap class 
+    * https://getbootstrap.com/docs/3.3/css/#helper-classes-clearfix
+    -->
+    <div class="clear-fix"></div>
+    <!-- separator -->
+    <section>
+        <!-- main container -->
+        <div class="container">
+            <!-- single row  -->
+            <div class="row">
+                <!-- col full -->
+                <div>
+                    <!-- horizontal rule will separate thing visually -->
+                    <hr> 
+                </div>
+            </div>
+        </div><!-- end of main container -->
+
+    </section>
+    <!-- features -->
+    <section>
+        <!-- main feature container -->
+        <div class="container">
+            <!-- remember for bootstrap to work .container > .row > .col total 12 -->
+            <!-- single row -->
+            <!-- there are 3 col. To make it 12 total divide 12 by 3 = col-4 -->
+            <div class="row">
+                <!-- col 1 -->
+                <div class="col-md-4">
+                    <h2>RETINA READY</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore consequatur dignissimos non error! Reiciendis, ut. Cumque tenetur necessitatibus ipsa fugiat magnam quibusdam quas temporibus labore? Eum, esse quisquam. Est.</p>
+                    <!-- .btn .btn-default https://getbootstrap.com/docs/3.3/css/#buttons-tags -->
+                    <a href="#" class="btn btn-default">More info</a>
+                </div>
+                <!-- col 2 -->
+                <div  class="col-md-4">
+                    <h2>MOBILE READY</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore consequatur dignissimos non error! Reiciendis, ut. Cumque tenetur necessitatibus ipsa fugiat magnam quibusdam quas temporibus labore? Eum, esse quisquam. Est.</p>
+                    <a href="#" class="btn btn-default">More info</a>
+                </div>
+                <!-- col 3 -->
+                <div  class="col-md-4">
+                    <h2>EASY LAYOUT</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore consequatur dignissimos non error! Reiciendis, ut. Cumque tenetur necessitatibus ipsa fugiat magnam quibusdam quas temporibus labore? Eum, esse quisquam. Est.</p>
+                    <a href="#" class="btn btn-default">More info</a>
+                </div>
+            </div>
+        </div><!-- end main feature container -->
+    </section> <!-- end of features section -->
+    <!-- keep the feature content out of footer section -->
+    <div class="clear-fix"></div>
+    <!-- footer -->
+    <footer>
+        <!-- main container -->
+        <div class="container">
+            <!-- single row -->
+            <div class="row">
+                <!-- col-full -->
+                <div class="col-md-12">
+                    <p id="footer-p">Copyrights &copy; Heggy 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+</html>
