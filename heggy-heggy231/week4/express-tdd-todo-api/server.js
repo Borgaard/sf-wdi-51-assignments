@@ -1,5 +1,5 @@
 // require express and other modules
-const express = require('express'),
+let express = require('express'),
     app = express(),
     bodyParser = require('body-parser');
 
@@ -35,93 +35,90 @@ app.get('/', (req, res) => {
 
 /*
  * JSON API Endpoints
- *
- * The comments below give you an idea of the expected functionality
- * that you need to build. These are basic descriptions, for more
- * specifications, see the todosTest.js file and the outputs of running
- * the tests to see the exact details. BUILD THE FUNCTIONALITY IN THE
- * ORDER THAT THE TESTS DICTATE.
  */
 
-// Search
 app.get('/api/todos/search', (req, res) => {
-  /* This endpoint responds with the search results from the
-   * query in the request. COMPLETE THIS ENDPOINT LAST.
-   */
-  res.send("Hello, world");
+  let searchTerm = req.query.q;
+  console.log(searchTerm);
+  let filteredTodos = todos.filter((todo) => {
+    return(todo.task.toLowerCase().includes(searchTerm.toLowerCase()) || todo.description.toLowerCase().includes(searchTerm.toLowerCase()));
+  });
+  res.json({data : filteredTodos});
 });
 
-// Index test1
+// get all todos
 app.get('/api/todos', (req, res) => {
-  /* This endpoint responds with all of the todos
-   */
-  // res.send("Hello, world")
-  //should respond with a javascript object translated into JSON format
-
-  // res.json({ todos: todos }); // 2) the JSON object should have one key-value pair. The key should be called "data". The value should be the hardcoded array of todos
-  // 1) the JSON object should have one key-value pair. The key should be called "data". The value should be the hardcoded array of todos
-  res.json({ "data": todos });
-  // console(req.params._id);
+  // send all todos as JSON response
+  res.json({ data: todos });
 });
 
-// Create
+// create new todo
 app.post('/api/todos', (req, res) => {
-  /* This endpoint will add a todo to our "database"
-   * and respond with the newly created todo.
-   */
-  // res.send("Hello World");
-  // Where does the data for the new todo live?
-  var newTodo = req.body;
-  newTodo._id = 19;
+  // create new todo with form data (`req.body`)
+  let newTodo = req.body;
+
+  // set sequential id (last id in `todos` array + 1)
+  if (todos.length > 0) {
+    newTodo._id = todos[todos.length - 1]._id + 1;
+  } else {
+    newTodo._id = 1;
+  }
+
+  // add newTodo to `todos` array
   todos.push(newTodo);
+
+  // send newTodo as JSON response
   res.json(newTodo);
 });
 
-// Show
-// http://localhost:3000/api/todos/7 put the id in there
+// get one todo
 app.get('/api/todos/:id', (req, res) => {
-  /* This endpoint will return a single todo with the
-   * id specified in the route parameter (:id)
-   */
-  // res.send("Hello world");
-  // GET /api/todos/:id (show)
-      // 1) "before all" hook
-  // res.json({ "data" : todos }); // pass todos array with key of data
-  // res.json({"data" : todos})
-  var todoId = parseInt(req.params.id);
-  console.log(todoId);
-  console.log('is this number?', typeof(todoId));
-  // console.log(todoId[0]);
-  // this function founTodo is fetching the id to my /api/todos/:id
+  // get todo id from url params (`req.params`)
+  let todoId = parseInt(req.params.id);
 
-  var foundTodo = todos.filter(function (todo) {
-    console.log('Todo._id:', todo._id);
+  // find todo to by its id
+  let foundTodo = todos.filter( (todo) => {
     return todo._id == todoId;
-  })[0]; // filter item that matches on return stmt.
-  // returning the id number
+  })[0];
+
+  // send foundTodo as JSON response
   res.json(foundTodo);
-
-  // What are you going to send back to the client?
-
-  console.log('todoID: ',todoId);
-  console.log('FoundToDo: ',foundTodo);
-
 });
 
-// Update
+// update todo
 app.put('/api/todos/:id', (req, res) => {
-  /* This endpoint will update a single todo with the
-   * id specified in the route parameter (:id) and respond
-   * with the newly updated todo.
-   */
+  // get todo id from url params (`req.params`)
+  let todoId = parseInt(req.params.id);
+
+  // find todo to update by its id
+  let todoToUpdate = todos.filter( (todo) => {
+    return todo._id === todoId;
+  })[0];
+
+  // update the todo's task
+  todoToUpdate.task = req.body.task;
+
+  // update the todo's description
+  todoToUpdate.description = req.body.description;
+
+  res.json(todoToUpdate);
 });
 
-// Destroy
+// delete todo
 app.delete('/api/todos/:id', (req, res) => {
-  /* This endpoint will delete a single todo with the
-   * id specified in the route parameter (:id) and respond
-   * with success.
-   */
+  // get todo id from url params (`req.params`)
+  let todoId = parseInt(req.params.id);
+
+  // find todo to delete by its id
+  let todoToDelete = todos.filter( (todo) => {
+    return todo._id === todoId;
+  })[0];
+
+  // remove todo from `todos` array
+  todos.splice(todos.indexOf(todoToDelete), 1);
+
+  // send back deleted todo
+  res.json(todoToDelete);
 });
 
 /**********
