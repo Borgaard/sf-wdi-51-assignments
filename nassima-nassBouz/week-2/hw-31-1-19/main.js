@@ -9,10 +9,10 @@ class Animalw{
   }
 };
 
-let cat = new Animal("catty", "Meo");
-let dog = new Animal("doggy", "wofwof");
-let bird = new Animal("birdy", "tweet tweet");
-let mouse = new Animal("mousy", "squake");
+let cat = new Animalw("cat", "Meo");
+let dog = new Animalw("dog", "wofwof");
+let bird = new Animalw("bir", "tweet tweet");
+let mouse = new Animalw("mouse", "squake");
 
 cat.makeNoise();
 dog.makeNoise();
@@ -22,22 +22,30 @@ mouse.makeNoise();
 //  part2
 let animals = [cat, dog, bird, mouse];
 
-for (attr in animo){
-console.log(animo[attr].makeNoise());
+for (attr in animals){
+console.log(animals[attr].makeNoise());
 }
 
 //part3
-for (attr in animo){
-  animo[attr].hunger = 10;
+for (attr in animals){
+  animals[attr].hunger = 10;
 };
-
+for (attr in animals){
+console.log(animals[attr].hunger);
+}
 // part4
-Animalw.prototype = {
-  walk(){
+Animalw.prototype.walk = function(){
     console.log(`${this.fname} took a walk`);
     this.hunger -= 1;
   }
-}
+
+cat.walk(); // will display cat took a walk
+cat.hunger;  // willreturn 9 because cat took a walk
+
+// ---------- part5--------------
+
+
+
 
 
 

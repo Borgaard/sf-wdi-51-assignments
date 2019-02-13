@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  text-align: center;
+  color: #44545E;
+  display: flex;
+  flex-direction: row;
+  background-color: #d1d2ea;
+}
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  outline: none;
+}
+img{
+  width:100%;
+  margin: 10px;
+}
+
+.shoppingCart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width:300px;
+  min-height:300px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  background: #e3e3f2;
+}
+.empty-cart-btn,
+.cart-checkout {
+  display: none;
+}
+
+.empty-cart-btn {
+  margin-bottom: 5px;
+}
+
+.cart-checkout {
+  background: #e3e3f2;
+}
+.items{
+  width:49%;
+  background-color: #2e318a;
+  color: white;
+}
+.cereal{
+  background-color: #d1d2ea;
+  display: flex;
+  flex-direction: row;
+}
+.cerel1{
+  width:49%;
+  margin: 15px;
+  position: relative;
+}
+
+.cerel2{
+  width:49%;
+  margin: 15px;
+}
+
+.candies{
+  display: none;
+}
+.juice{
+  display: none;
+}
+ul {
+ list-style-type: none;
+ color: orangered;
+}
