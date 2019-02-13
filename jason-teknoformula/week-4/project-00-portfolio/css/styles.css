@@ -1,0 +1,69 @@
+/*
+  TODOs
+  [X]-Responsive
+     [X]-1 Column layout on phones
+     [X]-Navbar turns into Hamburger Button
+  [X]- Multi-column Skills and Porfolio sections on desktop
+  [x]-Colored bullet points
+  [X]-Style Footer
+  [X]-Style Testimonials
+*/
+
+/* Color Palette
+  Sailor Neptune Green: #226A52;
+  Wine Berry Red: #922F46;
+  Vintage Gold: #9F7434;
+*/
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Serif";
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer {
+  height: 100%;
+}
+
+footer a {
+  color: white;
+}
+
+#quotes {
+  color: #922F46;
+  padding: 3em;
+}
+
+#skills ul {
+  text-align: left;
+}
+
+#skills li::before {
+  content: "•"; color: #922F46;
+  display: inline-block; width: 1em;
+  margin-left: -1em
+}
+
+.bodyText{
+  text-align: left;
+}
+
+.bg-custom {
+  background-color: #226A53;
+  color: white;
+}
+
+.carousel .item img {
+  max-height: 650px;
+  min-width: auto;
+}
+
+.rounded-circle {
+  padding: 10% 0;
+}
