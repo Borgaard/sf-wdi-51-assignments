@@ -6,6 +6,16 @@ Base Styles
   box-sizing: border-box;
 }
 
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+}
+
 body {
   font-family: Raleway, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -214,6 +224,9 @@ display: -ms-flexbox;
  img:hover{
   opacity: 0.5;
  }
+ .masonry img:hover {
+  opacity: .6;
+}
 
 textarea{
   width: 100%;

@@ -280,14 +280,14 @@ input, textarea {
    font-weight: 600;
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
    color: #7C878E;
    text-transform: uppercase;
    letter-spacing: 0.75px;
    letter-spacing: .05rem;
    font-size: 12.299px;
    font-size: .82rem;
-   font-weight: 600; 
+   font-weight: 600;
 }
 
 /* ----------------------------------------
@@ -390,7 +390,7 @@ Media Queries
 	footer button {
 		width: 300px;
 	}
-	
+
 	footer input {
 		margin-right: 0;
 	}
