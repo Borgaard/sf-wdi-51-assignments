@@ -3,6 +3,9 @@
 const express = require("express");
 const app = express();
 
+// Serving this to show static public page
+app.use(express.static('public'));
+
 // Allow CORS: we'll use this today to reduce security so we can more easily test our code in the browser.
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -14,7 +17,11 @@ app.use((req, res, next) => {
 });
 
 //the front slash indicates the root directory for the url and 'Hello World' is the suggested response
-app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", (req, res) => res.sendFile('views/index.html', {
+    root: __dirname
+
+
+}));
 
 //Seed data to serve when users visit url below:
 const albums = [{

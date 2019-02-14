@@ -3,6 +3,7 @@ const handleError = (xhr, status, errorThrown) => console.log(`uh oh! Error: ${e
 //looping through the json data to display in a string if successful
 const handleSuccess = json => {
   console.log(json);
+  console.log("Sanity Check: JS is working!");
   for (let i = 0; i < json.length; i++) {
     let title = json[i].title;
     let artist = json[i].artist;
