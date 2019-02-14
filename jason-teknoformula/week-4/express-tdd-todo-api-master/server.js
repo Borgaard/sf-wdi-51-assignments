@@ -57,6 +57,12 @@ app.get('/api/todos', (req, res) => {
   res.json({data: todos});
 });
 
+// Index
+app.get('/api/todos', (req, res) => {
+  //this endpoint responds with all of the todos
+  res.json({data: todos});
+});
+
 // Create
 app.post('/api/todos', (req, res) => {
   /* This endpoint will add a todo to our "database"
