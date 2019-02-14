@@ -49,20 +49,16 @@ app.get('/api/todos/search', (req, res) => {
    * query in the request. COMPLETE THIS ENDPOINT LAST.
    */
   // res.send("hi")
-  let search = req.query.search;
-  console.log(search)
-  res.send(search);
-  // let found = todos.filter( function(todo) {
-  //   todo.task === searchTerm || todo.description === searchTerm;
-  // })
-  // let found = [];
-  // todos.forEach(function(todo) {
-  //   if (todo.task == search || todo.description == search) {
-  //     found.push(todo)
-  //   }
-  // })
-
-  // res.send(found);
+  let found = []
+  // console.log(req.query);
+  todos.forEach((todo) =>{
+    console.log(todo.task.indexOf(req.query.q));
+    if(todo.task.indexOf(req.query.q) >= 0) {
+      console.log(todo)
+      found.push(todo)
+    }
+  })
+  res.json({data: found});
 });
 
 // Index
@@ -75,18 +71,6 @@ app.get('/api/todos', (req, res) => {
 // Create
 app.post('/api/todos', (req, res) => {
   /* This endpoint will add a todo to our "database" * and respond with the newly created todo.*/
-  // var task = req.body.task;
-  // var desc = req.body.description;
-  // var id;
-  // if (todos.length > 0) {
-  //   todos._id = todos[todos.length -1]._id + 1;
-  // } else {
-  //   todos._id = 1;
-  // }
-  // let newTodo = { id: id, task: task, description: desc}
-  // todos.push(newTodo);
-  // res.json(newTodo);
-
 var newTodo = req.body;
 if (todos.length > 0) {
   newTodo._id = todos[todos.length - 1]._id + 1;
