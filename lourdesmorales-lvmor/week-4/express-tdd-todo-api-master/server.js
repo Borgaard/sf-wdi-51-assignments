@@ -48,6 +48,9 @@ app.get('/api/todos/search', (req, res) => {
   /* This endpoint responds with the search results from the
    * query in the request. COMPLETE THIS ENDPOINT LAST.
    */
+  // let searchTerm = req.query.q;
+
+  // debugger.Todo.find().or([{"task": {"$regex":searchTerm}}, ])
 });
 
 // Index
