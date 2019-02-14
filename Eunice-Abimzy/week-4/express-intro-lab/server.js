@@ -20,7 +20,6 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => res.sendFile('views/index.html', {
     root: __dirname
 
-
 }));
 
 //Seed data to serve when users visit url below:
@@ -37,6 +36,26 @@ const albums = [{
         artist: "letlive."
     }
 ];
+
+//Creating this weird app-Adding taquerias seed data
+
+const taquerias = [{
+        name: "La Taqueria"
+    },
+    {
+        name: "El Farolito"
+    },
+    {
+        name: "Taqueria Cancun"
+    }
+];
+
+
+//Creating route to serve taquerias in json format
+app.get('/api/taquerias', (req, res) => res.json(taquerias));
+console.log("taquerias in the house!!!");
+
+
 //Creating route to serve albums data(json format)
 app.get("/api/albums", (req, res) => {
     res.json(albums);
@@ -47,20 +66,3 @@ console.log("Im running");
 app.listen(process.env.PORT || 3000, () =>
     console.log("Example app listening at http://localhost:3000/")
 );
-
-
-
-
-
-//  // MIDDLEWARE
-//  app.use(express.static(__dirname + '/public'));
-//  // server.js
-//  app.use(express.static('vendor'));
-//  console.log('Sanity Check: JS is working!');
-
-//  // Making the get request at homepage and getting response hello world
-//  app.get('/', (req, res) =>
-//    res.sendFile('views/index.html', {
-//      root: __dirname
-//    })
-//  );
