@@ -7,7 +7,11 @@ const Schema = mongoose.Schema;
 const BookSchema = new Schema({
     // keynames lower case
     title: String,
-    author: String,
+    // store reference to author model
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: 'Author'
+    },
     image: String,
     date: String
 })
