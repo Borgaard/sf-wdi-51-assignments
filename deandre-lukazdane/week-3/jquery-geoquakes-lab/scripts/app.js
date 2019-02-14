@@ -1,46 +1,49 @@
 // define globals
-var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
-var mapsApi = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"
-$(document).ready(function() {
-  console.log("Let's get coding!");
-  // CODE IN HERE!
+var weekly_quakes_endpoint =
+  "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson";
+var $info_row_target;
+var map;
 
+$(document).ready(function() {
+  $info_row_target = $("#info");
+
+  createMap();
+  geoInfo();
+});
+
+function geoInfo() {
   $.ajax({
     method: "GET",
     url: weekly_quakes_endpoint,
-    success: onSuccess,
-    error: onError
+    success: function(response) {
+      quakeArray = response.features;
+
+      quakeArray.forEach(function(quake) {
+        //ADD INFO ROW
+        var title = quake.properties.title;
+        var hours_ago = Math.round(
+          (Date.now() - quake.properties.time) / (1000 * 60 * 60)
+        );
+        $info_row_target.append(
+          "<p>" + title + " / " + hours_ago + " hours ago</p>"
+        );
+
+        // CREATE MARKER
+        var lat = quake.geometry.coordinates[1];
+        var lng = quake.geometry.coordinates[0];
+        new google.maps.Marker({
+          position: new google.maps.LatLng(lat, lng),
+          map: map,
+          title: title
+        });
+      });
+    }
   });
-})
-
-function onSuccess(data) {
-	console.log(data);
-	for (let i = 0; i < data.features.length; i++) {
-	let title = data.features[i].properties.title;
-	let mag = data.features[i].properties.mag;
-	let place = data.features[i].properties.place;
-	//let time = data.features.properties.time;
-	let info = '<p>' + mag + ' - ' + place+ '</p>'
-	$('#info').append(info);
-    let lat = data.features[i].geometry.coordinates[0];
-    let lng = data.features[i].geometry.coordinates[1];
-               // console.log(lat);
-     let marker = new google.maps.Marker({
-                 position: {lat:{lat},lng:{lng}},
-     map: map});
-              
-function onError(xhr, status, errorThrown) {
-  alert("Sorry, there was a problem!");
-  console.log("Error: " + errorThrown);
-  console.log("Status: " + status);
-  console.dir(xhr);
 }
-function initMap()[ 
-MAO+NEW_OMAGES.MAPS,]
-map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: 37.78, lng: -122.44},
 
-  zoom: 8
-});;
-function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
+function createMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 37.78, lng: -122.44 },
+    zoom: 3
+  });
+}

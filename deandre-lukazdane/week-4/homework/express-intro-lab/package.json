@@ -1,0 +1,19 @@
+{
+  "name": "express-intro-lab",
+  "version": "1.0.0",
+  "description": "express homework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/sf-wdi-51/express-intro-lab.git"
+  },
+  "author": "luke",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.0",
+    "express": "^4.16.4"
+  }
+}
