@@ -55,25 +55,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // var newBookUUID = 18;
 
 
-
-
-
-
-
 ////////////////////
 //  ROUTES
 ///////////////////
-
 // connect models and referencing data in other places
 
-// root route
-// define a root route: localhost:3000/
-app.get('/', function (req, res) {
+// ROOT route // define a root route: localhost:3000/
+app.get('/', (req, res) => {
   res.sendFile('views/index.html' , { root : __dirname});
 });
 
-// API route
-// get all books
+// API route  // get all books
 app.get('/api/books', (req, res) => {
   // Goal: send all books as JSON response. When someone goes to /books we want to get the books and sent them back to the user as a response
   // user makes request and we connect them to the database
@@ -98,12 +90,16 @@ app.get('/api/books/:id', function (req, res) {
   // out books are saved by mongod and oraganised by unique properties so that we can access them. Each object in array had an _id property, so that we can grab that single resource
   // therefore to grab a specific book use _id. Mongoose will automatically find _id, we use parameterised id
   // so when user looks for book, find req, I want them to find the book and respond with data that we found (dataFound)
-  db.Book.findOne({ _id: req.params.id }, (err, dataFound) => {
+  db.Book.findOne({ _id: req.params.id })
+  .populate('author')
+  .exec((err, dataFound) => {
     if(err) {
       console.log(`not what you are looking for..`)
     }
+    
     res.send(dataFound);
   })
+
   
   // this code is not needed anymore
   // console.log('books show', req.params);
@@ -115,24 +111,20 @@ app.get('/api/books/:id', function (req, res) {
   // }
 });
 
-// create new book
+// create new book // creating routes
 app.post('/api/books', function (req, res) {
   // create new book with form data (`req.body`)
-
-  // creating routes
     // make new instance of book model: function that takes object as only argument. that object related direclty to properties that we set up on our book model
-  const newBook = new db.Book({
+  let newBook = new db.Book({
     title: req.body.title,
     author: req.body.author,
     image: req.body.image,
     date: req.body.date
   });
-
-  // this code will only add an author to a book if the author already exists
+  // find author from req body. This code will only add an author to a book if the author already exists
   db.Author.findOne({name: req.body.author}, function(err, author){
   newBook.author = author;
-    // save new book to database
-    // setup create method
+    // save new book to database // setup create method
     newBook.save(function(err, book) {
       if(err) { throw err; }
       //if success
@@ -168,18 +160,15 @@ app.post('/api/books:book_id/characters', function (req, res){
         console.log(newBook);
         
       })
-      // send the entire book back
-      res.json(foundBook);
-      }
-    }
-  );
+    // send the entire book back
+    res.json(foundBook);
+  });
 });
 
 
-})
 
 
-// update book with put method
+// updating information. update book with put method
 app.put('/api/books/:id', function(req,res){
 
   // get book id from url params (`req.params`)
@@ -221,7 +210,15 @@ app.delete('/api/books/:id', function (req, res) {
         // tracks id that is passed through req.params
   console.log('books delete', req.params);
   const bookId = req.params.id;
-  
+  const characterId = req.params.character_id;
+
+  //update delte with new author 
+  db.Book.findById(bookId).populate('author').exec((err, deletedBook) => {
+    if (err) return console.log(err);
+     // struggeling
+  })
+
+
   //, find thing you want to remove,then remove. Mongoose combines two steps into 1 with .findOneAndDelete
   // connect to database      bookId we defined above,  we pass function that takes error and deletedBook as arguments
   db.Book.findOneAndDelete({ _id: bookId }, (err, deletedBook) => {

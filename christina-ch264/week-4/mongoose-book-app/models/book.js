@@ -3,6 +3,11 @@ const mongoose = require ('mongoose');
 // buildin schema from mongoose object that we set up above
 const Schema = mongoose.Schema;
 
+var CharacterSchema = new Schema({
+    name: String,
+});
+
+
 // fill in refelction of attributes has been given by object
 const BookSchema = new Schema({
     // keynames lower case
@@ -13,13 +18,11 @@ const BookSchema = new Schema({
         ref: 'Author'
     },
     image: String,
-    date: String
+    date: String,
     characters: [CharacterSchema]
 })
 
-var CharacterSchema = new Schema({
-    name: String,
-});
+
 
 // we set up a model and save it to a variable:
     // From Schema we can make a model. we can update schema, but model will remain the same
