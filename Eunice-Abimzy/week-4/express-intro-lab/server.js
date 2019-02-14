@@ -12,8 +12,21 @@ app.use((req, res, next) => {
     );
     next();
 });
+// MIDDLEWARE
+app.use(express.static(__dirname + '/public'));
+// server.js
+app.use(express.static('vendor'));
+console.log('Sanity Check: JS is working!');
 
-//the front slash indicates the root directory for the url and Hello World is the suggested response
+// Making the get resquest at homepage and getting response hello world
+app.get('/', (req, res) =>
+    res.sendFile('views/index.html', {
+        root: __dirname
+    })
+);
+
+
+//the front slash indicates the root directory for the url and 'Hello World' is the suggested response
 app.get("/", (req, res) => res.send("Hello World!"));
 
 //Seed data to serve when users visit url below:
@@ -30,7 +43,7 @@ const albums = [{
         artist: "letlive."
     }
 ];
-
+//Creating route to serve albums data(json format)
 app.get("/api/albums", (req, res) => {
     res.json(albums);
 });
