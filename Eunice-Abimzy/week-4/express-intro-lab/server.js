@@ -12,19 +12,6 @@ app.use((req, res, next) => {
     );
     next();
 });
-// MIDDLEWARE
-app.use(express.static(__dirname + '/public'));
-// server.js
-app.use(express.static('vendor'));
-console.log('Sanity Check: JS is working!');
-
-// Making the get resquest at homepage and getting response hello world
-app.get('/', (req, res) =>
-    res.sendFile('views/index.html', {
-        root: __dirname
-    })
-);
-
 
 //the front slash indicates the root directory for the url and 'Hello World' is the suggested response
 app.get("/", (req, res) => res.send("Hello World!"));
@@ -47,9 +34,26 @@ const albums = [{
 app.get("/api/albums", (req, res) => {
     res.json(albums);
 });
-
+console.log("Im running");
 
 //Use port 3000 for development or production port in production
 app.listen(process.env.PORT || 3000, () =>
     console.log("Example app listening at http://localhost:3000/")
 );
+
+
+
+
+
+//  // MIDDLEWARE
+//  app.use(express.static(__dirname + '/public'));
+//  // server.js
+//  app.use(express.static('vendor'));
+//  console.log('Sanity Check: JS is working!');
+
+//  // Making the get request at homepage and getting response hello world
+//  app.get('/', (req, res) =>
+//    res.sendFile('views/index.html', {
+//      root: __dirname
+//    })
+//  );
