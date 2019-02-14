@@ -14,7 +14,12 @@ const BookSchema = new Schema({
     },
     image: String,
     date: String
+    characters: [CharacterSchema]
 })
+
+var CharacterSchema = new Schema({
+    name: String,
+});
 
 // we set up a model and save it to a variable:
     // From Schema we can make a model. we can update schema, but model will remain the same
