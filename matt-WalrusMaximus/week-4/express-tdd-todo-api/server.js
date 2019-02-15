@@ -33,6 +33,8 @@ app.get('/', (req, res) => {
 });
 
 
+
+
 /*
  * JSON API Endpoints
  *
@@ -45,9 +47,17 @@ app.get('/', (req, res) => {
 
 // Search
 app.get('/api/todos/search', (req, res) => {
-  /* This endpoint responds with the search results from the
-   * query in the request. COMPLETE THIS ENDPOINT LAST.
-   */
+  // create variable for the q="" in browser
+  let searchTerm = req.query.q;
+  // log the q from query
+  console.log(searchTerm);
+  // creates variable that filters through the todo array
+  let filteredTodos = todos.filter((todo) => {
+    // create an or statement that searched through the object converting the query to lowercase and comparing it against the task key, if it finds nothing, search through description
+    return(todo.task.toLowerCase().includes(searchTerm.toLowerCase()) || todo.description.toLowerCase().includes(searchTerm.toLowerCase()));
+  });
+  // converts the result into a new object with a key of data and the value of our variable
+  res.json({data : filteredTodos});
 });
 
 // Index
@@ -57,10 +67,31 @@ app.get('/api/todos', (req, res) => {
 
 // Create
 app.post('/api/todos', (req, res) => {
-  /* This endpoint will add a todo to our "database"
-   * and respond with the newly created todo.
-   */
-});
+  // req.body is the todo object 
+  // Give the todo a unique id
+    // req.body._id = ##
+    // let todo = req.body;
+  // save the todo to our dB
+    let newTodo = req.body;
+  
+    // conditional to check if the array is empty, if it is, assign new body object 1
+    // otherwise grab the value from the last item and increment it by 1
+    if (todos.length > 0) {
+      newTodo._id = todos[todos.length - 1]._id + 1;
+    } else {
+      newTodo._id = 1;
+    }
+    // console log the new req body with the ID added
+    console.log(req.body);
+  
+    // add newTodo to `todos` array
+    todos.push(newTodo);
+  
+    // send the single todo back
+    // send newTodo as JSON response
+    res.json(newTodo);
+  });
+
 
 // Show
 app.get('/api/todos/:id', (req, res) => {
@@ -72,19 +103,44 @@ app.get('/api/todos/:id', (req, res) => {
 });
 
 // Update
+
+// pulling the object per the ID of the element clicked
 app.put('/api/todos/:id', (req, res) => {
-  /* This endpoint will update a single todo with the
-   * id specified in the route parameter (:id) and respond
-   * with the newly updated todo.
-   */
+  
+  // stores the id value of the pulled object as a variable
+  var updateTodo = parseInt(req.params.id);
+  // open an empty object to later store the replacement text
+  var newEntry = {};
+  // iterate through the stored array for objects
+  for (i=0;i<todos.length;i++) {
+    // trying to match the value of the target with the value of db array
+    if (updateTodo === todos[i]._id){
+      // logs the state if the todo item in the array
+      console.log(todos[i])
+      // assigned the object inside the target array index to the pre-assigned variable
+      newEntry = todos[i]
+    }
+  }
+  // updates the task value with the new data
+  newEntry.task = req.body.task
+  // updates the description value with the new data
+  newEntry.description = req.body.description
+  // responds with the new object key/value pairs
+  res.json(newEntry);
 });
 
 // Destroy
 app.delete('/api/todos/:id', (req, res) => {
-  /* This endpoint will delete a single todo with the
-   * id specified in the route parameter (:id) and respond
-   * with success.
-   */
+
+  var deleteTodo = parseInt(req.params.id);
+  console.log(deleteTodo);
+  for (i=0;i<todos.length;i++) {
+    if (deleteTodo === todos[i]._id){
+      console.log(todos[i])
+      res.json(todos.splice(i,1));
+      console.log(`Deleted object above`);
+    }
+  }
 });
 
 /**********
