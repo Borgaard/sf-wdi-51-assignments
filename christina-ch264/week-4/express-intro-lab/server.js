@@ -1,6 +1,9 @@
 // server.js
   // SERVER-SIDE JAVASCRIPT
 
+ const express = require('express');
+const app = express();
+
   // we can also parse jason. we can parse this object out to browser
   // parsing objects is how APIs are written
   // server.js
@@ -24,6 +27,9 @@
   const express = require('express');
   // initialise variable called app and set it euqal to express function
   const app = express();
+
+  // setup express app
+  app.use(express.static('public'));
 
   // Allow CORS (cross origin resource sharing, it is a security protocol): we'll use this today to reduce security so we can more easily test our code in the browser.
   app.use((req, res, next) => {
@@ -85,8 +91,17 @@ app.get('/', (req, res) => {
 
 // it sais refused access. before I could see 3 objects from the albums. I do not understand this.
 
+  app.get('/', (req, res) => {
+            console.log(`req =`, req);
+            console.log(`res =`, res);
+            // res.send('Hello christina!');
+            res.sendFile('views/index.html' , { root : __dirname});
+    });
 
 
+app.get('/api/albums', (req, res) => res.json(albums));
+
+  app.listen(process.env.PORT || 3003,  () => console.log('Example app listening at http://localhost:3000/'));
 
 // Notes
 // ====================
