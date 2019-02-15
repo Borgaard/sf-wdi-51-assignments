@@ -47,17 +47,40 @@ app.get('/api', (req, res) => {
   // It would be seriously overkill to save any of this to your database.
   // But you should change almost every line of this response.
   res.json({
-    woopsIForgotToDocumentAllMyEndpoints: true, // CHANGE ME ;)
+    ChristinaEndpoints: true,
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentationUrl: "https://github.com/example-username/express-personal-api/README.md", // CHANGE ME
-    baseUrl: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
+    documentationUrl: "https://github.com/ch264/week4/express-personal-api/README.md", //Change to my personal github readme file
+    baseUrl: "https://agile-island-65053.herokuapp.com", // Changed to my heroku url
     endpoints: [
-      {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+      {
+        method: "GET", 
+        path: "/api", 
+        description: "Describes all available endpoints"
+      },
+      {
+        method: "GET", 
+        path: "/api/profile", 
+        description: "Data about me"
+      }, // CHANGE ME
+      {
+        method: "DELETE", 
+        path: "/api/campsites", 
+        description: "E.g. Create a new campsite"
+      } // CHANGE ME
+      {
+        method: "PUT", 
+        path: "/api/campsites", 
+        description: "E.g. Create a new campsite"
+      } // CHANGE ME
     ]
   })
 });
+
+app.get('/api/profile',(req, res) => {
+  res.json({
+  social: 'Linkedin'
+  })
+})
 
 /**********
  * SERVER *
