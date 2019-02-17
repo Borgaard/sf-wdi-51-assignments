@@ -119,7 +119,7 @@ app.delete('/api/todos/:id', (req, res) => {
  * SERVER *
  **********/
 
-// listen on port 3000
+// listen on port 3001
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
 });
