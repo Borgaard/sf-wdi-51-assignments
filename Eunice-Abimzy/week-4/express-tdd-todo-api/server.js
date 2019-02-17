@@ -79,7 +79,10 @@ app.post("/api/todos", (req, res) => {
   /* This endpoint will add a todo to our "database"
    * and respond with the newly created todo.
    */
-});
+  todos.push(req.body);
+  res.json();    
+  });
+
 
 // Show
 app.get("/api/todos/:id", (req, res) => {
