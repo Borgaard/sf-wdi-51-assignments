@@ -90,10 +90,11 @@ app.get("/api/todos/:id", (req, res) => {
   const todoId = req.params.id;
   console.log("todo Id is now" + todoId);
 
-  todos.find(todo => {
-    return todoId;
-  })
+  const foundTodo = todos.find(todo => {
 
+    return todoId == todo._id;
+  })
+  res.json(foundTodo);
 });
 
 // Update
