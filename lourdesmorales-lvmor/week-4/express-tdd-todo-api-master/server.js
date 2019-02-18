@@ -73,22 +73,33 @@ app.post('/api/todos', (req, res) => {
 });
 
 // Show
-app.get('/api/todos/:id', (req, res) => {
+app.get('/api/todos/:id/', (req, res) => {
   /* This endpoint will return a single todo with the
    * id specified in the route parameter (:id)
    */
-  let todoId = req.param.id
-  console.log(todoId)
+  const todoId = req.params.id
+  console.log("TODO ID required ", todoId);
+  console.log("body ", req.body);
   
-  let matchingTodo
-  todos.forEach(todo => {
-    if(todoId === todo_id) {
-      matchingTodo = todo;
-    }
-    return matchingTodo;
+  // let matchingTodo;
+  // todos.forEach(todo => {
+  //   if(todoId == todo._id) {
+  //     matchingTodo = todo;
+  //   }
+  // });
+
+  const foundTodo = todos.find(todo => {
+    // if(todoId == todo._id) {
+    //   return true;
+    // }
+    return todoId == todo._id;
   });
-  console.log(matchingTodo);
-  res.json({todos:todos})
+  // console.log("TODO found " + matchingTodo);
+  // res.json({todos:todos})
+  // res.json(matchingTodo);
+
+  // console.log("TODO ", foundTodo);
+  res.json(foundTodo);
 });
 
 // Update

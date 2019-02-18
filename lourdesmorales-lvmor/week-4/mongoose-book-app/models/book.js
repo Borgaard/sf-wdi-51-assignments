@@ -12,6 +12,10 @@ const BookSchema = new Schema({
      date: String
  });
 
+ const CharacterSchema = new Schema({
+    name: String
+  });
+
  //Model, name of model same as variable name, inform it with book schema
  const Book = mongoose.model('Book', BookSchema);
  
