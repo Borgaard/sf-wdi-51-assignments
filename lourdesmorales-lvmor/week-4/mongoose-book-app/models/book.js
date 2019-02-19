@@ -1,29 +1,13 @@
-//Made a schema
+// Book Schema and Model
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
-     title: String,
-     author: {
-         type: Schema.Types.ObjectId,
-         ref: "Author"
-     },
-     image: String,
-     date: String
- });
+    title: String,
+    author: String,
+    image: String,
+    releaseDate: String
+});
 
- const CharacterSchema = new Schema({
-    name: String
-  });
-
- //Model, name of model same as variable name, inform it with book schema
- const Book = mongoose.model('Book', BookSchema);
- 
- //always export to use in other parts of application
- // Book is the variable to export to index.js
- module.exports = Book;
-
- // can look a little different check online - incomplete
-//  module.exports = {
-//      Book:
-//     }
+const Book = mongoose.model('Book', BookSchema);
+module.exports = Book;
