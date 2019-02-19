@@ -48,6 +48,13 @@ app.get('/api/todos/search', (req, res) => {
   /* This endpoint responds with the search results from the
    * query in the request. COMPLETE THIS ENDPOINT LAST.
    */
+  //http://localhost:3000/api/todos/search?q=ENTERQHERE
+  let searchTerm = req.query.q;
+
+  // db.Todo.find().or([
+  //   {"task": {"$regex":searchTerm}}, {"description": {$req}}
+  //   .exec(())
+  // ])
 });
 
 // Index
@@ -62,7 +69,7 @@ app.post('/api/todos', (req, res) => {
   /* This endpoint will add a todo to our "database"
    * and respond with the newly created todo.
    */
-   res.send("Hello World!");
+  let newTodo = req.body;
 });
 
 // Show

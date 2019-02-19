@@ -26,6 +26,7 @@ const taquerias = [
   { name: "Taqueria Cancun" }
 ];
 
+//sets up express to serve static files inside /public
 app.use(express.static('public'));
 
   // Allow CORS: we'll use this today to reduce security so we can more easily test our code in the browser.
@@ -35,11 +36,16 @@ app.use(express.static('public'));
     next();
   });
 
-  app.get('/', (req, res) => res.sendFile('views/index.html' , {root : __dirname}));
-
+  //sends our index page to the root route
+  app.get('/', (req, res) => {
+    res.sendFile('views/index.html' , {root : __dirname});
+    console.log(req);
+    console.log(res);
+  });
+  //sends a json object of our albums array to localhost:3000/api/albums
   app.get('/api/albums', (req, res) => res.json(albums));
-
+  //sends a json object of our taquerias array to localhost:3000/api/taquerias
   app.get('/api/taquerias', (req, res) => res.json(taquerias));
 
-
+  //defines 3000 as the port
   app.listen(process.env.PORT || 3000,  () => console.log('Example app listening at http://localhost:3000/'));
