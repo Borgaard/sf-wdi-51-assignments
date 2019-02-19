@@ -68,7 +68,8 @@ app.get("/api/todos/search", (req, res) => {
    */
 });
 
-// Index:This endpoint responds with all of the todos
+// Index:
+//This endpoint responds with all of the todos
 app.get("/api/todos", (req, res) => {
   const object = {
     data: todos
@@ -96,7 +97,8 @@ app.post("/api/todos", (req, res) => {
   res.json(newTodo);
 });
 
-// Show: This endpoint will return a single todo with the id specified in the route parameter (:id)
+// Show: 
+//This endpoint will return a single todo with the id specified in the route parameter (:id)
 app.get("/api/todos/:id", (req, res) => {
   const todoId = parseInt(req.params.id);
   console.log(`todo Id is now ${todoId}`);
@@ -113,7 +115,20 @@ app.put("/api/todos/:id", (req, res) => {
    * id specified in the route parameter (:id) and respond
    * with the newly updated todo.
    */
+  //First, get todo by id (from URL params) and put in variable.
+  const todoId = parseInt(req.params.id);
+
+  const todoToUpdate = todos.filter(todo => {
+    return todo._id == todoId;
+  })[0];
+  //After getting todoToUpdate (filtered by id), update each object property or key(in our hard coded data, it's task and description):
+  todoToUpdate.task = req.body.task;
+  todoToUpdate.description = req.body.description;
+
+  res.json(todoToUpdate);
 });
+
+
 
 // Destroy
 app.delete("/api/todos/:id", (req, res) => {
@@ -121,6 +136,7 @@ app.delete("/api/todos/:id", (req, res) => {
    * id specified in the route parameter (:id) and respond
    * with success.
    */
+
 });
 
 /**********
