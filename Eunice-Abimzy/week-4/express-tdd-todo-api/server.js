@@ -16,6 +16,10 @@ app.use(express.static(__dirname + "/public"));
 /************
  * DATABASE *
  ************/
+// const mongoose = require('mongoose');
+
+
+
 
 // our database is an array for now with some hardcoded values
 let todos = [{
@@ -64,10 +68,8 @@ app.get("/api/todos/search", (req, res) => {
    */
 });
 
-// Index
+// Index:This endpoint responds with all of the todos
 app.get("/api/todos", (req, res) => {
-  /* This endpoint responds with all of the todos
-   */
   const object = {
     data: todos
   };
@@ -75,28 +77,33 @@ app.get("/api/todos", (req, res) => {
 });
 
 // Create
+/* This endpoint will add a todo to our "database"
+ * and respond with the newly created todo.
+ */
 app.post("/api/todos", (req, res) => {
-  /* This endpoint will add a todo to our "database"
-   * and respond with the newly created todo.
-   */
-  todos.push(req.body);
-  res.json();    
-  });
+  const newTodo = req.body; //This takes in all form data
+  //Next is to assign an incremental id for each new todo
+  //Logic below: if todos array is not empty, the newTodo shd equal (id of last index + 1), 
+  //otherwise, if todos array is empty, make newTodo have an id of 1
+  if (todos.length > 0) {
+    newTodo._id = todos[todos.length - 1]._id + 1;
+  } else {
+    newTodo._id = 1;
+  }
+  //Next is to add newTodo to existing array
+  todos.push(newTodo);
 
+  res.json(newTodo);
+});
 
-// Show
+// Show: This endpoint will return a single todo with the id specified in the route parameter (:id)
 app.get("/api/todos/:id", (req, res) => {
-  /* This endpoint will return a single todo with the
-   * id specified in the route parameter (:id)
-   */
+  const todoId = parseInt(req.params.id);
+  console.log(`todo Id is now ${todoId}`);
 
-  const todoId = req.params.id;
-  console.log("todo Id is now" + todoId);
-
-  const foundTodo = todos.find(todo => {
-
-    return todoId == todo._id;
-  })
+  const foundTodo = todos.filter(todo => {
+    return todo._id == todoId;
+  })[0];
   res.json(foundTodo);
 });
 
