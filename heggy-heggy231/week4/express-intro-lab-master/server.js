@@ -51,7 +51,13 @@ const albums = [
 //  res: HTTP response argument to the middleware function
 //  response gets sent to root file says Hello World!
 // You should see "Hello World!" The browser console only shows client-side console outputs.
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => {
+  // sending the index.html file, try __dirname to your console.
+  console.log(`req= ${req}`);
+  console.log(`res= ${res}`);
+  res.sendFile('./index.html', { root : __dirname });
+  console.log(__dirname);
+});
 
 // get album data be accessible, set up route to serve up
 //  app.get method for the path /api/albums
