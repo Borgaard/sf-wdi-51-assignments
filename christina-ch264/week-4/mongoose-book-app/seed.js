@@ -154,6 +154,5 @@ db.Author.deleteMany({}, function(err, authors) {
         });
       });
     });
-
   });
 });
