@@ -1,0 +1,135 @@
+/* General Styles */
+
+body {
+  font-family: Lato, sans-serif;
+  font-size: 1em;
+}
+
+/* Rick & Morty */
+.playerCar {
+  position: absolute;
+  height: 50vh;
+  width: 50vh;
+  bottom: 60px;
+  left: 250px;
+  border-radius: 5px;
+  background-image: url(images/Rick-spaceship.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 900;
+}
+
+/* Dashboard */
+
+.dashboard {
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px;
+}
+
+.btnStart {
+  position: absolute;
+  top: 480px;
+  left: 20%;
+  width: 200px;
+  border: 1px solid black;
+  background-color: red;
+  color: white;
+  font-size: 2em;
+  z-index: 201;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+/* Background */
+
+#container {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  background-image: url(images/space.jpeg);
+  overflow: hidden;
+}
+
+.swirl {
+  background-image: url(images/portal.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 2em;
+  z-index: 200;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  -webkit-animation: rotation .75s infinite linear;
+}
+/* rotates the portal main menu image */
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.road {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  top: 0;
+  left: 25%;
+  text-align: center;
+  color: white;
+  background-image: url(images/galax.jpeg);
+  background-size: contain;
+  border-radius: 2px;
+}
+
+/* Flexbox */
+#flex {
+/*  display: flexbox;
+*/  justify-content: center;
+}
+
+
+
+
+
+
+/* Media Quieries */
+@media screen and (max-width: 400px){
+.playerCar {
+  width: 150px;
+}
+}
+
+@media screen and (max-width: 600px){
+.playerCar {
+  width: 200px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

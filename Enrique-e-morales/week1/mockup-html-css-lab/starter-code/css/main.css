@@ -1,0 +1,94 @@
+body {
+  margin: 0 500px 0 50px;
+  border-left: 5px solid lightgrey;
+  padding-left: 40px;
+}
+
+img {
+  width: 100%;
+}
+
+
+h1 a {
+  color: #ffcc66;
+  letter-spacing: 1px;
+  font-family: Lato, sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+}
+
+
+nav a, h3{
+  color: lightgrey;
+  font-family: Lato, sans-serif;
+  font-size: 1.25em;
+  text-decoration: none;
+  border-bottom: 2px solid lightgrey;
+  margin: .5em ;
+}
+
+h2 a {
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+}
+
+
+h3 {
+  border-bottom: none;
+  font-size: 30px;
+  font-weight: 100;
+  margin: 0;
+  margin-top: 50px;
+}
+
+p {
+  font-family: Lato, sans-serif;
+}
+
+article p::first-letter {
+  font-size: 5em;
+  float: left;
+  color: lightgrey;
+  line-height: 50px;
+  padding: 0 4px 0 0;
+}
+
+h4 a {
+  text-decoration: none;
+  color: #ffcc66;
+  font-family: Lato, sans-serif;
+  text-align: right;
+}
+
+article {
+  border-bottom: 1.5px solid lightgrey;
+
+}
+
+article h4  {
+  text-align: right;
+}
+
+footer nav a {
+  color: #ffcc66;
+  border: none;
+  font-size: 1em;
+}
+
+footer nav {
+    margin: 50px auto;
+
+}
