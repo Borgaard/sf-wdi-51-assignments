@@ -38,6 +38,7 @@ app.get('/', (req, res) => {
  */
 
 app.get('/api/todos/search', (req, res) => {
+  // taking the search term query parameter
   let searchTerm = req.query.q;
   console.log(searchTerm);
   let filteredTodos = todos.filter((todo) => {
