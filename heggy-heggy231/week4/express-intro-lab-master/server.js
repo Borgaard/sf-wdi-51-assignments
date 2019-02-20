@@ -58,6 +58,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 //  respond with some JSON containing all the albums from our albums variable.
 app.get('/api/albums', (req, res) => res.json(albums));
 
+// remember to run nodemon or end node and serve is node server.js
 
 // app express method listens for port, during production use the production port, otherwise use 3000 during development)".
 // in console I will see "Example app listening at http://localhost:3000/" logged out
