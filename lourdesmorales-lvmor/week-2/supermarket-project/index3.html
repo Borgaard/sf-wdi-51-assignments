@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Delicatezza Restaurant</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="sidebar" onclick="toggleSidebar()">
+    <div class="toggle-btn"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+
+<!-- Orders -->
+    <h2>Order</h2>
+    <ul id="show-cart" class="cart-list">
+      <!--  -->
+    </ul>
+  <header>
+      <h1 class="main header"><a href="landing-page.html">Delicatezza</a></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Starters</a></li>
+      <li><a href="index2.html">Secondi</a></li>
+      <li><a href="index3.html">Pasta</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <section id="food-options">
+    <div class="wrap">
+      <h2>Pasta</h2>
+      <div class="layout">
+        <div>
+          <h3>Spaghetti with Tomato and Basil</h3>
+          <li><a class="add-to-cart" id="ban" href="#" data-name="Spaghetti (Tomato and Basil)" data-price="10.99"><img class="category" src="images/spaghetti.jpeg" alt="Spaghetti (Tomato and Basil)"></a></li>
+        </div>
+        <div>
+          <h3>Carbonara</h3>
+          <li><a class="add-to-cart" id="app" href="#" data-name="Carbonara" data-price="10.99"><img class="category" src="images/carbonara.jpg" alt="Carbonara"></a></li>
+        </div>
+        <div>
+          <h3>Pasta al Pesto</h3>
+          <li><a class="add-to-cart" id="ban" href="#" data-name="Pasta al Pesto" data-price="15.99"><img class="category" src="images/pasta-al-pesto.jpeg" alt="Pasta al Pesto"></a></li>
+        </div>
+        <div>
+          <h3>Lasagna</h3>
+          <li><a class="add-to-cart" id="sho" href="#" data-name="Lasagna" data-price="11.99"><img class="category" src="images/lasagna.jpg" alt="Lasagna"></a></li>
+        </div>
+        <div>
+          <h3>Penne all'arrabbiata</h3>
+          <li><a class="add-to-cart" id="app" href="#" data-name="Penne all'arrabbiata" data-price="5.99"><img class="category" src="images/penne.jpg" alt="Penne all'arrabbiata"></a></li>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="copyright">&copy;2019 LM</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
