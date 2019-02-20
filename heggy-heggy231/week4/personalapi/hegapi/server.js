@@ -56,18 +56,29 @@ app.get('/api', (req, res) => {
       {method: "GET", 
       path: "/api/profile",
       name: "Heggy",
-      githubUsername: "heggy231", 
-      githubLink: "https://github.com/heggy231",
-      personalSiteLink: "https://heggy.me/",
-      currentCity: "San Francisco",
-      Pets: [{name: "Pika", type: "Cat", breed: "Siamese"}, {name: "Choco", type: "Dog", breed: "Lab"}],
-      githubProfileImage: "https://avatars2.githubusercontent.com/u/12738884?s=460&v=4",
       description: "Data about Heggy"}, // CHANGE ME
       {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
     ]
   })
 });
 
+app.get('/api/profile',(req,res)=>{
+  res.json({
+    githubUsername: "heggy231", 
+    githubLink: "https://github.com/heggy231",
+    personalSiteLink: "https://heggy.me/",
+    currentCity: "San Francisco",
+    Pets: [
+      {name: "Pika", 
+      type: "Cat", 
+      breed: "Siamese"}, 
+      {name: "Choco", 
+      type: "Dog", 
+      breed: "Lab"}
+    ],
+    githubProfileImage: "https://avatars2.githubusercontent.com/u/12738884?s=460&v=4",
+  });
+});
 /**********
  * SERVER *
  **********/
@@ -76,3 +87,4 @@ app.get('/api', (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log('Express server is up and running on http://localhost:3000/');
 });
+
