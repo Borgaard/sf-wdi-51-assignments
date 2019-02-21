@@ -1,0 +1,71 @@
+#container {
+    background-image: url("imgs/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+	/* height: 100vh;
+	background-position: center;
+	background-size: cover; */
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 90px;
+    margin: 0;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+p {
+    display: inline-block;
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#homer-instructions {
+    float: left;
+}
+
+#peter-instructions {
+    float: right;
+}
+
+input {
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 20px;
+}
+
+input:focus {
+    outline : 0;
+}
+
+img {
+    display: block;
+}
+
+.race {
+    position: relative;
+
+}
+#policeCar {
+    position: relative;
+    left: 0px;
+    top: 15px;
+    width: 170px;
+    //padding-left: 48px;
+}
+
+#sportsCar {
+    position: relative;
+    left: 0px;
+    top: 70px;
+    width: 170px;
+}
