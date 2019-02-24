@@ -41,7 +41,7 @@ $(document).ready(function() {
             </a>
 
             <!-- trash can icon to delete todo -->
-             <a href="javascript:void(0)" class="delete-todo">
+            <a href="javascript:void(0)" class="delete-todo">
               <span class="glyphicon glyphicon-trash"></span>
             </a>
           </div>

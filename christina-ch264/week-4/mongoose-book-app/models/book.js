@@ -20,7 +20,7 @@ const BookSchema = new Schema({
     image: String,
     date: String,
     characters: [CharacterSchema]
-})
+});
 
 
 

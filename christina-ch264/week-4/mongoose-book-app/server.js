@@ -165,32 +165,30 @@ app.post('/api/books', function (req, res) {
   // books.push(newBook);
   // res.json(newBook);
 
-
-// adding characters to books
-app.post('/api/books:book_id/characters', function (req, res){
+// adding characters to books, I started on by my own and added solution code to make it work: (see sprint-3 for original try)
+// Create a character associated with a book
+app.post('/api/books/:book_id/characters', (req, res) => {
   // Get book id from url params (`req.params`)
-  var bookId = req.params.book_id;
+  let bookId = req.params.book_id;
   db.Book.findById(bookId)
     .populate('author')
-    .exec(function(err, foundBook) {
-      // handle errors
-      if(err) return console.log(err)
+    .exec((err, foundBook) => {
       console.log(foundBook);
-      // push req.body into characters array
-      foundBook.characters.push(newCharacter)
-      // save the book with the new character
-      foundBook.save((err, newBook) => {
-        if(err) return console.log(err)
-
-        console.log(newBook);
-        
-      })
-    // send the entire book back
-    res.json(foundBook);
-  });
+      if (err) {
+        res.status(500).json({error: err.message});
+      } else if (foundBook === null) {
+        // Is this the same as checking if the foundBook is undefined?
+        res.status(404).json({error: "No Book found by this ID"});
+      } else {
+        // push character into characters array
+        foundBook.characters.push(req.body);
+        // save the book with the new character
+        foundBook.save();
+        // send the entire book back
+        res.status(201).json(foundBook);
+      }
+    });
 });
-
-
 
 
 // updating information. update book with put method. THis is the solution code I could not get this to work:
@@ -271,7 +269,30 @@ app.delete('/api/books/:id', function (req, res) {
   // res.json(bookToDelete);
 });
 
-
+// Delete a character associated with a book // Solution code
+app.delete('/api/books/:book_id/characters/:character_id', (req, res) => {
+  // Get book id from url params (`req.params`)
+  let bookId = req.params.book_id;
+  let characterId = req.params.character_id;
+  db.Book.findById(bookId)
+    .populate('author')
+    .exec((err, foundBook) => {
+      if (err) {
+        res.status(500).json({error: err.message});
+      } else if (foundBook === null) {
+        res.status(404).json({error: "No Book found by this ID"});
+      } else {
+        // find the character by id
+        let deletedCharacter = foundBook.characters.id(characterId);
+        // delete the found character
+        deletedCharacter.remove();
+        // save the found book with the character deleted
+        foundBook.save();
+        // send back the found book without the character
+        res.json(foundBook);
+      }
+    });
+});
 
 
 

@@ -15,3 +15,11 @@ module.exports.Author = require('./author.js');
 // }
 // exports.Author = Author;
 
+
+// if you have several models: 
+
+// module.exports = {
+//     Book: require('./book.js'),
+//     Author: require('./author.js'),
+//     Publisher: require('./publisher.js')
+// };
