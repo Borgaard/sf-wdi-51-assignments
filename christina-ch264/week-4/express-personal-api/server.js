@@ -1,12 +1,13 @@
 // require express and other modules
 const express = require('express');
 const app = express();
-const db = require('./models');
+// const db = require('./models');
 
 // parse incoming urlencoded form data
 // and populate the req.body object
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // allow cross origin requests (optional)
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
@@ -20,7 +21,7 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// const db = require('./models');
+const db = require('./models');
 
 /**********
  * ROUTES *
