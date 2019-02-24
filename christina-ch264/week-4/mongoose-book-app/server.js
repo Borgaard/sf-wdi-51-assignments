@@ -1,7 +1,4 @@
-// server.js
 // SERVER-SIDE JAVASCRIPT
-
-
 
 /////////////////////////////
 //  SETUP and CONFIGURATION
@@ -65,14 +62,13 @@ app.get('/', (req, res) => {
   res.sendFile('views/index.html' , { root : __dirname});
 });
 
-// API route  // get all books
+
+// API route  // READ all books // user makes request and we connect them to the database
 app.get('/api/books', (req, res) => {
-  // Goal: send all books as JSON response. When someone goes to /books we want to get the books and sent them back to the user as a response
-  // user makes request and we connect them to the database
+  // Goal: send all books as JSON response. When someone goes to /api/books we want to get the books and sent them back to the user as a response
   db.Book.find()
-  .populate('author')
   // populate fills in the author id with all the author data
-  // .populate('author')
+  .populate('author')
   .exec((err, Book) => {
     if (err) {
       console.log(`index error: ${ err }`);
@@ -96,11 +92,9 @@ app.get('/api/books/:id', function (req, res) {
     if(err) {
       console.log(`not what you are looking for..`)
     }
-    
     res.send(dataFound);
   })
 
-  
   // this code is not needed anymore
   // console.log('books show', req.params);
   // for(var i = 0; i < books.length; i++) {
@@ -111,7 +105,19 @@ app.get('/api/books/:id', function (req, res) {
   // }
 });
 
-// create new book // creating routes
+// my try is not working, see solution code below:
+// app.post('/api/books', (req, res) => {
+//   let Book = new db.Book({
+//       title: req.body.title,
+//       author: req.body.author
+//   });
+//   db.Book.create(req.body, (err, bookCreated) => {
+//       if (err) console.log("uups");
+//       res.json(bookCreated);
+//   });
+// });
+
+// create new book // solution code below:
 app.post('/api/books', function (req, res) {
   // create new book with form data (`req.body`)
     // make new instance of book model: function that takes object as only argument. that object related direclty to properties that we set up on our book model
@@ -123,23 +129,42 @@ app.post('/api/books', function (req, res) {
   });
   // find author from req body. This code will only add an author to a book if the author already exists
   db.Author.findOne({name: req.body.author}, function(err, author){
-  newBook.author = author;
+    if (err) console.log(err);
+    if (author === null) {
+      db.Author.create({
+        name: req.body.author,
+        alive: true
+      }, (err, newAuthor) => {
+        newBookAndAuthor(newBook, newAuthor, res);
+      });
+    } else {
+      newBookAndAuthor(newBook, author, res);
+    }
+  });
+});
+
+  function newBookAndAuthor(book, author, res) {
+    // add this author to book
+    book.author = author;
     // save new book to database // setup create method
-    newBook.save(function(err, book) {
+    book.save((err, book) => {
       if(err) { throw err; }
       //if success
       console.log(`Saved ${book.title}!`);
       // in app.js we target form input takes json and we respond with json. check app.js code
-      res.json(book, author);
+      res.json(book);
     });
-  });
-});
-  //this is hardcoded data for when you have the hardcoded book array before that we deleted. therefore we do not need it anymore, because mongoose dynamically creates a book
+  }
+
+
+
+  // this is hardcoded data for when you have the hardcoded book array before that we deleted. therefore we do not need it anymore, because mongoose dynamically creates a book
   // console.log('books create', req.body);
   // var newBook = req.body;
   // newBook._id = newBookUUID++;
   // books.push(newBook);
   // res.json(newBook);
+
 
 // adding characters to books
 app.post('/api/books:book_id/characters', function (req, res){
@@ -168,29 +193,34 @@ app.post('/api/books:book_id/characters', function (req, res){
 
 
 
-// updating information. update book with put method
+// updating information. update book with put method. THis is the solution code I could not get this to work:
+// app.put('/api/books/:id', (req, res) => {
+//   let bookId = req.params.id;
+//   db.Book.findOneAndUpdate({ _id: bookId }, req.body, (err, updatedBook) => {
+//       if (err) return console.log(err);
+//       res.json(updatedBook);
+//   });
+// });
+
+// solution code:
 app.put('/api/books/:id', function(req,res){
 
   // get book id from url params (`req.params`)
-  console.log('books update', req.params);
-  const bookId = req.params.id;
+  // console.log('books update', req.params);
   console.log(`the body is ${req.body}`);
-
-  const bookId = req.params.id;
+  let bookId = req.params.id;
   // find the index of the book we want and update. find book, pass through data that is going to update our book, and we have an optional object called new, that makes sure we create a new record
   // put: updates record and creates a new one
                                         // get updated body information and create a new instance of book once updated
-  db.Book.findOneAndUpdate(
-    {_id: bookId}, 
-    req.body, 
-    {new: true},
-    (err, updatedBook) => {
-      if(err){throw err;}
+  db.Book.findOneAndUpdate({ _id: bookId} , req.body, {new: true})
+  .populate('author')
+  .exec((err, updatedBook) => {
+      // if(err) console.log("no update");
       // respond with json object of updated book.
       res.json(updatedBook);
     });
 
-  // hard coded code:
+// hard coded code for initial array:
 // // get book id from url params (`req.params`)
 //   console.log('books update', req.params);
 //   var bookId = req.params.id;
@@ -215,7 +245,7 @@ app.delete('/api/books/:id', function (req, res) {
   //update delte with new author 
   db.Book.findById(bookId).populate('author').exec((err, deletedBook) => {
     if (err) return console.log(err);
-     // struggeling
+    // struggeling
   })
 
 
