@@ -35,8 +35,29 @@ app.use(express.static('public'));
  * HTML Endpoints
  */
 
-app.get('/', function homepage(req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+app.get('/api', (req, res) => {
+  // TODO: Document all your api endpoints below as a simple hardcoded JSON object.
+  // It would be seriously overkill to save any of this to your database.
+  // But you should change almost every line of this response.
+  res.json({
+    woopsIForgotToDocumentAllMyEndpoints: true, 
+    message: "Welcome to my personal api! Here's what you need to know!",
+    documentationUrl: "https://github.com/example-username/express-personal-api/README.md",
+    baseUrl: "http://YOUR-APP-NAME.herokuapp.com", 
+    endpoints: [
+      {method: "GET", path: "/api", description: "Describes all available endpoints"},
+      {method: "GET", path: "/api/profile", description: "Data about me"},
+      {method: "GET", path: "/api/book", description: "show favorite books"}, 
+      {method: "GET", path: "/api/book/:id", description: "get a book"},
+      {method: "POST", path: "/api/book/", description: "create a book"},
+      {method: "PUT", path: "/api/book/", description: "update a book"},
+      {method: "DELETE", path: "/api/book/", description: "delete a book"},
+
+      {method: "GET", path: "/api/country/", description: "country I lived in"},
+      {method: "GET", path: "/api/country/:id", description: "single country I lived in"},
+
+    ]
+  })
 });
 
 
@@ -44,24 +65,10 @@ app.get('/', function homepage(req, res) {
  * JSON API Endpoints
  */
 
-app.get('/api', (req, res) => {
-  // TODO: Document all your api endpoints below as a simple hardcoded JSON object.
-  // It would be seriously overkill to save any of this to your database.
-  // But you should change almost every line of this response.
-  res.json({
-    woopsIForgotToDocumentAllMyEndpoints: true, // CHANGE ME ;)
-    message: "Welcome to my personal api! Here's what you need to know!",
-    documentationUrl: "https://github.com/example-username/express-personal-api/README.md", // CHANGE ME
-    baseUrl: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
-    endpoints: [
-      {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "GET", path: "/api/book", description: "show favorite books"}, // CHANGE ME
-      {method: "GET", path: "/api/book/:id", description: "get a book"} // CHANGE ME
-
-    ]
-  })
+app.get('/', function homepage(req, res) {
+  res.sendFile(__dirname + '/views/index.html');
 });
+
 
 app.get('/api/profile',(req, res) => {
   // res.send('Welcome to my profile'),
@@ -84,7 +91,7 @@ app.get('/api/profile',(req, res) => {
         type: 'dog',
         breed: 'Springer Spaniel'
       }
-  ]
+    ]
   });
 });
 
@@ -100,12 +107,7 @@ app.get('/api/profile',(req, res) => {
     });
   });
 
-
-
-
-
-
-
+// read a specific book
 app.get('/api/book/:id', (req, res) => {
   db.Book.findOneAndDelete({
     _id: req.params.id
@@ -115,13 +117,30 @@ app.get('/api/book/:id', (req, res) => {
 });
 
 // create new book
-app.post('/api/book', function (req, res) {
+app.post('/api/book', (req, res) => {
   // create new book with form data (`req.body`)
-  console.log('create this book', req.body);
-  var newBook = req.body;
-  newBook._id = newBookUUID++;
-  books.push(newBook);
-  res.json(newBook);
+  // console.log('create this book', req.body);
+  // var newBook = req.body;
+  // newBook._id = newBookUUID++;
+  // books.push(newBook);
+  // res.json(newBook);
+
+  let newBook = new db.Book({
+    author: req.body.author,
+    title: req.body.title,
+    character: req.body.mainCharacter
+  })
+
+  db.Book.create(newBook, (err, newBookCreated) => {
+    if(err) console.log("no new book was created");
+    res.json(newBookCreated);
+  });
+
+  // db.Book.create(req.body, (err, newBookCreated) => {
+  //   if (err) {throw err;}
+  //   res.json(newBookCreated);
+  // })
+
 });
 
 /**********

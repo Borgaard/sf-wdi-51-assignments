@@ -1,15 +1,19 @@
 // import { Book } from "../../models";
 
-console.log("Sanity Check: JS is working!");
+// console.log("Sanity Check: JS is working!");
 
-let $book_list;
-let allBooks = [];
+// let $book_list;
+// let allBooks = [];
 
 $(document).ready(function(){
+    console.log("Sanity Check: JS is working!");
+    // my empty html div
+    // $book_list = $('#listview');
+    let book_list = $('#listview').text();
+    let bookId = '';
+    
 
-    // your code
-    $book_list = $('#listview');
-
+    // READ Books out
     $.ajax({
         method: 'GET',
         url: '/api/book',
@@ -17,9 +21,9 @@ $(document).ready(function(){
         error: handleError
     });
 
-    function handleSuccess(json) {
-        for (i = 0; i < json.length; i++) {
-            $('#listview').append( `<li> Book: ${json[i].title}</li>`);
+    function handleSuccess(book) {
+        for (i = 0; i < book.length; i++) {
+            $('#listview').append( `<li> Book: ${book[i].title}</li>`);
         }
     }
 
@@ -28,23 +32,33 @@ $(document).ready(function(){
         $('#listview').text('Failed to load books, is the server working?');
     };
 
+    // CREATE new Book
     $('#newBookForm').on('submit', function(e) {
         e.preventDefault();
-        console.log('something worked, keep debugging', $(this).serializeArray());
+        // console.log('something worked, keep debugging', $(this).serializeArray());
+        
+        // let newBook = 
+        
         $.ajax({
             method: 'POST',
             url: '/api/book',
-            // data: $(this).serializeArray(),
+            data: $(this).serialize(),
+            // data: {
+            //     author: author,
+            //     title: title,
+            //     mainCharacter: mainCharacter
+            // },
             success: newBookSuccess,
             error: newBookError
         });
     });
-    function newBookSuccess(json) {
-        $('#newBook').append( `<li> Book: ${json.newBook}</li>`);
+    function newBookSuccess() {
+        console.log("newBook")
+        $('#listView').append( `<li> Book: ${this.title}, ${this.author}, ${this.mainCharacter}</li>`);
     }
 
     function newBookError(json) {
-        console.log('error occured');
+        console.log('no new book');
     }
 });
 
