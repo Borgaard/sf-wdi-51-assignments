@@ -17,7 +17,9 @@ var app = express();
 app.use(express.static('public'));
 
 // body parser config to accept our datatypes
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 
 
@@ -25,8 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //  DATA
 ///////////////////
 
-var books = [
-  {
+var books = [{
     _id: 15,
     title: "The Four Hour Workweek",
     author: "Tim Ferriss",
@@ -67,7 +68,9 @@ var newBookUUID = 18;
 
 // define a root route: localhost:3000/
 app.get('/', function (req, res) {
-  res.sendFile('views/index.html' , { root : __dirname});
+  res.sendFile('views/index.html', {
+    root: __dirname
+  });
 });
 
 // get all books
@@ -81,7 +84,7 @@ app.get('/api/books', function (req, res) {
 app.get('/api/books/:id', function (req, res) {
   // find one book by its id
   console.log('books show', req.params);
-  for(var i=0; i < books.length; i++) {
+  for (var i = 0; i < books.length; i++) {
     if (books[i]._id === req.params.id) {
       res.json(books[i]);
       break; // we found the right book, we can stop searching
@@ -100,15 +103,15 @@ app.post('/api/books', function (req, res) {
 });
 
 // update book
-app.put('/api/books/:id', function(req,res){
-// get book id from url params (`req.params`)
+app.put('/api/books/:id', function (req, res) {
+  // get book id from url params (`req.params`)
   console.log('books update', req.params);
   var bookId = req.params.id;
   // find the index of the book we want to remove
-  var updateBookIndex = books.findIndex(function(element, index) {
+  var updateBookIndex = books.findIndex(function (element, index) {
     return (element._id === parseInt(req.params.id)); //params are strings
   });
-  console.log('updating book with index', deleteBookIndex);
+  console.log(`updating book with index ${updateBookIndex}`);
   var bookToUpdate = books[deleteBookIndex];
   books.splice(updateBookIndex, 1, req.params);
   res.json(req.params);
@@ -120,7 +123,7 @@ app.delete('/api/books/:id', function (req, res) {
   console.log('books delete', req.params);
   var bookId = req.params.id;
   // find the index of the book we want to remove
-  var deleteBookIndex = books.findIndex(function(element, index) {
+  var deleteBookIndex = books.findIndex(function (element, index) {
     return (element._id === parseInt(req.params.id)); //params are strings
   });
   console.log('deleting book with index', deleteBookIndex);

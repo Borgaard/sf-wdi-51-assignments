@@ -1,7 +1,7 @@
 // require express and other modules
-const express = require("express"),
-  app = express(),
-  bodyParser = require("body-parser");
+const express = require("express");
+app = express();
+bodyParser = require("body-parser");
 
 // configure bodyParser (for receiving form data)
 app.use(
@@ -66,6 +66,19 @@ app.get("/api/todos/search", (req, res) => {
   /* This endpoint responds with the search results from the
    * query in the request. COMPLETE THIS ENDPOINT LAST.
    */
+
+  //TO BE COMPLETED LATER-check mongoose book app
+  //   app.get("/api/todos/:id", (req, res) => {
+  //     const todoId = parseInt(req.params.id);
+  //     console.log(`todo Id is now ${todoId}`);
+
+  //     const foundTodo = todos.filter(todo => {
+  //       return todo._id == todoId;
+  //     })[0];
+  //     res.json(foundTodo);
+  //   });
+
+
 });
 
 // Index:
@@ -141,7 +154,7 @@ app.delete("/api/todos/:id", (req, res) => {
   const todoToDelete = todos.filter(todo => {
     return todo._id == todoId;
   })[0];
-  
+
   todos.splice(todos.indexOf(todoToDelete), 1);
 
   res.json(todoToDelete);
