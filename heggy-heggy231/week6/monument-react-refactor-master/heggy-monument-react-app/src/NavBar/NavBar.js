@@ -17,4 +17,5 @@ class NavBar extends Component {
 }
 
 // export it whereever I am importing to 
+// making it public
 export default NavBar;

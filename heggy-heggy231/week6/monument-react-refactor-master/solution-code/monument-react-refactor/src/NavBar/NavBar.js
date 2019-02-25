@@ -1,6 +1,7 @@
 import React from 'react'
 import './NavBar.css'
 
+// stateless component
 const navbar = () => {
     return (
         <nav>
