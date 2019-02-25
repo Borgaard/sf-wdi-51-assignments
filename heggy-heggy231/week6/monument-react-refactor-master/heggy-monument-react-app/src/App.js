@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import NavBar component
+import NavBar from './NavBar/NavBar';
 import './App.css';
 
 class App extends Component {
@@ -6,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      {/* in 3  */}
         <NavBar />
         <Index />
         <Footer />
