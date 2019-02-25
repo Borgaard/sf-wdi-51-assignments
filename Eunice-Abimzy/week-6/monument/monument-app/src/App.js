@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+// import './css';
+// import './images';
 
 
 class  Monument extends Component {
