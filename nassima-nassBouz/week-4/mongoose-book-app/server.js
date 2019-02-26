@@ -130,10 +130,10 @@ app.put('/api/books/:id', function(req,res){
 // get book id from url params (`req.params`)
   console.log('books update', req.params);
   var bookId = req.params.id;
+});
   // find the index of the book we want to remove
   var updateBookIndex = books.findIndex(function(element, index) {
     return (element._id === parseInt(req.params.id)); //params are strings
-  });
   console.log('updating book with index', deleteBookIndex);
   var bookToUpdate = books[deleteBookIndex];
   books.splice(updateBookIndex, 1, req.params);
@@ -154,11 +154,11 @@ app.delete('/api/books/:id', function (req, res) {
   books.splice(deleteBookIndex, 1);
   res.json(bookToDelete);
 });
-
-
-
-
+ 
+/// update with put
+app.put('/api/books/:id')
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('Book app listening at http://localhost:3000/');
+
 });

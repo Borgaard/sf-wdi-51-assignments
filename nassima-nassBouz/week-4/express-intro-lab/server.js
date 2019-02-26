@@ -12,10 +12,11 @@
 
   // app.get('/', (req, res) => res.send('Hello World!'));
 
-app.get('/',(req,res)=>
-        console.log(root));
+// app.get('/',(req,res)=>
+//consoel.log('req =', req);
+//console.log(root));
 
-// server.js
+// 4 add some data to the Server
   const albums = [
     {
       title: 'Cupid Deluxe',
@@ -30,7 +31,20 @@ app.get('/',(req,res)=>
       artist: 'letlive.'
     }
   ];
+/// display my albums object   // localhost:3010/api/albums
+app.get('/api/albums',(req,res)=>{
+        res.json(albums);
+        });
+
+///////////////////// part 2/////////////////
+// app.use(express.static(__dirname + '/public'));
+// app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get('/', (req, res) => {
+  consoel.log('req =', req);
+  consoel.log('res =', res);
+  res.sendFile('views/index.html' , { root : __dirname});
+})
 
 
-
-  app.listen(process.env.PORT || 3000,  () => console.log('Example app listening at http://localhost:3000/'));
+  app.listen(process.env.PORT || 3010,  () => console.log('Example app listening at http://localhost:3010/'));
