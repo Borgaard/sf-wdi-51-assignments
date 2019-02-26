@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // now I created Footer.css include its style
-import './Footer.css'
+import './Footer.css';
 // for social icon in footer I need to: 
 // npm install react-social-icons --save-dev
 // https://www.npmjs.com/package/react-social-icons
@@ -18,7 +18,7 @@ class Footer extends Component {
           <div className="social-links">
             <SocialIcon className="instagram" url="http://instagram.com" />
             <SocialIcon className="twitter" url="http://twitter.com/jaketrent" />
-            <a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <SocialIcon className="facebook" url="http://facebook.com" />
           </div>
           <div className="footerdiv">
             <input type="text" placeholder="Email Address"/>

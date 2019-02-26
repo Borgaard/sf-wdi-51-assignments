@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import About from './About/About';
 import Archive from './Archive/Archive';
-
+import Contact from './Contact/Contact';
 
 // rename to Index
 class Index extends React.Component {
@@ -11,6 +11,7 @@ class Index extends React.Component {
       <div>
         <About />
         <Archive />
+        <Contact />
       </div>
 
     )
