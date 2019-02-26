@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Article from './Article';
+import Article from './Article/Article';
 
 
 class Archive extends Component {
