@@ -41,6 +41,14 @@ article h3 {
 	margin-bottom: 0;
 }
 
+@media only screen and (max-width: 774px) {
+	aside {
+		display: none;
+	}
+	.grid-wrapper section {
+		width: 100%;
+	}
+}
 /* ----------------------------------------
 Layout
 ------------------------------------------- */

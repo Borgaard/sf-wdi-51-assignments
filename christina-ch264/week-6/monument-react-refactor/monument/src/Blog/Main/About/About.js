@@ -5,6 +5,8 @@ import Issues from './Issues/Issues.js';
 import AboutImage from './about.jpg'
 
 
+
+
 class About extends Component {
     render () {
         return (

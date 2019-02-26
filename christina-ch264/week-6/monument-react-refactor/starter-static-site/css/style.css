@@ -144,12 +144,12 @@ Layout
 /* ----------------------------------------
 Header
 ------------------------------------------- */
-header {
+/* header {
 	padding-top: 30px;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-nav {
+} */
+/* nav {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -181,13 +181,13 @@ h1 a,
 h1 a:hover,
 header h2 {
 	color: #fff;
-}
+} */
 
 
 /* ----------------------------------------
 Buttons
 ------------------------------------------- */
-button {
+/* button {
 	cursor: pointer;
 	outline: 0;
 	border: 2px solid #44545E;
@@ -213,7 +213,7 @@ button:hover {
 .articles button {
 	margin-top: 30px;
 	margin-top: 2rem;
-}
+} */
 
 /* ----------------------------------------
 Forms
@@ -332,7 +332,7 @@ footer .wrap {
 /* ----------------------------------------
 Media Queries
 ------------------------------------------- */
-@media only screen and (max-width: 790px) {
+/* @media only screen and (max-width: 790px) {
 	nav a {
 		padding: .2rem 2rem;
 	}
@@ -394,4 +394,4 @@ Media Queries
 	footer input {
 		margin-right: 0;
 	}
-}
+} */
