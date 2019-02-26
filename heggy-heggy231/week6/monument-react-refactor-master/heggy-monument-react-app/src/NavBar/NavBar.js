@@ -1,4 +1,4 @@
-import React from 'react';   
+import React, { Component } from 'react';   
 // rename to NavBar
 class NavBar extends Component {
   render () {

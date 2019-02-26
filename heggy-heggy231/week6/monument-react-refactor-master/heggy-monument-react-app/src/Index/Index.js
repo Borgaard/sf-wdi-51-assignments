@@ -1,11 +1,15 @@
-import React from 'react';
+// import Compenent here! since I am creating component
+import React, { Component } from 'react';
 import About from './About/About';
 
 // rename to Index
-class Index extends Component {
+class Index extends React.Component {
   render () {
     return (
-      <About />
+      <div>
+        <About />
+      </div>
+
     )
   }
 }

@@ -11,7 +11,7 @@ const footer = () => {
 			<div className="social-links">
                 <SocialIcon className="instagram" url="http://instagram.com" />
 				<SocialIcon className="twitter" url="http://twitter.com/jaketrent" />
-                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
             </div>
             <div className="footerdiv">
 			    <input type="text" placeholder="Email Address"/>

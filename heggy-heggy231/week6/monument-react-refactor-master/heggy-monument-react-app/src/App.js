@@ -1,11 +1,15 @@
+// I am exporting Component name from react
 import React, { Component } from 'react';
 // get style for App Component
 import './App.css';
 // import NavBar component
 import NavBar from './NavBar/NavBar';
+import Footer from './Footer/Footer';
+import Index from './Index/Index';
 
 
-class App extends Component {
+
+class App extends React.Component {
   // what should my component render?
   render() {
     return (

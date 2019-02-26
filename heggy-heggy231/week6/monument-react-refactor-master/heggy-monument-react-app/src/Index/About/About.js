@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './About.css'
 
 // define component about
-class About extends Component {
+class About extends React.Component {
   render() {
     return (
       <section id="about" class="callout about">
