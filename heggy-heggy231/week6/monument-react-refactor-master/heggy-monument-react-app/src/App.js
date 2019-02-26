@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+// get style for App Component
+import './App.css';
 // import NavBar component
 import NavBar from './NavBar/NavBar';
-import './App.css';
+
 
 class App extends Component {
   // what should my component render?
