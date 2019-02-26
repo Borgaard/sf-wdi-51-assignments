@@ -1,0 +1,23 @@
+
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+header {
+	background-image: url('./home_header_bg.jpg');
+	background-attachment: fixed;
+	height: 100vh;
+}
+/* .vertical center? */
+
+/* h1 a,
+h1 a:hover,
+header h2 {
+	color: #fff;
+} */
+
+header {
+	padding-top: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
