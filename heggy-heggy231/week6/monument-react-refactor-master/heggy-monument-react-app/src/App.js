@@ -6,7 +6,7 @@ import './App.css';
 import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
 import Index from './Index/Index';
-
+import Blog from './Blog/Blog';
 
 
 class App extends React.Component {
