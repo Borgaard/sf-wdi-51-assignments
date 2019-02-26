@@ -50,7 +50,7 @@ app.get('/api', (req, res) => {
       {method: "GET", path: "/api/book", description: "show favorite books"}, 
       {method: "GET", path: "/api/book/:id", description: "get a book"},
       {method: "POST", path: "/api/book/", description: "create a book"},
-      {method: "PUT", path: "/api/book/", description: "update a book"},
+      {method: "PUT", path: "/api/book/:id", description: "update a book"},
       {method: "DELETE", path: "/api/book/", description: "delete a book"},
 
       {method: "GET", path: "/api/country/", description: "country I lived in"},
@@ -116,7 +116,7 @@ app.get('/api/book/:id', (req, res) => {
   })
 });
 
-// create new book
+// create new book // shows up on reload ?
 app.post('/api/book', (req, res) => {
   // create new book with form data (`req.body`)
   // console.log('create this book', req.body);
@@ -135,13 +135,20 @@ app.post('/api/book', (req, res) => {
     if(err) console.log("no new book was created");
     res.json(newBookCreated);
   });
-
-  // db.Book.create(req.body, (err, newBookCreated) => {
-  //   if (err) {throw err;}
-  //   res.json(newBookCreated);
-  // })
-
 });
+
+// Edit a book
+app.put('/api/book/:id', (req, res) => {
+  let bookId = req.params.id;
+  db.Book.findOneAndUpdate({ _id: bookId}, req.body, (err, updatedBook) => {
+    console.log(updatedBook);
+    res.json(updatedBook);
+  })
+})
+
+// Delete a new book
+
+
 
 /**********
  * SERVER *

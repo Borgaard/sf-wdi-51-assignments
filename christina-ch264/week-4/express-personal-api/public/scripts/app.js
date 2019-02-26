@@ -57,9 +57,35 @@ $(document).ready(function(){
         $('#listView').append( `<li> Book: ${this.title}, ${this.author}, ${this.mainCharacter}</li>`);
     }
 
-    function newBookError(json) {
+    function newBookError() {
         console.log('no new book');
     }
+
+
+    // update a book
+    $("#updateButton").on('click', function(e) { 
+        e.preventDefault();
+        let newBookUpdate = $(this).parent().find("input").val();
+        $.ajax({
+            method: "PUT",
+            url:`/api/books/${ $(this).attr('data-id')}`,
+            data: {
+                    author: author,
+                    title: title,
+                    mainCharacter: mainCharacter
+                },
+            success: updatedBookSuccess
+        });
+    });
+
+    function updatedBookSuccess(book) {
+        console.log("updated my Book");
+    }
+
+
+    // Delete a Book
+
+
 });
 
 
