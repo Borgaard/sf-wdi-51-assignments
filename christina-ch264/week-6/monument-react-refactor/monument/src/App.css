@@ -133,7 +133,7 @@ section {
 	width: 100%;
 	margin: 0 auto;
 }
-
+ 
 .grid-wrapper {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -147,7 +147,7 @@ section {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-}
+} 
 
 .col-third {
 	width: 32%;
@@ -175,7 +175,20 @@ section {
 	background-color: #CFF2F6;
 }
 
+/* ----------------------------------------
+Layout
+------------------------------------------- */
+/* .grid-wrapper section {
+	width: 70%;
+	text-align: left;
+	padding-top: 0;
+	padding-bottom: 54.4px;
+	padding-bottom: 3.4rem;
+}
 
+.comment {
+	padding-top: 0;
+} */
 
 
 
@@ -211,11 +224,11 @@ button:hover {
 }
 
 
-
+/* 
 /* ----------------------------------------
 Layout
 ------------------------------------------- */
-.grid-wrapper section {
+/* .grid-wrapper section {
 	width: 70%;
 	text-align: left;
 	padding-top: 0;
@@ -225,9 +238,9 @@ Layout
 
 .comment {
 	padding-top: 0;
-} 
+}  */
 
-.grid-wrapper {
+/* .grid-wrapper {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -240,7 +253,7 @@ Layout
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-}
+}  */
 
 
 /* ----------------------------------------
