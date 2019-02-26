@@ -4,6 +4,7 @@ import About from './About/About';
 import Archive from './Archive/Archive';
 import Contact from './Contact/Contact';
 import Gallery from './Gallery/Gallery';
+import Header from './Header/Header';
 
 // rename to Index
 class Index extends React.Component {
