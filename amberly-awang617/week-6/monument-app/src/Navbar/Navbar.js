@@ -4,7 +4,7 @@ class Navbar extends Component {
     render() {
         return (
           <nav>
-            <a class="hamburger" href=""><i class="fa fa-bars"></i></a>
+            <a className="hamburger" href=""><i className="fa fa-bars"></i></a>
             <ul>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#gallery">Gallery</a></li>
