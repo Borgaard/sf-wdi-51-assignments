@@ -1,6 +1,8 @@
 // import Compenent here! since I am creating component
 import React, { Component } from 'react';
 import About from './About/About';
+import Archive from './Archive/Archive';
+
 
 // rename to Index
 class Index extends React.Component {
@@ -8,6 +10,7 @@ class Index extends React.Component {
     return (
       <div>
         <About />
+        <Archive />
       </div>
 
     )
