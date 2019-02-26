@@ -5,7 +5,10 @@ var allBooks = [];
 $(document).ready(function(){
 
   $booksList = $('#bookTarget');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
   $.ajax({
     method: 'GET',
     url: '/api/books',
@@ -80,6 +83,7 @@ $(document).ready(function(){
 
 });
 
+<<<<<<< HEAD
 function getCharacterHtml(_book_id, character) {
   return `${character.name} <button class="deleteCharacter btn btn-danger" data-bookid=${_book_id} data-charid=${character._id}><b>x</b></button>`;
 }
@@ -112,6 +116,15 @@ function getBookHtml(book) {
             <button type="submit" class="btn btn-default">Add character</button>
           </form>
           `;
+=======
+function getBookHtml(book) {
+  return `<hr>
+          <p>
+            <b>${book.title}</b>
+            by ${book.author}
+            <button type="button" name="button" class="deleteBtn btn btn-danger pull-right" data-id=${book._id}>Delete</button>
+          </p>`;
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
 }
 
 function getAllBooksHtml(books) {
@@ -168,6 +181,7 @@ function deleteBookSuccess(json) {
 
 function deleteBookError() {
   console.log('deletebook error!');
+<<<<<<< HEAD
 }
 
 function newCharacterSuccess(json) {
@@ -198,4 +212,6 @@ function deleteCharacterSuccess(json) {
     }
   }
   render();
+=======
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
 }

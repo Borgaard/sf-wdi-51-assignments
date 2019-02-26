@@ -7,12 +7,17 @@
 /////////////////////////////
 
 //require express in our app
+<<<<<<< HEAD
 const 
   express = require('express'),
   bodyParser = require('body-parser');
 
 // connect to db models
 let db = require('./models');
+=======
+var express = require('express'),
+  bodyParser = require('body-parser');
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
 
 // generate a new express app and call it 'app'
 let app = express();
@@ -24,6 +29,47 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+<<<<<<< HEAD
+=======
+
+////////////////////
+//  DATA
+///////////////////
+
+var books = [
+  {
+    _id: 15,
+    title: "The Four Hour Workweek",
+    author: "Tim Ferriss",
+    image: "https://s3-us-west-2.amazonaws.com/sandboxapi/four_hour_work_week.jpg",
+    release_date: "April 1, 2007"
+  },
+  {
+    _id: 16,
+    title: "Of Mice and Men",
+    author: "John Steinbeck",
+    image: "https://s3-us-west-2.amazonaws.com/sandboxapi/of_mice_and_men.jpg",
+    release_date: "Unknown 1937"
+  },
+  {
+    _id: 17,
+    title: "Romeo and Juliet",
+    author: "William Shakespeare",
+    image: "https://s3-us-west-2.amazonaws.com/sandboxapi/romeo_and_juliet.jpg",
+    release_date: "Unknown 1597"
+  }
+];
+
+
+var newBookUUID = 18;
+
+
+
+
+
+
+
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
 ////////////////////
 //  ROUTES
 ///////////////////
@@ -39,6 +85,7 @@ app.get('/', (req, res) => {
 // get all books
 app.get('/api/books', (req, res) => {
   // send all books as JSON response
+<<<<<<< HEAD
   db.Book.find().populate('author')
     .exec((err, books) => {
       if (err) { return console.log("index error: " + err); }
@@ -51,11 +98,28 @@ app.get('/api/books/:id', (req, res) => {
   db.Book.findOne({_id: req.params.id }, (err, data) => {
     res.json(data);
   });
+=======
+  console.log('books index');
+  res.json(books);
+});
+
+// get one book
+app.get('/api/books/:id', function (req, res) {
+  // find one book by its id
+  console.log('books show', req.params);
+  for(var i=0; i < books.length; i++) {
+    if (books[i]._id === req.params.id) {
+      res.json(books[i]);
+      break; // we found the right book, we can stop searching
+    }
+  }
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
 });
 
 // create new book
 app.post('/api/books', (req, res) => {
   // create new book with form data (`req.body`)
+<<<<<<< HEAD
   let newBook = new db.Book({
     title: req.body.title,
     image: req.body.image,
@@ -90,11 +154,35 @@ function createBookWithAuthorAndRespondTo(book, author, res) {
     res.json(book);
   });
 }
+=======
+  console.log('books create', req.body);
+  var newBook = req.body;
+  newBook._id = newBookUUID++;
+  books.push(newBook);
+  res.json(newBook);
+});
+
+// update book
+app.put('/api/books/:id', function(req,res){
+// get book id from url params (`req.params`)
+  console.log('books update', req.params);
+  var bookId = req.params.id;
+  // find the index of the book we want to remove
+  var updateBookIndex = books.findIndex(function(element, index) {
+    return (element._id === parseInt(req.params.id)); //params are strings
+  });
+  console.log('updating book with index', deleteBookIndex);
+  var bookToUpdate = books[deleteBookIndex];
+  books.splice(updateBookIndex, 1, req.params);
+  res.json(req.params);
+});
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
 
 // delete book
 app.delete('/api/books/:id', (req, res) => {
   // get book id from url params (`req.params`)
   console.log('books delete', req.params);
+<<<<<<< HEAD
   let bookId = req.params.id;
   // find the index of the book we want to remove
   db.Book.findOneAndRemove({ _id: bookId })
@@ -114,10 +202,21 @@ app.put('/api/books/:id', (req, res) => {
     .populate('author')
     .exec((err, updatedBook)=> {
       res.json(updatedBook);
+=======
+  var bookId = req.params.id;
+  // find the index of the book we want to remove
+  var deleteBookIndex = books.findIndex(function(element, index) {
+    return (element._id === parseInt(req.params.id)); //params are strings
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
   });
+  console.log('deleting book with index', deleteBookIndex);
+  var bookToDelete = books[deleteBookIndex];
+  books.splice(deleteBookIndex, 1);
+  res.json(bookToDelete);
 });
 
 
+<<<<<<< HEAD
 // Create a character associated with a book
 app.post('/api/books/:book_id/characters', (req, res) => {
   // Get book id from url params (`req.params`)
@@ -171,4 +270,11 @@ app.delete('/api/books/:book_id/characters/:character_id', (req, res) => {
 
 app.listen(process.env.PORT || 3000, () => {
   console.log('Example app listening at http://localhost:3000/');
+=======
+
+
+
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Book app listening at http://localhost:3000/');
+>>>>>>> 225323858f09578ef8668d3b65b4863e4ca40c26
 });
