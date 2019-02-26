@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import About from './About/About';
 import Archive from './Archive/Archive';
 import Contact from './Contact/Contact';
+import Gallery from './Gallery/Gallery';
 
 // rename to Index
 class Index extends React.Component {
@@ -12,6 +13,7 @@ class Index extends React.Component {
         <About />
         <Archive />
         <Contact />
+        <Gallery />
       </div>
 
     )
