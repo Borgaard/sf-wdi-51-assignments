@@ -24,6 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header
+          countersCount={this.state.numberOfCounters}
           increaseCounters={this.increaseCounters}
           decreaseCounters={this.decreaseCounters}
         />
