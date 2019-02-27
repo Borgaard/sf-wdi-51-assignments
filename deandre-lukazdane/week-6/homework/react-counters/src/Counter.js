@@ -2,23 +2,29 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = { count: 0 };
+  increment = () => {
+    let newCount = this.state.count + 1;
+    this.setState({
+      count: newCount
+    });
+  };
   render() {
     return (
       <div classNAme="Counter">
-        <h3>Counter: 0</h3>
-        <button onClick={this.increaseCount}>Decrement</button>
-        <button onClick={this.decreaseCount}>Increment</button>
+        <h3>Counter: {this.state.count}</h3>
+        <button onClick={this.decrement}>Decrement</button>
+        <button onClick={this.increment}>Increment</button>
       </div>
     );
   }
-  increaseCount = () => {
-    let count = this.state.count + 1;
-    this.setState({ count });
-  };
-  decreaseCount = () => {
-    let count = this.state.count - 1;
-    this.setState({ count });
-  };
+  //   increaseCounters = () => {
+  //     let count = this.state.count + 1;
+  //     this.setState({ count });
+  //   };
+  //   decreaseCounters = () => {
+  //     let count = this.state.count - 1;
+  //     this.setState({ count });
+  //   };
 }
 
 export default Counter;

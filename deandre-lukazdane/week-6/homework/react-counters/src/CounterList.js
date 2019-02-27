@@ -3,11 +3,12 @@ import Counter from "./Counter";
 
 class CounterList extends Component {
   render() {
+    //counterList will contain an array of counters
     let counters = [];
     for (let i = 0; i < this.props.counter; i++) {
-      counters.push(<Counter />);
+      counters.push(<Counter key={i} />);
     }
-    return <div className="counters">{<Counter />}</div>;
+    return <div className="Counter-row">{counters}</div>;
   }
 }
 
