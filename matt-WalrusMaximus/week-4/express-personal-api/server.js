@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// const db = require('./models');
+const db = require('./models');
 
 /**********
  * ROUTES *
@@ -58,6 +58,15 @@ app.get('/api', (req, res) => {
     ]
   })
 });
+
+// Show All Albums
+app.get('/api/albums', (req, res) => {
+  // db.Albums.find({}, (err, albums) => {
+  //   if (err) console.log(`Error at show all albums is: ${err}`);
+  //   res.json(albums);
+  // })
+  res.send('hello there');
+})
 
 /**********
  * SERVER *
