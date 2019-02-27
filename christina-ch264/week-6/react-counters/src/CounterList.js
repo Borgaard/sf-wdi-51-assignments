@@ -8,11 +8,12 @@ import Counter from './Counter';
 class CounterList extends Component {
     render() {
         let listArray = [];
-
+        // counter is defined in app.js and is the state of the number of counter compos in counterList
         for (let i = 0; i < this.props.counter; i++) {
             listArray.push(<Counter />);
         } 
         return (
+            // embed listArray in div on page
             <div className="Counter-row">{listArray}</div>
         )  
     }

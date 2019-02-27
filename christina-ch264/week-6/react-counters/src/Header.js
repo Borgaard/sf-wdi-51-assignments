@@ -17,7 +17,7 @@ class Header extends Component {
   render() {
     return (
       <header className="App-header">
-        <h1 className="App-title">React Counters</h1>
+        <h1 className="App-title">A Counter that Counts Counters</h1>
         {/* everytime you click button you push another counter into counterlist */}
         <button onClick={this.headerIncrease}>+</button>
         <button onClick={this.headerDecrease}>-</button>

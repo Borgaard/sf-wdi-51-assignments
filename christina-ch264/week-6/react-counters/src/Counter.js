@@ -24,10 +24,14 @@ class Counter extends Component {
     
     render() {
         return (
-            <div className="Counter">
+        <div className="container">
+        <div className="row">
+            <div className="Counter col-6 text-right">
                 <h4>Counter: {this.state.count}</h4>
                 <button onClick={this.increaseHandler}>incrementing</button>
                 <button onClick={this.decreaseHandler}>decrementing</button>
+            </div>
+            </div>
             </div>
         )
     }
