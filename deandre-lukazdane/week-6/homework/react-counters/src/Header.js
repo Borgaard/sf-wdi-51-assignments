@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CounterList from "./CounterList";
 class Header extends Component {
   // constructor(props) {
   //   super();
@@ -8,7 +9,7 @@ class Header extends Component {
     this.props.increaseCounters();
   };
   handleDecrement = () => {
-    if (this.props.countersCount > 0) {
+    if (this.props.countersCount() > 0) {
       this.props.decreaseCounters();
     }
   };
@@ -18,9 +19,11 @@ class Header extends Component {
         <h1 className="App-title">React Counters</h1>
         <button onClick={this.handleIncrement}>+</button>
         <button onClick={this.handledecrement}>-</button>
+        <CounterList />
       </header>
     );
   }
 }
 
 export default Header;
+// ---------------------------------
