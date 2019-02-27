@@ -1,5 +1,4 @@
 // Counter component so that it is using state to track the count internally and clicking one of the buttons changes the count number.
-
 import React, { Component } from "react";
 
 // create Counter Component
