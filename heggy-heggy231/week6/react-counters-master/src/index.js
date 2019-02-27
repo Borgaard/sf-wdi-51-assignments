@@ -8,4 +8,7 @@ const data = {
   counters: 5
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+// ReactDOM.render(<App data={data} />, document.getElementById("root"));
+// remember to pass the props down to APP!
+ReactDOM.render(<App data={data} />, document.getElementById("root"));
