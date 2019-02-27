@@ -3,9 +3,10 @@
 <meta charset="utf-8">
 <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 <title>My profile</title>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+<!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" > -->
 <script src="app.js"></script>
 </head>
 <body>
@@ -15,14 +16,14 @@
             <!-- <div class="toggle">
                  </a>   <i class="fa fa-bars menu" aria-hidden="true"></i>
                 </div> -->
-          <ul>
+          <ul class="navul">
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#portfolio">PORTFOLIO</a></li>
             <li><a href="#quotes">QUOTES</a></li>
             <li><a href="#contacts">CONTACT</a></li>
         </ul>
     </nav>
-<div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<div class="menu-toggle"><i class="fa fa-bars menu" aria-hidden="true"></i></div>
     
 </header>
 
@@ -116,13 +117,13 @@
 
 <section class="quotes" id="quotes">
     <h1>TESTIMONIALS</h1>
-    <p id="quote1">There is absolutely no reason not to be exciting!
+    <p id="quote1" class="testimonials">There is absolutely no reason not to be exciting!
 
             Jerky sausage picanha ham hock meatball pork chop. Bacon jerky porchetta pork frankfurter meatball. Turducken cupim pork loin, flank shoulder jerky swine prosciutto. Landjaeger tail shank ham hock. Sirloin chicken ham sausage.
     </p>
-    <p id="quote2">Bacon ipsum dolor amet tongue shankle frankfurter kielbasa shoulder prosciutto. Kevin landjaeger rump tenderloin. Bresaola flank short ribs prosciutto ham, short loin t-bone ball tip drumstick chicken shoulder cupim pork spare ribs pork belly. 
+    <p id="quote2" class="testimonials">Bacon ipsum dolor amet tongue shankle frankfurter kielbasa shoulder prosciutto. Kevin landjaeger rump tenderloin. Bresaola flank short ribs prosciutto ham, short loin t-bone ball tip drumstick chicken shoulder cupim pork spare ribs pork belly. 
         Biltong sausage tenderloin kevin.</p>
-        <P id="quote3">Meatloaf beef short ribs filet mignon corned beef chicken hamburger meatball brisket andouille jowl spare ribs. T-bone biltong meatball short ribs cupim. Pork loin venison tongue, bresaola corned beef pork chop cow doner boudin bacon. Pork belly ground round kielbasa meatloaf 
+        <P id="quote3" class="testimonials">Meatloaf beef short ribs filet mignon corned beef chicken hamburger meatball brisket andouille jowl spare ribs. T-bone biltong meatball short ribs cupim. Pork loin venison tongue, bresaola corned beef pork chop cow doner boudin bacon. Pork belly ground round kielbasa meatloaf 
             sausage boudin fatback, pastrami tri-tip shank rump chuck venison.</P>
 <a href="#contacts" class="angle-down"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 
@@ -156,71 +157,32 @@
 </footer>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+<!-- <script>
 $(document).ready(function(){
-    $('.menu-toggle').click(function(){
-        $('ul').toggleClass('active')
+    $('.menu').click(function(){
+        $('ul').toggleClass('menu-toggle')
     })
 
 
 
 // <--------auto sliding--------->
-    var slideIndex = 0;
+    <!-- var slideIndex = 0;
 showSlides();
 
-// function showSlides() {
-//   var i;
-//   var slides = document.getElementsByClassName("slide_img");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none"; 
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {slideIndex = 1} 
-//   slides[slideIndex-1].style.display = "block"; 
-//   setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
-// })
-    // <---------Smooth-Scrolling---->
-// 1
-// MkJK, 
-//   $('a[href*="#"]')
-//   // Remove links that don't actually link to anything
-//   .not('[href="#"]')
-//   .not('[href="#0"]')
-//   .click(function(event) {
-//     // On-page links
-//     if (
-//       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-//       && 
-//       location.hostname == this.hostname
-//     ) {
-//       // Figure out element to scroll to
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-//       // Does a scroll target exist?
-//       if (target.length) {
-//        // Only prevent default if animation is actually gonna happen
-//         event.preventDefault();
-//         $('html, body').animate({
-//           scrollTop: target.offset().top
-//         }, 2000, function() {
-//           // Callback after animation
-//           // Must change focus!
-//           var $target = $(target);
-//           $target.focus();
-//           if ($target.is(":focus")) { // Checking if the target was focused
-//             return false;
-//           } else {
-//             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-//             $target.focus(); // Set focus again
-//           };
-//         });
-//       }
-//     }
-//   });
-// })
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("testimonials");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1} 
+  slides[slideIndex-1].style.display = "block"; 
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+})
 
-</script>
+</script> --> 
 </body>
 </html>
