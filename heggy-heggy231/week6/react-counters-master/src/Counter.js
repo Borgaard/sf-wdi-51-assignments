@@ -9,6 +9,7 @@ class Counter extends Component {
   };
 
   render() {
+    debugger;
     return (
       <div className="Counter">
         <h4>Counter: 0</h4>
