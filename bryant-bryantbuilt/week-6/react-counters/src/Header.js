@@ -1,16 +1,26 @@
 import React, { Component } from "react";
+import App from './App'
 import CounterList from './CounterList';
 
 class Header extends Component {
 
-  render() {
-    return (
-      <header className="App-header">
-        <h1 className="App-title">React Counters</h1>
-        <button onClick={CounterList.addCounter}>+</button>
-        <button onClick={CounterList.removeCounter}>-</button>
-      </header>
-    );
+    addACounter = () => {
+      this.props.addCounter();
+    }
+
+    removeACounter = () => {
+      this.props.removeCounter();
+    }
+
+    render() {
+      return (
+        <header className="App-header">
+          <h1 className="App-title">React Counters</h1>
+          <button onClick={this.addACounter}>+</button>
+          <button onClick={this.removeACounter}>-</button>
+        </header>
+        
+      );
   }
 }
 
