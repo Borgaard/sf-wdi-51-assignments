@@ -45,6 +45,8 @@ next();
 // when the user is at the root route, send back hello world in the browser
 app.get('/', (req, res) =>  {
 res.sendFile('views/index.html' , { root : __dirname});
+console.log('req = ', req);
+console.log('res =', res);
 });
 
 app.get('/api/taquerias', (req,res) => {
