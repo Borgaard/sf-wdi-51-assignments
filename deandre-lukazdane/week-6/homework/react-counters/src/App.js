@@ -30,7 +30,7 @@ class App extends Component {
           countersCount={this.state.counters}
           increaseCounters={this.increaseCounters}
           decreaseCounters={this.decreaseCounters}
-          <CounterList counter={this.state.counters} />
+          <CounterList counters={this.state.counters} />
         </Header>
       </div>
     );

@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 
 class Header extends Component {
+  constructor() {
+    super();
+    this.increaseCounters = this.increaseCounters.bind(this);
+  }
   handleIncrement = () => {
     this.props.increaseCounters();
   };
   handleDecrement = () => {
-    this.props.decreaseCounters();
+    if (this.props.countersCount() > 0) {
+      this.props.decreaseCounters();
+    }
   };
   render() {
     return (
