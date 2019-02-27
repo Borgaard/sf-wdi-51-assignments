@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-
 class Header extends Component {
-  constructor() {
-    super();
-    this.increaseCounters = this.increaseCounters.bind(this);
-  }
+  // constructor(props) {
+  //   super();
+  //   this.increaseCounters = this.increaseCounters.bind(this);
+  // }
   handleIncrement = () => {
     this.props.increaseCounters();
   };
   handleDecrement = () => {
-    if (this.props.countersCount() > 0) {
+    if (this.props.countersCount > 0) {
       this.props.decreaseCounters();
     }
   };

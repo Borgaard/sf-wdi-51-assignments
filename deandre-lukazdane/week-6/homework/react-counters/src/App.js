@@ -12,7 +12,7 @@ import CounterList from "./CounterList";
 // };
 class App extends Component {
   state = {
-    counters: 0
+    counters: 5
   };
 
   increaseCounters = () => {
