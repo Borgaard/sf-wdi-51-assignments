@@ -6,7 +6,7 @@ class Header extends Component {
   };
 
   decrementCounter = () => {
-    this.props.countersCount > 0 ? this.props.decreaseCounters() : null;
+    this.props.decreaseCounters();
   };
 
   render() {

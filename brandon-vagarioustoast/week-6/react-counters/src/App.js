@@ -4,27 +4,27 @@ import CounterList from "./CounterList";
 
 class App extends Component {
   state = {
-    numberOfCounters: 0
+    numberOfCounters: this.props.data
   };
 
   increaseCounters = () => {
     let counters = this.state.numberOfCounters + 1;
     this.setState({
-      counters
+      numberOfCounters: counters
     });
   };
 
   decreaseCounters = () => {
     let counters = this.state.numberOfCounters - 1;
     this.setState({
-      counters
+      numberOfCounters: counters
     });
   };
   render() {
     return (
       <div className="App">
         <Header
-          countersCount={this.state.numberOfCounters}
+          countOfCounters={this.state.numberOfCounters}
           increaseCounters={this.increaseCounters}
           decreaseCounters={this.decreaseCounters}
         />
