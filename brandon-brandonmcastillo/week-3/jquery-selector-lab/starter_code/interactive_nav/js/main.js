@@ -6,10 +6,17 @@ $(document).ready(function() {
 //Target every subnav id and hide it according to section
 //Id and corresponding genre shows
 $('[data-related-panel]').on("click", function(){
+
 	var genre = $(this).data('related-panel');
+
 	$('#subnav').find('section').hide();
+
 	$('#'+ genre).show();
 })
 
+
+$('#main-nav').mouseout(function(event){
+    event.stopPropagation();
+});
 
 });
