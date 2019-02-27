@@ -1,32 +1,33 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import CounterList from "./CounterList";
-
+import CounterList from "./CounterList"
+//import Counter from "./Counter"
 class App extends Component {
-  state = {
-    counters: 0
+  constructor(){
+    super();
+    this.state = {
+      counters:0
+    }
+  }
+  increaseCounters = () =>{
+    let counters =  this.state.counters++;
+    this.setState({counters});
+  }
+  
+  decreaseCounters = () =>{
+    let counters =  this.state.counters - 1;
+    this.setState({counters});
   }
 
-  increaseCounters = () => {
-    let counters = this.state.counters + 1
-    this.setState({ counters })
-  }
-
-  decreaseCounters = () => {
-    let counters = this.state.counters - 1
-    this.setState({ counters })
-  }
-
-  // need to have numberOfCounters
   render() {
     return (
       <div className="App">
-        <Header 
-          countersCount={this.state.counters}
-          increaseCounters={this.increaseCounters} 
-          decreaseCounters={this.decreaseCounters} />
-        <CounterList 
-          counters={this.state.counters} />
+        <Header
+        CountersCount = {this.state.counters}
+        increaseCounters={this.increaseCounters} 
+        decreaseCounters={this.decreaseCounters} />
+
+        <CounterList counter={this.state.counters}/>
       </div>
     );
   }

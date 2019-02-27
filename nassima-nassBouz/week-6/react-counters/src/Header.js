@@ -1,30 +1,27 @@
 import React, { Component } from "react";
 
 class Header extends Component {
-  
-  handleIncrement = () => {
-    console.log("you pressed + !")
-    this.props.increaseCounters()
+  handleIncrease = () => {
+    console.log(this.props.increaseCounters())
+    this.props.increaseCounters();
+  };
+
+  handleDecrease = () => {
+   this.props.decreaseCounters();
   }
-
-  handleDecrement = () => {
-
-    this.props.countersCount > 0 ?
-      this.props.decreaseCounters():
-      null
-  }
-
   render() {
-
-
     return (
       <header className="App-header">
         <h1 className="App-title">React Counters</h1>
-        <button onClick={ this.handleIncrement }>+</button>
-        <button onClick={ this.handleDecrement }>-</button>
+        <button onClick={this.handleIncrease}>+</button>
+        <button onClick={this.handleDecrease}>-</button>
       </header>
     );
   }
 }
 
 export default Header;
+
+// CountersCount = {this.state.counters}
+// increaseCounters={this.increaseCounters} 
+// decreaseCounters={this.decreaseCounters} />

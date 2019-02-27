@@ -1,32 +1,27 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  // need to have counter value (0,1,2,-3)
-
-  state = {
-    count: 0
-  }
-
-  increment = () => {
-    let newCount = this.state.count + 1
-    this.setState({
-      count: newCount
-    })
-  }
-  
-  decrement = () => {
-    let newCount = this.state.count - 1
-    this.setState({
-      count: newCount
-    })  
-  }
+    constructor() {
+        super();
+    this.state = {
+        count : 0
+    };
+}
+    incrementCount = () =>{
+        let count =  this.state.count + 1;
+        this.setState({count});
+    }
+    decrementCount = () =>{
+        let count =  this.state.count - 1;
+        this.setState({count});
+    }
   render() {
-
+    console.log(this.state.count);
     return (
-      <div className='Counter' >
-        <h4>Counter: {this.state.count}</h4>
-        <button onClick={this.increment}>Increment</button>
-        <button onClick={this.decrement}>Decrement</button>
+      <div className="Counter">
+        <h4>Counter : {this.state.count}</h4>
+        <button onClick={this.incrementCount}>Increment</button>
+        <button onClick={this.decrementCount}>Decrement</button>
       </div>
     );
   }
