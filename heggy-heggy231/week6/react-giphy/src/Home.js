@@ -8,6 +8,7 @@ class Home extends Component {
       <main>
         <h1>Hello World! Heggy here</h1>
         <section>
+          {/* Import & render the Search file to your Home file. */}
           <Search />
         </section>
       </main>
