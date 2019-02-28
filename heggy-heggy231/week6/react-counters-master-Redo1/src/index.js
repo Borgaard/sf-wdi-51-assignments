@@ -8,4 +8,7 @@ const data = {
   counters: 5
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// pass data is just a variable (I can change it anything I want!) into App
+//   remember wrap it again with one more {  }
+//   this says I am writing in JS! { {counters: 5} }
+ReactDOM.render(<App data = { {counters: 5} }/>, document.getElementById("root"));
