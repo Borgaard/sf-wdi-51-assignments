@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import NavBar from './Navbar/Navbar'
 import Index from './Index/Index'
 import Footer from './Footer/Footer'
-// import Blog from './Blog/Blog'
+import Blog from './Blog/Blog'
+import {Switch, Route} from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -10,10 +11,13 @@ class App extends Component {
       <div>
       <NavBar />
       {/* <Blog /> */}
-      <Index />
+      {/* <Index /> */}
 
+      <Switch>
+        <Route exact path='/' component={Index}></Route>
+        <Route path='/blog' component={Blog}></Route>
+      </Switch>
       <Footer />
-      
 
       </div>
     );
