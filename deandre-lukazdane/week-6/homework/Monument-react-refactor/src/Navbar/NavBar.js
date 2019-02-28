@@ -16,8 +16,8 @@ class NavBar extends Component {
             <a href="index.html#gallery">Gallery</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
-          </li>
+            <a href="blog.htmcsl">Blog</a>
+          </li>cs
           <li>
             <a href="index.html#contact">Contact</a>
           </li>
