@@ -10,3 +10,6 @@ class App extends Component {
     );
   }
 }
+
+// remember to export making it public
+export default App;
