@@ -1,14 +1,14 @@
 // Developer TODO: Define App component defintion here
 import React, { Component } from "react";
 import "./App.css";
-import Search from "./Search";
+import SearchContainer from "./SearchContainer";
 
 export class Home extends Component {
   render() {
     return (
       <div>
         <h1>Giphy Search</h1>
-        <Search />
+        <SearchContainer />
       </div>
     );
   }
