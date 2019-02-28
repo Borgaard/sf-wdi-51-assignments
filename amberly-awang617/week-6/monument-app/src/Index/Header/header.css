@@ -1,7 +1,7 @@
 /* ----------------------------------------
 Header
 ------------------------------------------- */
-header {
+#index-Header {
 	background-image: url('./home_header_bg.jpg');
 	background-attachment: fixed;
 	height: 100vh;
