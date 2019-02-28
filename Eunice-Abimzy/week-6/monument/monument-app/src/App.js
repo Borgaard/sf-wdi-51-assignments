@@ -8,6 +8,7 @@ import Gallery from './Gallery';
 import Contact from './Contact';
 import Footer from './Footer';
 
+
 class  Monument extends Component {
   render() {
     return (
