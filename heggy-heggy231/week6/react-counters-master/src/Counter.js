@@ -5,14 +5,39 @@ import React, { Component } from "react";
 // Counter component to keep track of the count in state
 class Counter extends Component {
   state = {
+    // state is where we declare variable and change this
+    // nor var let const just put the var name
     count: 0
   };
+
+  // 
+  increaseCount = () => {
+    //let count = this.state.count + 1;
+    console.log(`clickedIncrease?`);
+    this.setState({
+      count:this.state.count + 1
+    });
+  }
+
+  decreaseCount = () => {
+    //let count = this.state.count - 1;
+
+    this.setState({
+      count:this.state.count - 1
+    });
+  }
+
 
   render() {
     debugger;
     return (
       <div className="Counter">
-        <h4>Counter: 0</h4>
+        {/* where do I want my var inside of HTML how to get variable?? 
+            user the state variable to get the counter number
+        */}
+  
+
+        <h4>Counter: { this.state.count }</h4>
         {/* <button>Decrement</button> */}
         <button onClick={this.increaseCount}>Increment</button>
         {/* <button>Increment</button> */}
@@ -21,21 +46,6 @@ class Counter extends Component {
     );
   }
 
-  increaseCount = () => {
-    let count = this.state.count + 1;
-
-    this.setState({
-      count
-    });
-  }
-
-  decreaseCount = () => {
-    let count = this.state.count - 1;
-
-    this.setState({
-      count
-    });
-  }
 }
 
 //  make counter available

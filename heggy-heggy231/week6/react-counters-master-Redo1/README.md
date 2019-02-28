@@ -2,6 +2,13 @@ Demo:
 http://react-counter.surge.sh/
 
 
+- hw code lives here
+https://git.generalassemb.ly/sf-wdi-51/react-counters/tree/master
+
+- how to install the exercise counter
+https://git.generalassemb.ly/sf-wdi-51/react-state-and-props#exercise-react-counters
+
+
 # React Counters
 
 By building this simple application, we'll explore the concepts of state, the differences between props and state and how we can change state from within a component using events.
@@ -15,11 +22,6 @@ npm install
 npm run start
 ```
 
-- hw code lives here
-https://git.generalassemb.ly/sf-wdi-51/react-counters/tree/master
-
-- how to install the exercise counter
-https://git.generalassemb.ly/sf-wdi-51/react-state-and-props#exercise-react-counters
 
 # State and Data-flow
 
