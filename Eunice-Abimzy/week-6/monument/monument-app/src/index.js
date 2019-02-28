@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import './index.css';
 import Monument from './App';
-// import Blog from './Blog/Blog';
 import * as serviceWorker from './serviceWorker';
 
 
-ReactDOM.render(<Monument />, document.getElementById('root'));
+ReactDOM.render(
+    <Router>
+        <Monument />
+    </Router>,
+document.getElementById('root'));
 
 // ReactDOM.render(<Blog />, document.getElementById('root'));
 
