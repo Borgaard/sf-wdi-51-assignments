@@ -4,6 +4,7 @@ class Home extends Component {
   render() {
     return (
       <main>
+        <h1>Hello World! Heggy here</h1>
       </main>
     );
   }
