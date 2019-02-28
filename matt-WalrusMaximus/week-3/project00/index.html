@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>WalrusMaximus, the web development pinniped</title>
+</head>
+<body>
+    <!-- Things I want:
+        [x] Sticky header with scalable responsive design
+        [x] sticky footer with copywrite nonsense, remove in lower width applications
+        [x] click nav header
+        [x] fancy colors
+        [x] 4 sections - About me, Projects/portfolio, testimonials, contact form
+        [] photo carosel with zoomy fullscreeny thing -->
+
+        <header>
+            <span id="title"><h1>WalrusMaximus</h1><h2>the web development pinniped</h2></span>
+            <nav id="nav-wrapper">
+                <a href="#" class="nav" id="about">About</a>
+                <a href="#" class="nav" id="projects">Projects</a>
+                <a href="#" class="nav" id="testimonials">Testimonials</a>
+                <a href="#" class="nav" id="contact">Contact</a>
+                <a href="#" id="hamburger"><p class="fa fa-bars"></p></a>
+            </nav>
+        </header>
+
+                    <!-- end header -->
+                    <!-- start main sections -->
+
+        <main>
+            <section class="aboutSection parallax" id="aboutScroll">
+                <div class="name-wrapper">
+                    <div class="image-wrapper"></div>
+                        <img class="walrusImg" id="walrus" src="images/walrus.jpg" alt="The Majestic Walrus">
+                        <img class="walrusImg" id="actualWalrus" src="images/actual_walrus.jpg" alt="The Actual Majestic Walrus">
+                    </div>
+                    <div class="name-wrapper">
+                    <h3>WalrusMaximus</h3>
+                    <p>Web Developer, Problem Solver, Walrus</p>
+                    </div>
+                </div>
+                <div class="about-wrapper">
+                    <h4>About</h4>
+                    <p>I need to level with you... I'm not actually a walrus! I am a human from the mountains of Colorado. I grew up in one of the highest elevation towns in the country at about 9000 feet. 
+                        I spent my formative years sledding down icy roads, accidentally hiking into minefields near NORAD, playing football (terribly) or wrestling (really well). I am a decent trap shooter, excellent swimmer, and can almost always tell you who "the guy in that one movie" was.
+                    </p>
+                </div>
+            </section>
+            <section class="projectsSection" id="projectsScroll">
+                    <!-- projects carousel goes here -->
+                    <h3>Projects (Actually concerts I really liked)</h3>
+                <div class="photos">
+                    <div class="photo-box" id="photo1">
+                        <h5>Havok</h5>
+                        <img src="images/photo1.jpg" alt="Havok">
+                    </div>
+                    <div class="photo-box" id="photo2">
+                        <h5>Behemoth</h5>
+                        <img src="images/photo2.jpg" alt="Behemoth">
+                    </div>
+                    <div class="photo-box" id="photo3">
+                        <h5>Amon Amarth</h5>
+                        <img src="images/photo3.jpg" alt="Amon Amarth">
+                    </div>
+                    <div class="photo-box" id="photo4">
+                        <h5>Alestorm</h5>
+                        <img src="images/photo4.jpg" alt="Alestorm">
+                    </div>
+                    <div class="photo-box" id="photo5">
+                        <h5>Slayer</h5>
+                        <img src="images/photo5.jpg" alt="Slayer">
+                    </div>
+                </div>
+                <div id="photoSelector">
+                    <div class="photoButton activeButton" id="button1">
+                    </div>
+                    <div class="photoButton" id="button2">
+                    </div>
+                    <div class="photoButton" id="button3">
+                    </div>
+                    <div class="photoButton" id="button4">
+                    </div>
+                    <div class="photoButton" id="button5">
+                    </div>
+                </div>
+
+            </section>
+            <section class="testimonialsSection parallax" id="testimonialsScroll">
+                    <!-- quotes slideshow goes here -->     
+                    <h4>What people are saying about me</h4>
+                    <div class="testimonials">
+                        <div id="quote1"><blockquote>"He's literally the worst. Except for Greg."</blockquote><p>&mdash;  Emily, housemate</p></div>
+                        <div id="quote2"><blockquote>"Sir, your order is ready."</blockquote><p>&mdash;  Erika, In-N-Out Burger</p></div>
+                        <div id="quote3"><blockquote>"You gotta love how George Kittle is simultaneously sinking your fantasy season and the Broncos season in one game."</blockquote><p>&mdash;  Greg, actually the worst</p></div>
+                        <div id="quote4"><blockquote>"He is the best. If anyone says otherwise I'll fight them."</blockquote><p>&mdash;  Brandy, space lawyer</p></div>
+                    </div>
+            </section>
+            <section class="contactSection" id="contactScroll">
+                <h4>Get in touch with me</h4>
+                    <div class="contact">
+                        <form class="contactWrapper">
+                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" name="email" placeholder="Email Address">
+                            <input type="text" name="phone" placeholder="Phone Number">
+                        </form>
+                        <form class="messageWrapper">
+                            <input type="textarea" name="message" placeholder="Message" cols="50" rows="4" wrap="hard">
+                        </form>
+                        <form class="submitWrapper">
+                            <input type="submit" value="Send">
+                        </form>
+                    </div>
+            </section>
+        </main>
+
+                    <!-- end main sections -->
+                    <!-- start footer -->
+
+        <footer>
+            <p>&copy;2019 WalrusMaximus</p>
+            <p>git: WalrusMaximus</p>
+        </footer>
+
+                    <!-- end footer -->
+
+                    <!-- scripty boys -->
+                    
+    <script src="jquery-3.3.1.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- here be dragons -->
