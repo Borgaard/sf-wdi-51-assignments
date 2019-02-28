@@ -4,18 +4,48 @@ import Header from "./Header";
 import CounterList from "./CounterList";
 
 class App extends Component {
+
+  state = {
+    counter: 0,
+  }
+
+  increaseCount = () => {
+    let counter = this.state.counter + 1;
+
+    this.setState({
+      counter
+    });
+  }
+
+  decreaseCount = () => {
+    let counter = this.state.counter -1;
+
+    this.setState({
+      counter
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header 
+        increaseFunction = {
+  // presentational components (header b/c it has no state) behavior by passing callback functions (this.increaseCount) to header as props
+          this.increaseCount
+        } 
+
+        decreaseFunction = {
+  // presentational components (header b/c it has no state) behavior by passing callback functions (this.increaseCount) to header as props
+          this.decreaseCount
+        }
+        />
         {/* passing 5 to counterList */}
         <CounterList appdata =
         // put into obj with key value counters: 5  
         {
-          {appCounters: this.props.data.counters}
+          {appCounters: this.state.counter}
         } />
-  {/* receiving data from  index.js hard coded data 5 */}
-        <p> { this.props.data.counters } </p>
+
       </div>
     );
   }
