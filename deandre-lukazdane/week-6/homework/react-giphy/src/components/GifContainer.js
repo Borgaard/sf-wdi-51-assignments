@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import GifCard from "../GifCard/GifCard";
+import Search from "./Search";
+import GifCard from "./GifCard";
 
 class GifContainer extends Component {
   render() {
     return (
       <div>
-        <p>This is where the card goes</p>
-        <GifCard />
+        <Search />
+        <div>{GifCard}</div>
       </div>
     );
   }
 }
-
 export default GifContainer;
