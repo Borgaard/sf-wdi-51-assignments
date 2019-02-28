@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class About extends Component {
     render (){
         return (
-            <section id="about" class="callout about">
+    <section id="about" class="callout about">
 		<article class="wrap">
 			<h2>About The Magazine</h2>
 			<h3>A Lifestyle Magazine Crafted with Love</h3>
