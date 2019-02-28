@@ -1,0 +1,104 @@
+body {
+  background: #3f9e7b;
+  display: flex;
+  flex-direction: column;
+  font-family: "Alegreya", serif;
+  font-size: 15px;
+  margin: 0 15% 5% 15%;
+  max-height: 100%;
+  width: auto;
+  text-align: center;
+}
+
+header {
+  margin: 5px;
+  text-align: center;
+}
+
+h1, p {
+  color: #2b1102;
+  margin: 0;
+  padding: 3px;
+}
+
+button {
+  background-color: #edc112;
+  border: none;
+  color: #2b110;
+  font-family: "Alegreya", serif;
+  margin: .5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: .9em;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-around;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+.background {
+  border: 5px solid #543904;
+  height: auto;
+  width: 100%;
+}
+
+#piece-1, #piece-2 {
+  height: auto;
+  position: absolute;
+}
+
+#piece-1 {
+  top: 25%;
+  left: 1%;
+  width: 9%;
+}
+
+#piece-2 {
+  top: 50%;
+  width:12%;
+}
+
+#piece-1 img, #piece-2 img {
+  height: auto;
+  width: 100%;
+}
+
+.message {
+  background: #4d683c;
+  border: 7px solid #896208;
+  color: #2b1102;
+  display: none;
+  height: 55%;
+  left: 27.5%;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  width: 45%;
+}
+
+.isabelle img {
+  width: 50%;
+  height: auto;
+}
+
+.villager img {
+  width: 70%;
+  height: auto;
+}
+
+#finish {
+  border-left: 2px solid #d68233;
+  height: 100%;
+  left: 85%;
+  position: absolute;
+}

@@ -1,0 +1,58 @@
+/* Global styles */
+
+/* Body styles */
+body {
+  font-family: Veranda, sans-serif;
+  color: #44545E;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  margin: 0 10%;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: #7B98AA;
+}
+
+/* Headings */
+
+h1 {
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+footer {
+  background: #CDF3F6;
+  overflow: auto;
+  text-align: center;
+}
+
+footer a {
+  color: #44545E;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin:auto;
+
+}
+
+header {
+  background-image: url('../images/home_header_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-bottom: 48px;
+  margin-top: 80px;
+}
+nav {
+position: absolute;
+display: flex;
+justify-content:center;
+}
+nav ul {
+  color:#7B98AA;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+h1 {
+  color: white;
+  margin-top: 70px;
+}
+
+.articles {
+display: flex;
+justify-content: center;
+align-items: center;
+display: flex;
+padding: 20px;
+}
+
+.magazine {
+  background-color: #CDF3F6;
+  align-content: center;
+  box-shadow: white;
+  display: flex;
+  text-align: center;
+
+}
+.magazine p {
+  display: flex;
+  text-align: center;
+  width:90%;
+  padding-top: 40px;
+}
+h1 a,
+h1 a:hover,
+header h2 {
+  color: #fff;
+
+}
+
+/* ----------------------------------------
+Comment Form
+------------------------------------------- */
+.form-wrapper {
+  flex-direction: row;
+}
+/* ----------------------------------------
+Buttons
+------------------------------------------- */
+button,
+input[type="submit"] {
+  cursor: pointer;
+  outline: 0;
+  border: 2px solid #44545E;
+  color: #44545E;
+  padding: 8px 25px;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  transition: all .3s ease-in-out;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #44545E;
+  color: white;
+  font-weight: 600;
+}
+
+.articles button {
+  margin-top: 30px;
+}
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+footer {
+  background-color: #CDF3F6;
+  overflow: auto;
+}
+
+footer .wrap {
+  padding: 30px 15px;;
+}
+
+.social-links a {
+  font-size: 30px;
+  padding: 15px;
+  margin-bottom: 0;
+  display: inline-block;
+  color: #44545E;
+}
+
+input[type="email"] {
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  margin-right: 20px;
+  padding: 10px 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+}
+.form-wrapper {
+  display:  flex;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+}
+
+.copyright {
+  border-top: 2px solid #44545E;
+  padding: 15px 0 3px;
+}
+
+@media (min-width: 600){
+  p {
+    font-size:1.25em;
+    width: 100%;
+  }
+}
+@media ( min-width: 800){
+  p {font-size: 1.5rem;
+    width: 100%;
+    line-height: 1.5;
+  }
+
+}

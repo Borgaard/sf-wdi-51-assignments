@@ -1,0 +1,299 @@
+/* main fonts Kaushan Script from google font by clicking on import tab @IMPORT*/
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+/* setting custom property for color; all color we are referring it as variable var(--mainPink)*/
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+body {
+  font-family: "Kaushan Script", cursive;
+  /* custom color property apply using var(custom property name) */
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+}
+/* global styles */
+.btn-pink {
+  color: var(--mainPink) !important;
+  border-color: var(--mainPink) !important;
+}
+.btn-black {
+  color: var(--mainBlack) !important;
+  border-color: var(--mainBlack) !important;
+}
+.btn-black:hover {
+  color: var(--mainPink) !important;
+  background: var(--mainBlack) !important;
+}
+/* this style btn pink for cart */
+.btn-pink:hover {
+  color: var(--mainBlack) !important;
+  background: var(--mainPink) !important;
+}
+/* -------------- nav links -------------- */
+/* when click on the button of hamburger icon: I can see the blue outline around the box getting rid of that outline*/
+.navbar-toggler {
+  /* since button click outline is coming from bootstrap
+  I need to add !important to override it */
+  outline: none !important;
+}
+/* actual hamburger from the font awesome */
+.toggler-icon {
+
+  font-size: 2.5rem; /* 1 rem = 16 px (2.5 rem * 16 px = 40px */
+  /* Note about rem values: when user uses 18px for root font in their browser; my website is responsive! we are adjusting to the user's value*/
+  /* color name from custom property of top of this file */
+  color: var(--mainPink);
+}
+.nav-link { /* link for home, about, store, services, order */
+  color: var(--mainPink);
+  /* transition: all 1s ease-in-out; */
+  transition: 1s;
+  font-size: 1.5rem;
+}
+/* we hover over each links */
+.nav-link:hover {
+  color: var(--mainBlack);
+}
+
+/* ---------- cart styles ------------ */
+/* icon of cart only */
+.cart-info__icon {
+  color: var(--mainBlack);
+  /* when hover over cart I want finger pointing */
+  cursor: pointer;
+}
+.cart-info {
+  /* border: width type of border colors */
+  border: 0.1rem solid var(--mainBlack);
+  color: var(--mainBlack);
+  /* rounded box border */
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+.cart-info:hover {
+  /* when hover border, background turns color */
+  background: var(--mainPink);
+  border-color: var(--mainPink);
+  color: var(--mainWhite);
+}
+/* turn cart icon color to white */
+.cart-info:hover .cart-info__icon {
+  color: var(--mainWhite);
+}
+/* background photo */
+.max-height {
+  /* centering the banner text  
+      min-height: regardless screen sz 
+        make it at least this screen size 100vh (viewheight) 
+      viewheight: we can set % of the window
+        which is responsive unit
+  */
+  /* min-height: 100vh; */
+  /* when calc function always put space inbtn operator minus otherwise doens't work! */
+  /* 100vh minus nav bar height (when you click on entire nav navbar navbar-expand-lg px-4, you can see it is 76px) */
+  min-height: calc(100vh - 76px);
+  /* 50%vh only take up 50% view height*/
+  /* min-height: 50vh;  */ 
+  /* add background to see the effect*/
+  /* linear-gradient(top > bottom)  for same color for all it which top or bottomr doesn't matter 
+      first color: yellowTrans 
+  */
+  background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url(../img/headerBcg.jpeg);
+  background-position: center;
+  /* cover: regardless of parent container bckgnd img will cover */
+  background-size: cover;
+  /* contain: img will be smaller I see it repeating */
+  /* background-size: contain;  */
+  /* background photo to be fixed make it parallax effect */
+  background-attachment: fixed;
+  /* if background img is too small img may repeat to fill the rest of the viewport.  prevent it by no-repeat */
+  background-repeat: no-repeat;
+  /* this is parent position setup for cart whi ch is position absolute.   cart needs parent container (background .maxheight) */
+  position: relative;
+  /* at this point I see scroll bar which means nav and background img is taking up more than 100%.  how do we make them take up only 100%?  we will update the ming-height upthere!*/
+}
+.banner {
+  color: var(--mainWhite);
+  /* margin-top: -4rem; */
+}
+.banner-title {
+  color: var(--mainPink);
+  font-size: 4rem;
+}
+.banner-link {
+  font-size: 1.5rem;
+  color: var(--mainBlack);
+  border: 0.2rem solid var(--mainBlack);
+}
+/* .bnner-link is button in bootstrap which has default hover effect */
+.banner-link:hover {
+  background: var(--mainBlack);
+  color: var(--mainPink);
+}
+/* about section */
+.about-img__container {
+  /* setting position rel. so outline pseudo element could position itself on this parent container */
+  position: relative;
+}
+.about-img__container::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  /* show up right side if you put positive */
+  /* left: 1.7rem; */
+  left: -1.7rem;
+  /* be responsive add 100% */
+  width: 100%;
+  height: 100%;
+  /* display outline of the about img 
+    outline is similar to border except it can outline outside of img (neg position) 
+  */
+  outline: 0.5rem solid var(--mainYellow);
+  z-index: -1;
+  transition: all 1s linear;
+}
+.about-img__container:hover:before {
+  top: 0;
+  left: 0;
+}
+/* store */
+.store {
+  background: var(--mainGrey);
+}
+.search-box {
+  background: var(--mainPink);
+  color: var(--mainBlack);
+}
+/* store item img with shopping cart  */
+.single-item {
+  transition: all 0.3 linear;
+}
+/* add box shadow when hovering box-shadow: x-val y-val blur:15px whatColor?black 000*/
+.single-item:hover {
+  box-shadow: 0 10px 15px rgb(0, 0, 0);
+}
+/* img that is holding the store item card and shopping cart (img container mom > cart is kid)*/
+.img-container {
+  position: relative;
+  /* when img zooms in we make sure it stays inside the img container. hide the overflowing img */
+  overflow: hidden;
+  cursor: pointer;
+}
+/* store-img is inside of img-container */
+.store-img {
+  transition: all 1s ease-in-out;
+}
+/* when hovering over img-container I want to zoom in store-img and make it happen over time (above transition is doing the easing) */
+.img-container:hover .store-img{
+  /* scale( <1:minimizing, >1:zoom-in make it big!) */
+  transform: scale(1.2);
+}
+.store-item-icon {
+  /* icon is relatively position to the parent img-container */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainYellow);
+  /* round the corner of icon box top left */
+  border-top-left-radius: 1rem;
+  /* shopping cart icon appears over time */
+  transition: all 1s ease-in-out;
+  /* hide the cart until user hovers over the img container */
+  /* translate 100% move cart right, down 100% this shifts icon out of the screen */
+  /* cart icon as default is unshifted out of screen */
+  transform: translate(100%, 100%);
+}
+/* when I hover over img container I want to unshift the cart icon into the img container */
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+/* change the icon color when hover */
+.store-item-icon:hover {
+  color: var(--mainWhite);
+}
+/* services */
+.services {
+  /* font color tobe white */
+  color: var(--mainWhite);
+  /*
+  short hand for:
+    /* cover: regardless of parent container bckgnd img will cover */
+    /* background-size: cover; */
+    /* contain: img will be smaller I see it repeating */
+    /* background-size: contain;  */
+    /* background photo to be fixed make it parallax effect */
+    /* background-attachment: fixed; */
+    /* if background img is too small img may repeat to fill the rest of the viewport.  prevent it by no-repeat */
+    /* background-repeat: no-repeat; 
+  */
+  /* rgba( last value is transparency. if 1 = not transparent opague) and don't forget the comma after the linear-gradient!!! */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/servicesBcg.jpeg')center/cover fixed no-repeat;
+}
+.service-title {
+  /* space btwn each letter */
+  letter-spacing: 0.5rem;
+}
+.service-text {
+  /* space btwn words */
+  word-spacing: 0.5rem;
+}
+/* footer */
+.footer-title {
+  background: var(--mainBlack);
+}
+.footer-contact {
+  background: var(--mainGrey);
+}
+.footer-icon {
+  /* icon bigger! */
+  font-size: 1.5rem;
+  /* font color white */
+  color: var(--mainWhite);
+  transition: all 0.4 ease-in-out;
+}
+.footer-icon:hover {
+  color: var(--mainPink);
+}
+/* cart */
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  /* cart to have bit of transparency */
+  background: rgba(255, 255, 255, 0.5);
+  /* cart needs to be on top right corner */
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  /* cart by default hidden */
+  width: 0;
+  overflow: hidden;
+}
+.show-cart {
+  /* width of cart window */
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+}
+.cart-item-remove {
+  color: var(--mainPink);
+  transition: all 1s ease-in-out;
+}
+.cart-item {
+  transition: all 2s ease-in-out;
+}
+.cart-item-remove:hover {
+  /* trashcan icon gets little bigger */
+  transform: scale(1.1);
+  color: var(--mainBlack);
+}
+.cart-item-price {
+  font-size: 0.8rem;
+}

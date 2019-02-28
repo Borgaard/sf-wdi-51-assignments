@@ -1,0 +1,109 @@
+body,
+html {
+    max-height: 100%;
+}
+
+html {
+    background: url('../images/mountain.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-top: 500px;
+    text-align: center;
+    margin: auto 0;
+    overflow: hidden;
+}
+
+h6 {color: white;
+      font-family: helvetica;
+      margin-top: 60px;
+    text-align: center;}
+
+.title {
+    padding: 10px;
+}
+
+/* MUSIC  */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music {
+    font-size: 30px;
+    color: white;
+    background-color: goldenrod;
+    font-family: 'bangers', 'sans-serif';
+    border-radius: 80px;
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+button {  }
+
+
+/* STYLES */
+
+p {
+    font-family: 'Bangers', 'sans-serif';
+    display: inline;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+}
+
+/* INSTRUCTION TAGS */
+.instructOne,
+.instructTwo {
+    border: 1px solid darkgoldenrod;
+    background: darkgoldenrod;
+    display: inline;
+    padding: 10px 10px;
+    margin: 200px;
+}
+
+/* GAUNTLET IMAGE */
+.gem {
+    width: 160px;
+    position: fixed;
+    right: 10px;
+    top: 16em;
+}
+
+/* GAME ROAD */
+.gameArea td {
+    position: relative;
+    width: 500px;
+    height: 100px;
+/* border: 1px solid grey; Outline of Track */
+}
+
+/* PLAYER 1 THANOS */
+.gameArea td.marvel1 {
+    height: 150px;
+    background-image: url("../thanos.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/* PLAYER 2 SPIDERMAN */
+.gameArea td.marvel2 {
+    height: 150px;
+    background-image: url("../Spidey.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+

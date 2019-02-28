@@ -1,0 +1,249 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+
+nav {
+  background: #24292d;
+}
+
+nav a:hover {
+  color: limegreen;
+  text-shadow: 0 1px 2vw limegreen;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.banner {
+  height: 50vh;
+  padding: 1rem;
+  background: url(../images/backgroundbanner.jpg);
+  background-color: grey;
+  background-size: cover;
+}
+
+.banner-inner{
+  position: relative;
+  top: 11rem;
+  left: 4rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 2px 1vw #24292d;
+}
+
+h3 {
+  color: white;
+  text-shadow: 0 1px 2vw #24292d;
+}
+
+.main-content{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  position: relative;
+}
+
+.photo {
+  grid-column: 1 / 5;
+}
+
+.photo img {
+  margin-left: 2rem;
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+#intro {
+  font-size: 1.1rem;
+  padding: 2rem 4rem;
+  grid-column: 5 / 13;
+}
+
+#intro a {
+  color: limegreen;
+}
+
+#code {
+  background: #24292d;
+  grid-column: 1 / 13;
+}
+
+#code h2 {
+  text-align: center;
+  padding-left: 2rem;
+  color: white;
+  text-shadow: 0 1px 2vw limegreen;
+}
+
+.carousel {
+  padding-bottom: 2rem;
+}
+
+.carousel .carousel-item {
+  top: -7rem;
+}
+
+img {
+  border: solid 1px limegreen;
+}
+
+#testimonials {
+  grid-column: 1 / 6;
+}
+
+#testimonials h2 {
+  text-align: center;
+  padding-left: 2rem;
+  color: black;
+  text-shadow: 0 1px 2vw limegreen;
+}
+
+.testimonial {
+  margin-left: 2rem;
+}
+
+.slider .slides {
+    background: #24292d;
+    margin-left: 2rem;
+  }
+
+#contact {
+  grid-column: 7 / 13;
+}
+
+#contact h2 {
+  text-align: center;
+  padding-left: 1rem;
+  color: black;
+  text-shadow: 0 2px 2vw limegreen;
+}
+
+form {
+  padding-top: 1rem;
+}
+
+#contact .row {
+  width: 80%;
+}
+
+.submit-button button {
+  margin-top: 2rem;
+  background: #24292d;
+}
+
+.submit-button button:hover {
+  background: limegreen;
+}
+
+footer {
+  height: 15vh;
+  background: #24292d;
+}
+
+footer p {
+  padding-left: 1rem;
+  color: lightgrey;
+}
+
+.footer {
+  margin-top: 6rem;
+  padding-top: .5rem;
+  display: flex;
+  align-items: ;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-floating, .btn-floating:hover {
+  background-color: #24292d;
+}
+
+.footer i {
+  color: white;
+  background-color: #24292d;
+}
+
+.footer i:hover {
+ text-shadow: 0 1px 1vw limegreen;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 689px){
+
+  .banner{
+    height: 30vh;
+  }
+
+  .banner-inner {
+    top: 5rem;
+    left: 2.3rem;
+  }
+
+  h1 {
+    margin-bottom: -1rem;
+  }
+
+  h1, h3 {
+    font-size: 2.3rem;
+  }
+
+  figure {
+    display: block;
+    grid-column: 1 / 13;
+  }
+
+  .photo img {
+   display: none;
+  }
+
+  #intro {
+    grid-column: 1 / 13
+  }
+
+/*Collapse bottom divs*/
+  #testimonials {
+    float: none;
+    display: block;
+    grid-column: 1 / 13;
+    border-bottom: solid black 2px;
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  #contact {
+    margin-top: .5rem;
+    display: block;
+    grid-column: 1 / 13;
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 430px){
+
+  #intro {
+    max-height: 40%;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+body {
+  box-sizing: border-box;
+}
+
+
+header {
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  font-family: Lato, sans-serif;
+  font-size: 43px;
+  letter-spacing: .3em;
+  color: white;
+}
+
+p {
+  font-weight: 500;
+  font-style: 1.5em;
+  font-size: 1.5em;
+  font-family: Raleway, sans-serif;
+  color: orange;
+  box-shadow: currentColor;
+}
+
+main {
+background-image: url('./img/footballfield.jpg');
+background-position: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 100px;
+  border: solid deepskyblue;
+  max-width: 20%;
+  max-height: 20%;
+  background: black;
+  margin: 30px 0;
+}
+
+footer {
+  background: black;
+  padding: 2em;
+  margin-top: -23px;
+}
+
+footer h4 {
+  font-family: Lato, sans-serif;
+  color: forestgreen;
+}
+
+
+#odell {
+  position: relative;
+  left: 0;
+}
+
+#joshNorman {
+  position: relative;
+  left: 0;
+}
+
+
+
+

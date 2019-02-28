@@ -1,0 +1,21 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  margin: 25px;
+  background-color: blue;
+}
+
+.square-two {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  margin: 25px;
+}
+
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Brandon Johnson | Engineer</title>
+</head>
+<body>
+      <!-- NavBar -->
+
+  <nav class="nav-wrapper">
+    <a href="#" class="sidenav-trigger right" data-target="mobile-links">
+        <i class="fas fa-bars"></i>
+      </a>
+    <ul class="nav-items hide-on-med-and-down">
+      <li><a href="#">Home</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+      <!-- Dropdown -->
+
+  <ul class="sidenav" id="mobile-links">
+    <li><a href="#code">Code</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+      <!-- Banner -->
+
+  <div class="banner">
+    <div class="banner-inner">
+      <h1>Brandon Johnson</h1>
+      <h3><em>Web Engineer</em></h3>
+    </div></div>
+
+      <!-- Main Content -->
+
+  <main class="main-content">
+    <figure class="photo">
+      <img src="./images/portfolio_pic_circle.png" alt="photo">
+    </figure>
+      <section id="intro">
+        <p>I'm a software engineering apprentice with a passion for clean and efficient code.</p>
+        <p>If I'm not programming, I'm bingewatching a show a few seasons too late, reading, or playing with my <a target="_blank" href="https://www.instagram.com/pansydadobie/">dog</a> at the park.</p>
+        <p>My social media is bare, but you can find me on most popular platforms. A crisp e-mail is also acceptable.</p></section>
+    <section id="code">
+
+      <!-- Code Carousel -->
+
+      <h2>Code</h2>
+      <div class="carousel">
+          <a class="carousel-item">
+            <img class="materialboxed" data-caption="Sample exploratory app that leverages Marvel's API to bring in release data." width="250" src="./images/wonderapp.png" alt="Wonder App">
+          </a>
+          <a class="carousel-item">
+            <img class="materialboxed" src="http://www.yogasquared.com/wp-content/uploads/2018/01/portrait-placeholder-3-2-300x300.jpg" width="250" data-caption="App that showcases extravagant programming skills."  alt="">
+          </a>
+          <a class="carousel-item">
+            <img class="materialboxed" src="http://www.yogasquared.com/wp-content/uploads/2018/01/portrait-placeholder-3-2-300x300.jpg" width="250" data-caption="Another app that shows fundamentals." alt="">
+          </a>
+      </div>
+    </section>
+
+      <!-- Testimonial Carousel -->
+
+    <section id="testimonials">
+      <div>
+        <h2>Testimonials</h2>
+          <div class="slider">
+            <ul class="slides">
+              <li>
+                <div class="caption left-align">
+                  <h3>"He made our dreams reality."</h3>
+                  <h5 class="light grey-text text-lighten-3">Enoch Thompson</h5>
+                </div>
+              </li>
+              <li>
+                <div class="caption right-align">
+                  <h3>"Brandon's approach to problem-solving is phenomenal."</h3>
+                  <h5 class="light grey-text text-lighten-3">Jason Vorhees</h5>
+                </div>
+              </li>
+              <li>
+                <div class="caption center-align">
+                  <h3>"Brandon saved our company."</h3>
+                  <h5 class="light grey-text text-lighten-3">Bill Gates</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </section>
+
+      <!-- Contact Form -->
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="row">
+        <div class="col s12 l12">
+          <form action="">
+            <div class="input-field">
+              <input type="text" id="name">
+              <label for="email">Your Name</label>
+            </div>
+            <div class="input-field">
+              <input type="email" id="email">
+              <label for="email">Your E-mail</label>
+            </div>
+            <div class="input-field">
+              <textarea  id="message" class="materialize-textarea"></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <div class="submit-button center">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+             </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <ul class="footer">
+      <li>
+        <a href="https://github.com/vagarioustoast" target="_blank" class="btn-floating btn-med">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/brandon-johnson-77607abb/" target="_blank" class="btn-floating btn-med">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:johnsonbrandon647@gmail.com" target="_blank"class="btn-floating btn-med">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    </ul>
+    <p>&copy; 2019 Brandon Johnson</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

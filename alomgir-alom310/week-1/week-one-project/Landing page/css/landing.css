@@ -1,0 +1,47 @@
+header {
+  background-image: url('../images/home_header_bg.jpg');
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.about article{
+  max-width: 800px;
+  font-size: 17px;
+  font-size: 1em;
+  line-height: 1;
+}
+
+.about h2{
+  margin-bottom: 0;
+}
+
+.pictures{
+  column-count: 3;
+  width: 100%;
+}
+
+.pictures img {
+  cursor: pointer;
+  transition: all 3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  margin-bottom: 16px;
+}
+
+.pictures img:hover{
+  opacity: .6;
+}
+
+#gallery {
+  padding-bottom: 0;
+}
+
+#contact {
+  padding-top: 24px;
+  padding-top: 1.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .pictures {
+    column-count: 2;
+  }
+}

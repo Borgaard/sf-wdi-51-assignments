@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: darkgrey;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  color: white;
+}
+
+main div {
+  background-image: url("../images/blog_header_bg.jpg");
+}
+
+h2, h3 {
+  color: grey;
+}
+
+footer {
+  background-color: #C4FCFC;
+  text-align: center;
+  height: 200px;
+}
+
+.top-nav {
+
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.top-nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: darkgrey;
+  font-weight: 600;
+}
+
+.issues-nav ul li a {
+  text-decoration: none;
+  color: darkgrey;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.social {
+  margin: 20px;
+  border-bottom: 1px solid black;
+}

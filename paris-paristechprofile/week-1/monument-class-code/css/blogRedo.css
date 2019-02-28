@@ -1,0 +1,34 @@
+/*header*//*header*//*header*//*header*//*header*/
+.container{
+	margin:0em;
+}
+header {
+	background-image: url('../images/home_header_bg.jpg');
+	background-size: cover;
+	background-position: center;
+	padding-top: 6rem;
+	padding-bottom: 2.5rem;
+
+
+
+	/* If there is a background-image */
+	height: 40em;
+	margin-bottom: 4em;
+}
+header h2 {
+	font-size: 1em;
+	letter-spacing: 1em;
+	letter-spacing: 0.2rem;
+}
+
+h1 a {
+	display: flex;
+	color: #44545E;
+	color: white;
+	margin-top: 6em;
+	display: inline-block;
+}
+h4{
+	font-size: 1em;
+	text-align: center;
+}

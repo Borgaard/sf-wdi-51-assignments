@@ -1,0 +1,169 @@
+<!-- DO NOT MODIFY -->
+<!-- DO NOT MODIFY -->
+<!-- DO NOT MODIFY -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>jQuery Playground</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>The time is <span class="time">BROKEN</span></h1>
+
+        <div class="col-md-4">
+          <img class="img-thumbnail">
+        </div>
+        <div class="col-md-8">
+          <div class="alert alert-danger">Red Message</div>
+          <div class="alert alert-warning">Yellow Message</div>
+          <div class="alert alert-info">Blue Message</div>
+          <div class="alert alert-success">Green Message</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 well">
+          <div class="form-group">
+            <label for="question">Question:</label>
+            <div class="input-group">
+              <span class="input-group-addon" id="q-addon">
+                <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+              </span>
+              <input type="text" class="form-control" id="question" value="can you grab this text with jQuery?" placeholder="Username" aria-describedby="q-addon">
+            </div>
+          </div>
+          <div class="form-inline">
+            <input class="form-control add-me">
+            +
+            <input class="form-control add-me">
+            =
+            <input class="form-control" id="total" disabled>
+          </div>
+        </div>
+        <div class="col-md-offset-1 col-md-3 clearfix" id="chessboard">
+          <div class="row clearfix">
+            <div class="col-xs-1 square endangered"><span class="glyphicon glyphicon-queen red" aria-hidden="true"></span></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></span></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-king red" aria-hidden="true"></span></div>
+            <div class="col-xs-1 square"></div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-pawn red" aria-hidden="true"></span></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-pawn red" aria-hidden="true"></span></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-knight green" aria-hidden="true"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-pawn green" aria-hidden="true"></span></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-pawn green" aria-hidden="true"></span></div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-bishop red"></span></div>
+            <div class="col-xs-1 square"></div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-queen green" aria-hidden="true"></span></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"><span class="glyphicon glyphicon-king green" aria-hidden="true"></span></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+            <div class="col-xs-1 square"></div>
+          </div>
+          <p>It's red's move! Save the red queen!</p>
+        </div>
+      </div>
+
+      <!-- BEGIN CANARY IN THE COAL MINE -->
+      <div id="canary">
+        <h2>*BREAKING NOISE*</h2>
+        <div class="lead">Please read the error message in your Javascript Console</div>
+        <div class="form-inline">
+          <select class="form-control">
+            <option selected="true" disabled>What kind of error is it?</option>
+            <option name="SyntaxError">SyntaxError</option>
+            <option name="ReferenceError">ReferenceError</option>
+            <option name="TypeError">TypeError</option>
+            <option name="EvalError">EvalError</option>
+            <option name="URIError">URIError</option>
+          </select>
+          <input type="text" class="form-control" placeholder="What file is it in?">
+          <input type="number" class="form-control" placeholder="What line is it on?">
+        </div>
+      </div>
+      <!-- END CANARY IN THE COAL MINE -->
+
+      <!-- APPLICATION SCRIPTS -->
+      <script src="scripts/ignore-setup.js"></script>
+      <script src="scripts/challenge.js"></script>
+      <script src="scripts/ignore-evaluation.js"></script>
+    </div>
+  </body>
+</html>

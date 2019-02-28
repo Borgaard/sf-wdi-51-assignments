@@ -1,0 +1,131 @@
+
+/* background ----------------------------------------------------------------------------*/
+body {
+ background-color: #70783b;
+}
+
+#game-background {
+  background-image: url('./images/scary-background.jpg');
+  max-width: 65em;
+  height: 40em;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin: 5% auto;
+  position: relative;
+}
+
+/* body text (includes headings)-----------------------------------------------------------------------------*/
+
+
+h2, h3, h4{
+  font-family: 'Griffy', cursive;
+  color: pink;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+h3, h4 {
+  margin-top: -2%;
+}
+
+h2 {
+  font-size: 48px;
+  padding-top: 2%;
+  font-weight: lighter;
+}
+
+h4{
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+
+/* character images -----------------------------------------------------------------------------*/
+
+img {
+  width: 40%;
+  height: auto;
+}
+
+#courage, #eustace {
+  margin-top: 10%;
+  position: absolute;
+  width: 20%;
+  height: auto;
+}
+
+#courage {
+  right: -2%;
+}
+
+#eustace{
+  right: -9%;
+}
+
+.imgRow {
+  display: flex;
+}
+
+/* buttons ----------------------------------------------------------------------------*/
+
+.buttons {
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ bottom: 30%;
+ margin-left: 3%;
+}
+
+#start, #restart, #pause {
+  width: 8%;
+  background: none;
+  color: pink;
+  font-size: 20px;
+  padding: 0px;
+  margin-top: 1%;
+}
+
+
+/* media screens ------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 700px) {
+
+    /* buttons ----------------------------------*/
+    #moveEustace, #moveCourage {
+      font-size: 16px;
+    }
+    /* character start locations ----------------------------------*/
+    #courage, #eustace {
+      margin-top: 10%;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    #moveEustace, #moveCourage {
+      font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    #moveEustace, #moveCourage {
+      font-size: 12px;
+    }
+    #courage, #eustace {
+      margin-top: 6%;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    #moveEustace, #moveCourage {
+      font-size: 10px;
+    }
+}

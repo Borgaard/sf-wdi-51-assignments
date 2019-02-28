@@ -1,0 +1,156 @@
+/* Global
+  ======================================================= */
+body {
+  margin: 0;
+  padding: 60px;
+  border-left: 6px solid #CCCCCC;
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+}
+
+
+/* Layout
+  ======================================================= */
+#main {
+  display: flex;
+}
+
+#main section {
+  width: 66.66%;
+  margin-right: 40px;
+}
+
+#sidebar {
+  width: 33.33%;
+  margin-top: 130px;
+  color: #4A4444;
+}
+
+img {
+  max-width: 100%
+}
+
+
+/* Text Styles
+  ======================================================= */
+a {
+  text-decoration: none;
+  color: #F8CE78;
+}
+
+a:hover {
+  color: #8E393E;
+  font-weight: 700;
+}
+
+.more {
+  text-align: right;
+  font-weight: 700;
+}
+
+p {
+  margin: 27px 0 0;
+}
+
+
+/* Header
+  ======================================================= */
+h1 {
+  display: inline;
+}
+
+header h2 {
+  display: inline;
+  margin-left: 30px;
+}
+
+
+/* Nav
+  ======================================================= */
+header ul {
+  display: flex;
+}
+
+header li {
+  list-style-type: none;
+  width: 16.66%;
+}
+
+header nav a {
+  color:  white;
+  font-size: 24px;
+  background-color: #B0B6BB;
+  padding: 18px 0;
+  border-right: 1px solid white;
+  text-align: center;
+  display: block;
+}
+
+
+/* Headings
+  ======================================================= */
+h1, h2 {
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 300;
+  color: #B0B6BB;
+}
+
+h2 a {
+  font-size: 34px;
+  color: black;
+}
+
+h3 {
+  margin: 70px 0 -12px 0;
+  font-size: 36px;
+  color: #CCCCCC;
+  font-weight: 300;
+}
+
+h4, .module li {
+  color: #B0B6BB;
+}
+
+
+/* Articles
+======================================================= */
+.posts {
+  margin-right: 50px;
+}
+
+article, .module {
+  border-bottom: 1px solid #CCCCCC;
+  padding: 0 0 16px 0;
+}
+
+article p:first-of-type:first-letter {
+  font-size: 100px;
+  color: #CCCCCC;
+  float: left;
+  line-height: 1;
+  margin: -10px 10px -10px -10px;
+}
+
+/* Sidebar
+  ======================================================= */
+.ad {
+  margin-top: 18px;
+}
+
+
+/* Footer
+  ======================================================= */
+footer {
+  margin: 56px 0 0 0;
+  color: #CCCCCC;
+  font-size: 18px;
+}

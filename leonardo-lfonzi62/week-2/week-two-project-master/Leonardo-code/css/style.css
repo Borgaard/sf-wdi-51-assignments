@@ -1,0 +1,64 @@
+body {
+  display: flex;
+}
+
+body div {
+  width: 50%;
+}
+
+.categories{
+  background-color: goldenrod;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.categories > button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 10px;
+  outline: none;
+}
+
+
+
+.shopping-cart ul{
+   list-style: none;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+}
+.shopping-cart {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+}
+
+.shopping-items-present{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+li{
+  margin-bottom: 0;
+  display: inline-block;
+  border: 2px lightgrey solid;
+
+}
+
+.cart-item  {
+
+ text-align: center;
+   width:100%;
+   margin-bottom: 5%;
+}
+

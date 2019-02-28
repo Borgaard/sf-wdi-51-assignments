@@ -1,0 +1,110 @@
+/* Global
+========================================*/
+/* [X] TODO: add font-family */
+body {
+  box-sizing: border-box;
+  font-family: "Abel", sans-serif;
+}
+
+p {
+  text-align: center;
+}
+
+/* Layout
+================================*/
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  min-height: 98vh;
+  width: 98vw;
+}
+
+.column {
+  width: 50%;
+}
+
+.cart {
+  background-color: #BFBFBF;
+}
+
+
+/* Header/Headings
+=================================*/
+header {
+  background-color: #006DB2;
+}
+
+h1,
+nav {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.67em 0;
+}
+
+nav {
+  padding-bottom: 1.5em;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-family: "Abel", sans-serif;
+  font-size: 1.2em;
+  margin: 0 1.87em;
+}
+
+button:hover {
+  border: 1px solid #B28753;
+  cursor: pointer;
+}
+
+
+
+/* Products
+==================================*/
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productItem {
+  border: 1px solid #B28753;
+  flex-basis: 200px;
+  margin: 10px 10px;
+}
+
+.productItem:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+/* Produce
+==============================================*/
+.produceProducts,
+.pastaProducts,
+.snacksProducts {
+  display: none;
+}
+
+/* Shopping Cart
+============================================*/
+
+ul {
+  color: #B28753;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  margin: 1em 0;
+}

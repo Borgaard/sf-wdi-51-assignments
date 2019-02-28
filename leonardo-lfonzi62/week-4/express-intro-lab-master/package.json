@@ -1,0 +1,14 @@
+{
+  "name": "express-intro-lab-master",
+  "version": "1.0.0",
+  "description": "Express Hw",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Fontenette",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

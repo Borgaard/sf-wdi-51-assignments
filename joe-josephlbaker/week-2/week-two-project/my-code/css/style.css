@@ -1,0 +1,152 @@
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+header {
+  background-image: url('images/rachel-park-366508-unsplash.jpg');
+  background-color: black;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.h1wrap h1 {
+  position: absolute;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(9,9,9,.6);
+  top: 344px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+
+h1 span {
+  margin: 0 2px; /* otherwise you loose the space between words */
+}
+
+h3 {
+  margin-top: 80px;
+}
+
+h3, h2, h4{
+  text-align: center;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+}
+
+/*********THREE COLUMN LAYOUT*************/
+
+.grid-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-third {
+  width: 50%;
+}
+/************************************************/
+
+
+.searchbar input[type=text] {
+  width: 200px;
+  padding: 6px;
+  margin: 6px;
+  display: inline-block;
+  border: none;
+  font-size: 17px;
+}
+
+.searchbar a {
+  display: inline-block;
+  float: right;
+}
+
+.logo-text {
+  font-weight: 900;
+  color: #FF4136;
+  display: inline-block;
+  font-family:'Roboto Slab', serif;
+  font-size: 26px;
+  padding: 5px;
+  margin-left: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.topnav {
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  font-family: 'Roboto Slab', serif;
+  color: #FF4136;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.logo {
+  max-width: 150px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shop-item-title{
+  text-align: center;
+}
+
+.shop-item-price{
+  text-align: center;
+}
+
+.cart {
+  column-width: 50%;
+  background-color: #DDDDDD;
+}

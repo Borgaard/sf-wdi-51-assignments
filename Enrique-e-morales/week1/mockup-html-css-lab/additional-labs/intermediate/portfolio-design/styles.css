@@ -1,0 +1,13 @@
+.logo_flag {
+  background-color: darkred;
+  width: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+
+h1 {
+  color: white;
+
+}

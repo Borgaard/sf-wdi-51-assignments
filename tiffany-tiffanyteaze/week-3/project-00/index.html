@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tiffany Teaze</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+  <link href="./css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="body">
+  <header>
+    <div class="container-fluid orange-nav-bar">
+      </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">
+            <img class="orange-circle" src="./images/logos3/tiffany-logos-04.png">
+          </a>
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mydropdown">
+          <ul class="nav-ul">
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Tiffany Teaze</h1>
+      <h3 class="personal-brand">I'm a frank and eclectic web developer</h3>
+      <div class="little-orange-bar">
+      </div>
+  </div>
+  <img id="profile-pic" src="./images/69520028.jpg" alt="Picture of Tiffany Teaze">
+  </header>
+  <section id="about">
+    <div class="container">
+      <h2 class="text-center">Hi, I'm Tiffany.</h2>
+      <p class="text-center">I’m a red-headed front-end developer, but I’ve got a great back-end too ;) My friends say that I’m peculiar, funny, and a very stylish eater. I do love fast food, so they’re right.</p>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="container">
+      <h3>Front-End Development</h3>
+      <p>Here’s more relevant information about my work. Perhaps there is a
+very descriptive paragraph highlighting all my good qualities and
+important business words that make me look very good.</p>
+    </div>
+  </section>
+  <section id="testimonials" >
+    <div class="container">
+      <h2>Testimonials</h2>
+      <!-- Quotes -->
+      <div class="quotes">
+        <blockquote>
+          <p>“A well deserved accolade for a gifted little lady."</p>
+          <p class="quote-giver">- Bill Gates</p>
+        </blockquote>
+        <blockquote>
+          <p>"Better than Grimes."</p>
+          <p class="quote-giver">- Elon Musk</p>
+        </blockquote>
+        <blockquote>
+          <p>"I met Tiffany Teaze at a party once, and she was even more charming than me."</p>
+          <p class="quote-giver">- Paul Rudd</p>
+        </blockquote>
+        <blockquote>
+          <p>"A visionary."</p>
+          <p class="quote-giver">- Lady Gaga</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <h3>Portfolio</h3>
+      <!-- Carousel -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="my-slider" class="carousel slide container" data-ride="carousel" data-interval="false">
+              <!-- dot nav -->
+              <ol class="carousel-indicators">
+                <li data-target="#my-slider" data-slide-to="0"></li>
+                <li data-target="#my-slider" data-slide-to="1"></li>
+                <li data-target="#my-slider" data-slide-to="2"></li>
+              </ol>
+              <!-- slide wrapper -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <a href="./images/monument.jpg" data-toggle="lightbox">
+                    <img src="./images/monument.jpg" alt="Monument">
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="./images/javascriptracer.jpg" data-toggle="lightbox">
+                    <img src="./images/javascriptracer.jpg" alt="Racer">
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="./images/javascriptracer.jpg" data-toggle="lightbox">
+                    <img src="./images/supermarket.jpg" alt="Racer">
+                  </a>
+                </div>
+              </div>
+              <!-- left right slider nav -->
+              <a class="left" href="#my-slider" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left arrow-color" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right" href="#my-slider" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right arrow-color" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container justify-content-center contact-wrapper">
+      <h3>Contact Me</h3>
+      <form id="contact-form" method="post" action="contact.php" role="form">
+        <div class="row justify-content-between">
+          <div class="col-sm-3">
+            <input id="form_name" type="text" name="name" class="form-control" placeholder="Name" required="required" data-error="Name is required.">
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Valid email is required.">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <input id="form_email" type="text" name="subject" class="form-control" placeholder="Subject">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9">
+            <textarea type="text" id="form_email" name="message" rows="4" class="form-control md-textarea" placeholder="Message"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9">
+            <input id="form_email" type="submit" class="btn btn-success btn-send" value="Send">
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+    <footer>
+      <img class="copyright" src="./images/logo-05.png">
+      <p class="copyright">&copy; 2019</p>
+      <ul class="message">
+        <li>
+          <a href="#">
+            <img src="./images/socials/socials-08.png" alt="GitHub">
+          </a>
+        </li>
+        <li><a href="#"><img src="./images/socials/socials-09.png" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="./images/socials/socials-10.png" alt="Instagram"></a></li>
+      </ul>
+    </footer>
+  <script src="./js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="./js/sebnitu-Quovolver-3931b12/jquery.quovolver.js"></script>
+  <script src="./css/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+</body>
+</html>

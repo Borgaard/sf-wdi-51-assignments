@@ -1,0 +1,20 @@
+.categories {
+	background-color: aqua;
+	width: 50%;
+	float: left;
+}
+
+.cart {
+	background-color: red;
+	width: 50%;
+	float: right;
+}
+
+body {
+	text-align: center;
+}
+
+.categories-bttn button {
+	border: none;
+	background-color: transparent;
+}

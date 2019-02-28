@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+		<!-- set viewport to device width to allow responsiveness -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CDN -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="styles/styles.css">
+
+    <!-- JS -->
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+		<title>Giffaw</title>
+
+	</head>
+	<body>
+		<div class="container">
+
+			<h1 class="text-center">Giffaw</h1>
+
+			<div class="row">
+
+				<div class="col-sm-4">
+					<form class="form-inline">
+						<label>Search Gifs</label>
+						<input type="text" class="form-control gif-input" name="q" value="homer" placeholder="search gifs" id="search">
+						<input type="hidden" name="api_key" value="dc6zaTOxFJmzC">
+						<input type="submit" value="Go!" class="btn btn-primary">
+					</form>
+				</div>
+
+				<div class="col-sm-8">
+					<div class="gif-gallery"></div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+		    <script src="scripts/app.js"></script>
+	</body>
+</html>

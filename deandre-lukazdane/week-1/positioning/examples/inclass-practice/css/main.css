@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+}
+
+#box1 {
+  background-color: #E16F20;
+  position: relative;
+}
+
+#box2 {
+  background-color: #FFC84E;
+  position: relative;
+  top: -50px;
+  left: 50px;
+  z-index: 2;
+}
+
+#box3 {
+  background-color: #00465D;
+  position: relative;
+  top: -100px;
+  z-index: 3;
+}
+
