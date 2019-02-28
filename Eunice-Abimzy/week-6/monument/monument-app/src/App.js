@@ -20,7 +20,6 @@ class  Monument extends Component {
        <Contact /> 
        <Footer /> 
       </main>
-
     )
   }
 }
