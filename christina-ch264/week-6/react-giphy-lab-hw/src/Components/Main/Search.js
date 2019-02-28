@@ -1,43 +1,39 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
-class Search extends Component {
+// class Search extends Component {
 
-    state = {
-        query: ''
-    }
 
-    handleInput = (e) => {
-        e.preventDefault();
-        console.log("Submit")
-    }
+    // state = {
+    //     query: ''
+    // }
 
-    handleChange = (e) => {
-        console.log('searched!');
-        this.setState({query: e.target.value})
+    // handleInput = (e) => {
+    //     e.preventDefault();
+    //     console.log("Submit")
+    // }
+
+    // handleChange = (e) => {
+    //     console.log('searched!');
+    //     this.setState({query: e.target.value})
         
-    }
-    
+    // }
 
-    render () {
-        console.log(this.state);
+const search = (props) => {
+
+    // render (props) {
+        // console.log(this.state);
         return (
-            <section>
                 <div>
-                    {/* <form onSubmit={ this.handleSubmit }> */}
-                    <form onSubmit={ this.handleInput }>
-                    <label htmlFor="search">
-                        {/* starting value is current state on pageload, in our case an empty string so that user can adds comment to page. 
-                        On change we capture the value and call the handlechange function to modify the new comment value */}
-                        {/* <input type="text" name="message" value ={ this.state.newCommentValue } onChange={this.handleChange}/> */}
-                        <input type="text" name="message" value ={ this.state.query } onChange={this.handleChange}/> 
-                    </label>
-                    <input type="submit" value="submit" />
-                </form>
+                    {/* <form onSubmit={ this.handleInput }> */}
+                        {/* <input type="text" name="message" value ={ this.props.query } onChange={this.props.handleChange}/>  */}
+                        {/* <input type="submit" value="search" /> */}
+                    {/* </form> */}
+
+                    <input type="text" placeholder="Search here" onKeyUp={props.handleChange}/>
                 </div>
-            </section>
         )
-    }
+    // }
 }
 
-export default Search;
+export default search;
