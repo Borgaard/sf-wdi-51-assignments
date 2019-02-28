@@ -5,7 +5,7 @@ const GifCard = props => {
   // class GifCard extends Component {
   //   render() {
   return (
-    <div>
+    <div onLoad={console.log("It search")}>
       <h1>{props.gifcard.title}</h1>
       <img
         src={props.gifcard.images.fixed_height.url}

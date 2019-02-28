@@ -4,7 +4,7 @@ import GifCard from "./GifCard";
 import axios from "axios";
 
 class GifContainer extends Component {
-  state = { query: "", response: [] };
+  // state = { query: "", response: [] };
   Search = () => {
     axios
       .get("http://api.giphy.com/v1/gifs/search?q=", {
@@ -19,23 +19,26 @@ class GifContainer extends Component {
         });
       });
   };
+
+  handleTermChange(Term) {
+    console.log(Term);
+  }
   //Keep in mind that case is sensitive
   render() {
-    let gifcard;
-    if (this.state.response) {
-      gifcard = this.state.response.map(result => {
-        return (
-          <div>
-            <GifCard gifcard={gifcard} key={gifcard.id} />
-          </div>
-        );
-      });
-    }
+    // let gifcard;
+    // if (this.state.response) {
+    //   let gifcard = this.state.response.map(result => {
+    //     return (
+    //       <div>
+    //         <GifCard gifcard={gifcard} key={gifcard.id} />
+    //       </div>
+    //     );
+    //   });
+    // }
     return (
       <div>
-        <Search />
-        {gifcard}
-        {/* <GifCard /> */}
+        {/* {gifcard} */}
+        <GifCard />
       </div>
     );
   }
