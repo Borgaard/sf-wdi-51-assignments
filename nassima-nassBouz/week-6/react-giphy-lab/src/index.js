@@ -1,8 +1,8 @@
 // Developer TODO: Load in App component and render to the DOM
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Home from './Home';
 
-ReactDOM.render( <App/>,
+ReactDOM.render( <Home/>,
     document.getElementById('root')
  );
