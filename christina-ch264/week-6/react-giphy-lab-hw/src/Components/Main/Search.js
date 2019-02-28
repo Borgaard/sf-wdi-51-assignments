@@ -29,8 +29,8 @@ const search = (props) => {
                         {/* <input type="text" name="message" value ={ this.props.query } onChange={this.props.handleChange}/>  */}
                         {/* <input type="submit" value="search" /> */}
                     {/* </form> */}
-
-                    <input type="text" placeholder="Search here" onKeyUp={props.handleChange}/>
+                    {/* onChange fires on each keystroke / onKeyUp */}
+                    <input type="text" placeholder="Search here" onChange={props.handleChange}/>
                 </div>
         )
     // }

@@ -15,6 +15,14 @@ class SearchContainer extends Component {
     //     console.log("Submit")
     // }
 
+// Pseudocode
+// 1. Define elements in render() using values from state.
+// 2. Capture changes of a form element using onChange() as they happen.
+// 3. Update the internal state in event handler.
+// 4. New values are saved in state and then the view is updated by a new render().
+
+
+
     giphySearch = () => {
         console.log('axios api goes here')
         // use axios api
