@@ -7,7 +7,7 @@ class GifContainer extends Component {
     return (
       <div>
         <Search />
-        <div>{GifCard}</div>
+        <GifCard />
       </div>
     );
   }
