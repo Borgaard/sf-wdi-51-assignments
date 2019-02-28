@@ -1,17 +1,19 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Home.css";
 import HelloMessage from "./HelloMessage";
 import Search from "./components/Search/Search";
-import GifContainer from "./components/GifContainer/GifContainer";
+import GifContainer from "./components/Container/GifContainer";
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="App">
         <HelloMessage />
+        <Search />
+        <GifContainer />
       </div>
     );
   }
 }
 
-export default App;
+export default Home;
