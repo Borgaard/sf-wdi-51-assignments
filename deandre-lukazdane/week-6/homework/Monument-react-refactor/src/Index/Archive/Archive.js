@@ -7,8 +7,8 @@ class Archive extends Component {
       <section>
         <h2>From the Archive</h2>
 
-        <div class="grid-wrapper articles">
-          <article class="col-third">
+        <div className="grid-wrapper articles">
+          <article className="col-third">
             <img src="images/article_1.jpg" alt="" />
             <div>
               <h3>Issue Twenty &mdash; The Southwest</h3>
@@ -28,7 +28,7 @@ class Archive extends Component {
               <button>Read More</button>
             </div>
           </article>
-          <article class="col-third">
+          <article className="col-third">
             <img src="images/article_2.jpg" alt="" />
             <div>
               <h3>Issue Nineteen &mdash; Camping</h3>
@@ -47,7 +47,7 @@ class Archive extends Component {
               <button>Read More</button>
             </div>
           </article>
-          <article class="col-third">
+          <article className="col-third">
             <img src="images/article_3.jpg" alt="" />
             \>
             <h3>Issue Eighteen - Food</h3>

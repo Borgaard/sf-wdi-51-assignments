@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="wrap">
-          <div class="social-links">
+          <div className="social-links">
             <a href="">
               <i className="fa fa-facebook-square" aria-hidden="true" />
             </a>

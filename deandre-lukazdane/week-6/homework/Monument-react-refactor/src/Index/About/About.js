@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./About.css";
+import "../../css/style.css";
 
 class About extends Component {
   render() {
     return (
-      <section id="about" class="callout about">
-        <article class="wrap">
+      <section id="about" className="callout about">
+        <article className="wrap">
           <h2>About The Magazine</h2>
           <h3>A Lifestyle Magazine Crafted with Love</h3>
           <p>
