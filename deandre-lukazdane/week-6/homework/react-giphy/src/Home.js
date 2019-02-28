@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Home.css";
+import "./index.css";
 import HelloMessage from "./HelloMessage";
 import GifContainer from "./components/GifContainer";
 

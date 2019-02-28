@@ -1,14 +1,35 @@
-import React, { Component } from "react";
+import React from "react";
 
-class GifCard extends Component {
-  render() {
-    return (
-      <div>
-        <h1>This is where the gif title goes</h1>
-        <iframe>This is where the gif goes</iframe>
-      </div>
-    );
-  }
-}
+const GifCard = props => {
+  //let GifCard;
+  // class GifCard extends Component {
+  //   render() {
+  return (
+    <div>
+      <h1>{props.gifcard.title}</h1>
+      <img
+        src={props.gifcard.images.fixed_height.url}
+        alt={props.gifcard.title}
+      />
+    </div>
+  );
+}; //}
+
+//export default GifCard;
+
+// import React from "react";
+
+// const gifcard = props => {
+//   return (
+//     <div className="container">
+//       <h2>{props.gifcard.title}</h2>
+//       <img
+//         className="card-img-top"
+//         src={props.gifcard.images.fixed_height.url}
+//         alt={props.gifcard.titl}
+//       />
+//     </div>
+//   );
+// };
 
 export default GifCard;
