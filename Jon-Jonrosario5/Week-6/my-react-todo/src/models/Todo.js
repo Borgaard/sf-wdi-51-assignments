@@ -10,11 +10,16 @@ class TodoModel {
         return(request)
     
     }
-    
+
     static create(todo) {
         let request = axios.post(endpoint, todo)
         return request
       }
+
+    static delete(todo){
+        let request = axios.delete(`${endpoint}/${todo._id}`)
+        return request
+    }
     
 }
 
