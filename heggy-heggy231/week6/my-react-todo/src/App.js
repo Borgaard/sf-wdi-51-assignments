@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import TodosContainer from './containers/TodosContainer';
+import Header from './components/Header';
+import MyRoutes from './config/routes';
 
 class App extends Component {
   render() {
     return (
       <div className="container">
-      {/* this is my routing for nav bar! */}
-        <Switch>
-          <Route exact path='/' component={ Home }/>
-          <Route path='/todos' component={ TodosContainer }/>
-        </Switch>
+        <Header/>
+        {/* my Routes is nameSpace obj exported from routes file */}
+        { MyRoutes }
       </div>
     );
   }

@@ -1,12 +1,12 @@
 // containers/TodosContainer.js
-import React from 'react';
+import React, { Component } from 'react';
 
-class TodosContainer extends React.Component {
+class TodosContainer extends Component {
   render() {
     return (
-      <h2>
-        I am the TodosContainer page
-      </h2>
+      <div className='todosContainer'>
+        <h2>This is the todos container</h2>
+      </div>
     );
   }
 }
