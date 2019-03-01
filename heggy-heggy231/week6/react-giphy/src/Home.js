@@ -5,13 +5,13 @@ class Home extends Component {
   render() {
     return (
 // Remember to put all html inside parent wrapper!!
-      <main>
+      <div>
         <h1>Hello World! Heggy here</h1>
         <section>
           {/* Import & render the Search file to your Home file. */}
           <Search />
         </section>
-      </main>
+      </div>
 
     );
   }

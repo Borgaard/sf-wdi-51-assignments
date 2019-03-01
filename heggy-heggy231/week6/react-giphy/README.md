@@ -7,6 +7,9 @@ starter pack
 solution pack
 - https://git.generalassemb.ly/sf-wdi-51/react-giphy-lab/tree/solution
 
+- Component life cycle: https://git.generalassemb.ly/sf-wdi-51/react-component-lifecycle 
+- react router: https://git.generalassemb.ly/sf-wdi-51/react-router-intro
+
 - demo: https://react-giphy-app.herokuapp.com/
 
 ### # Event Handlers and the Component Lifecycle in React
