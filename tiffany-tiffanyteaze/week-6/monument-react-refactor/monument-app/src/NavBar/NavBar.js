@@ -4,16 +4,13 @@ import {
     Link,
     Switch
   } from 'react-router-dom';
-// import './NavBar.css';
-
-
-  
-  import Blog from '../Blog/Blog'
+  import './NavBar.css';
+import Blog from '../Blog/Blog'
 
 class NavBar extends Component {
     render() {
         return(
-            {/* <nav>
+            <nav>
                 <a className="hamburger" href=""><i className="fa fa-bars"></i></a>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -22,7 +19,7 @@ class NavBar extends Component {
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 
-            </nav> */}
+            </nav>
             );
         }
     }
