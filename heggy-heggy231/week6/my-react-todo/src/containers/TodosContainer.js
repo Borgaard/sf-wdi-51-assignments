@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import TodoModel from '../models/Todo';
 import TodosList from '../components/TodosList'
+// At the top import the component
+import CreateTodoForm from '../components/CreateTodoForm'
 
 class TodosContainer extends Component {
   state = {
@@ -22,6 +24,21 @@ class TodosContainer extends Component {
     })
   }
 
+  createTodo = (todo) => {
+    let newTodo = {
+        body: todo,
+        completed: false
+    }
+    // .then() indicates it is promise
+    TodoModel.create(newTodo).then((res) => {
+      // copy the current state
+      let todos = this.state.todos
+      // modify and push it back to the state
+      let newTodos = todos.push(res.data)
+      this.setState({newTodos})
+    })
+  }
+
   render() {
     // debugger;
   // calling TodoModel.all() function
@@ -34,6 +51,9 @@ class TodosContainer extends Component {
       <div className='todosContainer'>
         <TodosList
           todos={this.state.todos} />
+        <CreateTodoForm
+          createTodo={ this.createTodo }
+        />
       </div>
     );
   }
