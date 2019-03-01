@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 
 class CreateTodoForm extends Component {
-  constructor() {
-    super();
-    //sets the initial state via the constructor! that's the constructor's job :)
-    this.state = {
-      todo: ""
-    };
-  }
+  state = {
+    todo: ""
+  };
+
   onInputChange = event => {
     this.setState({
       todo: event.target.value
