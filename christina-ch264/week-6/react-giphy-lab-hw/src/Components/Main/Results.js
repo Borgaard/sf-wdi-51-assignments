@@ -9,7 +9,7 @@ const results = (props) => {
             <section className="result">
                 <div>
                     <p>{props.result.embed_url}</p>
-                    <img src={props.result.images.fixed_height}/>
+                    <img src={props.result.images.fixed_height.url}/>
                 </div>
             </section>
         )
