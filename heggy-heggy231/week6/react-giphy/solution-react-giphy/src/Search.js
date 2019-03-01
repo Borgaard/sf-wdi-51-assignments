@@ -6,7 +6,7 @@ class Search extends Component {
     query: ''
   }
    submit () {
-    EventTarget set this to be a query
+    // EventTarget set this to be a query
   }
   render() {
     return (

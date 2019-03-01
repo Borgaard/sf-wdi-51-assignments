@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// presentational components header b/c it has no state) behavior by reeiving callback functions (this.increaseCount) from App.js as props
 class Header extends Component {
   render() {
     return (

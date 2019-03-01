@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-// using Babel to compile code
-import axios from 'axios';
-// // In standard vanilla Javascript
-// let axios = require('axios')
+
 
 // step by step instruction: https://git.generalassemb.ly/sf-wdi-51/react-giphy-lab
 class Search extends Component {
