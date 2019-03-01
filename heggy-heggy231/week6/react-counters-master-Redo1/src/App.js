@@ -10,10 +10,12 @@ class App extends Component {
   }
 
   increaseCount = () => {
+    // grab state counter val and increase it by 1 and assign it to local variable!
     let counter = this.state.counter + 1;
 
-    // this.setState() saves the change to the state!
+    // this.setState() saves the change to the state for App obj!
     this.setState({
+    // Note: counter is this.state.counter + 1 like what it says above!
       counter
     });
   }

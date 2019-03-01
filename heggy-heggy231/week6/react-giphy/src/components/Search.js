@@ -20,19 +20,16 @@ class Search extends Component {
     // Update submit function so that it now logs the query value in state.
     console.log(this.state.query);
 
-    // save the change to state 
-    this.setState({
-      query
-    });
+    // here I am only reading the state! no need to save state in here!!
   }
   // Define a function that updates your query value in state whenever a change is made to the input field. You can do this using an onInput function on your text box, or by using ref.
   userInput = (e) => {
     console.log(e);
     // debugger;
     // e.target.value fetch the value of user search term!
-    this.state.query = e.target.value;
+    let query = e.target.value;
 
-    // save the change to state 
+    // save the change to state and query gets updated on top 
     this.setState({
       query
     });
