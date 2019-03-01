@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import './index.css'
 
 class HeroHeader extends Component {
     render (){
         return (
-            <header className="vertical-center">
+            <header className="header">
 
 		<div>
 			<h1><a href="">Monument</a></h1>

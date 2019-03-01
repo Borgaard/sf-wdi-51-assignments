@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './blog.css';
 import Header from './Header'
-import Nav from './Nav'
+import Nav from '../NavBar'
 import Main from './Main'
 import AboutUs from './AboutUs'
 import Issues from './Issues'

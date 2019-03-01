@@ -2,13 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import './index.css';
-import Monument from './App';
+import Home from './App';
+import Blog from './Blog/Blog'
 import * as serviceWorker from './serviceWorker';
+import {Route, Link, Switch} from 'react-router-dom';
 
 
 ReactDOM.render(
     <Router>
-        <Monument />
+        <Switch>
+         <Route exact path="/" component={ Home } />
+         <Route path="/blog" component={ Blog} />
+       </Switch>
     </Router>,
 document.getElementById('root'));
 
