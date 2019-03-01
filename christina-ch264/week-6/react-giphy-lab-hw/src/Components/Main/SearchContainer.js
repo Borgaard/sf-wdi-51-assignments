@@ -10,43 +10,38 @@ class SearchContainer extends Component {
         resultList: []
     }
 
-    // handleInput = (e) => {
-    //     e.preventDefault();
-    //     console.log("Submit")
-    // }
-
 // Pseudocode
 // 1. Define elements in render() using values from state.
 // 2. Capture changes of a form element using onChange() as they happen.
 // 3. Update the internal state in event handler.
 // 4. New values are saved in state and then the view is updated by a new render().
 
-
-
     giphySearch = () => {
-        console.log('axios api goes here')
+        console.log('axios api looks for:', this.state.query);
         // use axios api
-        axios.get('https://api.giphy.com/v1/gifs/search?', {
-            params: {
-                api_key:"Gf2zWMUcvwe2Ot0FzFTFeG2BddE9xTrF",
-                q: this.state.query
-            }
-        })
+        axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.state.query}&api_key=RHi6JOuPn9wR4pGJziqoZ3WE27wzW0pz`)
         .then((response) => {
-            console.log(response.data)
+            console.log(response.data.data);
+            console.log("Axios then")
             // response.data.img
+            this.setState({resultList: response.data.data})
+            
         })
         .catch((error) => {
             console.log(error)
+            console.log("Axios catch")
         })
     }
 
 
-    hasSearchTerm = () => {
+    handleSubmit = (e) => {
+        e.preventDefault();
         if (this.state.query.length > 0) {
             console.log('yes');
-            this.giphysearch();
-        } 
+            this.giphySearch();
+        } else {
+            console.log('no query term')
+        }
         // return true;
     }
 
@@ -55,12 +50,16 @@ class SearchContainer extends Component {
         this.setState({query: e.target.value})
     }
 
+
     render () {
-        console.log(this.state);
+        // map loop to create unique results
+            let data = this.state.resultList;
         return (
                 <div>
                     {/* handle search results */}
-                    <Search handleChange={this.handleChange}/>
+                    <Search handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                    {/* add prop result to instance Results */}
+                    {data.map(result => <Results result={result}/>)}
                 </div>
                 
         )

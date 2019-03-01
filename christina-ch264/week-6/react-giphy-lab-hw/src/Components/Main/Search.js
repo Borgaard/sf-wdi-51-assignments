@@ -25,12 +25,13 @@ const search = (props) => {
         // console.log(this.state);
         return (
                 <div>
-                    {/* <form onSubmit={ this.handleInput }> */}
+                    <form onSubmit={ props.handleSubmit }>
                         {/* <input type="text" name="message" value ={ this.props.query } onChange={this.props.handleChange}/>  */}
-                        {/* <input type="submit" value="search" /> */}
-                    {/* </form> */}
+                        <input type="text" placeholder="Search here" onChange={props.handleChange}/>
+                        <input type="submit" value="search" />
+                    </form>
                     {/* onChange fires on each keystroke / onKeyUp */}
-                    <input type="text" placeholder="Search here" onChange={props.handleChange}/>
+                    
                 </div>
         )
     // }
