@@ -39,19 +39,28 @@ createTodo = (todo) => {
   })
 }
 
-  render() {
-    // TodoModel.all().then( (res) => {
-    //   console.log(res);
-    // })
+deleteTodo = (todo) => {
+  TodoModel.delete(todo).then((res) => {
+      let todos = this.state.todos.filter(function(todo) {
+        return todo._id !== res.data._id
+      });
+      this.setState({todos})
+  })
+}
 
-    return (
-      <div className="todosContainer">
-        <Todos
-          todos={this.state.todos} />
-        <CreateTodoForm createTodo={ this.createTodo } />
-      </div>
-    );
-  }
+render(){
+  return (
+    <div className="todosComponent">
+      <CreateTodoForm
+        createTodo={this.createTodo}
+        />
+      <Todos
+        todos={this.state.todos}
+        deleteTodo={this.deleteTodo}
+        />
+    </div>
+  )
+}
 }
 
 export default TodosContainer;

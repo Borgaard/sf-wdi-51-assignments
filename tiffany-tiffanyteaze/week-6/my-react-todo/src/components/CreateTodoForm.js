@@ -4,6 +4,21 @@ export default class CreateTodoForm extends Component {
   state = {
       todo: ''
   };
+
+  onInputChange = (event) => {
+      this.setState({
+          todo: event.target.value
+      })
+  }
+
+  onFormSubmit = (event) => {
+      event.preventDefault()
+      let todo = this.state.todo;
+      this.props.createTodo(todo)
+      this.setState({
+          todo: ""
+      })
+  }
   
     render() {
     return (
