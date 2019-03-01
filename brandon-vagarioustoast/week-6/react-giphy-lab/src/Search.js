@@ -4,9 +4,11 @@ export class Search extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.props.searchedTerm} onInput={this.props.onInput}>
-          <input type="text" />
-        </form>
+        <input
+          type="text"
+          placeholder="Search Giphy"
+          onKeyUp={this.props.onInput}
+        />
       </div>
     );
   }

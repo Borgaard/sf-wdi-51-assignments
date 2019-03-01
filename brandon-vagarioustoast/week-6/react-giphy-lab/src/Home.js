@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./App.css";
 import SearchContainer from "./SearchContainer";
 
-export class Home extends Component {
+class Home extends Component {
   render() {
     return (
       <div>
