@@ -1,0 +1,155 @@
+/* Layout
+===========================*/
+.archive, .gallery {
+  padding: 8em 2em;
+}
+
+.wrapper-archive, .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column-archive, .column {
+  width: 32%;
+}
+
+.gallery-smallview {
+  display: none;
+}
+
+
+/* Headings
+===========================*/
+.landing-bg {
+  background-attachment: fixed;
+  background-image: url("../images/home_header_bg.jpg");
+  background-position: 50% 30%;
+  color: white;
+  display: flex;
+  height: 100vh;
+  padding-top: 4.29em;
+  text-align: center;
+}
+
+.landing-bg h2 {
+  color: white;
+}
+
+.head-text {
+  margin: auto;
+}
+
+h1 {
+  color: white;
+  font-size: 2.4em /*36px*/;
+  letter-spacing: 0.3em;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.archive h2 {
+  padding-bottom: 2em;
+}
+
+
+
+/* Text Styles
+===========================*/
+p {
+  text-align: center;
+}
+
+button {
+  display: block;
+  letter-spacing: .1em;
+  margin: 0 auto;
+}
+
+
+/* Archive Section
+===============================*/
+.column p {
+  padding: 2em 0;
+}
+
+
+/* About Section
+===============================*/
+.about {
+  background-color: #CDF3F6;
+  padding: 8em 7.33em;
+}
+
+.about p {
+  font-size: 1.2em;
+}
+
+
+/* Gallery Section
+================================*/
+.gallery h3, .gallery-smallview h3 {
+  padding: 20px;
+}
+
+.gallery img, .gallery-smallview img {
+  padding-bottom: 1em;
+  transition: all 0.2s ease-in-out;
+}
+
+.gallery img:hover, .gallery-smallview img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+
+/* Media Queries
+================================*/
+@media screen and (max-width: 807px) {
+  .wrapper-archive {
+    display: block;
+  }
+
+  .column-archive {
+    margin: 40px 0;
+    width: 100%;
+  }
+
+  .column-archive img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .column-archive img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .gallery-smallview {
+    display: block;
+  }
+
+  .gallery-smallview > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .column {
+    padding-right: 10px;
+    width: 48%;
+  }
+}
+
+
+

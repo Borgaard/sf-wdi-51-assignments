@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  max-width: 80%;
+  margin: 0 auto;
+  background: ;
+}
+
+ul {
+  display: flex;
+}
+
+h1 {
+  font-family: Racing Sans One, cursive;
+  font-weight: 600;
+  color: firebrick;
+}
+
+nav a {
+  margin-left: .5em;
+}
+
+img {
+  max-width: 60%;
+  margin-top: .5em;
+}
+
+.card {
+  margin: 1em;
+  border: solid 5px firebrick;
+}
+
+.card-font {
+  font-family: Racing Sans One, cursive;
+}
+
+.card-content a {
+  margin-left: 4em;
+  background: firebrick;
+}
+
+aside {
+  position: fixed;
+  top: 30%;
+  left: 55%;
+  border: solid firebrick 5px;
+  padding: 2em;
+}
+
+.grocery-items h3 {
+  font-style: italic;
+  padding: 0 .5em;
+
+}
+
+.grocery-items ul {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  left: -50px;
+  padding: 20px;
+  background: black;
+}
+
+footer h6 {
+  color: white;
+}

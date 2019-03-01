@@ -1,0 +1,182 @@
+<!--
+  TODO List
+  [X]-Make skeleton with semantic HTML Tags
+  [X]-Clicking navbar -> scroll down to section
+  [X]-Incorporate Carousel with timed sliding imgs
+  [X]-Testimonials fade in and out
+  [X]-Mobile layout w/ hamburger nav menu
+  [X]-Contact form w/ validation
+  [X]-Skills section
+  [ ]-Use an API(?)
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <header>
+      <!--Navbar (incl. hamburger button for mobile)-->
+      <nav class="navbar navbar-expand-md bg-custom navbar-dark">
+        <span class="navbar-brand">Jason Serafica</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Jason Serafica | The Developer Diva
+        <!-- Headshot -->
+      </h1>
+    </header>
+
+    <section id="about">
+     <h2>About Me</h2>
+     <!-- About Me txt -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-center">
+            <p class="bodyText">Let's get our greetings and salutations out of the way! Hiiiiieeeee! My name is Jason. I am a semi-self-taught web developer in San Francisco! This is my main portfolio page.</p>
+          </div>
+        <div class="col-md-6">
+            <img class="img-fluid rounded-circle" src="img/avatar.jpg">
+        </div>
+      </div>
+      <!-- Photo Carousel (incl. controls and captions) -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/img1.jpg" alt="First slide">
+          </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/img2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/img3.jpg" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <section id="skills" class="container">
+      <!-- multi-column layout -->
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Non-Technical Masteries</h3>
+          <ul>
+            <li>Event Organizing</li>
+            <li>Community Management</li>
+            <li>Volunteer Mobilization</li>
+            <li>Dramatic Lip-Syncs</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3>Languages & Frameworks</h3>
+          <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>REACT</li>
+            <li>Django</li>
+            <li>node.js</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container">
+      <!-- multi-column layout -->
+      <h2>Portfolio</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <h3>OpenWeather Viewer</h3>
+          <a href="https://github.com/teknoformula/freecodecamp-weather-viewer"><i class="fas fa-4x fa-cloud-sun-rain"></i></a>
+        </div>
+        <div class="col-md-3">
+          <h3>Earthquake Mapper</h3>
+          <a href="https://github.com/teknoformula/geoquake-lab"><i class="fas fa-4x fa-map-marker-alt"></i></a>
+        </div>
+        <div class="col-md-3">
+          <h3>Udacity React Project</h3>
+          <a href="https://github.com/teknoformula/Udacity-Neighborhood-Map"><i class="fab fa-4x fa-react"></i></a>
+        </div>
+        <div class="col-md-3">
+          <h3>Twitch Stream Widget</h3>
+          <a href="https://github.com/teknoformula/fcc-twitch-viewer"><i class="fab fa-4x fa-twitch"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="quotes" class="container">
+      <!-- Testimonials (lorem ipsum text) -->
+      <h2>Testimonials</h2>
+      <h3 id="testimonials">
+        I heard they do car commercials...in Japan!
+      </h3>
+    </section>
+    <form class="bg-custom">
+        <h3>Holla @ Me</h3>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="messageArea">Message</label>
+          <textarea class="form-control" id="messageArea" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+    </form>
+    <footer id="contact" class="bg-custom">
+      <!-- contact form -->
+      <!-- social media links -->
+      <h3>But Don't @ Me</h3>
+      <ul class="d-flex justify-content-around">
+        <li><a href="#"><i class="fab fa-3x fa-twitter-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-3x fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fab fa-3x fa-github-square"></i></a></li>
+      </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

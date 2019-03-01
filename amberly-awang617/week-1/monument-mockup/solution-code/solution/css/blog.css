@@ -1,0 +1,38 @@
+/* ----------------------------------------
+Header
+------------------------------------------- */
+header h2 {
+	font-size: 20.8px;
+	letter-spacing: 4.8px;
+	letter-spacing: 0.3rem;
+}
+
+h1 a {
+	color: #44545E;
+
+
+}
+
+/* ----------------------------------------
+Layout
+------------------------------------------- */
+.grid-wrapper section {
+	text-align: left;
+}
+
+/* ----------------------------------------
+Aside
+------------------------------------------- */
+aside {
+	text-align: left;
+}
+
+aside ul {
+	list-style: disc;;
+
+}
+
+aside li {
+	display: list-item;
+	color: #44545E;
+}

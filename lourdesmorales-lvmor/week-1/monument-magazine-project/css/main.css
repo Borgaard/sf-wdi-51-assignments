@@ -1,0 +1,333 @@
+/*Requirements
+[]Add media queries
+[X]Use rems or ems for padding, margin, and font sizes
+[X]Links and buttons should include hover effects
+[X]Use anchor tags to link together the landing page and the blog page
+[X]Use the appropriate Google Fonts to style the text on the page
+[X]Code should follow best practices, including proper indentation and valid syntax.
+[]Include browser prefixes
+*/
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ----------------------------------------
+Typography
+------------------------------------------- */
+
+body {
+  font-family: Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: #44545E;
+}
+
+body header div h1 a {
+  color: #000000;
+}
+
+header {
+  color: white;
+  text-transform: none;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: Lato, sans-serif;
+  text-transform: none;
+  line-height: 1.4;
+}
+
+header h1 {
+  padding-top: 10em;
+  font-size: 20em;
+  font-size: 2.5rem;
+  letter-spacing: 12px;
+  letter-spacing: .8rem;
+}
+
+header h3 {
+  padding-top: 4em;
+}
+
+/* ----------------------------------------
+Navigation Bar
+------------------------------------------- */
+
+nav {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 .5em 1em rgba(0, 0, 0, .1);
+  transition: all 300ms ease-out;
+  /* Add styles for fixed nav */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /*z-index: 100;*/
+}
+
+nav ul {
+  padding: 1em;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 600;
+  margin: 2rem;
+  padding: .25rem 2rem;
+  text-decoration: none;
+  color: gray;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+
+header {
+  background-image: url("../images/home_header_bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 55em;
+  margin-bottom: 8em;
+}
+
+h1, header h3 {
+  height: 10em;
+  font-weight: 800;
+}
+
+/* ----------------------------------------
+Archive Section
+------------------------------------------- */
+
+.archive-wrapper {
+  max-width: 99%;
+  padding-bottom: 5em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.row1 {
+  height: 27em;
+}
+
+.row1 img {
+  padding-bottom: 1em;
+}
+
+.row2 {
+  padding: 3em 1em;
+}
+
+/* ----------------------------------------
+About Section
+------------------------------------------- */
+
+.about-section {
+  background-color: #CDF3F6;
+}
+
+.about-box{
+  max-width: 80%;
+  padding: 7em;
+}
+
+.about-section h3 {
+  padding: 1em 0 3em;
+}
+
+.subscribe {
+  background-color: #CDF3F6;
+  border: #000000;
+}
+
+/* ----------------------------------------
+Issue 20 Gallery
+------------------------------------------- */
+.main-gallery {
+  padding-top: 3em;
+  max-width: 60rem;
+}
+
+.gallery-wrapper {
+  column-count: 3;
+  width: 100%;
+  margin: 4em 0 3em;
+}
+
+.gallery-wrapper img {
+  transition: all .3s ease-in-out;
+  -webkit- transition: all .3s ease-in-out;
+  margin-bottom: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.gallery-wrapper img:hover {
+  background-color: #44545E;
+  opacity: .5;
+}
+
+/* ----------------------------------------
+Leave a Comment
+------------------------------------------- */
+.wrap {
+  max-width: 60rem;
+
+}
+
+.contact-form form input, .contact-form textarea {
+  color: #44545E;
+  padding: 1em 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: .75em;
+  letter-spacing: .2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form button, textarea {
+  width: 100%;
+  display: block;
+}
+
+.contact input, textarea {
+  border: .2em solid #44545E;
+  padding: 1em 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: left;
+  border-spacing: 1em;
+  margin-bottom: 1em;
+}
+
+.contact input {
+  width: 33%;
+}
+
+textarea {
+  height: 12em;
+}
+
+main h2 {
+  padding-bottom: 2em;
+}
+
+/* ----------------------------------------
+Buttons
+------------------------------------------- */
+button, input[type="submit"] {
+  cursor: pointer;
+  outline: 0;
+  border: 2px solid #44545E;
+  color: #44545E;
+  padding: 8px 25px;
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .2em;
+  transition: all .3s ease-in-out;
+}
+
+button:hover, [type="submit"]:hover {
+  background-color: #44545E;
+  color: white;
+  font-weight: 600;
+}
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+
+footer {
+  background-color: #CDF3F6;
+}
+
+.wrap {
+  padding: 2em;
+}
+
+.social-links a {
+  font-size: 30px;
+  padding: 15px;
+  margin: 0;
+  display: inline-block;
+  color: #44545E;
+}
+
+.email-subscribe {
+  padding: 1.5em;
+}
+
+input[type="email"] {
+  text-transform: uppercase;
+  padding: 10px 5px;
+  border-radius: 0;
+  font-size: 1em;
+  font-weight: 600;
+  border: .5em solid white;
+  /*margin: 3em 2em 4em;*/
+}
+
+input[type="submit"] {
+  border-color: .1em solid #44545E;
+}
+
+input[type="email"]{
+  background-color: white;
+  border:none;
+  border-radius: 0;
+  margin-right: 20px;
+  padding: 10px 5px;
+  width: 25em;
+}
+
+.email-subscribe{
+  max-width: 40rem;
+}
+
+.copyright {
+  border-top: .1em solid #44545E;
+  padding: 1em;
+}
+
+
+

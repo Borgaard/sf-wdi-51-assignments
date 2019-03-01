@@ -1,0 +1,723 @@
+/* Color Palette 
+#333    - Very dark gray 80% black
+#444    - dark charcoal
+#fff    - white
+#337ab7 - blue
+#eee    - light grey
+#aeaeae - lighter grey
+#cecece - darker grey
+#e63636 - red
+#adadad - lighter grey
+rgba(31, 31, 31, 0.75) - graphite grey
+#129CF3 - BLUE
+#A9ADB0 - GREY
+#343434 - Very dark gray
+#727272 - grey lighter
+rgba(31, 31, 31, .75) - grey 12 dark almost black with transparency very little
+rgba(0, 0, 0, .4) - black with lot of transparency
+#D8D8D8 - light grey 
+#1a1a1a - Gray10
+#1274B1 - darker blue
+#316B90 - more darker blue
+#D7DADB - light gray
+#B5B5B5 - medium grey
+#0F1217 - dark black
+#555    - Davy's Grey
+#9d9d9d - light grey
+#444    - light grey
+
+#F7FC71 - Yellow
+#C8AAEF - light purple
+rgb(141, 70, 235) - dark purple
+#D8DCFF - purple/white
+#D9D0DE - grey/brown
+#EAE7D7 - beige/white
+#B58E5F - golden brown
+#7C693E - tree brown
+rgb(210, 210, 210) - light olive
+#E4E3C2 - warm olive
+#E8D0D9 - soft pink with olive undertone
+#474240 - Very dark grayish orange
+#323031 - JET
+*/
+/* for all elements: *  */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  /* when content overflows vertically (overflow-y) add scroll bar  */
+  overflow-y: scroll;
+  /* hide content if overflow horizontally */
+  overflow-x: hidden;
+}
+p {
+  /* note bootstrap is doing margin for you > no need to worry about spacing */
+  font-size: 14px;
+}
+/* ======= Generic CSS ======= */
+.section-title {
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+.section-title h2 {
+  /* set position for the :after last-child element */
+  position: relative;
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* add small line after h2 under about us */
+.section-title h2:after {
+  content: "";
+  /* position is anchored to .section-title h2*/
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 60px;
+  height: 1px;
+  background-color: #129CF3; /* blue */
+  margin-left: -30px;
+
+}
+.section-title p {
+  color: #333; /* Very dark gray 80% black */
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 45px;
+}
+/* ======= Navigation ======= */
+.navbar-default {
+  background-color: transparent;
+  border-color: #444; /* dark charcoal*/
+  z-index: 110;
+  /* add transition to button */
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+/* immediate item selector > */
+.navbar-default .navbar-nav > li > a {
+  color: #B5B5B5; /* gray med */
+  font-family: 'Raleway', sans-serif;
+  transition: all 1s;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #129CF3; /* blue */
+}
+.navbar-default .navbar-nav > li > a:focus {
+  color: #B5B5B5;
+}
+.navbar-brand {
+  padding: 9px 15px;
+}
+.navbar-brand img {
+  /* add transition to button */
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: #129CF3; /* blue */
+}
+
+/* ======= Header ======= */
+.header {
+  /* add background img in header element */
+  background-image: url("../images/header-bg.jpg");
+  /* keep the img fixed makes parallax effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* 2 background-position values: horizontal, vertical position.  */
+  background-position: 50% 50%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.header-overlay {
+  /* add modern looking overlay adding greyish overlay */
+  background-color: rgba(31, 31, 31, 0.75); /* graphite grey with bit of opacity */
+}
+.header-iphone img {
+  /* fit whole img width */
+  width: 100%;
+}
+.logo {
+  padding-bottom: 50px;
+}
+.header-text h1 {
+  color: #fff; /* white */
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 45px;
+  padding-top: 30px;
+  text-transform: uppercase; 
+}
+.header-text p {
+  color: #fff; /* text white */
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.header-btns {
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+.btn-download,
+.btn-download:focus,
+.btn-download:active, 
+.btn-download:visited
+{
+  background: transparent;
+  border-color: #129CF3; /* BLUE*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 19px;
+  text-transform: uppercase; 
+  /* rounded corner */
+  border-radius: 3px;
+  /* add transition to button */
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.btn-download:hover {
+  background-color: #129CF3; /* BLUE*/
+  color: #fff; /* white text */
+}
+.btn-tour,
+.btn-tour:focus,
+.btn-tour:active, 
+.btn-tour:visited {
+  color: #A9ADB0; /* GREY */
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 500;
+  /* button is see through */
+  background: transparent;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.btn-tour:hover {
+  color: #fff;
+}
+/* =========== About Us =========== */
+
+/* =========== Choose Us =========== */
+.choose-us-wrapper {
+  padding-top: 50px;
+}
+.about-iphone img {
+  margin-top: 8px;
+}
+.choose-us-title {
+  padding-bottom: 50px;
+}
+.choose-us-title h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 37px;
+  /* mom gets position relative for adding line underneath */
+  position: relative;
+}
+/* adding the custom underline */
+.choose-us-title h2:after {
+  content: "";
+  position: absolute;
+  /* from the bottom edge of choose-us h2.  I want to show the line */
+  bottom: -12px;
+  left: 0;
+  width: 70px;
+  /* thinness of line */
+  height: 1px; 
+  background-color: #129CF3;
+}
+.choose-us-title p {
+  margin-top: 40px;
+  font-size: 19px;
+  line-height: 24px;
+}
+.choose-us-item {
+  position: relative;
+  padding-bottom: 4px;
+  padding-left: 80px;
+}
+.choose-us-item div {
+  /* move the font-awesome icons to left side 
+     position is relative to the choose-item  parent container
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.choose-us-item div i {
+  font-size: 55px;
+  color: #129CF3; /* blue */
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  -moz-transition: all 1s;
+}
+.choose-us-item h3 {
+  color: #343434; /* grey dark */
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+}
+.choose-us-item p {
+  color: #727272; /* grey lighter */
+  font-size: 15px;
+}
+
+/* Testimonial */
+.testimonial {
+  /* add back ground img */
+  background-image: url("../images/testimonial-bg.jpg");
+  /* parallax effect use fixed */
+  background-attachment: fixed;
+  /* incase img too small prevent img from repeating */
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: 50% 50%;
+}
+/* overlay make the site img modern having a little tint */
+.testimonial-overlay {
+  background-color: rgba(31, 31, 31, .75);/* grey 12 dark almost black with transparency very little */
+  /* padding top|bottom 80px */
+  padding: 80px 0;
+}
+.carousel-indicators {
+  /* bring the 3 dots for slider down away from the text */
+  bottom: -30px;
+}
+.carousel-inner .item img {
+  border: 2px solid #129CF3; /* blue remember solid is required for border */
+  /* Make testimonial photo circle!! (it used to be square: boring!!)
+  border-radius: 50%; is short hand for following
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%; */
+  border-radius: 50%;
+  padding: 3px;
+}
+.testimonial-caption {
+  padding-bottom: 80px;
+}
+.testimonial-caption h2 {
+  /* name of testimonial giver  */
+  color: #129CF3; /* blue name */
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+  margin-top: 25px;
+}
+.testimonial-caption h4 {
+  color: #129CF3; /* blue name */
+}
+/* position name */
+.testimonial-caption h4 span {
+  color: #D8D8D8; /* light grey */
+  font-style: italic; 
+  font-weight: 300;
+}
+.testimonial-caption p {
+  color: #D8D8D8; /* light grey */
+  font-size: 27px;
+  padding-top: 50px;
+}
+
+/* ======= Features ======= */
+.features-inner-wrapper {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+.left-feature-item {
+  position: relative;
+  padding-right: 90px;
+  margin-bottom: 35px;
+  /* text align to right */
+  text-align: right;
+}
+.left-feature-item-icon {
+  /* position icon is anchor to its parent div left-feature-item */
+  position: absolute;
+  right: 0;
+  /* bring the icon bit higher than the text */
+  top: -8px; 
+  font-size: 40px;
+  color: #129CF3; /* blue */
+  width: 90px;
+  height: 90px;
+  text-align: center;
+}
+.left-feature-item h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 21px;
+  color: #333; /* Very dark gray 80% black */
+}
+.left-feature-item p {
+  color: #333; /* Very dark gray 80% black */
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.feature-iphone img {
+  width: 100%;
+}
+.right-feature-item {
+  position: relative;
+  padding-left: 90px;
+  margin-bottom: 35px;
+  /* margin-top: 35px; */
+  text-align: left;
+}
+.right-feature-item-icon {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  font-size: 40px;
+  color: #129CF3; /* blue */
+  width: 90px;
+  height: 90px;
+  text-align: center;
+}
+.right-feature-item h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 21px;
+  color: #333;
+}
+.right-feature-item p {
+  color: #333; /* Very dark gray 80% black */
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+/* ======= Purchase Now ======= */
+.purchase-now {
+  background-color: #1a1a1a; /* Gray10 */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.purchase-now p {
+  color: #dfdfdf;
+  font-size: 18px;
+  font-weight: 300;
+}
+.btn-purchase-now, 
+.btn-purchase-now:active,
+.btn-purchase-now:focus,
+.btn-purchase-now:visited
+{
+  background-color: #129CF3; /* blue */
+  border: 1px solid #129CF3; /* blue */
+  color: #fff; /* white */
+  border-radius: 3px;
+  padding: 15px 35px;
+  text-transform: uppercase;
+  /* button hover ease in out fading rate */
+  transition: all 1s;
+}
+/* change background-color when hover btn */
+.btn-purchase-now:hover {
+  background-color: #1274B1; /* darker blue */
+  border-color: #316B90; /* more darker blue */
+}
+/* ======= Counter ======= */
+.counter {
+  background-image: url("../images/counter-bg.jpg");
+  background-repeat: no-repeat;
+  /* parallax effect */
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: 50% 50%;
+}
+.counter-overlay {
+  /* show more of background photo */
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: rgba(0, 0, 0, .4); /* black with lot of transparency */
+}
+/* fontAweseom icon for .counter-item */
+.counter-item i {
+  color: #129CF3; /* blue */
+  font-size: 60px;
+
+}
+.counter-item h2 {
+  /* google font */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #D7DADB; /* light gray */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-top: 15px;
+  margin-bottom: 1px;
+}
+.counter-item p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #D7DADB; /* light gray */
+  font-size: 20px;
+  margin-top: 0px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* ======= Download-Now ======= */
+/* fix the img to fit better by picking the main section of download now section */
+.download-now img {
+  width: 100%;
+}
+.available-on {
+  background-color: #1a1a1a; /* Gray10 */
+  /* neg margin bring the available-on section and download-now section closer together */
+  margin-top: -8px;
+  position: relative;
+}
+.available-title {
+  padding-top: 75px;
+}
+.available-title h2 {
+  color: #fff; /* white */
+  font-size: 30px;
+}
+.available-title p {
+  color: #B5B5B5; /* medium grey */
+}
+/* get rid of padding for icons */
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+.available-on-item {
+  text-align: center;
+  border-left: 1px solid #0F1217; /* dark black */
+  min-height: 230px;
+  padding-bottom: 15px;
+  position: relative;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.available-on-item:hover {
+  background-color: #121212;
+}
+/* styling font awesome icons */
+.available-on-item i {
+  color: #129CF3; /* blue */
+  text-align: center;
+  opacity: 1;
+  font-size: 40px;
+  padding-top: 90px;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.available-on-item:hover i {
+  /* when hovering font awesome icons disappears */
+  opacity: 0;
+}
+.available-on-inner {
+  position: absolute;
+  /* bring down text h2 to same level as icon */
+  bottom: 93px;
+  width: 100%;
+  /* hide the text normally */
+  opacity: 0;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.available-on-inner h2 {
+  text-align: center;
+  font-weight: 300;
+  color: #D7DADB; /* light grey */
+  font-size: 16px;
+}
+.available-on-item:hover div.available-on-inner {
+  opacity: 1;
+}
+/* ======= Contact Us ======= */
+/* spacing out name, email, subjt fields */
+.contact-us-form .form-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #555; /* Davy's Grey */
+  /* form text border default is blue > change to light grey, background-color of the form field transparent */
+  background-color: transparent;
+  border: 1px solid #aeaeae; /* lighter grey*/
+  /* rounded box */
+  border-radius: 3px;
+  /* give spacing btwn form fields */
+  margin-bottom: 15px;
+  /* form outline and texts gets bit lighter */
+  opacity: 0.8;
+  /* ease in/out of outline of field */
+  outline: 0px !important;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+#message {
+  /* text input area bigger give height */
+  height: 117px;
+  /* user can't make the text input area bigger */
+  resize: none;
+}
+.submit-btn, 
+.submit-btn:hover,
+.submit-btn:focus,
+.submit-btn:visited {
+  background-color: transparent;
+  border: 1px solid #129CF3; /* blue */
+  border-radius: 4px; /* rounded corners */
+  /* button width to take up its col-md-8 containder width */
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 18px;
+  /* font color is blue */
+  color: #129CF3; /* blue */
+  /* ease in/out of outline of field  when clicking the color blue goes away and default grey color shows*/
+  outline: 0px !important;
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.submit-btn:hover {
+  background: #129CF3; /* blue backgroun submit button when hovering*/
+  color: #fff; /* white font submit text*/
+  border-color: #129CF3;
+}
+.social-icons {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+/* position social-icons in the middle of the page */
+.social-icons ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* get rid of the ul bullet default styles: list-style */
+.social-icons ul li {
+  /* omit bullet listing style */
+  list-style: none;
+  /* social icons line up horizontally */
+  display: inline;
+  padding-left: 10px;
+}
+.social-icons ul li a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #9d9d9d; /* light grey */
+  border-radius: 3px;
+  width: 45px;
+  height: 45px; /* size similar to form fields but just a bit smaller */
+  line-height: 49px;
+  color: #9d9d9d; /* light grey */
+  /* add easing in/out transition  */
+  transition: all 1s;
+  /* safari chrome -webkit- */
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.social-icons ul li a:hover {
+  background-color: #129CF3; /* blue */
+  border: 1px solid #129CF3;
+  color: #fff; /* white */
+}
+/* font awesome icon resize bigger! */
+.social-icons ul li a i {
+  font-size: 25px;
+}
+/* ======= Footer ======= */
+.footer {
+  background-color: #1a1a1a; /* jet black */
+  padding-bottom: 35px;
+  padding-top: 35px;
+  /* add bule line at the bottom of footer */
+  border-bottom: 3px solid #129CF3; /* blue */
+}
+#copyright {
+  width: 50%;
+}
+#copyright p {
+  color: #8C8B8A; /* light grey */
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+/* style the brand */
+#copyright p a {
+  /* rid of anchor default style */
+  text-decoration: none;
+  color: #129CF3; /* blue */
+}
+/* move the angle-up arrow right side, scroll-top brings user back to beginning of page */
+.scroll-top {
+  text-align: right;
+}
+.scroll-top a {
+  background-color: #129CF3; /* blue */
+  /* clickable area to get bigger */
+  padding: 25px;
+}
+/* style the fontAwesome icon */
+.scroll-top a i {
+  color: #fff;
+  font-size: 25px;
+}
+/* make bx slider to center */
+div .bx-viewport {
+  margin-left: 137px;
+}

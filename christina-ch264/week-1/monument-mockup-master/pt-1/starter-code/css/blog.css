@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  color: #44545E;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+/*put flex in the body*/
+}
+
+/*  Header styles
+===================================================================*/
+li {
+ /*display: flex;
+ flex-direction: space-around;*/
+ display: inline;
+
+/* float: left;*/
+}
+
+/*change*/
+a {
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: auto .25em;
+  /*margin-left: 1em;
+  margin-right: 5px;
+  padding-left: 0px;
+  padding-right: 5px;*/
+
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+/*center the navigation bar*/
+nav {
+  margin: auto 0px;
+  text-align: center;
+}
+
+
+/* body styles
+======================================================================*/
+
+h1 {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4em;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+/*.heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  color: red;
+}*/
+
+/*#date {
+  /*align-items: flex-start;*/
+  /*float: left;*/
+  /*text-align: left;*/
+
+/*}
+*/
+
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 10%;
+}
+
+p {
+  max-width: 1400px;
+}
+
+/*.image-wrapper {
+  object-fit: contain;
+}*/
+
+/*make an image responsive. this will target all images inside this container*/
+.image-wrapper img {
+  width: 100%;
+}
+
+/*make nav bar responsive*/
+
+@media screen and (max-width: 600px) {
+  ul li {
+    display: none;
+  }
+}
+
+

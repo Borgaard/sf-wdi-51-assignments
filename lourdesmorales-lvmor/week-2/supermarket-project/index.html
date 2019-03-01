@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Delicatezza Restaurant</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+</head>
+<body>
+    <div id="sidebar" onclick="toggleSidebar()">
+    <div class="toggle-btn"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+
+<!-- Orders -->
+    <h2>Order</h2>
+    <ul id="show-cart" class="cart-list">
+      <!--  -->
+    </ul>
+  </div>
+  <header>
+      <h1 class="main header"><a href="landing-page.html">Delicatezza</a></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Starters</a></li>
+      <li><a href="index2.html">Secondi</a></li>
+      <li><a href="index3.html">Pasta</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <section id="food-options">
+    <div class="wrap">
+      <h2>Starters</h2>
+      <div class="layout">
+        <div>
+          <h3>Caprese Salad</h3>
+          <li><a class="add-to-cart" id="app" href="#" data-name="Caprese Salad" data-price="10.99"><img class="category" src="images/caprese.jpg" alt="Caprese Salad"></a></li>
+        </div>
+        <br>
+        <div>
+          <h3>Italian Meatballs</h3>
+          <li><a class="add-to-cart" id="ban" href="#" data-name="Italian Meatballs" data-price="15.99"><img class="category" src="images/italian-meatballs.jpg" alt="Italian Meatballs"></a></li>
+        </div>
+        <div>
+          <h3>Prosciutto</h3>
+          <li><a class="add-to-cart" id="sho" href="#" data-name="Prosciutto" data-price="11.99"><img class="category" src="images/prosciutto.jpg" alt="Prosciutto"></a></li>
+        </div>
+        <div>
+          <h3>Olives</h3>
+          <li><a class="add-to-cart" id="app" href="#" data-name="Olives" data-price="5.99"><img class="category" src="images/olives.jpg" alt="Olives"></a></li>
+        </div>
+        <div>
+          <h3>Bruschetta</h3>
+          <li><a class="add-to-cart" id="ban" href="#" data-name="Bruschetta" data-price="10.99"><img class="category" src="images/bruschetta.jpg" alt="Bruschetta"></a></li>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="copyright">&copy;2019 LM</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

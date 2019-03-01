@@ -1,0 +1,168 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100%;
+  background: #726189;
+}
+
+/* Style elements in the header */
+
+header {
+  background-image: url("images/banner-lavender.jpg");
+  background-size: cover;
+  text-align: center;
+  border-bottom: 5px solid #334f41;
+}
+
+header h1, h2 {
+  color: #250d47;
+  margin-top: 40px;
+}
+
+header h1 {
+  font-size: 45px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 27px;
+}
+/* Setting up grid system for the shop */
+main {
+  display: flex;
+  height: 100%;
+  bottom: 20px;
+  margin: 0 12%;
+}
+
+.market {
+  width: 66.6667%;
+  text-align: center;
+}
+
+.col-half {
+  flex-wrap: wrap;
+  width: 50%;
+  flex-direction: row;
+}
+
+.cart {
+  width: 33.3333%;
+  text-align: center;
+}
+
+/* Styling Elements in the main */
+main h1 {
+  color: #44345b;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.pictures {
+  display: none;
+}
+
+.pictures img {
+  width: 90%;
+  height: auto;
+  margin: 5px;
+  border: 4px solid #334f41;
+}
+
+/* Styling buttons */
+button{
+  background-color: #63796E;
+  border: 2px solid #63796E;
+  color: white;
+  font-family: "Josefin-sans", sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 0 10px 15px 10px;
+  outline: none;
+  padding: 7px 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  background-color: #566b60;
+  border: 2px solid white;
+}
+
+.pictures button {
+  font-size: 12px;
+  margin-bottom: 0;
+  margin-top: 7px;
+  text-transform: none;
+}
+
+/* Styling the ul and li elements*/
+ul {
+  padding-left: 0;
+}
+
+li {
+  display: block;
+  padding: 5px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+
+@media only screen and (max-width: 940px) {
+  main {
+    margin: 0 10%;
+  }
+
+  section {
+    margin-right: 20px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+  .categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    margin: 2px;
+    width: 60%;
+    font-size: 12px;
+    padding: 7px 4px;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  main {
+    margin: 0;
+  }
+
+  header h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 10px
+    width: 100%;
+  }
+}

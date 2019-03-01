@@ -1,0 +1,68 @@
+.masonry {
+  column-count: 3;
+  width: 100%
+  margin: 64px 0 0;
+  margin: 4rem 0 2rem;
+  padding-bottom: 0;
+}
+
+.masonry img {
+  transition: all .3s ease-in-out;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.masonry img:hover {
+  opacity: .6;
+}
+
+.gallery {
+  padding-bottom: 0;
+}
+
+.about {
+  background-color: #CDF3F6;
+}
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+header {
+  background-image: url("../images/home_header_bg.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.about p {
+  display: inline-block;
+  max-width: 800px;
+  width: 100%;
+}
+
+.contact {
+  padding-top: 24px;
+  padding-top: 1.5rem;
+}
+
+form {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 560px) {
+  .about p {
+    width: 100%;
+  }
+
+  .masonry {
+  column-count: 2;
+  width: 100%
+  margin: 64px 0 0;
+  margin: 4rem 0 2rem;
+  padding-bottom: 0;
+  }
+}
+

@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Global Overrides
+  ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* ==========================================================================
+   Author's custom styles
+  ========================================================================== */
+
+/* Global
+   ================================================================ */
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 54px;
+  color: #444;
+  border-left: 6px solid #ddd;
+  background: #fff;
+}
+
+
+h1 {
+  font-size: 54px;
+  font-weight: normal;
+}
+
+h2 a {
+  color: inherit;
+}
+
+h2 a:hover {
+  color: #888;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+
+h3 {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  float: left;
+  width: 66.66667%;
+}
+
+
+.wrapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+  margin: 10px 0;
+}
+#sidebar {
+  float: right;
+  width: 29%;
+  margin-top: 108px;
+  color: #888;
+}
+
+.more {
+  font-weight: bold;
+  text-align: right;
+}
+p {
+  margin: 27px 0 0;
+  padding: 0;
+}
+
+a:hover {
+  color: #caa55b;
+}
+a {
+  -webkit-transition: all 300ms;
+  text-decoration: none;
+  color: #f8ce78;
+}
+
+
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+header h1 {
+  display: inline;
+  margin-right: 27px;
+}
+
+header h2 {
+  font-size: 27px;
+  display: inline;
+  margin-bottom: 13.5px;
+  color: #888;
+}
+
+
+footer {
+  clear: both;
+  color: #bbb;
+}
+
+
+header nav ul li {
+  float: left;
+  width: 16.66667%;
+  margin: 0;
+  padding: 0;
+}
+header nav a:hover {
+  color: white;
+  background: #8b8f93;
+}
+
+header nav a {
+  font-size: 22.5px;
+  display: block;
+  border-right: 1px solid white;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  background: #b0b6bb;
+}
+
+
+.module {
+  padding: 27px 0;
+  border-bottom: 1px solid #ddd;
+}
+.ad img {
+  margin: auto;
+}
+
+.module:last-of-type {
+  border: none;
+}
+
+
+article {
+  margin: 54px 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-top: 27px;
+}
+article p:first-of-type:first-letter {
+  font-size: 108px;
+  line-height: 1;
+  float: left;
+  margin: -10px 10px 0 -8px;
+  color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

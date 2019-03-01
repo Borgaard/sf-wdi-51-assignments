@@ -1,0 +1,59 @@
+*{
+  font-family: Merriweather;
+  color: #AFAFAF;
+}
+
+
+body {
+  background-color: #F1F1F1;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+
+body>div {
+  width: 80%;
+  margin: auto;
+}
+
+.flexBoundary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section {
+  width: 49%;
+}
+
+.form-control {
+  border: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="submit"]{
+ background-color: #6FAB82;
+ color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

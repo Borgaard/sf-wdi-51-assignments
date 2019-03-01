@@ -1,0 +1,140 @@
+body,
+html {
+    height: 100vh;
+    background-color: #3B3A3B;
+    text-align: center;
+}
+
+/* NAV BAR & HEADER SECTION */
+.nav {
+    background-color: black;
+}
+
+ul {
+    margin-top: 3rem;
+    margin-left: 8rem;
+}
+
+li {
+    display: inline;
+    padding: 1rem;
+    font-size: 1em;
+    font-family: 'montserrat', 'sans-serif';    
+}
+
+li > a {
+	color: white;
+}
+
+a:hover {
+		color: gold;
+		text-decoration: none;
+}
+
+
+
+/* IMAGE SECTION */
+.heading {
+    background-image: url("./images/food.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+     height: 400px;
+}
+
+
+
+/* MISSION SECTION */
+.mission {
+	background-color:  black;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+}
+/* MAIN SECTION (Three Columns) */
+.main {
+    color: white;
+    background-color: #3B3A3B;
+    padding: 2em;
+    margin-bottom: 12rem;
+}
+
+
+/* MENU BAR */
+.sidebar {
+	
+	
+    margin-top: 1rem;
+    padding: 2px;
+    width: 160px;
+    background-color: #3B3A3B;
+    position: relative;
+    height: 90%;
+}
+
+/* MENU BAR LINKS */
+.sidebar button {
+	display: flex;
+	flex-direction:  column;
+    color: white;
+    background-color: #3B3A3B;
+    width:  100px;
+    padding:  10px;
+    margin-left:  2em;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+/* ACTIVE LINK */
+.sidebar button:hover {
+    background-color: grey;
+    color: yellow;
+}
+
+
+
+/* H STYLES */
+h1 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+    color: gold;
+    font-family: 'bilbo swash caps', sans-serif;
+    margin-bottom:  2rem;
+}
+
+h1+h3 {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: -6em;
+    margin-left: 5em;
+}
+
+h2 {
+    font-family: 'bilbo swash caps', sans-serif;
+    color: gold;
+}
+
+h3 {
+	color: gold;
+	font-family:'montserrat';
+}
+
+p {
+    font-family: 'montserrat', sans-serif;
+    color: white;
+    font-size: 13px;
+}
+
+.product {position: relative;
+	text-align:  left;
+	right: -20em;
+	top:  -9em;
+	padding:  1em;
+}
+
+#items {
+width: 15rem;}
+
+
+

@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+
+
+}
+
+.title{
+  justify-content: center;
+}
+
+.buttons{
+  justify-content: center;
+
+}
+
+.button5 {
+  border-radius: 50%;
+  height: 100px;
+  width:100px;
+ }
+
+.box1,.box2{
+  height: 60px;
+  width:60px;
+  margin:40px;
+
+
+
+}
+.box1{
+
+  background-color: red;
+  position: absolute;
+  margin-top: 450px;
+
+
+}
+.box2{
+  margin-top: 100px;
+  position: relative;
+  background-color: blue;
+}
+
+
+.box3{
+  margin-left: 90%;
+  margin-top: 10%;
+  background-color:green;
+  height: 600px;
+  width: 60px;
+  position: fixed;
+  writing-mode: vertical-rl;
+  justify-content: center;
+  font-size: 45px;
+  word-spacing: 13px;
+
+}
+
+body{
+  font-family: "bangers";
+  margin-right:0px;
+
+}
+
+div{
+  display: flex;
+
+
+}
+
+
+.green{
+  background-color: green;
+}
+

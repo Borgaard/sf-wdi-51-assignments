@@ -1,0 +1,36 @@
+/* Color Palette 
+#333    - Very dark gray 80% black
+#fff    - white
+#337ab7 - blue
+#eee    - light grey
+#cecece - darker grey
+#e63636 - red
+#adadad  - lighter grey
+
+#F7FC71 - Yellow
+#C8AAEF - light purple
+rgb(141, 70, 235) - dark purple
+#D8DCFF - purple/white
+#D9D0DE - grey/brown
+#EAE7D7 - beige/white
+#B58E5F - golden brown
+#7C693E - tree brown
+rgb(210, 210, 210) - light olive
+#E4E3C2 - warm olive
+#E8D0D9 - soft pink with olive undertone
+#474240 - Very dark grayish orange
+#323031 - JET
+*/
+
+body {
+  padding-top: 100px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Very dark gray 80% black */
+}
+
+/* footer */
+/* for footer I added clear-fix to feature */
+#footer-p {
+  /* padding top|botton(30) left|right(0) */
+  padding: 30px 0;
+}

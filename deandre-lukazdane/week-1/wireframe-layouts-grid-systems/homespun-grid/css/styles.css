@@ -1,0 +1,85 @@
+
+.row, .column {
+	box-sizing: border-box;
+}
+
+.row {
+	border: 1px solid black;
+
+}
+/* sets clearfix after row */
+.row:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.column {
+	margin: 1%;
+	border: 2px solid goldenrod;
+	float: left;
+	position: relative;
+	border-radius: 20px;
+	text-align: center;
+}
+.column .column {
+	border 3pc solid;
+}
+
+/* sets columns widths*/
+.column-1 {width: 700;
+
+}
+.column-2 {width: 14.66%;
+
+}
+.column-3 {width: 23%;
+
+}
+.column-4 {width: 31.33%;
+
+}
+.column-5 {width: 39.66%;
+
+}
+.column-6 {width: 48%;
+
+}
+.column-7 {width: 56.33%;
+
+}
+.column-8 {width: 64.66%;
+
+}
+.column-9 {width: 73%;
+
+}
+.column-10 {width: 81.33%;
+
+}
+.column-11 {width: 89.66%;
+
+}
+.column-12 {width: 98%;
+
+}
+
+/* Layout specific styles*/
+header > .column,
+footer > .column {
+	padding: 25px;
+}
+
+.middle > .column {
+	height: 400px;
+	line-height: 400px;
+}
+
+header nav {
+	margin: auto;
+	text-align: center;
+}
+
+nav a {
+	display: inline-block;
+}

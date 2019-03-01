@@ -1,0 +1,60 @@
+header {
+  background-image: url('../images/home_header_bg.jpg');
+  height: 100vh;
+  /*position: fixed;*/
+}
+
+.about article {
+  max-width: 800px;
+}
+
+.articles .grid-wrapper {
+  justify-content: space-between;
+}
+
+.gallery-imgs {
+  column-count: 3;
+  margin: 0 3em;
+}
+
+.three-col {
+  display: flex;
+  justify-content: space-around;
+}
+
+.two-col {
+  display: none;
+}
+
+#gallery img {
+  height: auto;
+  max-width: 100%;
+  padding: .5em .25em;
+}
+
+#contact {
+  padding-top: 1.5em;
+  padding-top: 1.5rem;
+}
+
+.about .wrap h2{
+  font-size: 1.7em;
+  margin-bottom: 1em;
+}
+
+.about .wrap h3 {
+  font-size: 1.2em;
+}
+
+
+
+@media only screen and (max-width: 560px) {
+  .three-col {
+    display: none;
+  }
+
+  .two-col {
+    display: flex;
+    justify-content: space-around;
+  }
+}

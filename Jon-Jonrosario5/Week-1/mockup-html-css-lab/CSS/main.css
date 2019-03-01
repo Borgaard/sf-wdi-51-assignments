@@ -1,0 +1,100 @@
+* {
+  font-family: Lato;
+  margin-left: 10px;
+
+  text-decoration: none;
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  text-align:left;
+  margin-right: 50em;
+}
+
+p {
+  text-align:justify-all;
+  margin: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 45px;
+  color:grey;
+  padding-right: 20px;
+  vertical-align: top;
+  max-width: 55em;
+
+}
+
+article p::first-letter {
+  font-size: 100px;
+  float: left;
+  margin-top: .15em;
+
+
+}
+
+h1 a {
+  color: gold;
+  font-size: 50px;
+  text-decoration: none;
+
+}
+
+h2 a {
+  color: black;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: left;
+}
+
+nav a {
+  text-decoration: underline;
+  color:rgba(185,191,190,.3);
+  margin: 5px;
+  font-size: 22px
+
+}
+
+nav a:hover{
+  background: gold;
+}
+
+h3 {
+  color:rgba(185,191,190,.4);
+  font-size: 40px;
+  font-weight: 200;
+
+}
+
+img {
+display: block;
+
+}
+
+footer {
+  color:gold;
+  font-size: 15px;
+}
+
+footer  nav a{
+  color: gold;
+  font-size: 15px
+
+}
+
+h4 a{
+  float: right;
+  color: gold;
+
+}
+
+article {
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+

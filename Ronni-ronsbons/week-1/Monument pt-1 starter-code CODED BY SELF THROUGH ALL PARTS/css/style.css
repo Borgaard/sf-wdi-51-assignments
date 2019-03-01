@@ -1,0 +1,266 @@
+/* Global
+===========================*/
+body {
+  box-sizing: border-box;
+  color: #6E7A82;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* Layout
+===========================*/
+
+
+
+/* Text Styles
+===========================*/
+header nav, h1, h2, h3, footer a {
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #4B5A64;
+}
+
+h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+li a {
+  color: #9AB0BE;
+  text-decoration: none;
+}
+
+footer a {
+  color: #4B5A64;
+  padding: 1.29em /*18px*/;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+
+
+/* Header
+===========================*/
+header nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav {
+  text-align: center;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li {
+  display: inline-block;
+  font-size: 16px;
+  padding: .2rem 4rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+
+
+/* Headings
+===========================*/
+.head-text {
+  margin: auto;
+}
+
+h2, h3 {
+  color: #4B5A64;
+}
+
+
+/* Article
+============================*/
+img {
+  width: 100%;
+}
+
+
+
+/* Forms
+==============================*/
+input, textarea {
+  color: #6E7A82;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin-bottom: .8em;
+  padding: 0.86em 0.7em /*8px*/;
+  text-transform: uppercase;
+}
+
+button, input[type="submit"] {
+  background-color: transparent;
+  border: 2px solid #4B5A64;
+  padding: 0.7em 2.14em /*6px 30px*/;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #4B5A64;
+  color: white;
+  cursor: pointer;
+}
+
+.comment h2 {
+  text-align: center;
+}
+
+.comment form {
+  margin: 3.57em 0.71em;
+}
+
+.row-container {
+  display: flex;
+  margin: 0.71em /*10px*/;
+}
+
+.row-container input {
+  flex: 1;
+  margin: 0 0.71em;
+}
+
+.row-container textarea {
+  flex: 1;
+  margin: 0 0.71em;
+}
+
+.comment input, textarea {
+  border: 2px solid #4B5A64;
+}
+
+.contact {
+  margin: 4em /*30px*/ 0;
+}
+
+.contact input[type="text"] {
+  border: 2px solid white;
+  margin-right: 1.43em /*20px*/;
+  padding: 0.7em 7.7em;
+}
+
+
+/* Footer
+=============================*/
+footer {
+  background-color: #CDF3F6;
+  margin-top: 4.29em /*60px*/;
+  padding-top: 2.86em /*40px*/;
+  padding-bottom: 0.29em /*4px*/;
+  text-align: center;
+}
+
+footer p {
+  border-top: 2px solid #4B5A64;
+  padding: 0.57em /*8px*/;
+}
+
+
+/* Media Queries
+===============================*/
+@media screen and (max-width: 807px) {
+  header ul li {
+    display: inline-block;
+    font-size: 16px;
+    padding: .2rem 3rem;
+  }
+
+  .row-container {
+    display: block;
+  }
+
+  .row-container input {
+    margin: 0.71em;
+    width: 96%;
+  }
+
+  .row-container textarea {
+    width: 96%;
+  }
+
+  .row-container input[type="submit"] {
+    width: 99%;
+  }
+
+  .contact input[type="text"] {
+      margin-right: 2em;
+      padding: 0.7em 7.7em;
+  }
+}
+
+@media screen and (max-width: 679px) {
+  header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+   }
+
+  .hamburger {
+    color: white;
+    display: block;
+    left: 20px;
+    position: absolute;
+    top: 10px;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .row-container {
+    display: block;
+  }
+
+  .row-container input {
+    margin: 0.71em;
+    width: 90%;
+  }
+
+  .row-container textarea {
+    width: 90%;
+  }
+
+  .row-container input[type="submit"] {
+    width: 94%;
+  }
+
+  .contact input[type="text"] {
+      margin-right: 0;
+      padding: 0.7em 7.7em;
+  }
+
+  input[type="submit"] {
+    width: 300px;
+  }
+
+}
+

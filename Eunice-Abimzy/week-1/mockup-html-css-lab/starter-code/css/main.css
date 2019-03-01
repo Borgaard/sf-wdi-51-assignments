@@ -1,0 +1,105 @@
+/*will not need to make any edits to the HTML.
+Don't leave anything on the page unstyled — even if your CSS
+isn't perfect.
+BONUS
+
+Add hover effects to the nav.
+Imagine how you might use the border property to eliminate the
+need for the | characters in the nav.
+*/
+
+/*Global overrides first*/
+* {
+  box-sizing: border-box;
+  margin: 10px;
+}
+/*Page specific style*/
+body {
+font-family: "Lato", sans-serif;
+margin:0 auto;
+}
+
+h1 a {
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: normal;
+  margin-left: 0;
+}
+
+header h2 {
+  font-weight: 500;
+  color: #303030;
+}
+
+h2 a {
+  text-decoration: none;
+  margin-left: 0;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #C8C8C8;
+  font-size:30px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+header nav a {
+  text-align: left;
+  color: #D3D3D3;
+  font-size: 18px;
+  margin-left: 0;
+}
+/*
+Bonus work-Adding hover effet to header nav*/
+header nav a:hover {
+  color: goldenrod;
+}
+
+article h2 a {
+  color: #303030;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+article h4 a {
+  color: goldenrod;
+  text-decoration: none;
+  text-align: right;
+}
+
+article img {
+  display: inline-block;
+  width: 100vh;
+}
+
+article p {
+  color: #909090;
+  font-size:14px;
+  width: 100vh;
+}
+
+article p:first-of-type:first-letter {
+  font-size: 90px;
+  margin: -10px 10px 0 -8px;
+  line-height: 1;
+  float: left;
+  color: #E0E0E0;
+}
+
+/*I was trying to get the line break here but it didnt work*/
+
+article {
+  border-bottom: 4px;
+  border-bottom-color: #909090;
+}
+
+footer nav a {
+   color:goldenrod;
+}
+
+footer p {
+ color: #C8C8C8;
+ font-size: 14px;
+}
