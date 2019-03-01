@@ -16,7 +16,7 @@ class CreateTodoForm extends Component {
     event.preventDefault();
     // user submit the string of something
     let todo = this.state.todo;
-    // .createTodo() is a function
+    // .createTodo() is a function passed down from TodosContainer.js
     this.props.createTodo(todo)
     this.setState({
       todo: ""

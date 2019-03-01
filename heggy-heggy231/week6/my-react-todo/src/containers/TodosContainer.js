@@ -16,6 +16,8 @@ class TodosContainer extends Component {
   }
 
   fetchData(){
+    // .all() => static all() goes to models/todo.js axios
+    // .then() => promise
     TodoModel.all().then( (res) => {
       this.setState ({
         todos: res.data.todos,
