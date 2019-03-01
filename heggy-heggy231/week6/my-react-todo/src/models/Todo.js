@@ -20,6 +20,15 @@ class TodoModel {
     let request = axios.post(endPoint, todo);
     return request;
   }
+
+  static delete(todo) {
+  // provide the thing I am deleting
+  // `https://super-crud-api.herokuapp.com/api/todos`/jldjfad adding the todo._id url
+
+    let request = axios.delete(`${endPoint}/${todo._id}`);
+    return request;
+  }
+
 }
 
 export default TodoModel

@@ -26,6 +26,28 @@ class TodosContainer extends Component {
     })
   }
 
+  // Create a function to delete a todo on successful response. After the todo delete response is sent back from the server, we find the corresponding entry for the todo in our todos state array and remove it.
+  // why are we filtering? todos are saved on state.  we have to match.  remove from state, check for missiing todo is removing from UI
+  deleteTodo = (todo) => {
+    // note .delete() I need to create it
+    // TodoModel.delete(todo) takes you back to the model Todo.js static delete() 
+    TodoModel.delete(todo).then((res) => {
+      // debugger;
+  // callback function
+      let todos = this.state.todos.filter(function(todo) {
+  // only the todos that don't match the id of todo response data
+        return todo._id !== res.data._id
+      });
+      this.setState({ 
+        // we are updating the todos state 
+        //  todos same as todos: todos
+        todos : todos 
+      })
+    })
+  }
+
+
+// create new Todo
   createTodo = (todo) => {
     let newTodo = {
         body: todo,
@@ -37,7 +59,8 @@ class TodosContainer extends Component {
       let todos = this.state.todos
       // modify and push it back to the state
       let newTodos = todos.push(res.data)
-      this.setState({newTodos})
+      // this.setState({ todos: newTodos}) same as this.setState({ newTodos })
+      this.setState({ newTodos})
     })
   }
 
@@ -51,11 +74,14 @@ class TodosContainer extends Component {
     // ))
     return (
       <div className='todosContainer'>
-        <TodosList
-          todos={this.state.todos} />
         <CreateTodoForm
           createTodo={ this.createTodo }
         />
+        <TodosList
+          todos={this.state.todos} 
+          deleteTodo={this.deleteTodo}
+          />
+
       </div>
     );
   }

@@ -26,7 +26,9 @@ class TodosList extends Component {
   we want to give react uniquue id since react requires it
 */
           key={todo._id}
-          todo={todo}/>
+          todo={todo}
+  // this signals that deleteTodo is coming down form parent component
+          deleteTodo={this.props.deleteTodo}/>
       )
     })
 
