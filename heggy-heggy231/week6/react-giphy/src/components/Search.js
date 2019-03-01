@@ -4,6 +4,7 @@ import axios from 'axios';
 // // In standard vanilla Javascript
 // let axios = require('axios')
 
+// step by step instruction: https://git.generalassemb.ly/sf-wdi-51/react-giphy-lab
 class Search extends Component {
   // Search component's initial state. It should have a query value that corresponds to a search term.
 
@@ -12,16 +13,19 @@ class Search extends Component {
   }
 
   // function that is triggered whenever the user submits the Search form
-  searching = (e) => {
+  
+  searchingSubmit = (e) => {
     e.preventDefault();
     alert('searched!!');
-    console.log("e", e);
+    // Update submit function so that it now logs the query value in state.
+    console.log(this.state.query);
   }
   // Define a function that updates your query value in state whenever a change is made to the input field. You can do this using an onInput function on your text box, or by using ref.
   userInput = (e) => {
     console.log(e);
-    debugger;
-    // this.state.query = 
+    // debugger;
+    // e.target.value fetch the value of user search term!
+    this.state.query = e.target.value;
   }
   
   // axios.get('url')
@@ -38,7 +42,7 @@ class Search extends Component {
     return(
       <div>
     {/* inside of form add event listener onSubmit and call searching function */}
-        <form onSubmit={this.searching}>
+        <form onSubmit={this.searchingSubmit}>
           <label>
             Search: 
             {/* `this` points to the current obj I am in; Search component 
