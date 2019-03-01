@@ -39,7 +39,7 @@ class SearchContainer extends Component {
 
     onInput = (event) => {
         this.setState({
-            query: event.target.value
+            query:event.target.value
         })
     }
 

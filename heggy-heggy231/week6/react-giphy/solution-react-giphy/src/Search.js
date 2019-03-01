@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Search extends Component {
-  // state goe here
-  state = {
-    query: ''
-  }
-   submit () {
-    // EventTarget set this to be a query
-  }
-  render() {
-    return (
-      // create a form
-      <input type="text" placeholder= />
-      // inside input yextbox  call on onInpu
-      <form onSubmit={this.submit}></form>
-      // define function
+const search = (props) => {
+    return(
+        <div>
+            <input 
+                type="text" 
+                placeholder="Search here"
+                onKeyUp={props.onInput}
+            />
+        </div>
     )
-  }
 }
-export default Search;
+
+export default search;
