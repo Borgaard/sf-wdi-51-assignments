@@ -12,6 +12,7 @@ class App extends Component {
   increaseCount = () => {
     let counter = this.state.counter + 1;
 
+    // this.setState() saves the change to the state!
     this.setState({
       counter
     });

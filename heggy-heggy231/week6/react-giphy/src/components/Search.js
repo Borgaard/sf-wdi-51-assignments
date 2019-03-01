@@ -19,6 +19,11 @@ class Search extends Component {
     alert('searched!!');
     // Update submit function so that it now logs the query value in state.
     console.log(this.state.query);
+
+    // save the change to state 
+    this.setState({
+      query
+    });
   }
   // Define a function that updates your query value in state whenever a change is made to the input field. You can do this using an onInput function on your text box, or by using ref.
   userInput = (e) => {
@@ -26,6 +31,11 @@ class Search extends Component {
     // debugger;
     // e.target.value fetch the value of user search term!
     this.state.query = e.target.value;
+
+    // save the change to state 
+    this.setState({
+      query
+    });
   }
   
   // axios.get('url')
