@@ -58,7 +58,7 @@ class SearchContainer extends Component {
                 <div>
                     {/* handle search results */}
                     <Search handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-                    {/* add prop result to instance Results */}
+                    {/* add the prop result to instance Results. you make a result as a prop and send it down to Results */}
                     {data.map(result => <Results result={result}/>)}
                 </div>
                 
