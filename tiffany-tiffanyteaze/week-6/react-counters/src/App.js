@@ -24,13 +24,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header 
+          counter={this.state.counters}
+          increaseCounters={this.increaseCounters}
+          decreaseCounters={this.decreaseCounters} />
         
         <CounterList 
-        counter={this.state.counters}
-        increaseCounters={this.increaseCounters}
-        decreaseCounters={this.decreaseCounters}
-        />
+          counters={this.state.counters} />
       </div>
     );
   }
