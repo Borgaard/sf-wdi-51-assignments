@@ -13,7 +13,7 @@ class Search extends Component {
   // })
 
   render() {
-    // debugger;
+    debugger;
     // simple form with a single input and submit button.
     //  inside of return always wrap in one element like div
     return(

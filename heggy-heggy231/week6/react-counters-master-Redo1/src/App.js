@@ -17,6 +17,7 @@ class App extends Component {
     this.setState({
     // Note: counter is this.state.counter + 1 like what it says above!
       counter
+      // counter: this.state.counter + 1
     });
   }
 
