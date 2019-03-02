@@ -1,39 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Search extends Component {
-  state = {
-    query: "",
-    newQueryValue: ""
-  };
-
-  inputQuery = event => {
-    event.preventDefault();
-    console.log("typing inside input");
-    this.setState({query:event.target.value})
-  };
-
-  searchQuery = event => {
-    event.preventDefault();
-    console.log("searched!");
-    this.query =event.nativeEvent.text;
-  };
-
-  render() {
-    return (
-      // <h1>hey</h1>
-      <form>
-        <input
-          type="text"
-          name="query"
-          value={this.state.newQueryValue}
-          onInput={this.inputQuery}
-        />
-        <button className={"button"} onClick={this.searchQuery}>
-          Search
-        </button>
-      </form>
-    );
-  }
-}
+const Search = props => {
+  return (
+    <form >
+      <input
+        onChange={props.handleInput}
+        style={{ margin: "1em auto", display: "block" }}
+        type="text"
+        name="term"
+      />{" "}
+      &nbsp;
+      <button
+        onClick={props.getInput}
+        style={{ margin: "auto", display: "block" }}
+        type="button"
+        className="btn btn-primary"
+      >
+        Search
+      </button>
+    </form>
+  );
+};
 
 export default Search;
