@@ -80,13 +80,25 @@ app.put("/api/books/:id", function(req, res) {
   console.log(req.body);
   let id;
   id = req.params.id;
-  Book.findOneAndUpdate({ _id: id }, req.body, { new: true });
+  Book.findOneAndUpdate(
+    { _id: id },
+    req.body,
+    { new: true },
+    (err, updatedBook) => {
+      if (err) console.error(err);
+      res.json(updatedBook);
+    }
+  );
 });
 
 // delete book
 app.delete("/api/books/:id", function(req, res) {
   // get book id from url params (`req.params`)
   let bookId = req.params.id;
+  Book.deleteOne({ _id: bookId }, (err, deletedBook) => {
+    if (err) console.error(err);
+    res.send(`Deleted: ${bookId}`);
+  });
 });
 
 app.listen(process.env.PORT || 3000, function() {
