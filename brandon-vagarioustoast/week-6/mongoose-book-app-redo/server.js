@@ -63,11 +63,15 @@ app.get("/api/books/:id", function(req, res) {
 // create new book
 app.post("/api/books", function(req, res) {
   // create new book with form data (`req.body`)
-  console.log("books create", req.body);
-  var newBook = req.body;
-  newBook._id = newBookUUID++;
-  books.push(newBook);
-  res.json(newBook);
+  let newBook = {
+    title: req.body.title,
+    author: req.body.author
+  };
+
+  Book.create(newBook, (err, createdBook) => {
+    if (err) console.error(err);
+    res.json(createdBook);
+  });
 });
 
 // update book
