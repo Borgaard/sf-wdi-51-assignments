@@ -77,31 +77,16 @@ app.post("/api/books", function(req, res) {
 // update book
 app.put("/api/books/:id", function(req, res) {
   // get book id from url params (`req.params`)
-  console.log("books update", req.params);
-  var bookId = req.params.id;
-  // find the index of the book we want to remove
-  var updateBookIndex = books.findIndex(function(element, index) {
-    return element._id === parseInt(req.params.id); //params are strings
-  });
-  console.log("updating book with index", deleteBookIndex);
-  var bookToUpdate = books[deleteBookIndex];
-  books.splice(updateBookIndex, 1, req.params);
-  res.json(req.params);
+  console.log(req.body);
+  let id;
+  id = req.params.id;
+  Book.findOneAndUpdate({ _id: id }, req.body, { new: true });
 });
 
 // delete book
 app.delete("/api/books/:id", function(req, res) {
   // get book id from url params (`req.params`)
-  console.log("books delete", req.params);
-  var bookId = req.params.id;
-  // find the index of the book we want to remove
-  var deleteBookIndex = books.findIndex(function(element, index) {
-    return element._id === parseInt(req.params.id); //params are strings
-  });
-  console.log("deleting book with index", deleteBookIndex);
-  var bookToDelete = books[deleteBookIndex];
-  books.splice(deleteBookIndex, 1);
-  res.json(bookToDelete);
+  let bookId = req.params.id;
 });
 
 app.listen(process.env.PORT || 3000, function() {
