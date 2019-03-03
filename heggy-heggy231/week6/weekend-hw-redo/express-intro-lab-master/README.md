@@ -2,8 +2,15 @@
 
 ### Base Challenges - Build an Express App
 
+- step by step instruction: https://git.generalassemb.ly/sf-wdi-51/express-intro-lab/tree/master
 1) npm install express --save
 2) touch touch server.js
+3) update entry point: server.js in package.json
+    "main": "server.js",
+
+4) 
+
+
 Solution in the solution branch.
 
 **Check Install**
