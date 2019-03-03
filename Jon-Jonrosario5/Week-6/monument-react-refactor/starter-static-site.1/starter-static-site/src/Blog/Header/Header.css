@@ -5,11 +5,10 @@ header h2 {
 	letter-spacing: 0.3rem;
 }
 
-header {
+.vertical-center {
 	background-image: url('./blog_header_bg.jpg');
 	background-size: cover;
 	background-position: center;
-
 /* 	padding-top: 6rem;
 	padding-bottom: 2.5rem; */
 
@@ -24,7 +23,7 @@ h1 a {
 	color: #44545E;
 
 	/* If background-image */
-	color: white;
+	color:black;
 	margin-top: 40px;
 	margin-top: 2.5rem;
 	display: inline-block;
