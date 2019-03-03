@@ -64,6 +64,19 @@ class TodosContainer extends Component {
     })
   }
 
+  updateTodo = (todo, todoBody, todoId) => {
+    // debugger;
+    function isUpdatedTodo(todo) {
+        return todo._id === todoId;
+    }
+// order matters (.update(todoId, todoBody))  static update(todoId, updateInfo) { since we are getting the model from todo.js model
+    TodoModel.update(todoId, todoBody).then((res) => {
+        let todos = this.state.todos;
+        todos.find(isUpdatedTodo).body = todoBody.body;
+        this.setState({todos: todos})
+    })
+  }
+
   render() {
     // debugger;
   // calling TodoModel.all() function
@@ -78,9 +91,10 @@ class TodosContainer extends Component {
           createTodo={ this.createTodo }
         />
         <TodosList
-          todos={this.state.todos} 
+          todos={this.state.todos}
+          updateTodos={this.updateTodo}
           deleteTodo={this.deleteTodo}
-          />
+        />
 
       </div>
     );

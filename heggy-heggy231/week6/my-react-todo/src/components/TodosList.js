@@ -28,7 +28,9 @@ class TodosList extends Component {
           key={todo._id}
           todo={todo}
   // this signals that deleteTodo is coming down form parent component
-          deleteTodo={this.props.deleteTodo}/>
+          deleteTodo={this.props.deleteTodo}
+          updateTodo={this.props.updateTodo} 
+          />
       )
     })
 
