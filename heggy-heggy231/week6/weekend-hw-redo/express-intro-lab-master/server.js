@@ -2,6 +2,7 @@
 // [ x ] creating routes for clients to make requests to your server 
 // [ x ] add some starter data (often called "seed data") to serve when the users visit '/api/albums'.
 // [ x ] To have this data be accessible, we'll need to set up a route to serve it. Add an app.get method for the path /api/albums. Inside the new route, use res.json(albums) to respond with some JSON containing all the albums from our albums variable.
+// [ ] Request Data From the Server
 // [  ] storing data on the server:
 // serverside js
 //  export express here

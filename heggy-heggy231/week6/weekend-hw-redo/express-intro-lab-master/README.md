@@ -376,11 +376,28 @@ Solution in the solution branch.
 app.get('/api/taquerias', (req, res) => res.json(taquerias) );
 
 
+// app.get takes 2 arguments: url, cb with req, res
+app.get('/api/albums', (req, res) => {
+  res.json(albums);
+});
+
+![end result json album](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%201.30.19%20PM.png?1551648664605)
+
+- here is what server.js has global variable albums
+![album array](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%201.31.19%20PM.png?1551648698188)
+-
+![api album route path](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%201.31.30%20PM.png?1551648703230)
+
 **Request Data From the Server**
 
 1. Let's get this working with our index page now.  In your browser, open `index.html` and then open the javascript console.  You should see 'Sanity Check: JS is working!'  Try running the following AJAX request in the JavaScript console:
 
   ```js
+
+  const handleSuccess = json =>  console.log(json);
+
+  const handleError = (xhr, status, errorThrown) => console.log('uh oh');
+
   $.ajax({
      method: 'GET',
      url: 'http://localhost:3000/api/albums',
@@ -388,11 +405,14 @@ app.get('/api/taquerias', (req, res) => res.json(taquerias) );
      error: handleError
    });
 
-   const handleSuccess = json =>  console.log(json);
-
-   const handleError = (xhr, status, errorThrown) => console.log('uh oh');
+   ==> result in my console
 
   ```
+![ajax in my console](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%201.44.23%20PM.png?1551649870818)
+
+![ajax returns obj](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%201.50.18%20PM.png?1551649870765)
+
+![ajax code](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%201.50.26%20PM.png?1551649871585)
   > Note: you must be on a page with jQuery in order to use .ajax in the browser console!  Fortunately, the included index.js does have jQuery.
 
   You should get something back like:
