@@ -1,6 +1,7 @@
 // [ x ] creating a new project with Node and Express
 // [ x ] creating routes for clients to make requests to your server 
-// [  ] add some starter data (often called "seed data") to serve when the users visit '/api/albums'.
+// [ x ] add some starter data (often called "seed data") to serve when the users visit '/api/albums'.
+// [ x ] To have this data be accessible, we'll need to set up a route to serve it. Add an app.get method for the path /api/albums. Inside the new route, use res.json(albums) to respond with some JSON containing all the albums from our albums variable.
 // [  ] storing data on the server:
 // serverside js
 //  export express here
@@ -38,7 +39,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// set root dir
+// app.get takes 2 param url, call back (req, res), this rout sets root dir
 app.get('/', (req, res) => {
   console.log('##### req ##### ', req);
   console.log('##### res ##### ', res);
@@ -49,7 +50,10 @@ app.get('/', (req, res) => {
   // res.json(taquerias) makes response into json object http://localhost:3000/api/taquerias
 app.get('/api/taquerias', (req, res) => res.json(taquerias) );
 
-
+// app.get takes 2 arguments: url, cb with req, res
+app.get('/api/albums', (req, res) => {
+  res.json(albums);
+});
 // set up port 3000 to listen
 //  process.env.PORT || 3000 "in production use the production port, otherwise use 3000 (for development)".
 app.listen(process.env.PORT || 3000,  () => console.log('Server is up and running!!! Example app listening at http://localhost:3000/'));

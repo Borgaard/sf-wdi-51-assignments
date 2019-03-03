@@ -370,6 +370,12 @@ Solution in the solution branch.
 
   > Restart your server, and you should see our albums when you use postman to request the `http://localhost:3000/api/albums` URL.  You could also try using curl: `curl -X GET http://localhost:3000/api/albums` or just your browser.
 
+
+// app.get takes 2 param app object has a method called ***** app.get() which takes 2 arguments: a url and a callback function  http://localhost:3000/api/taquerias
+  // res.json(taquerias) makes response into json object http://localhost:3000/api/taquerias
+app.get('/api/taquerias', (req, res) => res.json(taquerias) );
+
+
 **Request Data From the Server**
 
 1. Let's get this working with our index page now.  In your browser, open `index.html` and then open the javascript console.  You should see 'Sanity Check: JS is working!'  Try running the following AJAX request in the JavaScript console:
