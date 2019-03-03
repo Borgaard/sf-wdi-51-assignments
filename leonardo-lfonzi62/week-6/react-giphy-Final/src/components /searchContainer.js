@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import Search from './search';
 import Results from './results';
 import axios from 'axios';
+import { throws } from 'assert';
 
-class Search extends Component {
+class SearchContainer extends Component {
     state = {
         Query:"",
         response:[]
     }
-
     handleSubmit = (event) => {
     event.preventDefault();
     // making AJAX call to giphy database using the necessary requirements per the website instructions 
@@ -23,7 +24,6 @@ class Search extends Component {
     console.info(`A new Query was submitted:${QueryTerm}`) // logging the user's search term input in the console 
    
 }
-
      handleChange =(event) => {
     console.log('Your Query Term has changed!:' + event.target.value); // logging the Query term the user types in
     this.setState({Query: event.target.value}); //dynamically  setting the state of the user's Query to whatever they are typing in the input
@@ -48,19 +48,12 @@ class Search extends Component {
             })
         }
 
-
-        return( <div>
-				<div class="col-sm-4">
-					<form onSubmit={this.handleSubmit} className="form-inline">
-						<label>Search Gifs</label>
-						<input type="text" className="form-control gif-input" name="q" value={this.state.Query} onChange = {this.handleChange}  placeholder="search gifs"/>
-						{/* <input type="hidden" name="api_key" value={this.state.Query} onChange = {this.handleChange} /> */}
-						<input type="submit" value="Go!" className="btn btn-primary"/>
-					</form>
-				</div>
-                 {gifresults}
-                 </div>
+        return( <div> 
+            <Search handleSubmit={this.handleSubmit} handleChange={this.handleChange}  query={this.QueryTerm} results={this.gifresults} />
+            {gifresults}
+            </div>
         )
     }
 }
-export default Search;
+
+export default SearchContainer;
