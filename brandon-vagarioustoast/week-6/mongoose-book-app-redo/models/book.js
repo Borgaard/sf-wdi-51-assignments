@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const CharacterSchema = new Schema({
+  name: String
+});
+
 const BookSchema = new Schema({
   title: String,
   author: {
@@ -8,17 +12,10 @@ const BookSchema = new Schema({
     ref: "Author"
   },
   image: String,
-  releaseDate: String
-});
-
-const CharacterSchema = new Schema({
-  name: String
+  releaseDate: String,
+  characters: [CharacterSchema]
 });
 
 let Book = mongoose.model("Book", BookSchema);
-let Character = mongoose.model("Character", CharacterSchema);
 
-module.exports = {
-  Book,
-  Character
-};
+module.exports = Book;

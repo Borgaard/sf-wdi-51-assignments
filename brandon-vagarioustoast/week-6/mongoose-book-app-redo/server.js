@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
 // get all books
 app.get("/api/books", (req, res) => {
   // send all books as JSON response
-  Book.find({})
+  Book.find()
     .populate("author")
     .exec((err, books) => {
       if (err) console.error(err);
@@ -101,6 +101,22 @@ function createBookWithAuthorAndRespondTo(book, author, res) {
     res.json(book);
   });
 }
+
+// add characters to book
+
+app.post("/api/books/:book_id/characters", (req, res) => {
+  let bookId = req.params.book_id;
+  Book.findById(bookId)
+    .populate("author")
+    .exec((err, foundBook) => {
+      if (err) console.error(err);
+      foundBook.characters.push(req.body.characters);
+      foundBook.save((err, savedBook) => {
+        if (err) console.error(`Error with saved book: ${err}`);
+        res.json(savedBook);
+      });
+    });
+});
 
 // update book
 app.put("/api/books/:id", (req, res) => {

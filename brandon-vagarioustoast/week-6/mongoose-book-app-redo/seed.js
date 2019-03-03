@@ -93,41 +93,40 @@ var authors_list = [
 ];
 
 // remove all records that match {} -- which means remove ALL records
-db.Author.deleteMany({}, function(err, authors) {
+db.Author.remove({}, (err, authors) => {
   console.log("removed all authors");
   db.Author.create(authors_list, function(err, authors) {
     if (err) {
-      console.log(err);
+      console.error(err);
       return;
     }
     console.log("recreated all authors");
     console.log("created", authors.length, "authors");
 
-    db.Book.deleteMany({}, function(err, books) {
+    db.Book.remove({}, (err, books) => {
       console.log("removed all books");
       books_list.forEach(function(bookData) {
-        var book = new db.Book({
+        let book = new db.Book({
           title: bookData.title,
           image: bookData.image,
           releaseDate: bookData.releaseDate
         });
-        db.Author.findOne({ name: bookData.author }, function(
-          err,
-          foundAuthor
-        ) {
+        db.Author.findOne({ name: bookData.author }, (err, foundAuthor) => {
           console.log(
             "found author " + foundAuthor.name + " for book " + book.title
           );
           if (err) {
-            console.log(err);
+            console.error(err);
             return;
           }
           book.author = foundAuthor;
           book.save(function(err, savedBook) {
             if (err) {
-              console.log(err);
+              console.error(err);
             }
-            console.log("saved " + savedBook.title + " by " + foundAuthor.name);
+            console.info(
+              "saved " + savedBook.title + " by " + foundAuthor.name
+            );
           });
         });
       });
