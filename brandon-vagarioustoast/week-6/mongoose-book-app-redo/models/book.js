@@ -11,6 +11,14 @@ const BookSchema = new Schema({
   releaseDate: String
 });
 
-let Book = mongoose.model("Book", BookSchema);
+const CharacterSchema = new Schema({
+  name: String
+});
 
-module.exports = Book;
+let Book = mongoose.model("Book", BookSchema);
+let Character = mongoose.model("Character", CharacterSchema);
+
+module.exports = {
+  Book,
+  Character
+};
