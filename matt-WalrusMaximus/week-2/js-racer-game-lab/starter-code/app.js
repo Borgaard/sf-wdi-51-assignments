@@ -88,24 +88,59 @@ function redRacer() {
     if (racers.red.pos < 8) {
         racers.red.pos++
         document.getElementById('dot1').style.left = `${racers.red.pos*10}%`
+    } else {
+        if (racers.red.isPlayer) {
+            alert("You win!")
+            window.location.reload();
+        } else {
+            alert("You lost.")
+            window.location.reload();
+        }
     }
 }
+
 function blueRacer() {
     if (racers.blue.pos < 8) {
         racers.blue.pos++
-        document.getElementById('dot1').style.left = `${racers.blue.pos*10}%`
+        document.getElementById('dot2').style.left = `${racers.blue.pos*10}%`
+    } else {
+        if (racers.blue.isPlayer) {
+            alert("You win!")
+            window.location.reload();
+        } else {
+            alert("You lost.")
+            window.location.reload();
+        }
     }
 }
+
 function greenRacer() {
     if (racers.green.pos < 8) {
         racers.green.pos++
-        document.getElementById('dot1').style.left = `${racers.green.pos*10}%`
+        document.getElementById('dot3').style.left = `${racers.green.pos*10}%`
+    } else {
+        if (racers.green.isPlayer) {
+            alert("You win!")
+            window.location.reload();
+        } else {
+            alert("You lost.")
+            window.location.reload();
+        }
     }
 }
+
 function whiteRacer() {
     if (racers.white.pos < 8) {
         racers.white.pos++
-        document.getElementById('dot1').style.left = `${racers.white.pos*10}%`
+        document.getElementById('dot4').style.left = `${racers.white.pos*10}%`
+    } else {
+        if (racers.white.isPlayer) {
+            alert("You win!")
+            window.location.reload();
+        } else {
+            alert("You lost.")
+            window.location.reload();
+        }
     }
 }
   
@@ -137,9 +172,9 @@ function whiteMove() {
     
 }
 
-//the game doesnt work and I may have bitten off more than I can chew with the random interval nonsense, but, the core concept is here! I will refactor this to make it work when
-//i figure out why the pieces wont move together.
-
+// IT WOOOOORKS! Simple issue was fixing the targeting of the elements, even without jquery it was easy to find what went wrong with fresh eyes.
+// also made a page refresh at the end so the game automatically can be restarted.
+// noticed an interesting anomoly on one of the games, if the pieces are moving at exactly the same speed, you can get both a "win" and "lose" notification.
 
 
 
