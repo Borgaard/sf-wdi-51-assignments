@@ -1,23 +1,14 @@
 import React from "react";
 
-export default class Search extends React.Component {
-  state = {
-    query: ""
-  };
+const Search = props => {
+  return (
+    <div>
+      <form onSubmit={props.submit}>
+        <input type="text" placeholder="Search Here" onChange={props.onInput} />
+        <button>Go</button>
+      </form>
+    </div>
+  );
+};
 
-  onInput = e => {
-    e.preventDefault();
-    console.log("Searched");
-  };
-
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.onInput}>
-          <input type="text" placeholder="Search Here" />
-          <button>Go</button>
-        </form>
-      </div>
-    );
-  }
-}
+export default Search;
