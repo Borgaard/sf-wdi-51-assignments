@@ -40,10 +40,11 @@ let gifJson = {
 
 class Results extends Component {
   render() {
+    console.log(this.props.gif);
     return (
-      <div>
-        <img src={this.props.result.images.fixed_height.url} alt="" />
-        <p>Source: {this.props.result.source}</p>
+      <div className="gif-result">
+        <img src={this.props.gif.images.fixed_height.url} alt={this.props.gif.title} />
+        <p>Source: {this.props.gif.source_tld}</p>
         {/* <img src={gifJson.data[0].images.fixed_height.url} alt="cat pulling out a drawer" />
         <p>Source: {gifJson.data[0].source}</p> */}
       </div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SearchContainer from './components/SearchContainer.js';
-import './App.css';
 
 class Home extends Component {
   render() {

@@ -6,7 +6,8 @@ class Search extends Component {
       <div>
         <form onSubmit={this.props.submit}>
           {/* value={this.props.value} doesn't show input like it did in blog-app */} 
-          <input type="text" name="search" placeholder={this.props.value} onInput={this.props.input} />
+          {/* changed from onInput to onKeyUp to trigger live search */}
+          <input type="text" name="search" placeholder="Find GIFs" value={this.props.value} onKeyUp={this.props.input} />
           <input type="submit" name="submit" value="Search" />
         </form>
       </div>

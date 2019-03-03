@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from './Search.js';
-import Results from './Results.js';
+import ResultsList from './ResultsList.js';
 import axios from 'axios';
 import { giphyUrl } from '../constants.js';
 import { giphyKey } from '../constants.js';
@@ -35,10 +35,10 @@ class SearchContainer extends Component {
 
   handleInput = (event) => {
     event.preventDefault();
-    console.log('input changed');
     this.setState({
       query: event.target.value,
     });
+    this.search();
     // console.log(this.state.query);
   };
 
@@ -59,27 +59,28 @@ class SearchContainer extends Component {
     });
   };
 
-  render() {
-    let results = '';
-    if(this.state.searchSubmitted === true && this.state.searchResults) {
-      // [] this.state.searchResults is empty here, so why is this proceeding?
-      // [] also how do i get the searchResults with the axios response?
-      results = this.state.searchResults.map( (result, index) => {
-        return (
-          <div>
-            <Results result={result} key={index}/>
-          </div>
-        );  
-      })
-    } else {
-      return (
-        <div>
-          <Search input={this.handleInput} submit={this.handleSubmit} placeholder={this.state.searchValue} />
-          {results}
-        </div>
-      )
+  // only update component if new input value differs from current)
+  shouldComponentUpdate = (nextProps, nextState) => {
+    if(this.state.searchResults.length === 0 && this.state.query === nextState.query) {
+      return false;
+    }
+    return true;
+  };
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if(prevState.query !== this.state.query) {
+      this.search();
     };
   };
-}
+
+  render() {
+    return (
+      <div>
+        <Search input={this.handleInput} submit={this.handleSubmit} placeholder={this.state.searchValue} />
+        <ResultsList info={this.state.searchResults} />
+      </div>
+    )
+  };
+};
 
 export default SearchContainer;
