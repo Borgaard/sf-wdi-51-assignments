@@ -2,7 +2,7 @@
 Header
 ------------------------------------------- */
 header {
-	background-image: url('../images/home_header_bg.jpg');
+	background-image: url('/images/home_header_bg.jpg');
 	background-attachment: fixed;
 	height: 100vh;
 }
