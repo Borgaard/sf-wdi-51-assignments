@@ -2,6 +2,8 @@
 
 ### Base Challenges - Build an Express App
 
+1) npm install express --save
+2) touch touch server.js
 Solution in the solution branch.
 
 **Check Install**
