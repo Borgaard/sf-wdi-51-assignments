@@ -7,8 +7,10 @@ import { Link } from 'react-router-dom';
       <div>
         <h1>ToDo</h1>
         <nav>
-            <Link to={'/'}>Home</Link>
-            <Link to={'/todos'}>Todos</Link>
+            <ul>
+            <li><Link to={'/'}>Home</Link></li>
+            <li><Link to={'/todos'}>Todos</Link></li>
+            </ul>
         </nav>
       </div>
     )
