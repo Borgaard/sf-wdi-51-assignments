@@ -9,7 +9,7 @@
 const express = require('express');
 // set var app to express() lib functions
 const app = express();
-// serve static files in public
+// serve static files in public. Set up the express app to serve the static files (actually, the whole public directory.)
 app.use(express.static('public'));
 
 // add taquerias data points
@@ -17,7 +17,7 @@ let taquerias = [
   { name: "La Taqueria" },
   { name: "El Farolito" },
   { name: "Taqueria Cancun" }
-]
+];
 
 // add album data points make this global so every one can see
 const albums = [
@@ -45,9 +45,12 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   console.log('##### req ##### = ', req);
   console.log('##### res ##### = ', res);
-  // res.send('Hello Heggy');
-  res.sendFile('views/index.html', { root : __dirname });
+  console.log("dirname? ", { root : __dirname });
   console.log("dirname? ", __dirname);
+  // res.send('Hello Heggy');
+  // dirname?  /Users/Heggy/Document/GA/wdi/sf-wdi-51-assignments/heggy-heggy231/week6/weekend-hw-redo/express-intro-lab-master is the top level root of the file
+  res.sendFile('views/index.html', { root : __dirname });
+
 });
 
 // app object has a method called .get() which takes two arguments: a url and a callback function  http://localhost:3000/api/taquerias

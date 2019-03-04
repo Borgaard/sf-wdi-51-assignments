@@ -8,12 +8,23 @@ $(document).ready(() => {
   $.ajax({
     // since api/albums is a get route I ask method tobe get
     method: 'GET',
-    url: 'http://localhost:3000/api/albums',
+    // url: 'http://localhost:3000/api/albums',
+    url: '/api/albums',
     success: handleSuccess,
     error: handleError
   });
 
-}); // end of doc.ready function
+  $.ajax({
+    method: 'GET',
+    // relative to localhost:3000
+    url: '/api/taquerias',
+    success: handleResponse,
+    error: handleError
+  });
+
+}); // end of doc.ready function for 
+
+
 
 // remember to put function outside of document.ready()
 
@@ -27,7 +38,7 @@ const handleSuccess = json =>  {
   console.log(json);
   // inside of console grab json obj when sucess happens
   var albums = json;
-  debugger;
+  // debugger;
 // albums => array with 3 obj, (3) [{…}, {…}, {…}]
 // 0: {title: "Cupid Deluxe", artist: "Blood Orange"}
 // 1: {title: "M3LL155X - EP", artist: "FKA twigs"}
@@ -47,8 +58,8 @@ const handleSuccess = json =>  {
   var outputhtml = `<ul>`; 
   for(var i = 0; i < albums.length; i++) {
   //<ul> <li> Blood Orange -- Cupid Deluxe </li>
-    console.log(outputhtml = `${outputhtml} 
-			<li> ${albums[i].artist} --- ${albums[i].title} </li>`);
+  console.log(outputhtml = `${outputhtml} 
+                              <li> ${albums[i].artist} --- ${albums[i].title} </li>`);
   }
 
   // <ul> 
@@ -82,7 +93,14 @@ const handleSuccess = json =>  {
 } // end of handleSuccess function
 
 // also move handleError function outside of ajax call
-const handleError = (xhr, status, errorThrown) => console.log('uh oh');
+// const handleError = (xhr, status, errorThrown) => console.log('uh oh');
+
+// or 
+
+const handleError = (XHR, status, errorThrown) => {
+  console.log(`uh oh! Error: ${errorThrown}`);
+  $('#albumTarget').text('Failed to load albums, is the server working?');
+}
 
 // == it will get more complicated!!! ===
 // const handleSuccess = json => {
