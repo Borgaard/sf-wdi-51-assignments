@@ -10,14 +10,15 @@ $(document).ready(() => {
     // url: 'http://localhost:3000/api/albums',
     url: '/api/albums',
     success: handleSuccess,
-    error: handleError
+    error: handleAlbumsError
   });
+
   $.ajax({
     method: 'GET',
     // relative to localhost:3000
     url: '/api/taquerias',
     success: handleResponse,
-    error: handleError
+    error: handleFoodError
   });
 }); // end of doc.ready function for 
 
@@ -29,7 +30,38 @@ const handleResponse = json => {
   // debugger;
   // food is array with 3 obj
   var foodList = json;
-  debugger;
+  // debugger;
+  // foodList[0] => {name: "La Taqueria"}
+  /*
+  for(var i = 0; i < foodList.length; i++){
+    console.log('food name: ', foodList[i].name);
+  }
+  */
+  /*
+  output => 
+  food name:  La Taqueria
+  food name:  El Farolito
+  food name:  Taqueria Cancun
+  */
+
+  var outputTacoHtml = `<ul>`;
+  for(var i = 0; i < foodList.length; i++){
+  // <ul> <li> Blood Orange -- Cupid Deluxe </li>
+    outputTacoHtml = `${outputTacoHtml} <li> food name: ${foodList[i].name} </li>`;
+  }
+  // add the ending ul to close the list item
+  outputTacoHtml += '</ul>';
+  console.log(outputTacoHtml);
+
+  /*
+  => <ul> 
+      <li> food name: La Taqueria </li> 
+      <li> food name: El Farolito </li> 
+      <li> food name: Taqueria Cancun </li>
+    </ul>
+  */
+  // now append that to the root directory http://localhost:3000/
+  $('#foodTarget').html(outputTacoHtml);
 };
 
 // Consider moving the success handling function definition outside the ajax call, since it's about to get more complicated!
@@ -58,34 +90,30 @@ const handleSuccess = json =>  {
   // VM9564:2 FKA twigs --- M3LL155X - EP
   // VM9564:2 letlive. --- Fake History
   // $('#albumTarget').html(firstSong);
-
-  var outputhtml = `<ul>`; 
+ /*
+  let outputhtml = `<ul>`; 
   for(var i = 0; i < albums.length; i++) {
   //<ul> <li> Blood Orange -- Cupid Deluxe </li>
   console.log(outputhtml = `${outputhtml} 
                               <li> ${albums[i].artist} --- ${albums[i].title} </li>`);
   }
-
+  */
   // <ul> 
-
 	// 				<li> Blood Orange --- Cupid Deluxe </li> 
-
 	// 				<li> FKA twigs --- M3LL155X - EP </li> 
-
 	// 				<li> letlive. --- Fake History </li>
 
-  // start the ul
-  var outputhtml = `<ul>`; 
+  // starting ul
+  let outputhtml = `<ul>`; 
   for(var i = 0; i < albums.length; i++) {
                 //<ul> <li> Blood Orange -- Cupid Deluxe </li>
     outputhtml = `${outputhtml}
                   <li> ${albums[i].artist} --- ${albums[i].title} </li>`;
   }
-  // closing the ul
+  // append closing ul
   outputhtml += '</ul>';
   console.log(outputhtml);
   /* => <ul> 
-
 					<li> Blood Orange --- Cupid Deluxe </li> 
 
 					<li> FKA twigs --- M3LL155X - EP </li> 
@@ -103,9 +131,21 @@ const handleSuccess = json =>  {
 
 const handleError = (XHR, status, errorThrown) => {
   console.log(`uh oh! Error: ${errorThrown}`);
+  // display error message in id albumTarget
   $('#albumTarget').text('Failed to load albums, is the server working?');
 }
 
+const handleAlbumsError = (XHR, status, errorThrown) => {
+  console.log(`uh oh! Error: ${errorThrown}`);
+  // display error message in id albumTarget
+  $('#albumTarget').text('Failed to load albums, is the server working?');
+}
+
+const handleFoodError = (XHR, status, errorThrown) => {
+  console.log(`uh oh! Error: ${errorThrown}`);
+  // display error message in id albumTarget
+  $('#foodTarget').text('Failed to load foodList, is the server working?');
+}
 // == it will get more complicated!!! ===
 // const handleSuccess = json => {
 //   // takes an array of albums and renders them as an unordered list
