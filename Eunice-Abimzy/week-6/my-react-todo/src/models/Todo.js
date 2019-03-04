@@ -12,5 +12,10 @@ class TodoModel {
         let request = axios.post(endPoint, todo);
         return request;
     }
+    //Creating the delete method called from todosContainer (Parent)
+    static delete(todo) {
+        let request = axios.delete(`${endPoint}/${todo._id}`)//this is enpoint with specified todo _id to be deleted
+        return request
+    }
 }
 export default TodoModel

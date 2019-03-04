@@ -35,12 +35,24 @@ TodoModel.create(newTodo).then((res) => {
     this.setState({ newTodos });
   })
 }
+  //Provide function to delete a todo on successful response. 
+  //After delete response is sent back from server,find corresponding entry without same _id
+  //for todo in todos state array and remove it
+deleteTodo = (todo) => {
+TodoModel.delete(todo).then((res) => {
+  let todos = this.state.todos.filter(function(todo) {
+    return todo._id !== res.data._id
+  });
+  this.setState({todos})
+    })
+  }
 render(){
    return (
       <div className="todosComponent">
+        <CreateTodoForm createTodo={this.createTodo}/>
           <Todos 
-          todos={ this.state.todos}/>
-          <CreateTodoForm createTodo={this.createTodo}/>
+          todos={ this.state.todos}
+          deleteTodo={this.deleteTodo}/>
       </div>
     )
   }
