@@ -1,5 +1,12 @@
 
 # React Giphy - redo #1
+- app hierarchy:
+    root: index.js
+        Home
+          SearchContainer (Logic)
+            Search
+            Result
+
 
 1) connect search button to alert searched
 ![alert searched!!](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%207.35.52%20PM.png?1551670656346)
@@ -143,6 +150,29 @@ solution pack
 
 - Component life cycle: https://git.generalassemb.ly/sf-wdi-51/react-component-lifecycle 
 - react router: https://git.generalassemb.ly/sf-wdi-51/react-router-intro
+
+
+6) reading Giphy doc:
+ - https://developers.giphy.com/docs/
+ - Javascript (View the GIPHY Javascript SDK)
+//javascript, jQuery
+var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5");
+xhr.done(function(data) { console.log("success got data", data); });
+				
+
+  - copy the url into insomnia
+http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5
+get rid of everything after ?
+
+get: http://api.giphy.com/v1/gifs/search
+Qeury: 
+q : tran
+api_key : USeXS2PI5TP0Fvdy2AnCaSsT7HuzSTcL
+limit: 5
+
+  - then I get the dat I get back from Giphy
+
+7) 
 
 
 - https://git.generalassemb.ly/sf-wdi-51/react-intro
