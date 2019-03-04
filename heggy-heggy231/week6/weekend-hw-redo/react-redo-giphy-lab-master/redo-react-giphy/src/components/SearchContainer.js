@@ -22,23 +22,23 @@ class SearchContainer extends Component {
 // https://git.generalassemb.ly/sf-wdi-51/react-component-lifecycle 
 // Updating lifecycle methods. e.g. Has state changed? Methods: shouldComponentUpdate(nextProps, nextState)
 // if user clicks search and same term is being then don't search again.  Say No to ShouldComponentUpdate!!!
-  shouldComponentUpdate = (nextProps, nextState) => {
-    // first if there is no results searched for something with no giphy out there which means there is a long wait for backend to comeback and this.state.query === nextState.query menas if user searched for same thing for next one then 
-    // AJAX calls are asynchronous, so we have to be mindful of how long our request will take and when our components will render.
-    if(this.state.results.data.length === 0 &&
-      this.state.query === nextState.query){
-      return false;
-    }
-    return true;
-  }
+  // shouldComponentUpdate = (nextProps, nextState) => {
+  //   // first if there is no results searched for something with no giphy out there which means there is a long wait for backend to comeback and this.state.query === nextState.query menas if user searched for same thing for next one then 
+  //   // AJAX calls are asynchronous, so we have to be mindful of how long our request will take and when our components will render.
+  //   if(this.state.results.data.length === 0 &&
+  //     this.state.query === nextState.query){
+  //     return false;
+  //   }
+  //   return true;
+  // }
 
   // Updating lifecycle methods. e.g. Has state changed? Methods:
   //  componentDidUpdate(prevProps, prevState, snapshot)
-  componentDidUpdate = (prevProps, prevState) => {
-    if(prevState.query !== this.state.query){
-        this.onSubmitSearching();
-    }
-  }
+  // componentDidUpdate = (prevProps, prevState) => {
+  //   if(prevState.query !== this.state.query){
+  //       this.onSubmitSearching();
+  //   }
+  // }
 
 
   // function that is triggered whenever the user submits the Search form

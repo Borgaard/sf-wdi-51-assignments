@@ -7,6 +7,7 @@
             Search
             Result
 
+- to view giphy data go to giphydata.js and play around inside of console.
 
 1) connect search button to alert searched
 ![alert searched!!](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%207.35.52%20PM.png?1551670656346)

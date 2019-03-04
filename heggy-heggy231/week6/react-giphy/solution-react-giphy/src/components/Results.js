@@ -6,7 +6,7 @@ const results = (props) => {
             <h2>{props.result.title}</h2>
             <img className="card-img-top"
                 src={props.result.images.fixed_height.url} 
-                alt={props.result.titl}/>
+                alt={props.result.title}/>
         </div>
     )
 }
