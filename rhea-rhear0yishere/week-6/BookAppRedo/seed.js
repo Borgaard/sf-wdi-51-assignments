@@ -1,5 +1,5 @@
-// This file allows us to seed our application with data
-// simply run: `node seed.js` from the root of this project folder.
+// // This file allows us to seed our application with data
+// // simply run: `node seed.js` from the root of this project folder.
 
 var db = require('./models');
 
@@ -54,18 +54,88 @@ var books_list = [
   }
 ];
 
-// remove all records that match {} -- which means remove ALL records
-db.Book.deleteMany({}, function(err, books){
-  if(err) {
-    console.log('Error occurred in remove', err);
-  } else {
-    console.log('removed all books');
 
-    // create new records based on the array books_list
-    db.Book.create(books_list, function(err, books){
-      if (err) { return console.log('err', err); }
-      console.log("created", books.length, "books");
-      process.exit();
-    });
+
+var authors_list = [
+  {
+    name: "Harper Lee",
+    alive: false
+  },
+  {
+    name: "F Scott Fitzgerald",
+    alive: false
+  },
+  {
+    name: "Victor Hugo",
+    alive: false
+  },
+  {
+    name: "Jules Verne",
+    alive: false
+  },
+  {
+    name: "Sheryl Sandberg",
+    alive: true
+  },
+  {
+    name: "Tim Ferriss",
+    alive: true
+  },
+  {
+    name: "John Steinbeck",
+    alive: false
+  },
+  {
+    name: "William Shakespeare",
+    alive: false
   }
-});
+];
+
+// // remove all records that match {} -- which means remove ALL records
+// // db.Book.deleteMany({}, function(err, books){
+// //   if(err) {
+// //     console.log('Error occurred in remove', err);
+// //   } else {
+// //     console.log('removed all books');
+
+// //     // create new records based on the array books_list
+// //     db.Book.create(books_list, function(err, books){
+// //       if (err) { return console.log('err', err); }
+// //       console.log("created", books.length, "books");
+// //       process.exit();
+// //     });
+// //   }
+// // });
+
+
+
+db.Author.deleteMany({}, (err, authors) =>{
+  db.Author.create(authors_list, (err, authors) =>{
+    if (err) {
+      console.log(err);
+      return;
+    }
+    db.Book.deleteMany({}, (err, books) => {
+      books_list.forEach((bookData) => {
+        let book = new db.Book({
+          title: bookData.title,
+          image: bookData.image,
+          releaseDate: bookData.releaseDate
+        });
+        db.Author.findOne({name: bookData.author}, (err, foundAuthor) => {
+          if (err) {
+            console.log(err);
+            return;
+          }
+          book.author = foundAuthor;
+          book.save((err, savedBook) =>{
+            if (err) {
+              return console.log(err);
+            }
+          });
+        });
+      });
+    });
+
+  });
+}); 

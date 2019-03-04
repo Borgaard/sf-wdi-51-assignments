@@ -57,11 +57,10 @@ $(document).ready(function(){
 function getBookHtml(book) {
   return `<hr>
           <p>
-            <b>${book.title}</b>
-            by ${book.author}
+            <b>${book.title}</b>  
+           by  ${(book.author) ? book.author.name : 'null'}
 
             <button type="button" name="button" class="deleteBtn btn btn-danger pull-right" data-id=${book._id}>Delete</button>
-
             
             <span class="edit-input" style="display: none">
               <input type="text" value="${book.title}" />
