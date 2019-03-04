@@ -5,7 +5,7 @@ class App extends Component {
 
   render() { 
     return (
-      <div>
+      <div className="container">
         <Form appName={"Favorite Books"} searchName={"Title"}/>
       </div>
       );

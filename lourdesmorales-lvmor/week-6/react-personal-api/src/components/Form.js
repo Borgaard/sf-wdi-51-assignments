@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BookList from "./BookList";
 import BookModel from "../models/Book";
 
+
 class Form extends Component {
 
   constructor(){
@@ -31,7 +32,7 @@ class Form extends Component {
   }
 
   handleSubmit = event => {
-    let obj = {
+    let newBook = {
       _id: this.state._id,
       title: this.state.title,
       author: this.state.author,
@@ -40,37 +41,62 @@ class Form extends Component {
       characters: this.state.characters    
     };
 
-    var formData = new FormData();
-    formData.set('_id', this.state._id);
-    formData.set('title', this.state.title);
-    console.log(this.state.title)
-    formData.set('author', this.state.author);
-    formData.set('image', this.state.image);
-    formData.set('releaseDate', this.state.releaseDate);
-    formData.set('characters', this.state.characters);
-    BookModel.postbook(formData).then(res => {
-      this.loadBooks();
-    });
+    if (newBook._id === '') {
+      BookModel.create(newBook).then(res => {
+        console.log(res);
+        this.loadBooks();
+      });
+    } else {
+      BookModel.update(newBook).then(res => {
+        console.log(res);
+        this.loadBooks();
+      });
+    }
+  
+    
     // console.info(`a new book submitted ${newBook}`);
+
+
+
     event.preventDefault();
   };
 
   handleChange = event => {
-    // console.log("a change occured, change is " + event.target.value);
     this.setState({ [event.target.name]: event.target.value });
-    //console.log("this is the event/////////", event);
-    //console.log(event.target.name, event.target.value)
-    //console.log(this.state)
+
   };
+
+  //delete functionality
+  deleteBook = (_id) => {
+    BookModel.delete(_id).then((res) => {
+        // let books = this.state.books.filter(function(book) {
+        //   return book._id !== res.data._id
+        // });
+        // this.setState({books})
+        this.loadBooks();
+    })};
+
+    editBook = _id => {
+      BookModel.find(_id).then(res => {
+        console.log(res);
+        this.setState({
+          _id: res.data[0]._id,
+          title: res.data[0].title,
+          author: res.data[0].author,
+          image: res.data[0].image,
+          releaseDate: res.data[0].releaseDate,
+          characters: res.data[0].characters,
+
+        });
+
+
+      })
+    };
 
   
   render() {
-    // let newBook = this.bookList.newBookValue;
-    // console.log("current state>>>>>>>", this.state);
-    // console.log(this.state.bookList.newBookValue);
-    // console.log("props>>>>", this.props);
 
-    
+
 
     return (
       <div>
@@ -78,8 +104,9 @@ class Form extends Component {
         <form onSubmit={this.handleSubmit}>
             <input
               type="text"
-              name="id"
-              // value={this.state.newBookValue}
+              name="_id"
+              value={this.state._id}
+              onChange={this.handleChange}
             />
           <label htmlFor="title">
             Title:
@@ -103,7 +130,7 @@ class Form extends Component {
               onChange={this.handleChange}
             />
 
-<label htmlFor="image">
+          <label htmlFor="image">
             Image:
             </label>
             <input
@@ -139,7 +166,9 @@ class Form extends Component {
           <button>Save Book</button>
         </form>
 
-        <BookList books={this.state.bookList} />
+        <BookList books={this.state.bookList} 
+            editBook={this.editBook}
+            deleteBook={this.deleteBook} />
       </div>
     );
   }
