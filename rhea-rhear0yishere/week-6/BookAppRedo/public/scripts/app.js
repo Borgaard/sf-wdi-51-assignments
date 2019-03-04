@@ -33,6 +33,25 @@ $(document).ready(function(){
     });
   });
 
+
+  $booksList.on('click', '.edit-book-button', function() {
+    console.log('clicked edit button');
+    $(this).parent().find(".edit-input").show();
+
+  });
+
+  $booksList.on('click', '.edit-book-submit-button', function() {
+    $(this).parent().hide();
+    let newTitle = $(this).parent().find("input").val();
+    $.ajax({
+      method: "PUT",
+      url: `/api/books/${ $(this).attr('data-id') }`,
+      data: { title: newTitle },
+      success: console.log("success")
+    })
+
+  })
+
 });
 
 function getBookHtml(book) {
@@ -40,7 +59,18 @@ function getBookHtml(book) {
           <p>
             <b>${book.title}</b>
             by ${book.author}
+
             <button type="button" name="button" class="deleteBtn btn btn-danger pull-right" data-id=${book._id}>Delete</button>
+
+            
+            <span class="edit-input" style="display: none">
+              <input type="text" value="${book.title}" />
+              <button class="edit-book-submit-button" data-id="${book._id}">Save</button>
+            </span>
+
+            <button class="edit-book-button">Edit</button>
+            <br>
+
           </p>`;
 }
 
