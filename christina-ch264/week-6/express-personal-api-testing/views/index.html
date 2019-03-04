@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blank</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>My favorite Videogames</h1>
+          <h4><a href="/api">Read My API Documentation here</a></h4>
+          <!-- new todo form-->
+          <form class="form-inline" id="videogame-form">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" name="title" class="form-control" placeholder="Title" id="title-input">
+            </div>
+            <div class="form-group">
+              <label for="avatar">Avatar</label>
+              <input type="text" name="avatar" class="form-control" placeholder="Avatar" id="avatar-input">
+            </div>
+            <button type="submit" class="btn btn-default">Create Videogame</button>
+          </form>
+          <!-- list of todos -->
+          <div id="listview">
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <!-- header
+  <div class="well">
+    <div class="container">
+      <div class="page-header">
+        <h1>To Do <small>get it done!</small></h1>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- page content -->
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        new todo form
+        <form class="form-inline" id="create-todo">
+          <div class="form-group">
+            <input type="text" name="task" class="form-control" placeholder="Task" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="description" class="form-control" placeholder="Description">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-default" value="Add To Do">
+          </div>
+        </form>
+        <br>
+
+        list of todos
+        <ul class="list-group" id="todos-list">
+
+        </ul>
+      </div>
+    </div>
+  </div> -->
+  
+  
+  
+    <!-- APPLICATION SCRIPTS -->
+    <script src="/scripts/app.js"></script>
+  
+  </body>
+</html>

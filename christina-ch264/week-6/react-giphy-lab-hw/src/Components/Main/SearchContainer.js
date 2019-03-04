@@ -42,7 +42,6 @@ class SearchContainer extends Component {
         } else {
             console.log('no query term')
         }
-        // return true;
     }
 
     handleChange = (e) => {
