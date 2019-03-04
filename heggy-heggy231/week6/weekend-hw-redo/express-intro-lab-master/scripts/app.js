@@ -23,9 +23,26 @@ $(document).ready(() => {
 //   res.json(albums);
 // });
 const handleSuccess = json =>  {
-  debugger;
+  // debugger;
   console.log(json);
+  // inside of console grab json obj when sucess happens
+  var albums = json;
+  debugger;
+// albums => array with 3 obj, (3) [{…}, {…}, {…}]
+// 0: {title: "Cupid Deluxe", artist: "Blood Orange"}
+// 1: {title: "M3LL155X - EP", artist: "FKA twigs"}
+// 2: {title: "Fake History", artist: "letlive."}
+  var firstSong = `${ albums[0].artist } -- ${ albums[0].title }`;
+  console.log("firstSong: ", firstSong); // => Blood Orange -- Cupid Deluxe
+  // display Blood Orange -- Cupid Deluxe on page using jQuery
 
+  for(var i = 0; i < albums.length; i++) {
+    console.log(`${albums[i].artist} --- ${albums[i].title}`);
+  }
+  // VM9564:2 Blood Orange --- Cupid Deluxe
+  // VM9564:2 FKA twigs --- M3LL155X - EP
+  // VM9564:2 letlive. --- Fake History
+  // $('#albumTarget').html(firstSong);
 }
 
 // also move handleError function outside of ajax call
