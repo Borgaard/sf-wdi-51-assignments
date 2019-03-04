@@ -36,14 +36,50 @@ const handleSuccess = json =>  {
   console.log("firstSong: ", firstSong); // => Blood Orange -- Cupid Deluxe
   // display Blood Orange -- Cupid Deluxe on page using jQuery
 
-  for(var i = 0; i < albums.length; i++) {
-    console.log(`${albums[i].artist} --- ${albums[i].title}`);
-  }
+  // for(var i = 0; i < albums.length; i++) {
+  //   console.log(`${albums[i].artist} --- ${albums[i].title}`);
+  // }
   // VM9564:2 Blood Orange --- Cupid Deluxe
   // VM9564:2 FKA twigs --- M3LL155X - EP
   // VM9564:2 letlive. --- Fake History
   // $('#albumTarget').html(firstSong);
-}
+
+  var outputhtml = `<ul>`; 
+  for(var i = 0; i < albums.length; i++) {
+  //<ul> <li> Blood Orange -- Cupid Deluxe </li>
+    console.log(outputhtml = `${outputhtml} 
+			<li> ${albums[i].artist} --- ${albums[i].title} </li>`);
+  }
+
+  // <ul> 
+
+	// 				<li> Blood Orange --- Cupid Deluxe </li> 
+
+	// 				<li> FKA twigs --- M3LL155X - EP </li> 
+
+	// 				<li> letlive. --- Fake History </li>
+
+  // start the ul
+  var outputhtml = `<ul>`; 
+  for(var i = 0; i < albums.length; i++) {
+                //<ul> <li> Blood Orange -- Cupid Deluxe </li>
+    outputhtml = `${outputhtml}
+                  <li> ${albums[i].artist} --- ${albums[i].title} </li>`;
+  }
+  // closing the ul
+  outputhtml += '</ul>';
+  console.log(outputhtml);
+  /* => <ul> 
+
+					<li> Blood Orange --- Cupid Deluxe </li> 
+
+					<li> FKA twigs --- M3LL155X - EP </li> 
+
+          <li> letlive. --- Fake History </li></ul>
+  */ 
+  // append it on <div id='albumTarget'></div>,  user.html since it has tags.
+  $('#albumTarget').html(outputhtml);
+} // end of handleSuccess function
 
 // also move handleError function outside of ajax call
 const handleError = (xhr, status, errorThrown) => console.log('uh oh');
