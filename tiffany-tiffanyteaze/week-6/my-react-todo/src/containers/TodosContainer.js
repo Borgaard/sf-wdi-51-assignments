@@ -48,15 +48,27 @@ deleteTodo = (todo) => {
   })
 }
 
+updateTodo = (todoBody, todoId) => {
+  function isUpdatedTodo(todo) {
+      return todo._id === todoId;
+  }
+  TodoModel.update(todoId, todoBody).then((res) => {
+      let todos = this.state.todos
+      todos.find(isUpdatedTodo).body = todoBody.body
+      this.setState({todos: todos})
+  })
+}
+
 render(){
   return (
     <div className="todosComponent">
       <CreateTodoForm
-        createTodo={this.createTodo}
-        />
+        createTodo={ this.createTodo }
+      />
       <Todos
-        todos={this.state.todos}
-        deleteTodo={this.deleteTodo}
+        todos={ this.state.todos }
+        updateTodo={ this.updateTodo } 
+        deleteTodo={ this.deleteTodo }
         />
     </div>
   )

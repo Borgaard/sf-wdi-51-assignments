@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UpdateTodoForm from './UpdateTodoForm'
 
 export default class Todo extends Component {
     deleteClickedTodo = (event) => {
@@ -15,6 +16,11 @@ export default class Todo extends Component {
               onClick={this.deleteClickedTodo}>
               Remove
             </a>
+            <UpdateTodoForm 
+                todo={ this.props.todo }
+                buttonName="Update Todo!" 
+                updateTodo={ this.props.updateTodo }
+                />
           </li> 
         )
       }
