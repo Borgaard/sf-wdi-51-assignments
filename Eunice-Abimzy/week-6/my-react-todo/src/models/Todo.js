@@ -7,5 +7,10 @@ class TodoModel {
         let request = axios.get(endPoint);
         return request
     }
+    //Creating the create method called from todosContainer (Parent)
+    static create(todo) {
+        let request = axios.post(endPoint, todo);
+        return request;
+    }
 }
 export default TodoModel
