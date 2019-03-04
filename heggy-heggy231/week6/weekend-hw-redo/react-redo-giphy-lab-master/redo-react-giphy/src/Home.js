@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // Import the Search file to your Home file.
-import Search from './components/Search';
+// updating to the new next child SearchContainer that has logic
+import SearchContainer from './components/SearchContainer';
 
 class Home extends Component {
   render() {
@@ -10,7 +11,7 @@ class Home extends Component {
         <h1>Hello World! Heggy here</h1>
         <section>
           {/* Import & render the Search file to your Home file. */}
-          <Search />
+          <SearchContainer />
         </section>
       </div>
 

@@ -44,6 +44,96 @@ class Search extends Component {
 export default Search;
 ```
 
+2) set state to user's search term inside of search input field
+```javascript
+
+import React, { Component } from 'react';
+
+class Search extends Component {
+  // Define your Search component's initial state. It should have a query value that corresponds to a search term.
+  state = {
+    // query value that corresponds to a search term
+    query: ''
+  };
+
+  // function that is triggered whenever the user submits the Search form
+  onSubmitSearching = (e) => {
+    e.preventDefault();
+    alert('searched!!');
+  }
+
+  // Define a function that updates your query value in state whenever a change is made to the input field. You can do this using an onInput function on your text box, or by using ref.
+  userInput = (e) => {
+    console.log(e);
+    // debugger;
+    // inside console: play around with e
+    // e.target 
+    // => <input type="text" placehoder="search any giphy">
+    // e.target.value
+    // => "d" // this is the input I put to kick off the debugger
+    var userQuery = e.target.value;
+    console.log('user searched term: ', userQuery);
+    this.setState({
+      query: userQuery,
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        {/* this points to search component, this.function name is the fuction I need to create!!!  indication that I need to create onSubmitSearching */}
+        <form onSubmit={this.onSubmitSearching}>
+          <label>
+            Search: 
+            {/* `this` points to the current obj I am in; Search component 
+          interesting read on this topic: https://medium.com/capital-one-tech/how-to-work-with-forms-inputs-and-events-in-react-c337171b923b
+          */}
+            <input type="text" onInput={this.userInput} placeholder="search any giphy" />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    );
+  }
+}
+
+export default Search;
+
+```
+![state updated with user's input inside search field](https://cdn.glitch.com/cb093bfd-142f-45b3-bdb4-52ff49e0a1c2%2FScreen%20Shot%202019-03-03%20at%207.55.25%20PM.png?1551671820178)
+- resource Setting onSubmit in React.js: https://stackoverflow.com/questions/28479239/setting-onsubmit-in-react-js
+
+3) keyboard shortcut to set up new component
+type: `rcc`
+
+4) important to update the parent to see the new SearchContainer.js
+// after moving this logic make sure to update
+//  the parent which is Home.js with SearchContainer.js
+```javascript
+import React, { Component } from 'react';
+// Import the Search file to your Home file.
+import SearchContainer from './components/SearchContainer';
+
+class Home extends Component {
+  render() {
+    return (
+// Remember to put all html inside parent wrapper!!
+      <div>
+        <h1>Hello World! Heggy here</h1>
+        <section>
+          {/* Import & render the Search file to your Home file. */}
+          <SearchContainer />
+        </section>
+      </div>
+
+    );
+  }
+}
+
+export default Home;
+```
+5) 
+
 ## resource
 starter pack
 - https://git.generalassemb.ly/sf-wdi-51/react-giphy-lab
