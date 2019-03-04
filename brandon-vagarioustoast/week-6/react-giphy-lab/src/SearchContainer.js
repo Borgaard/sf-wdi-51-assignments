@@ -6,10 +6,7 @@ export default class SearchContainer extends React.Component {
     query: ""
   };
 
-  submit = e => {
-    e.preventDefault();
-    console.log(`Searched ${this.state.query}`);
-  };
+  submit = e => {};
 
   onInput = e => {
     let newSearch = e.target.value;
@@ -19,6 +16,6 @@ export default class SearchContainer extends React.Component {
   };
 
   render() {
-    return <Search submit={this.submit} onInput={this.onInput} />;
+    return <Search onInput={this.onInput} />;
   }
 }
