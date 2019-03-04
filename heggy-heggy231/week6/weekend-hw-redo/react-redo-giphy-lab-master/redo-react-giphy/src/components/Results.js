@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchContainer from './SearchContainer';
 
 class Results extends Component {
   render() {
@@ -18,9 +19,10 @@ class Results extends Component {
         // giphyimages = {}
         // />
       resultImages.push(
+        // this.props.giphyimages is an obj from SearchContainer.js which is { data: [] }
         <img 
-          src="{ this.props.giphyimages.data[i].images.fixed_height.url }" 
-          class="giphy" />);
+          src={ this.props.giphyimages.data[i].images.fixed_height.url } 
+          className="giphy" />);
     }
     return (
       <div>
