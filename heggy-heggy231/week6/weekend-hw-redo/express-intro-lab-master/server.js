@@ -9,7 +9,8 @@
 const express = require('express');
 // set var app to express() lib functions
 const app = express();
-
+// serve static files in public
+app.use(express.static('public'));
 
 // add taquerias data points
 let taquerias = [
@@ -42,9 +43,11 @@ app.use((req, res, next) => {
 
 // app.get takes 2 param url, call back (req, res), this rout sets root dir
 app.get('/', (req, res) => {
-  console.log('##### req ##### ', req);
-  console.log('##### res ##### ', res);
-  res.send('Hello Heggy');
+  console.log('##### req ##### = ', req);
+  console.log('##### res ##### = ', res);
+  // res.send('Hello Heggy');
+  res.sendFile('views/index.html', { root : __dirname });
+  console.log("dirname? ", __dirname);
 });
 
 // app object has a method called .get() which takes two arguments: a url and a callback function  http://localhost:3000/api/taquerias
