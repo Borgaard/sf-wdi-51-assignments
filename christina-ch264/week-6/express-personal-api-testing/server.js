@@ -130,8 +130,8 @@ app.put('/api/videogames/:id', (req, res) => {
   let videogameId = req.params.id;
   // console.log(videogameId);
   db.Videogame.findOneAndUpdate({ _id: videogameId }, req.body, (err, updatedVideogame) => {
-      if (err) return console.log(err);
-      console.log(updatedVideogame);
+      // if (err) return console.log(err);
+      // console.log(updatedVideogame);
       res.json(updatedVideogame);
   });
 });
@@ -153,7 +153,7 @@ app.put('/api/videogames/:id', (req, res) => {
   // Delete a specific book
   app.delete('/api/videogames/:id', (req, res) => {
     let videogameId = req.params.id;
-    db.Videogame.findOneAndDelete({_id: videogameId}, (err, foundVideogame) => {
+    db.Videogame.findOneAndDelete({ _id: videogameId }, (err, foundVideogame) => {
       // if (err) console.log(err);
       res.json(foundVideogame);
     })

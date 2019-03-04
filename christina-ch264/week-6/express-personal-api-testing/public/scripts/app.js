@@ -58,7 +58,7 @@ $(document).ready(function(){
     //////////////////////////////////////////////////////////////////////////
     /// DELETE
     ///////////////////////////////////////////////////////////////////////////
-    $videogameList.on('click', '.videogame-button-delete',() => {
+    $videogameList.on('click', '.videogame-button-delete', function(){
         console.log(`clicked delete, /api/videogames/${ $(this).attr('data-id') }`);
 
         $.ajax({
@@ -73,25 +73,25 @@ $(document).ready(function(){
     /// PUT
     ///////////////////////////////////////////////////////////////////////////
 
-    $videogameList.on('click', '.videogame-button-edit', function() {
+    $videogameList.on('click', '.videogame-button-edit', function () {
         console.log('clicked edit button');
         $(this).parent().find("#edit-input").show();
     });
 
-    $videogameList.on('click', '.videogame-button-edit-submit', function(){
-        console.log('clicked edit submit button');
+    $videogameList.on('click', '.videogame-button-edit-submit', function () {
+        console.log(`clicked edit submit button, /api/videogames/${ $(this).attr('data-id') }`);
         $(this).parent().hide();
 
-        let newVideogame = $(this).parent().find('.input').val();
+        let newVideogame = $(this).parent().find('input').val();
 
         $.ajax({
             method: "PUT",
             url: "/api/videogames/"+$(this).attr('.data-id'),
             // serialize form data to json
             // data: $(this).serialize(),
-            data: { title: newVideogame},
+            data: { title: newVideogame, avatar: newVideogame },
             success: editSuccess,
-            error: (err) => {
+            error: function (err) {
                 console.log('edit went wrong')
             }
         });
@@ -181,7 +181,7 @@ $(document).ready(function(){
     // replace videogame with newly updated version (json)
     function editSuccess (videogame) {
         $(this).parent().parent().find(".videogame-title").html(videogame.title);
-        console.log(videogame);
+        console.log(this);
         render();
     }
 
