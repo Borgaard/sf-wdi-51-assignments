@@ -4,7 +4,6 @@ console.log("Sanity Check: JS is working!");
 $(document).ready(() => {
   // put your ajax call inside the handler for the document ready event: $(document).ready(function() {})
   // code in here
-
   $.ajax({
     // since api/albums is a get route I ask method tobe get
     method: 'GET',
@@ -13,7 +12,6 @@ $(document).ready(() => {
     success: handleSuccess,
     error: handleError
   });
-
   $.ajax({
     method: 'GET',
     // relative to localhost:3000
@@ -21,12 +19,18 @@ $(document).ready(() => {
     success: handleResponse,
     error: handleError
   });
-
 }); // end of doc.ready function for 
 
-
-
 // remember to put function outside of document.ready()
+// /api/taquerias res.json >> passing json obj
+const handleResponse = json => {
+  console.log(json);
+  // catch the json obj passed in to play with the res.json data
+  // debugger;
+  // food is array with 3 obj
+  var foodList = json;
+  debugger;
+};
 
 // Consider moving the success handling function definition outside the ajax call, since it's about to get more complicated!
 // since from api/albums route I am asking for .json therfore I am passing json here
