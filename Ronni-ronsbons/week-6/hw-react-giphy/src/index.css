@@ -1,0 +1,51 @@
+body {
+  background-color: #ffd6c6;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: #d642a0;
+}
+
+h1,
+h4,
+form {
+  text-align: center;
+}
+
+input {
+  border: 2px solid #d642a0;
+  font-family: "Montserrat", sans-serif;
+  padding: 4px 10px;
+  margin: 0 6px;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+  background-color: #d642a0;
+  color: white;
+  cursor: pointer;
+}
+
+.results-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.gif-result{
+  border: 1px solid #d642a0;
+  margin: 10px 0;
+  padding: 6px;
+  text-align: center;
+  width: 30vw;
+}
+
+img {
+  max-width: 25vw;
+}
