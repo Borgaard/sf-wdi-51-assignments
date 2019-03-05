@@ -1,0 +1,31 @@
+/* ----------------------------------------
+Gallery
+------------------------------------------- */
+.masonry {
+	column-count: 3;
+	width: 100%;
+	margin: 64px 0 0;
+	margin: 4rem 0 2rem;
+	padding-bottom: 0;
+}
+
+.masonry img {
+	cursor: pointer;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+}
+
+.masonry img:hover {
+	opacity: .6;
+}
+
+#gallery {
+	padding-bottom: 0;
+}
+
+#contact {
+	padding-top: 24px;
+	padding-top: 1.5rem;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blank</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="/scripts/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>These are my favorite books</h1>
+          <h4><a href="/api">Read My API Documentation</a></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <form class="form-inline" id="newBookForm">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" name="title" placeholder="Book title">
+            </div>
+            <div class="form-group">
+              <label for="title">Author</label>
+              <input type="text" class="form-control" name="author" placeholder="Book author">
+            </div>
+            <div class="form-group">
+                <label for="title">Main Character</label>
+                <input type="text" class="form-control" name="mainCharacter" placeholder="Main Character">
+              </div>
+            <!-- <div class="form-group">
+              <label for="title">Characters</label>
+              <input type="text" class="form-control" name="characters[name]" placeholder="Book character 1">
+              <input type="text" class="form-control" name="characters[name]" placeholder="Book character 2">
+            </div> -->
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <button type="submit" class="btn btn-default updateButton">Update a Book</button>
+          <div id='listview'>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
