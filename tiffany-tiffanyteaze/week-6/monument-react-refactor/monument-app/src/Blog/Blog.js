@@ -3,14 +3,12 @@ import MidSection from './MidSection/MidSection'
 import Header from './Header/Header'
 import Contact from './Contact/Contact';
 
-const blog = () => {
+const Blog = () => {
     return (
         <div>
-            <Header />
-            <MidSection />
-            <Contact />
+        <h1>blog</h1>
         </div>
     )
 }
 
-export default blog;
+export default Blog;

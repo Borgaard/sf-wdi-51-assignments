@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import './NavBar.css';
+import {
+    Route,
+    Link,
+    Switch
+  } from 'react-router-dom';
+  import './NavBar.css';
+import Blog from '../Blog/Blog'
 
 class NavBar extends Component {
     render() {
@@ -9,9 +15,10 @@ class NavBar extends Component {
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><Link to="/blog">Blog</Link></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                
             </nav>
             );
         }
