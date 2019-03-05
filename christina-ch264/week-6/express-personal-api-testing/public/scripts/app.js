@@ -75,24 +75,27 @@ $(document).ready(function(){
 
     $videogameList.on('click', '.videogame-button-edit', function () {
         console.log('clicked edit button');
-        $(this).parent().find("#edit-input").show();
+        $(this).parent().find(".edit-input").show();
     });
 
-    $videogameList.on('click', '.videogame-button-edit-submit', function () {
-        console.log(`clicked edit submit button, /api/videogames/${ $(this).attr('data-id') }`);
-        $(this).parent().hide();
+    $videogameList.on('submit', '.edit-input', function (e) {
+        event.preventDefault();
 
-        let newVideogame = $(this).parent().find('input').val();
+        let videogameId = $(this).attr('data-id');
+        console.log(`clicked edit submit button, /api/videogames/${ videogameId }`);
 
         $.ajax({
             method: "PUT",
-            url: "/api/videogames/"+$(this).attr('.data-id'),
+            url: `/api/videogames/${ videogameId }`,
             // serialize form data to json
-            // data: $(this).serialize(),
-            data: { title: newVideogame, avatar: newVideogame },
+            data: $(this).serialize(),
             success: editSuccess,
             error: function (err) {
-                console.log('edit went wrong')
+                console.log('edit went wrong', err)
+            },
+            complete: function () {
+                console.log(this);
+                $('.edit-input').hide();
             }
         });
     });
@@ -123,14 +126,21 @@ $(document).ready(function(){
     // }
 
     function getVideogameHtml(videogame) {
-        return ` <hr><p><b  class="videogame-title" <strong>Videogame:</strong> ${videogame.title}, <strong>Avatar:</strong> ${videogame.avatar}"</b>
-            <button type="button" name="button" class="videogame-button-delete btn btn-danger pull-right" data-id=${videogame._id}>Delete</button>
-            <button class="videogame-button-edit btn btn-secondary pull-right" >Edit</button>
-            <span id="edit-input" style="display: none">
-                <input type="text" value="${videogame.title}" />
-                <input type="text" value="${videogame.avatar}" />
-                <button class="videogame-button-edit-submit btn btn-secondary" data-id="${videogame._id}">Save</button>
-            </span></p>`;
+        return `
+            <hr>
+            <div>
+                <strong>Videogame:</strong> ${videogame.title}, <strong>Avatar:</strong> ${videogame.avatar}"
+                
+                <button type="button" name="button" class="videogame-button-delete btn btn-danger pull-right" data-id=${videogame._id}>Delete</button>
+                
+                <button class="videogame-button-edit btn btn-secondary pull-right">Edit</button>
+                
+                <form class="edit-input" style="display: none" data-id="${videogame._id}">
+                    <input type="text" name="title" value="${videogame.title}" />
+                    <input type="text" name="avatar" value="${videogame.avatar}" />
+                    <button type="submit" class="videogame-button-edit-submit btn btn-secondary">Save</button>
+                </form>
+            </div>`;
     }
     
     //maps through array of videogames and returns it as a string
@@ -180,10 +190,18 @@ $(document).ready(function(){
 
     // replace videogame with newly updated version (json)
     function editSuccess (videogame) {
-        $(this).parent().parent().find(".videogame-title").html(videogame.title);
+        let videogameId = videogame._id;
+        // debugger;
+        // $(this).parent().parent().find(".videogame-title").html(videogame.title);
+        for(var i = 0; i < allVideogames.length; i++) {
+            if(allVideogames[i]._id === videogameId) {
+                allVideogames.splice(i, 1);
+                break;  // we found our videogame - no reason to keep searching (this is why we didn't use forEach)
+            }
+
         console.log(this);
         render();
-    }
+    }}
 
     function deleteSuccess(json) {
         let videogame = json;

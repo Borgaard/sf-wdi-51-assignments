@@ -127,11 +127,16 @@ app.post('/api/videogames', (req, res) => {
 
 // Edit a game
 app.put('/api/videogames/:id', (req, res) => {
+  console.log('//////////////')
+  console.log(req.params)
+  console.log('//////////////')
+
   let videogameId = req.params.id;
-  // console.log(videogameId);
+
   db.Videogame.findOneAndUpdate({ _id: videogameId }, req.body, (err, updatedVideogame) => {
-      // if (err) return console.log(err);
-      // console.log(updatedVideogame);
+      if (err) return console.log(err);
+
+      console.log(updatedVideogame);
       res.json(updatedVideogame);
   });
 });
