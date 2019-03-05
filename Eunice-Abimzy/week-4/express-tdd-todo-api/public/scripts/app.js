@@ -1,5 +1,5 @@
 // wait for DOM to load before running JS
-$(document).ready(function() {
+$(document).ready(function () {
 
   // base API route
   const baseUrl = '/api/todos';
@@ -16,7 +16,7 @@ $(document).ready(function() {
   const renderAll = () => {
     $todosList.empty();
     // render all todos to view
-    allTodos.forEach( todo => render(todo) );
+    allTodos.forEach(todo => render(todo));
   }
 
   // helper function to render all todos to view
@@ -79,7 +79,7 @@ $(document).ready(function() {
     }
   });
 
-  // listen for submit even on form
+  // listen for submit event on form
   $createTodo.on('submit', event => {
     event.preventDefault();
 
@@ -143,7 +143,7 @@ $(document).ready(function() {
       var todoId = $(event.currentTarget).closest('.todo').attr('data-id');
 
       // find the todo to delete by its id
-      var todoToDelete = allTodos.find( todo => todo._id == todoId );
+      var todoToDelete = allTodos.find(todo => todo._id == todoId);
       console.log("DELETING: ", todoId)
       // DELETE request to delete todo
       $.ajax({
