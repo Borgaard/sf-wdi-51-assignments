@@ -1,0 +1,38 @@
+
+h1{
+  font-size: 3em;
+}
+h2{
+  font-size: 1.5em;
+  margin-top: 0;
+}
+h3{
+  margin-top: .8em;
+  font-size: 1.5em;
+}
+
+.post-page{
+  padding: 2em;
+  margin: 2em;
+  background-color: whitesmoke;
+}
+
+.bad {
+  background-color: red;
+  padding: .4em;
+  color: white;
+  margin-bottom: .3em;
+  width: 20vw;
+}
+
+.good {
+  background-color: green;
+  padding: .4em;
+  color: white;
+  margin-bottom: .3em;
+  width: 20vw;
+}
+
+button {
+  margin: .3em;
+}
