@@ -53,17 +53,9 @@ var books = [
 var newBookUUID = 18;
 
 
-
-
-
-
-
 ////////////////////
 //  ROUTES
 ///////////////////
-
-
-
 
 // define a root route: localhost:3000/
 app.get('/', function (req, res) {
