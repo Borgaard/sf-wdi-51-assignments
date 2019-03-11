@@ -9,3 +9,8 @@ const BookSchema = new Schema({
   image: String,
   releaseDate: String,
 });
+
+// create the Book model from the schema
+const Book = mongoose.model('Book', BookSchema);
+
+module.exports = Book;
