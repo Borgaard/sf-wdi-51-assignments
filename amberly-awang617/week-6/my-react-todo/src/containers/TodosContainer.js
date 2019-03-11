@@ -47,13 +47,25 @@ class TodosContainer extends Component {
     })
   }
 
+  updateTodo = (todo, todoBody, todoId) => {
+    function isUpdatedTodo(todo) {
+      return todo._id === todoId;
+    }
+    TodoModel.update(todoId, todoBody).then( (res) => {
+      let todos = this.state.todos;
+      todos.find(todo => isUpdatedTodo(todo)).body = todoBody.body;
+      this.setState({ todos })
+    })
+  }
+
   render() {
     return (
       <div className='todosContainter'>
+        <CreateTodoForm createTodo={this.createTodo}/>
         <TodosList 
           todos={this.state.todos} 
+          updateTodo={this.updateTodo}
           deleteTodo={this.deleteTodo}/>
-        <CreateTodoForm createTodo={this.createTodo}/>
       </div>
     );
   }

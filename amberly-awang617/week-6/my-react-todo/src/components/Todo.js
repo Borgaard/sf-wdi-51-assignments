@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import UpdateTodoForm from './UpdateTodoForm'
 
 class Todo extends Component {
 
@@ -10,12 +11,19 @@ class Todo extends Component {
   render(){
     return(
         <li data-todos-index={this.props.todo.id}>
-            <span>{this.props.todo.body}</span>
-            <a 
-              href="#removeTodo"
-              className='remove'
-              onClick={this.deleteClickedTodo}>
-              Remove</a>
+        <div>
+          <span>{this.props.todo.body}</span>
+          <a 
+            href="#removeTodo"
+            className='remove'
+            onClick={this.deleteClickedTodo}>
+            Remove</a>
+          <UpdateTodoForm 
+            todo={this.props.todo}
+            buttonName="Update Todo!"
+            updateTodo={this.props.updateTodo}
+          />
+        </div>
         </li>
     )
   }
