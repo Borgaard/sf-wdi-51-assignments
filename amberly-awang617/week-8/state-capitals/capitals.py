@@ -194,14 +194,15 @@ def tally_score(lyst):
     print('You got', total_correct, 'correct.')
     print('You got', total_wrong, 'wrong.')
 
-def end_game(state_list):
+def end_game(state_list, games):
     end = input('Would you like to play again? (yes/no) ')
-    if end.lower() == 'yes':
-        play(state_list)
+    if end.lower().strip() == 'yes':
+        play(state_list, games)
     else: 
         print('Goodbye!')
 
-def play(state_list):
+def play(state_list, counter):
+    counter += 1
     game_scorce(state_list)
     shuffled_test = random.sample(state_list, len(state_list))
     for state in shuffled_test:
@@ -211,15 +212,16 @@ def play(state_list):
             state['correct'] += 1
             state['game_correct'] += 1
             print('correct')
-            print(state['correct'], 'people got this right')
         else:
             state['wrong'] += 1
             state['game_wrong'] +=1
             print('wrong')
-            print(state['correct'], 'people got this right')
+        print('This was answered correctly', state['correct'], 'out of', counter, 'times.')
     tally_score(shuffled_test)
-    end_game(state_list)
+    end_game(state_list, counter)
 
 print('Welcome to the game!')
+game_counter = 0
 add_keys(test_states)
-play(test_states)
+add_keys(states)
+play(test_states, game_counter)
