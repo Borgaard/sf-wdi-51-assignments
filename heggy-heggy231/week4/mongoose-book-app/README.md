@@ -3,6 +3,7 @@
 ## Deliverables
 
 Fork this repo & push work to your remote fork.
+- https://git.generalassemb.ly/sf-wdi-46/mongoose-book-app/tree/starting-point-sprint-3
 
 ## Prerequisites
 
