@@ -11,7 +11,8 @@
 
 # [X] get the array to show up shuffled! 
 # [X] get python to ask for name of capitol "please "
-# [ ] an array of state dictionaries
+# [X] store the user's input
+# [X] check user's input is correct or not and give feedback
 
 # tips: Potentially Useful Methods
 # print
@@ -29,161 +30,35 @@ states = [
     "name": "Alabama",
     "capital": "Montgomery"
 }, {
-    "name": "Alaska",
-    "capital": "Juneau"
-}, {
-    "name": "Arizona",
-    "capital": "Phoenix"
-}, {
-    "name": "Arkansas",
-    "capital": "Little Rock"
-}, {
-    "name": "California",
-    "capital": "Sacramento"
-}, {
-    "name": "Colorado",
-    "capital": "Denver"
-}, {
-    "name": "Connecticut",
-    "capital": "Hartford"
-}, {
-    "name": "Delaware",
-    "capital": "Dover"
-}, {
-    "name": "Florida",
-    "capital": "Tallahassee"
-}, {
-    "name": "Georgia",
-    "capital": "Atlanta"
-}, {
-    "name": "Hawaii",
-    "capital": "Honolulu"
-}, {
-    "name": "Idaho",
-    "capital": "Boise"
-}, {
-    "name": "Illinois",
-    "capital": "Springfield"
-}, {
-    "name": "Indiana",
-    "capital": "Indianapolis"
-}, {
-    "name": "Iowa",
-    "capital": "Des Moines"
-}, {
-    "name": "Kansas",
-    "capital": "Topeka"
-}, {
-    "name": "Kentucky",
-    "capital": "Frankfort"
-}, {
-    "name": "Louisiana",
-    "capital": "Baton Rouge"
-}, {
-    "name": "Maine",
-    "capital": "Augusta"
-}, {
-    "name": "Maryland",
-    "capital": "Annapolis"
-}, {
-    "name": "Massachusetts",
-    "capital": "Boston"
-}, {
-    "name": "Michigan",
-    "capital": "Lansing"
-}, {
-    "name": "Minnesota",
-    "capital": "St. Paul"
-}, {
-    "name": "Mississippi",
-    "capital": "Jackson"
-}, {
-    "name": "Missouri",
-    "capital": "Jefferson City"
-}, {
-    "name": "Montana",
-    "capital": "Helena"
-}, {
-    "name": "Nebraska",
-    "capital": "Lincoln"
-}, {
-    "name": "Nevada",
-    "capital": "Carson City"
-}, {
-    "name": "New Hampshire",
-    "capital": "Concord"
+    "name": "Pennsylvania",
+    "capital": "Harrisburg"
 }, {
     "name": "New Jersey",
     "capital": "Trenton"
 }, {
-    "name": "New Mexico",
-    "capital": "Santa Fe"
-}, {
-    "name": "New York",
-    "capital": "Albany"
-}, {
-    "name": "North Carolina",
-    "capital": "Raleigh"
-}, {
-    "name": "North Dakota",
-    "capital": "Bismarck"
-}, {
-    "name": "Ohio",
-    "capital": "Columbus"
-}, {
-    "name": "Oklahoma",
-    "capital": "Oklahoma City"
-}, {
-    "name": "Oregon",
-    "capital": "Salem"
-}, {
-    "name": "Pennsylvania",
-    "capital": "Harrisburg"
-}, {
-    "name": "Rhode Island",
-    "capital": "Providence"
-}, {
-    "name": "South Carolina",
-    "capital": "Columbia"
-}, {
-    "name": "South Dakota",
-    "capital": "Pierre"
-}, {
-    "name": "Tennessee",
-    "capital": "Nashville"
-}, {
-    "name": "Texas",
-    "capital": "Austin"
-}, {
-    "name": "Utah",
-    "capital": "Salt Lake City"
-}, {
-    "name": "Vermont",
-    "capital": "Montpelier"
-}, {
-    "name": "Virginia",
-    "capital": "Richmond"
-}, {
-    "name": "Washington",
-    "capital": "Olympia"
-}, {
-    "name": "West Virginia",
-    "capital": "Charleston"
-}, {
-    "name": "Wisconsin",
-    "capital": "Madison"
-}, {
     "name": "Wyoming",
     "capital": "Cheyenne"
 }]
+
 
 # use random lib method shuffle to shuffle states
 random.shuffle(states)
 # print(states)
 
 print("Welcome to name your capital game!!!")
-input("Tell me the capital of: " + states[3]["name"])
+# input("Tell me the capital of: " + states[3]["name"])
 
+for state in states: 
+    capital_guess = input("Tell me the capital of: " + state["name"] + "state capital is " + state["capital"])
+    print("your answer: " + capital_guess)
+
+    if capital_guess == state["capital"]:
+        print("yes! you are correct!")
+    else:
+        print("Sorry wrong capital. Try a new state!")
+
+
+    # if capital_guess == state["capital"]:
 # for state in states:
 #   print("capital " + state["capital"] + " state " + state["name"])
 
@@ -192,7 +67,7 @@ for state in states:
   state["correct"] = 0
   state["wrong"] = 0
 
-print(states[0]["correct"])
+# print(states[0]["correct"])
 # expect to see each state's name with number of each state got correct which is set to 0 at first
   # print("correct for state " + state["name"] + " " + " number that state got correct" + str(state["correct"]))
 
