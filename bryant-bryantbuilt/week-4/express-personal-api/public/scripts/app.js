@@ -11,7 +11,7 @@ $(document).ready(function(){
     githubLink: "https://github.com/bryantbuilt",
     githubProfileImage: "https://avatars1.githubusercontent.com/u/46357603?s=400&v=4",
     personalSiteLink: "https://bryantbuilt.github.io",
-    currentCity: "Oakland"
+    currentCity: "Oakland",
     pets: [{name: "Fatoosh", type: "Cat", breed: "Scottish Fold"},
     {name: "Yuzu", type: "Cat", breed: "Cornish Rex"}]
     }

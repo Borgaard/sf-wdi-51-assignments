@@ -48,7 +48,7 @@ class TodosContainer extends Component {
     }
     TodoModel.update(todoId, todoBody).then((res)=>{
       let todos = this.state.todos
-      todos.find(isUpdatedTodo).body = todoBody.body
+      todos.find(todo => isUpdatedTodo(todo).body = todoBody.body);
       this.setState({todos: todos})
     })
   }
