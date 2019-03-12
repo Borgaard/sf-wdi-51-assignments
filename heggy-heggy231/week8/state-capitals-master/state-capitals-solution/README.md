@@ -1,5 +1,5 @@
 # Let's Learn our State Capitals
-
+hw state capital resource: https://git.generalassemb.ly/sf-wdi-51/state-capitals
 We're going to create a game to help us memorize the names of the capitals of all 50 states.
 
 To play the game:
