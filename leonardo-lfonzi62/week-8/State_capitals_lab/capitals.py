@@ -165,12 +165,6 @@ three_States = [
     "capital": "Phoenix"
 }]
 
-# student = {
-#  	'name': 'Fred',
-#  	'course': 'WDI',
-#  	'current_week': 4
-#  } 
-
 # GAME LOGIC STARTS HERE
 
 random.shuffle(states) # python method that shuffles the states list
@@ -196,9 +190,3 @@ if score < 0: # if the score is negative, set the score to equal 0
     score = 0       
 print('Congrats, your final score is ' + str(score) + ' !' + ' you got ' + str(correct_Amount) + ' out of ' + str(total_Questions) + ' questions correct')
 
-
-
-
-
-# for key in student:
-#      print( f"{key} = {student[key]}" )
