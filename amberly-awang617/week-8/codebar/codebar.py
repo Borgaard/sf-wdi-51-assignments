@@ -1,4 +1,4 @@
-class Member:
+class Member():
     def __init__(self, full_name):
         self.full_name = full_name
     
@@ -24,13 +24,12 @@ class Instructor(Member):
         self.skills.append(skill)
 
     def __str__(self):
-        # return self.full_name + ' - ' + self.bio
         if self.skills == None:
             return self.full_name + ' - ' + self.bio
         else:
-            return self.full_name + ' - ' + str(self.skills) + ' - ' + self.bio
+            return self.full_name + ' - ' + ", ".join(self.skills) + '\n' + self.bio
 
-class Workshop:
+class Workshop():
     def __init__(self, date, subject, instructors = None, students = None):
         self.date = date
         self.subject = subject
@@ -44,15 +43,15 @@ class Workshop:
             self.instructors.append(participant)
 
     def print_details(self):
-        print('Workshop - ' + self.date + ' - ' + self.subject)
+        print('Workshop - ' + self.date + ' - ' + self.subject + '\n')
         print('Students')
-        for student in self.students:
-            print(student)
-        print('Instructors')
-        for instructor in self.instructors:
-            print(instructor)
+        for i,student in enumerate(self.students):
+            print(f'{i+1}. {student}')
+        print('\n Instructors')
+        for i,instructor in enumerate(self.instructors):
+            print(f'{i+1}. {instructor}')
 
-workshop = Workshop("12/03/2014", "Shut1")
+workshop = Workshop("12/03/2014", "Shutl")
 
 jane = Student("Jane Doe", "I am trying to learn programming and need some help")
 lena = Student("Lena Smith", "I am really excited about learning to program!")
@@ -66,9 +65,6 @@ workshop.add_participant(jane)
 workshop.add_participant(lena)
 workshop.add_participant(vicky)
 workshop.add_participant(nicole)
-workshop.print_details()
 
-# skills = nicole.print_skills()
-# print(skills)
-# print(nicole)
+workshop.print_details()
 
