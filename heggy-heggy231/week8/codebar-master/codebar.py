@@ -10,9 +10,9 @@ class Member:
     print(f'Hi, my name is {self.full_name}!')
 
 # instantiate class heggy using Member class
-# heggy = Member('heggy')
+heggy = Member('heggy')
 # call method introduce()
-# heggy.introduce() # => Hi, my name is heggy!
+heggy.introduce() # => Hi, my name is heggy!
 
 # Each Member is also either a Student or an Instructor.
 # [X] create 2 classes inherit from Member
@@ -22,7 +22,12 @@ class Student(Member):
     Member.__init__(self, full_name)
     self.reason = reason
 
+eunice = Student('eunice', "I've been coding in Python for 5 years and want to share the love!")
+eunice.introduce()
+
 # Each instructor a bio (e.g., "I've been coding in Python for 5 years and want to share the love!").
 # Each instructor also has a set of skills (e.g., ["Python", "Javascript", "C++"]).
 # An instructor can gain a new skill using add_skill.
 
+# class Instructor(Member):
+#   def __init__(self, )
