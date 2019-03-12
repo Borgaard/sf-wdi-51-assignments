@@ -10,8 +10,8 @@
 
 
 # [X] get the array to show up shuffled! 
-# [ ] get python to ask for name of capitol "please "
-# an array of state dictionaries
+# [X] get python to ask for name of capitol "please "
+# [ ] an array of state dictionaries
 
 # tips: Potentially Useful Methods
 # print
@@ -182,6 +182,7 @@ random.shuffle(states)
 # print(states)
 
 print("Welcome to name your capital game!!!")
+input("Tell me the capital of: " + states[3]["name"])
 
 # for state in states:
 #   print("capital " + state["capital"] + " state " + state["name"])
@@ -190,6 +191,8 @@ print("Welcome to name your capital game!!!")
 for state in states: 
   state["correct"] = 0
   state["wrong"] = 0
+
+print(states[0]["correct"])
 # expect to see each state's name with number of each state got correct which is set to 0 at first
   # print("correct for state " + state["name"] + " " + " number that state got correct" + str(state["correct"]))
 
