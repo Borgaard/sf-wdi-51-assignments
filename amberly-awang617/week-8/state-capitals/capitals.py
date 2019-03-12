@@ -188,7 +188,7 @@ def game_scorce(lyst):
 def tally_score(lyst):
     total_correct = 0
     total_wrong = 0
-    for state in test_states:
+    for state in lyst:
         total_correct += state['game_correct']
         total_wrong += state['game_wrong']
     print('You got', total_correct, 'correct.')
@@ -217,11 +217,11 @@ def play(state_list, counter):
             state['game_wrong'] +=1
             print('wrong')
         print('This was answered correctly', state['correct'], 'out of', counter, 'times.')
-    tally_score(shuffled_test)
+    tally_score(state_list)
     end_game(state_list, counter)
 
 print('Welcome to the game!')
 game_counter = 0
 add_keys(test_states)
 add_keys(states)
-play(test_states, game_counter)
+play(states, game_counter)
