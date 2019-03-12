@@ -42,23 +42,21 @@ states = [
     "capital": "Cheyenne"
 }]
 
-
-
 # print(states)
-
 print("Welcome to name your capital game!!!")
 # input("Tell me the capital of: " + states[3]["name"])
 # for state in states: 
+
+# initialize store the number of times a user gets a capital correct and the number of times the answer is wrong, must put outside of my function so it keep the previous game count for correct, wrong
+for state in states:
+	state["correct"] = 0
+	state["wrong"] = 0
 
 def state_game():
 	# use random lib method shuffle to shuffle states 
 	# shuffle has to be inside of function so it gets shuffled eachtime
 	random.shuffle(states)
 	for state in states: 
-		# initialize store the number of times a user gets a capital correct and the number of times the answer is wrong
-		state["correct"] = 0
-		state["wrong"] = 0
-		
 		capital_guess = input("Tell me the capital of: " + state["name"] + "state capital is " + state["capital"])
 		print("your answer: " + capital_guess)
 		
