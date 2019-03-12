@@ -30,6 +30,8 @@ class Workshop:
         self.instructors = []
 
     def add_participant(self, participant):
+    # isinstance method returns boolean value true or false
+    # check if sub class instance of parent isinstance is preferred way to check
         if isinstance(participant, Instructor):
             self.instructors.append(participant)
         elif isinstance(participant, Student):
@@ -41,6 +43,7 @@ class Workshop:
         for index in range(len(self.students)):
             print(f"{index + 1}. {self.students[index].full_name} - {self.students[index].reason}")
         print("Instructors")
+        # 2 ways to loop thru second option
         for index, instructor in enumerate(self.instructors):
             print(f"{index + 1}. {instructor.full_name} - {', '.join(instructor.skills)} \n {instructor.bio}")
 
