@@ -17,6 +17,11 @@ class Student(Member):
     Member.__init__(self, full_name)
     self.reason = reason
 
+  def print_student_details(self):
+    print("###############")
+    print(f"Student {self.full_name}, {self.reason}")
+    print("###############")
+
 # Each instructor a bio (e.g., "I've been coding in Python for 5 years and want to share the love!").
 # An instructor can gain a new skill using add_skill.
 class Instructor(Member):
@@ -72,11 +77,12 @@ class Workshop:
 workshop = Workshop("03/12/2019", "Java")
 
 # instantiate class heggy using Member class
-heggy = Member('heggy')
+# heggy = Member('heggy')
 # call method introduce()
-heggy.introduce() # => Hi, my name is heggy!
+# heggy.introduce() # => Hi, my name is heggy!
 eunice = Student('Student eunice', "I've been coding in Python for 5 years and want to share the love!")
 eunice.introduce()
+eunice.
 # => I've been coding in Python for 5 years and want to share the love!
 print("reason why eunice started to code:")
 print(eunice.reason)
@@ -92,4 +98,12 @@ print(f'Hi, my name is {isha.full_name}! and my skill is {isha.skills} and my bi
 workshop.add_participant(isha)
 workshop.add_participant(eunice)
 # method that prints detail about the workshop
-workshop.print_details()
+workshop = Workshop("12/03/2014", "Shutl")
+
+jane = Student("Jane Doe", "I am trying to learn programming and need some help")
+lena = Student("Lena Smith", "I am really excited about learning to program!")
+vicky = Instructor("Vicky Python", "I want to help people learn coding.")
+vicky.add_skill("HTML")
+vicky.add_skill("JavaScript")
+nicole = Instructor("Nicole McMillan", "I have been programming for 5 years in Python and want to spread the love")
+nicole.add_skill("Python")
