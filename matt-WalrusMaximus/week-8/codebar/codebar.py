@@ -1,7 +1,9 @@
+# constructor for universal member traits
 class Member():
     def __init__(self, position):
         self.position = position
 
+# constructor for students
 class Student(Member):
     def __init__(self, first_name="", last_name="", purpose=""):
         Member.__init__(self, "Student")
@@ -11,8 +13,9 @@ class Student(Member):
         self.purpose = purpose
 
     def introduce(self):
-        print(f'Hi, my name is {self.first_name}, I am a {self.position} at Codebar. I want to {self.purpose}')
+        print(f'Hi, my name is {self.first_name}, I am a {self.position} at Codebar. {self.purpose}')
 
+# constructor for members
 class Instructor(Member):
     def __init__(self, first_name="", last_name="", bio=""):
         Member.__init__(self, "Instructor")
@@ -28,14 +31,16 @@ class Instructor(Member):
     def add_skill(self, skill_added=""):
         self.skills.append(skill_added)
 
+# constructor for adding workshops
 class Workshop():
     def __init__(self, name="", date=""):
         self.name = name
         self.date = date
-        self.header = (f"Workshop - {name} - {date}")
+        self.header = (f"Workshop - {name} - {date}\n")
         self.students = []
         self.instructors = []
 
+    # allows you to add participants into the instance of workshop. checks if student, instructor, or exception
     def add_participants(self, participant):
         if isinstance(participant, Instructor):
             self.instructors.append(participant)
@@ -44,32 +49,36 @@ class Workshop():
         else:
             print(f"Failed to add {participant}, is not a student or an instructor")
     
-    def participants(self):
-        for student in self.students:
-            print(student.full_name)
+    # runs a function to build out a response with the contents of the workshop
+    def print_details(self):
+        print("\n")
+        print(self.header)
+        print("Students:")
+        for idx, student in enumerate(self.students):
+            print(f"{idx+1}. {student.full_name} - {student.purpose}")
+        print("\nInstructors:")
+        for idx, instructor in enumerate(self.instructors):
+            print(f"{idx+1}. {instructor.full_name} - {' / '.join(instructor.skills)}\n   {instructor.bio}")
+        print("\n")
 
-
-
-
-
-wally = Student('Wally','Walrus',"learn to make sense of all of this stuff.")
-joe = Student('Joe','Random','be better at things')
-john = Student('John','Q','code and whatnot')
+# populates students
+wally = Student('Wally','Walrus',"I want to learn to make sense of all of this stuff.")
+joe = Student('Joe','Random','I should be better at things')
+john = Student('John','Q','I want to code and whatnot')
 matt = Student('Matthew','Freeland','I want to apply my skills to a better professional than event space marketing')
 
-walrus = Instructor('Matthew','Walrus',"I've been a walrus for my entire life.")
-walrus.add_skill("Stuff")
+# populates instructors based on classes
 brock = Instructor('Brock','Lobster',"I should try Inward Perfection in Stellaris. Factions don't have to be scary.")
 brock.add_skill("Everything")
+brock.add_skill("More")
 dalton = Instructor('Dalton','Hart',"wat")
 dalton.add_skill("Everything")
+dalton.add_skill("More")
 isha = Instructor('Isha','Aurora',"Your CSS and HTML aren't very well organized")
 isha.add_skill("Everything")
+isha.add_skill("More")
 
-brock.introduce()
-dalton.introduce()
-isha.introduce()
-
+# Make the course and populate it with participants
 course_one = Workshop("WDI 51","01/22/2019")
 course_one.add_participants(matt)
 course_one.add_participants(wally)
@@ -78,7 +87,7 @@ course_one.add_participants(brock)
 course_one.add_participants(dalton)
 course_one.add_participants(isha)
 
-course_one.participants()
+course_one.print_details()
 
 
 
