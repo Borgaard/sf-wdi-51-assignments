@@ -156,11 +156,11 @@ states = [
     "capital": "Cheyenne"
 }]
 
-# Global variable for determining number of games the user has played
+# Global variable for determining number of games the user has played and if they are retrying their incorrect answers
 times_played = 0
 
 # The primary function of the game
-def game():
+def game(questions, retrying):
     """Starts the game environment by declaring local variables for logic"""
     # Updates the global variable to track number of games played
     global times_played
@@ -171,10 +171,17 @@ def game():
     wrong_answers = 0
     questions_asked = 0
 
-    # imports the game object into a new list and then shuffles it
-    questions = states
-    random.shuffle(questions)
+    # list of wrong answers to display as a new game
+    # shuffles the object of states to randomize the game
+    # if (retrying == False):
+    #     questions = states
+    #     random.shuffle(questions)
+    # else:
+    #     questions = wrong_answer_list
+    #     random.shuffle(questions)
 
+    wrong_answer_list = []
+    
     # checks if the number of games played is 1 or more to correct the plural
     time_pluralizer = ('time' if times_played == 1 else "times")
 
@@ -199,21 +206,32 @@ def game():
         else:
             wrong_answers += 1
             print(f"You entered: {user_input}, the answer is {the_answer}, You've answered {wrong_answers} incorrectly.")
+            wrong_answer_list.append({'name': state, 'capital': the_answer})
+
+    questions = wrong_answer_list
+    
 
     # displays the end result, as well as how many times they've played, pluralizing the "times_played" variable so it shows as a singular if they have only played one game
     # prompt the user if they want to play again, forcing them to input y or n to play again or exit the game respectively
-    play_again = input(f'Game Over: You got {correct_answers} correct out of {questions_asked}. \nYou have played {times_played} {time_pluralizer}\nYou have answered Do you want to play again? y/n ')
+    play_again = input(f'Game Over: You got {correct_answers} correct out of {questions_asked}. \nYou have played {times_played} {time_pluralizer}\nDo you want to play again? (new) Retry your wrong answers (retry) or quit (quit): ')
     
     # check if they user input a valid answer and either start a new game, exit the game, or prompt them again until a valid answer is returned
-    while (play_again != "y" or "n"):
-        if (play_again == "y"):
-            game()
-        elif (play_again == "n"):
+    while (play_again != "new" or "retry" or "quit"):
+        if (play_again == "new"):
+            questions = states
+            random.shuffle(questions)
+            game(questions, False)
+        elif (play_again == "retry"):
+            game(questions, True)
+        elif (play_again == "quit"):
             print("Thank you for playing!")
-            return
+            exit()
         else:
-            play_again = input("Please enter y to play again, or n to quit")
+            play_again = input("Please enter 'new' to start again, 'retry' to try your wrong answers again, or 'quit' to quit: ")
 
 # initializes the function to start the game environment
-game()
+print("Welcome to 'that game where you try to answer what is the capital of that one state'!\nThe game will display a state, type your answer in the console\n")
+questions = states
+random.shuffle(questions)
+game(questions, False)
 
