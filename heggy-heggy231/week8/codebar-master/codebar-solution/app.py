@@ -47,7 +47,6 @@ class Workshop:
         for index, instructor in enumerate(self.instructors):
             print(f"{index + 1}. {instructor.full_name} - {', '.join(instructor.skills)} \n {instructor.bio}")
 
-
 workshop = Workshop("12/03/2014", "Shutl")
 
 jane = Student("Jane Doe", "I am trying to learn programming and need some help")
