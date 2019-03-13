@@ -1,5 +1,5 @@
 # Codebar
-
+https://git.generalassemb.ly/sf-wdi-51/codebar/tree/master
 ## Part I: Members, Students and Instructors
 
 You're starting your own web development school called Codebar! Everybody at Codebar -- whether they are attending workshops or teaching them -- is a `Member`.
