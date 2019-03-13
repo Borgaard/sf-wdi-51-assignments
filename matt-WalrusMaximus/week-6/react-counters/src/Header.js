@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class Header extends Component {
   
   handleIncrement = () => {
-    console.log("you pressed + !")
     this.props.increaseCounters()
   }
 
@@ -15,7 +14,6 @@ class Header extends Component {
   }
 
   render() {
-
 
     return (
       <header className="App-header">
