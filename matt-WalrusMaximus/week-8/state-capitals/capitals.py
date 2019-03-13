@@ -171,15 +171,7 @@ def game(questions, retrying):
     wrong_answers = 0
     questions_asked = 0
 
-    # list of wrong answers to display as a new game
-    # shuffles the object of states to randomize the game
-    # if (retrying == False):
-    #     questions = states
-    #     random.shuffle(questions)
-    # else:
-    #     questions = wrong_answer_list
-    #     random.shuffle(questions)
-
+    # initializes an empty list to receive incorrect answers
     wrong_answer_list = []
     
     # checks if the number of games played is 1 or more to correct the plural
@@ -188,8 +180,10 @@ def game(questions, retrying):
     # starts a loop hunting for the values of the questions array
     for value in questions:
 
-        # increments the num of questions asked variable and stores the values of the current index position for more semantic string interpolation
+        # increments the num of questions asked variable 
         questions_asked += 1
+
+        # stores the values of the current index position for more semantic string interpolation
         the_answer = value['capital']
         state = value['name']
 
@@ -202,20 +196,20 @@ def game(questions, retrying):
         if (user_input == the_answer):
             correct_answers += 1
             print(f"Correct! The capital of {state} is {the_answer}! Your current score is {correct_answers}/{questions_asked}.")
-        # on failure, display wrong answer message and show them the correct answer as well as the number of answers they have gotten wrong.
+        # on incorrect answer, display wrong answer message and show them the correct answer as well as the number of answers they have gotten wrong.
         else:
             wrong_answers += 1
             print(f"You entered: {user_input}, the answer is {the_answer}, You've answered {wrong_answers} incorrectly.")
             wrong_answer_list.append({'name': state, 'capital': the_answer})
 
+    # replaces the questions list with the wrong answers, the later if statement determines if they are going to retry with this list or start a new game with a fresh list
     questions = wrong_answer_list
-    
 
     # displays the end result, as well as how many times they've played, pluralizing the "times_played" variable so it shows as a singular if they have only played one game
-    # prompt the user if they want to play again, forcing them to input y or n to play again or exit the game respectively
+    # prompt the user if they want to play again, forcing them to input new retry or quit to play again, retry, or exit the game respectively
     play_again = input(f'Game Over: You got {correct_answers} correct out of {questions_asked}. \nYou have played {times_played} {time_pluralizer}\nDo you want to play again? Start a new game (new) / Retry your wrong answers (retry) / or quit (quit): ')
     
-    # check if they user input a valid answer and either start a new game, exit the game, or prompt them again until a valid answer is returned
+    # check if they user input a valid answer and either start a new game, retry, exit the game, or prompt them again until a valid answer is returned
     while (play_again != "new" or "retry" or "quit"):
         if (play_again == "new"):
             questions = states
