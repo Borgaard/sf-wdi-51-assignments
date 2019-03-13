@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-
 class Search extends Component {
-    state = {
-        query: '',
-    };
-    handleSubmit = (event) =>{
-        //alert("testing submit button");
-        event.preventDefault();
-        console.log("searche!")
-        this.setState({query :this.search.value});
-        console.log(this.state.query)
+    // state = {
+    //     query: '',
+    // };
+    // handleSubmit = (event) =>{
+    //     //alert("testing submit button");
+    //     event.preventDefault();
+    //     console.log("searche!")
+    //     this.setState({query :this.search.value});
+    //     console.log(this.state.query)
 
 
-    }
-    handleChange = (event) => {
-        //console.log(searched)
-        event.preventDefault();
-        this.setState({query :this.search.value});
-        //console.log(query)
-    }
+    // }
+    // handleChange = (event) => {
+    //     //console.log(searched)
+    //     event.preventDefault();
+    //     this.setState({query :this.search.value});
+    //     //console.log(query)
+    // }
     // render() {
     //     return (
         // <div>
@@ -34,16 +33,29 @@ class Search extends Component {
         // </div>
         // )
         render() {
-            return (
-               <form onSubmit={this.handleSubmit}> 
-                <input
-                  placeholder="Search for..."
-                  ref={input => this.search = input}
-                  onChange={this.handleChange}
+        //     return (
+        //     //    <form onSubmit={this.handleSubmit}> 
+        //     <form>
+
+        //         <input
+        //           placeholder="Search for..."
+        //          ref={input => this.search = input}
+        //         />
+        //         <input type="submit" value="Submit"  onChange={this.handleChange}/>
+        //         {/* <p>{this.state.query}</p> */}
+        //     </form>
+        // )
+
+        return(
+            <div>
+                {/* //      <form onSubmit={this.handleSubmit}>  */}
+                <input 
+                    type="text" 
+                    placeholder="Search here"
+                    onKeyUp={this.handleChange}
                 />
-                <input type="submit" value="Submit" />
-                <p>{this.state.query}</p>
-              </form>
+                 {/* </form>  */}
+            </div>
         )
     }
 }

@@ -3,20 +3,25 @@ import Header from "./Header";
 import CounterList from "./CounterList"
 //import Counter from "./Counter"
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
+ 
+   state = {
       counters:0
     }
-  }
+ 
   increaseCounters = () =>{
     let counters =  this.state.counters++;
     this.setState({counters});
   }
   
   decreaseCounters = () =>{
-    let counters =  this.state.counters - 1;
-    this.setState({counters});
+   //check first if the number of counter is greater than 0 to substract
+    let counters =  this.state.counters;
+    if (counters > 0){
+      counters--;
+      this.setState({counters});
+    } else {
+      this.setState({counters});
+    }
   }
 
   render() {

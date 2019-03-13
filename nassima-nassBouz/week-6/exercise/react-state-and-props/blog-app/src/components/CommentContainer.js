@@ -9,8 +9,7 @@ class CommentContainer extends Component{
 
     handleSubmit = (event) => {
         let newComment = this.state.newCommentValue;
-         this.state.commentList.push(newComment);
-
+        this.state.commentList.push(newComment);
         this.setState({
             commentList: this.state.commentList,
             newComment: ''
@@ -31,7 +30,7 @@ class CommentContainer extends Component{
             <div>
                 <h3>Comments</h3>
                 { comments }
-                 <form onSubmit = { this.handleSubmit}>
+                 <form onSubmit = { this.handleSubmit }>
                     <label htmlFor="message">
                         Comment:
                         <input type="text" name="message" onChange={ this.handleChange } />

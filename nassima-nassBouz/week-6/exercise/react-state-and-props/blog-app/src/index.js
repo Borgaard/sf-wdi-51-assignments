@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Post from './components/Post'
-import './App.css'
+import './index.css'
 
 ReactDOM.render(
   <Post 
