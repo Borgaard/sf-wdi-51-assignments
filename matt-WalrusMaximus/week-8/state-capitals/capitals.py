@@ -213,7 +213,7 @@ def game(questions, retrying):
 
     # displays the end result, as well as how many times they've played, pluralizing the "times_played" variable so it shows as a singular if they have only played one game
     # prompt the user if they want to play again, forcing them to input y or n to play again or exit the game respectively
-    play_again = input(f'Game Over: You got {correct_answers} correct out of {questions_asked}. \nYou have played {times_played} {time_pluralizer}\nDo you want to play again? (new) Retry your wrong answers (retry) or quit (quit): ')
+    play_again = input(f'Game Over: You got {correct_answers} correct out of {questions_asked}. \nYou have played {times_played} {time_pluralizer}\nDo you want to play again? Start a new game (new) / Retry your wrong answers (retry) / or quit (quit): ')
     
     # check if they user input a valid answer and either start a new game, exit the game, or prompt them again until a valid answer is returned
     while (play_again != "new" or "retry" or "quit"):
@@ -227,7 +227,7 @@ def game(questions, retrying):
             print("Thank you for playing!")
             exit()
         else:
-            play_again = input("Please enter 'new' to start again, 'retry' to try your wrong answers again, or 'quit' to quit: ")
+            play_again = input("Please enter 'new' to start a new game, 'retry' to try your wrong answers again, or 'quit' to quit: ")
 
 # initializes the function to start the game environment
 print("Welcome to 'that game where you try to answer what is the capital of that one state'!\nThe game will display a state, type your answer in the console\n")
