@@ -1,0 +1,56 @@
+.Grid {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Grid-cell1 {
+  flex: 1 ;
+   position:relative;
+    height: 50px;
+  width: 50px;
+  background: blue;
+  margin:  50px;
+  position: absolute;
+}
+.Grid-cell2 {
+  flex: 1 ;
+  position:relative;
+  height: 50px;
+  width: 50px;
+  background: blue;
+  margin:  50px;
+  position: absolute;
+}
+
+/*#blueBox{
+  height: 50px;
+  width: 50px;
+  background: blue;
+  margin:  50px;
+  position: absolute;
+}
+
+#redBox{
+  height: 50px;
+  width: 50px;
+  background: red;
+   margin:50px;
+    position: absolute;
+}
+*/
+.start{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin:50px;
+
+}
+/*body{
+  background-color: yellow;
+}
+
+h1{
+  color: red;
+}
+*/
