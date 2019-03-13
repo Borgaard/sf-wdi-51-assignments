@@ -1,4 +1,5 @@
 # an array of state dictionaries
+import random
 states = [
 {
     "name": "Alabama",
@@ -167,6 +168,7 @@ state = [
 
 prompt = '> '
 
+
 def end_game():
     bye = "See you later"
     return
@@ -177,18 +179,32 @@ intro = input(prompt)
 print("Would you like to test your state capital knowledge? Y/N")
 start_game = input(prompt)
 
-# prompt = "What's your favorite color >"
-# text = input(prompt)
+def play_game():
+    random.shuffle(states)
+
+    for state in states:
+        print(f"\n What is the capital of {state['name']}\n")
+        answer = input(prompt)
+        
+        if answer == state['capital']:
+            print(f"\nHooray, {state['capital']} is the right answer!\n")
+        else:
+            print("Aww no!, that wasn't right.\n")
+        
+        print('On to the next one \n')
+            
+            
+
+
+
+
 
 if start_game == 'Y':
     print('Great, let\'s play')
-
-for key in state:
-    print(f"{key}={state[key]}")
-    answer = input(prompt)
+    play_game()
 
 else:
-    print("Goodbye!")
+    print("Sorry to hear that, see you next time!")
 
 
 
