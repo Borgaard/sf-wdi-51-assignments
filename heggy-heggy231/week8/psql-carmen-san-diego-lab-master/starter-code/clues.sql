@@ -40,11 +40,11 @@
 
 -- SELECT gets the column
 
-SELECT name, code, population
-FROM country
-WHERE region = 'Southern Europe'
-ORDER BY population
-LIMIT 1;
+-- SELECT name, code, population
+-- FROM country
+-- WHERE region = 'Southern Europe'
+-- ORDER BY population
+-- LIMIT 1;
 
 -- This throws an error b/c aggregation functin Min which only returns one result when cuntry.name is query together which only one result is allowed, since we may get same population 3000 3000 france italy which one to pick?  ambigous.. this doesn't work so we try the sub-querry: popuation = ();
 -- SELECT country.name, MIN(population)
@@ -80,77 +80,169 @@ WHERE countrycode = 'VAT';
 -- note: countrylanguage has percentage column if value == 100 
 -- step 1) get only the nearby country get only the region: southern Europe ***** answer: SMR ******
 
+-- SELECT name, code
+-- FROM country
+-- WHERE region = 'Southern Europe';
+
+
+
+
+
+
+
+
+-- how to select language Albania speak??
+-- code: ALB 
+-- SELECT language
+-- FROM countrylanguage
+-- WHERE countrycode = 'ALB';
+
+-- Albaniana
+-- Greek
+-- Macedonian
+
+-- count of country that show up:
+-- SELECT COUNT(language)
+-- FROM countrylanguage
+-- WHERE countrycode = 'ALB';
+
+-- => 3!!!
+
+
+-- 2) get all nearby country that speak only 1 language
+-- SELECT name, code
+-- FROM country
+-- WHERE region = 'Southern Europe'
+-- AND 1 = (SELECT COUNT(language)
+--          FROM countrylanguage
+--          WHERE countrycode = code);
+
+-- RESULT ===>>>
+-- Bosnia and Herzegovina	BIH
+-- Portugal	PRT
+-- San Marino	SMR
+-- Holy See (Vatican City State)	VAT
+
+
+-- 3) from the result I only want country that speaks Italian
+-- SELECT name, code
+-- FROM country
+-- WHERE region = 'Southern Europe'
+-- AND 1 = (SELECT COUNT(language)
+--          FROM countrylanguage
+--          WHERE countrycode = code)
+  -- here we want to use in since it's not aggregate funtion.  So `in`
+    -- allows you to give more than one result (as long as italian is one of the result it will be true)
+-- AND 'Italian' in (SELECT language
+--                 FROM countrylanguage
+--                 WHERE countrycode = code);
+
+
 SELECT name, code
 FROM country
-WHERE region = 'Southern Europe';
+WHERE region = 'Southern Europe'
+AND 1 = (SELECT COUNT(language)
+         FROM countrylanguage
+         WHERE countrycode = code)
+AND 'Italian' in (SELECT language
+                FROM countrylanguage
+                WHERE countrycode = code);
+
+-- howo do you select language that filtered country VAT speaks?
+-- SELECT language
+-- FROM countrylanguage
+-- WHERE countrycode = 'VAT';
+
+-- Italian
+
+-- SELECT language
+-- FROM countrylanguage
+-- WHERE countrycode = 'BIH';
+-- Serbo-Croatian <=== filter this guy out!!
 
 
 
-SELECT countrycode
-FROM countrylanguage
-WHERE language = 'Italian' AND percentage = 100; 
--- => SMR
+-- WHERE countrycode = code); code is from the result of first query to only get the nearby country.  now we move to countrylanguage table.
+-- I want you to get the code that I filtered just for Southern Europe and count how many language each of the filtered country speak.
+-- but I want only 1 country language filtered country
 
-SELECT name
-FROM country
-WHERE code = 'SMR'; 
+
+
+
+-- SELECT countrycode
+-- FROM countrylanguage
+-- WHERE language = 'Italian' AND percentage = 100; 
+-- -- => SMR
+
+-- SELECT name
+-- FROM country
+-- WHERE code = 'SMR'; 
 
 -- => San Marino
 
-SELECT c.region, c.name, c.code
-FROM countrylanguage cl, country c
-WHERE language = 'Italian'
-AND cl.countrycode = c.code
-AND c.region = 'Southern Europe'
+-- SELECT c.region, c.name, c.code
+-- FROM countrylanguage cl, country c
+-- WHERE language = 'Italian'
+-- AND cl.countrycode = c.code
+-- AND c.region = 'Southern Europe'
 -- 1 = () <== this is subquery
-AND 1 = (SELECT COUNT(language)
-         FROM countrylanguage
-         WHERE countrycode = c.code);
+-- AND 1 = (SELECT COUNT(language)
+--          FROM countrylanguage
+--          WHERE countrycode = c.code);
 
 -- 
-SELECT COUNT(language), countrycode, countrylanguage
-  FROM countrylanguage
-  GROUP BY countrycode
-  -- ORDER BY the first coulum of my result
-  ORDER BY 1; 
+-- SELECT COUNT(language), countrycode, countrylanguage
+--   FROM countrylanguage
+--   GROUP BY countrycode
+--   -- ORDER BY the first coulum of my result
+--   ORDER BY 1; 
 
 -- count how many records matched
-SELECT COUNT(language), countrycode
-FROM countrylanguage
-GROUP BY countrycode
-ORDER BY 1;
+-- SELECT COUNT(language), countrycode
+-- FROM countrylanguage
+-- GROUP BY countrycode
+-- ORDER BY 1;
 
 
 -- count how many records (rows)
-SELECT COUNT(language)
-FROM countrylanguage;
+-- SELECT COUNT(language)
+-- FROM countrylanguage;
 
 -- count how many unique lanugages now (GROUP BY filters) and which country show
-SELECT COUNT(language), language
-FROM countrylanguage
-GROUP BY language
+-- SELECT COUNT(language), language
+-- FROM countrylanguage
+-- GROUP BY language
 
 
-1	[South]Mande
-1	Abhyasi
-1	Acholi
-1	Adja
-2	Afar
-2	Afrikaans
-3	Aimar�
-1	Ainu
+-- 1	[South]Mande
+-- 1	Abhyasi
+-- 1	Acholi
+-- 1	Adja
+-- 2	Afar
+-- 2	Afrikaans
+-- 3	Aimar�
+-- 1	Ainu
 
 -- when groupby something I need that something upthere
-SELECT COUNT(language), countrycode
-FROM countrylanguage
-GROUP BY countrycode;
+-- SELECT COUNT(language), countrycode
+-- FROM countrylanguage
+-- GROUP BY countrycode;
+
+
+-- Southern Europe	San Marino	SMR
+-- Southern Europe	Holy See (Vatican City State)	VAT
+
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
  -- There are only two cities she could be flying to in the country. One is named the same as the country – that
  -- would be too obvious. We're following our gut on this one; find out what other city in that country she might
- --  be flying to.
+ --  be flying to. (earlier result I got outhern Europe	San Marino	SMR, what city that share SMR but different name than San Marino)
 
+SELECT *
+FROM city
+WHERE countrycode = 'SMR'
+AND name != 'San Marino';
 
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
