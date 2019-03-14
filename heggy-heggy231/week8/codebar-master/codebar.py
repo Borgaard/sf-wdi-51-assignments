@@ -70,6 +70,8 @@ class Workshop:
       self.students.append(participant)
 
 # outputs the details of the workshop.
+# Create separate methods to print the workshop details (date and classroom), a method to print out the students and one to print out the coaches. Call these from print_details instead of having all the code there.
+
 # =>
 # Workshop - 12/03/2014 - Shutl
 #
