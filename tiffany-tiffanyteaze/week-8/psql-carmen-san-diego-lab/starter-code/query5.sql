@@ -1,0 +1,1 @@
+SELECT * FROM city ci, country co WHERE ci.countrycode = co.code AND name LIKE 'Serra%';
