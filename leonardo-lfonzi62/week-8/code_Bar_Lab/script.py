@@ -27,7 +27,6 @@ class Workshop():
         self.subject = subject
         self.instructors = []
         self.students = []
-        self.Teacher_Assistant = []
     def add_participant(self, member):
          if isinstance(member, Instructor): #checking if the var passed to this funciton has a class of Instructor, then push that member into the instructor array
              self.instructors.append(member)

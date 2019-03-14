@@ -174,19 +174,19 @@ correct_Amount = 0
 wrong_Amount = 0
 total_Questions = len(states)
 
-for state in states: # loops through the array of objects
+for state in three_States: # loops through the array of objects
     hint = print('Here is a hint of the state capital: ' + state['capital'][:3]) # prints the first three characters of the state capital
     user_Guess = input('What is the capital of ' + state['name'] + '?') #capturing user inputs' input
     if user_Guess == state['capital']: # comparing the user's input to the current state's capital in the list
         print('Correct!')
         score += 1
         correct_Amount += 1 #correct amount is incremented by one for each correct answer
-        print('Your current score is ' + str(score))
+        print('Your current score is %d' % (score))
     else:
         print('Incorrect State Name!')
         score -= 1
-        print('Your current score is ' + str(score))
+        print('Your current score is  %d' % (score))
 if score < 0: # if the score is negative, set the score to equal 0
     score = 0       
-print('Congrats, your final score is ' + str(score) + ' !' + ' you got ' + str(correct_Amount) + ' out of ' + str(total_Questions) + ' questions correct')
+print('Congrats, your final score is %d! you got %d out of %d questions correct' % (score, correct_Amount, total_Questions))
 
