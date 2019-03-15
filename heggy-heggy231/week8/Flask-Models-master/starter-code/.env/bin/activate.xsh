@@ -25,7 +25,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/Users/Heggy/Document/GA/wdi/lessons/Flask-Models-master/starter-code/.env"
+$VIRTUAL_ENV = r"/Users/Heggy/Document/GA/wdi/sf-wdi-51-assignments/heggy-heggy231/week8/Flask-Models-master/starter-code/.env"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

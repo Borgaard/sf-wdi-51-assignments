@@ -56,7 +56,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/Heggy/Document/GA/wdi/lessons/Flask-Models-master/starter-code/.env"
+set -gx VIRTUAL_ENV "/Users/Heggy/Document/GA/wdi/sf-wdi-51-assignments/heggy-heggy231/week8/Flask-Models-master/starter-code/.env"
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | tr "." "\n")[1] -lt 3

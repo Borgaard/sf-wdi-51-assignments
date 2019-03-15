@@ -10,7 +10,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/Heggy/Document/GA/wdi/lessons/Flask-Models-master/starter-code/.env"
+setenv VIRTUAL_ENV "/Users/Heggy/Document/GA/wdi/sf-wdi-51-assignments/heggy-heggy231/week8/Flask-Models-master/starter-code/.env"
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/bin:$PATH:q"
