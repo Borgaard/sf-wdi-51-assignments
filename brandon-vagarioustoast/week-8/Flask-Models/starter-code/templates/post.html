@@ -13,4 +13,20 @@
     </div>
     <a>r/{{post.sub}}</a>
 </article>
+<section>
+  <h2>New Post Form</h2>
+  <form method="POST" action="" novalidate>
+    {{ form.hidden_tag() }}
+    <div>
+      {{ form.text.label }}
+      {{ form.text(class_="textarea") }}
+    </div>
+    <div>
+      {{ form.user.label("Post By:") }}
+      {{ form.user(class_="input") }}
+    </div>
+
+    {{ form.submit(class_="button") }}
+  </form>
+</section>
 {% endblock %}

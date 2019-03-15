@@ -3,7 +3,7 @@ from flask import render_template, flash, redirect, url_for
 
 # This import makes our connection to the models
 import models
-from forms import SubForm, PostForm
+from forms import SubForm, PostForm, CommentForm
 
 
 DEBUG = True
@@ -71,7 +71,7 @@ def r(sub=None):
 
 
 @app.route('/posts')
-@app.route('/posts/<id>')
+@app.route('/posts/<id>', methods=['GET', 'POST'])
 def posts(id=None):
     if id == None:
         posts = models.Post.select().limit(100)
@@ -79,7 +79,18 @@ def posts(id=None):
     else:
         post_id = int(id)
         posts = models.Post.get(models.Post.id == post_id)
-        return render_template('post.html', post=posts)
+        comments = posts.comments
+
+        form = CommentForm()
+        if form.validate_on_submit():
+            models.Comment.create(
+                user=form.user.data.strip(),
+                text=form.text.data.strip(),
+                posts=posts
+            )
+
+            return redirect(f'/posts/{post_id}')
+        return render_template('post.html', post=posts, form=form, comments=comments)
 
 
 if __name__ == '__main__':
