@@ -73,13 +73,13 @@ def r(sub=None):
 @app.route('/posts')
 @app.route('/posts/<id>')
 def posts(id=None):
-    with open('posts.json') as json_data:
-        posts = json.load(json_data)
-        if id == None:
-            return render_template('posts.html', posts=posts)
-        else:
-            post_id = int(id)
-            return render_template('post.html', post=posts[post_id])
+    if id == None:
+        posts = models.Post.select().limit(100)
+        return render_template('posts.html', posts=posts)
+    else:
+        post_id = int(id)
+        posts = models.Post.get(models.Post.id == post_id)
+        return render_template('post.html', post=posts)
 
 
 if __name__ == '__main__':

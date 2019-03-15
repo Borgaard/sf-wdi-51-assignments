@@ -30,7 +30,20 @@ class Post(Model):
         order_by = ('-timestamp',)
 
 
+class Comment(Model):
+    timestamp = DateTimeField(default=datetime.datetime.now)
+    user = CharField()
+    text = TextField()
+    # relate the Comment to the Post model
+
+    post = ForeignKeyField(Post, backref='comments')
+
+    class Meta:
+        database = DATABASE
+        order_by = ('-timestamp',)
+
+
 def initialize():
     DATABASE.connect()
-    DATABASE.create_tables([Sub, Post], safe=True)
+    DATABASE.create_tables([Sub, Post, Comment], safe=True)
     DATABASE.close()
