@@ -1,0 +1,27 @@
+<!-- this is the form builder -->
+<!-- WTForms takes care of security related concerns. the secret key in app.py is used to populate this field. we have to pass down form object, a reference to our form.class -->
+
+<!-- CREATE a new SUB -->
+
+{% extends "layout.html" %}
+
+	{% block content %}
+		<!-- validation is handled by backend -->
+	<form method="POST" action="" novalidate>
+		<!-- tag is hidden to user, and it stores token that is checked by db to make sure that req we are getting is valid and non malicious -->
+		{{ form.hidden_tag() }}
+
+		<div>
+			{{ form.name.label }}
+			<!-- output the input tag -->
+			<!-- attach class to input, css framework comes with wtforms. you can also attach other attributes such as data and pass them through as argument-->
+			{{ form.name(class_="input", data="brock") }}
+		</div>
+		<div>
+			{{ form.description.label }}
+			{{ form.description(class_="input") }}
+		</div>
+
+		{{ form.submit(class_="button") }}
+	</form>
+{% endblock %}
