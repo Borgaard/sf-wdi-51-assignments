@@ -259,6 +259,8 @@ WHERE name LIKE '%Serra%';
 -- 370	Itapecerica da Serra	BRA	S�o Paulo	126672
 -- 3170	Serravalle	SMR	Serravalle/Dogano	4802
 
+-- []another search for what country it's in.
+-- error in this block
 SELECT name
 FROM country
 WHERE 'BRA' = (SELECT 

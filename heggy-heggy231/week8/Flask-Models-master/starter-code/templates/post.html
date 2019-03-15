@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <!-- return render_template('post.html', post=post, comments=comments, form=form) -->
+    <h1>Post: {{post.title}}</h1>
+    <article class="message is-primary">
+        <div class="message-header">
+            <div>{{post.title}}</div>
+            <p>By: {{post.user}}</p>
+        </div>
+        <div class="message-body">
+            {{post.text}}
+        </div>
+        <a>r/{{post.sub}}</a>
+    </article>
+
+    {% if comments %}
+        <h1>Comments List</h1>
+        {% for comment in comments %}
+        <article class="message is-primary">
+            <div class="message-header">
+                <a href={{url_for('comments', id=comment.id)}}>{{comment.title}}</a>
+                <p>By: {{comment.username}}</p>
+            </div>
+            <div class="message-body">
+                {{comment.text}}
+            </div>
+            <a>r/{{comment.sub}}</a>
+        </article>
+        {% endfor %}
+    {% endif %}
+    
+    <section>
+        <h2>Add a Comment to this Post</h2>
+        <form method="POST" action="" novalidate>
+            {{ form.hidden_tag() }}
+
+            <div class="field">
+            {{ form.title.label }}
+            {{ form.title(class_="input") }}
+            </div>
+            <div class="field">
+            {{ form.comment.label }}
+            {{ form.comment(class_="textarea") }}
+            </div>
+            <div class="field">
+            {{ form.username.label("Post By:") }}
+            {{ form.username(class_="input") }}
+            </div>
+
+            {{ form.submit(class_="button") }}
+        </form>
+    </section>
+
+{% endblock %}
+
+<!-- 
+class PostForm(Form):
+  user = TextField("By:")
+  title = TextField("Title")
+  text = TextAreaField("Content")
+  submit = SubmitField('Create Post')
+
+# file that we can use all the from for my app
+  # username = CharField()
+  # title = CharField()
+  # comment = TextField()
+class CommentForm(Form):
+  username = TextField("By:")
+  title = TextField("Title")
+  comment = TextAreaField("Content")
+  submit = SubmitField('Create Comment')
+-->
