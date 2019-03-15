@@ -49,7 +49,7 @@ class Comment(Model):
   text = TextField()
   # relate the Comment model to the Post model
   # backref='comments' ties comments to the Post model
-  post = ForeignKeyField(Sub, backref='comments')
+  post = ForeignKeyField(Post, backref='comments')
 
   class Meta:
     database = DATABASE
@@ -59,7 +59,6 @@ class Comment(Model):
 # make a connection to the database
 # [] WHERE DO THE .CONNECT, .CREATE_TABLES, .CLOSE FUNCTIONS COME FROM?
 # create a table in the database for the Sub model, Post model, and Comment model
-# [] WHY ARE WE PASSING IN SUB AS A LIST/ARRAY []?
 # then close the connection to the database
 # [] WHY WOULD YOU WANT TO CLOSE THE CONNECTION TO THE DATABASE?
 def initialize():

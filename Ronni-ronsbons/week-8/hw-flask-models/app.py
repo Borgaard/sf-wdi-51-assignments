@@ -117,6 +117,7 @@ def posts(id=None):
         post_id = int(id)
         found_post = models.Post.get(models.Post.id == post_id)
         # .comments references the backref='comments' in CommentModel.post
+        # [] THIS IS UNDEFINED
         comments_data = found_post.comments
 
         # handle POST request for new comment
