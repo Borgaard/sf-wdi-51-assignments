@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Sub</h1>
+    <article class="message is-dark">
+        <div class="message-header">
+            <a>{{sub.name}}</a>
+        </div>
+        <div class="message-body">
+            {{sub.description}}
+        </div>
+    </article>
+
+    <!-- display all posts for a subreddit -->
+    {% if posts %}
+        <h1>Post List</h1>
+        {% for post in posts %}
+        <article class="message is-primary">
+                <div class="message-header">
+                    <a href={{url_for('posts', id=post.id)}}>{{post.title}}</a>
+        
+                    <p>By: {{post.user}}</p>
+                </div>
+                <div class="message-body">
+                    {{post.text}}
+                </div>
+                <a>r/{{post.sub}}</a>
+        </article>
+        {% endfor %}
+    {% endif %}
+
+    <!-- adds form to create a new post in the subreddit page -->
+    <!-- form is passed down in app.py - return render_template(form=form) -->
+    <section>
+        <h2>Add a Post</h2>
+        <form method="POST" novalidate>
+            {{ form.hidden_tag() }}
+
+            <div>
+                {{ form.title.label }}
+                <!-- class_ with the underscore is to distinguish it from the Python keyword class -->
+                {{ form.title(class_="input") }}
+            </div>
+            <div>
+                {{ form.text.label }}
+                {{ form.text(class_="textarea") }}
+            </div>
+            <div>
+                {{ form.user.label("Post By:") }}
+                {{ form.user(class_="input") }}
+            </div>
+            {{ form.submit(class_="button") }}
+        </form>
+    </section>
+{% endblock %}
