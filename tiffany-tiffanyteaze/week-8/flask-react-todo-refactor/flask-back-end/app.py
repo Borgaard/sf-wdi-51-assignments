@@ -46,8 +46,8 @@ def create_todo(todoid=None):
         return Todo.get_todo(todoid)
 
 @app.route('/todo/<todoid>', methods=['PUT'])
-def update(todoid):
-    from models import todo
+def edit_todo(todoid):
+    from models import Todo
     body = request.json['body']
     priority = request.json['priority']
     completed = request.json['completed']
