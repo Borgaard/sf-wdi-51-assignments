@@ -31,10 +31,15 @@ class CreateTodoForm extends Component {
       <div >
         <form onSubmit={ this.onFormSubmit } id="taskForm">
           <input  
-            onChange={ this.onInputChange } 
+            // onChange={ this.onInputChange } 
             type="text" id="newItemDescription" 
             placeholder="What do you need to do?" 
             value={this.state.todo}
+          />
+          <input 
+            type='text'
+            placeholder='priority'
+            className='prio'
           />
           <button type="submit" id="addTask" className="btn">Add Todo</button>
         </form>

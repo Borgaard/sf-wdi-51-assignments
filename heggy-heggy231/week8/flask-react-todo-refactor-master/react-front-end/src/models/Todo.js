@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+// const url = `https://super-crud-api.herokuapp.com/api/todos`
 const url = `http://localhost:8000/api/todos`
 
 class TodoModel {
@@ -23,7 +24,6 @@ class TodoModel {
     let request = axios.put(`${url}/${todoId}`, updateObject)
     return request
   }
-
 
 }
 

@@ -38,6 +38,10 @@ class TodoForm extends Component {
             onChange={ this.onChange } 
             type='text'
             value={(this.state && this.state.todo) || ''} />
+          <input 
+            type='number'
+            value='priority'
+          />
           <button type='submit' className="btn">{this.props.buttonName}</button>
         </form>
       </div>
