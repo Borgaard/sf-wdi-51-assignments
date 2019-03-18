@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Comments</h1>
+{% for comment in comments %}
+<article class="message is-primary">
+    <div class="message-header">
+        <a href={{url_for('comments', id=comment.id)}}>{{comments.title}}</a>
+
+        <p>By: {{comment.username}}</p>
+    </div>
+    <div class="message-body">
+        {{comment.comment}}
+    </div>
+    <a>r/{{comment.post}} What is this??</a>
+</article>
+{% endfor %}
+{% endblock %}
