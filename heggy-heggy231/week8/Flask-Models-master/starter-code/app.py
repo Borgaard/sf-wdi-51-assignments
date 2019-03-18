@@ -94,6 +94,23 @@ def posts(id=None):
 		# right side post = models.Post.get(models.Post.id == post_id)
 		return render_template('post.html', post=post, comments=comments, form=form)
 
+# create route only for comments
+@app.route('/comments')
+@app.route('/comments/')
+@app.route('/comments/<id>', methods=['GET', 'POST'])
+def comments(id=None):
+	if id == None:
+		comments = models.Comment.select().limit(100)
+		return render_template('comments.html', comments=comments)
+	else:
+		comment_id = int(id)
+		comment = models.Comment.get(models.Comment.id == Comment_id)
+		# get the post comments
+		comments = post.comments  # post = ForeignKeyField(Post, backref="comments") This give you access to everything in comments!!!
+		
+		# right side post = models.Post.get(models.Post.id == post_id)
+		return render_template('comment.html', comment=comment, comments=comments, form=form)
+
 if __name__ == '__main__':
 	models.initialize()
 	app.run(debug=DEBUG, port=PORT)

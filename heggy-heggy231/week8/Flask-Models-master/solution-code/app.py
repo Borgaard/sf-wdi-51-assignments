@@ -2,6 +2,7 @@ from flask import Flask, g
 from flask import render_template, flash, redirect, url_for
 
 from forms import SubForm, PostForm
+# gain access to our models
 import models
 
 DEBUG = True
@@ -23,7 +24,7 @@ def after_request(response):
   g.db.close()
   return response
 
-
+# The root route redirect to route /r if form gets submitted
 @app.route('/', methods=['GET', 'POST'])
 def index():
   form = SubForm()

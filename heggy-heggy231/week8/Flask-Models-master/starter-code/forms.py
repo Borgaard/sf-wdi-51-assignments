@@ -21,7 +21,7 @@ class PostForm(Form):
   text = TextAreaField("Content")
   submit = SubmitField('Create Post')
 
-# file that we can use all the from for my app
+# MODEL of COMMENT: file that we can use all the from for my app
   # username = CharField()
   # title = CharField()
   # comment = TextField()
