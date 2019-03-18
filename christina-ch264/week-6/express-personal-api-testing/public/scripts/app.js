@@ -7,20 +7,7 @@ $(document).ready(function(){
     let $videogameList;
     $videogameList = $('#listview');
 
-    // render = videogame => {
-    //     let videogameHtml = 
-    //     `<hr>
-    //             <p> 
-    //                 <b class="videogame-title>${videogame.title}, with the Superhero:${videogame.avatar}</b>
-    //                 <button type="button" name="button" class="videogame-button-delete btn btn-danger pull-right" data-id=${videogame._id}>Delete</button>
-    //                 <button class="videogame-button-edit btn btn-secondary pull-right">Edit</button>              
-    //                 <span class="edit-input" style="display: none">
-    //                     <input type="text" value="${videogame.title}" />
-    //                     <button type="button" class="videogame-button-submit btn btn-secondary" data-id="${videogame._id}">Save</button>
-    //                 </span>
-    //             </p> `
-    //             $videogameList.append(videogameHtml);        
-    // }
+
     ///////////////////////////////////////////////////////////////////////////
     /// GET
     ///////////////////////////////////////////////////////////////////////////
@@ -103,27 +90,6 @@ $(document).ready(function(){
     ///////////////////////////////////////////////////////////////////////////
     /// FUNCTIONS
     ///////////////////////////////////////////////////////////////////////////
-
-    // function render() {
-    //     $('#listview').append( ` <hr>
-    //         <li> Videogame: ${this.title}, Avatar: ${this.avatar}</li>`);
-    // }
-
-    // function handleSuccess(videogame) {
-    //     for (i = 0; i < videogame.length; i++) {
-    //         $('#listview').prepend( ` <hr><b <strong>Videogame:</strong> ${videogame[i].title}, <strong>Avatar:</strong> ${videogame[i].avatar}</b>
-    //         <span>
-    //             <button type="button" name="button" class="videogame-button-delete btn btn-danger pull-right" data-id=${videogame[i]._id}>Delete</button>
-    //             <button class="videogame-button-edit btn btn-secondary pull-right" data-id=${videogame[i]._id}>Edit</button>
-    //         </span>
-    //         <span id="edit-input" style="display: none">
-    //             <input type="text" value="${videogame.title}" />
-    //             <input type="text" value="${videogame.avatar}" />
-    //             <button type="button" class="videogame-button-edit-submit btn btn-secondary" data-id="${videogame._id}">Save</button>
-    //         </span>`);
-    //         // render();
-    //     }
-    // }
 
     function getVideogameHtml(videogame) {
         return `

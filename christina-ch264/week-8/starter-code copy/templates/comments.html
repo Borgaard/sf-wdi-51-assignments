@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Comment</h1>
+{% for comment in comments %}
+<article class="message is-dark">
+    <div class="message-header">
+        <a href={{url_for('comments', comment=comment.id)}}>{{comment.user}}</a>
+    </div>
+    <div class="message-body">
+        {{comment.text}}
+		</div>
+		<a>comments/{{comment.post}}</a>
+</article>
+{% endfor %}
+{% endblock %}
