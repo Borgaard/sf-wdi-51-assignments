@@ -34,13 +34,15 @@ class Workshop():
             self.students.append(member)
     
     def print_details(self):
-        print(f'Workshop - {self.date} - {self.subject} \n \n Students')
+        print('=======================================================================') 
+        print(f' Workshop - {self.date} - {self.subject} \n \n Students')
         for i, student in enumerate(self.students):
             print(f'{i+1}. {self.students[i].full_name} - {self.students[i].reason}')
         print('\n Instructors')
         for i, instructor in enumerate(self.instructors):
-            print(f'{i+1}. {self.instructors[i].full_name} - {self.instructors[i].bio}')
-      
+            print(f'{i+1}. {self.instructors[i].full_name} - {self.instructors[i].bio} - Skills: {self.instructors[i].skills}')
+        print('=======================================================================')
+
 workshop = Workshop("12/03/2014","Shutle")
 
 jane = Student("Jane Doe", "I am trying to learn programming and need some help")
