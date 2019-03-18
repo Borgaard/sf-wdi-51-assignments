@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Post</h1>
+<article class="message is-primary">
+    <div class="message-header">
+        <a href={{url_for('posts', id=post.id)}}>{{post.title}}</a>
+
+        <p>By: {{post.user}}</p>
+    </div>
+    <div class="message-body">
+        {{post.text}}
+    </div>
+    <a>r/{{post.sub.name}}</a>
+</article>
+
+<section>
+    <h2>Add a Comment to this Post</h2>
+    <form method="POST" action="" nonvalidate>
+        {{form.hidden_tag()}}
+
+        <div>
+            {{form.user.label("Comment By:")}}
+            {{form.user(class_="input")}}
+            <!-- {{form.created_date}} -->
+        </div>
+        <div>
+            {{form.text.label("Comment:")}}
+            {{form.text(class_="textarea")}}
+        </div>
+        {{form.submit(class_="button")}}
+    </form>
+</section>
+
+{% if comments %}
+<div class="comment-wrapper" style="margin-left: 20px">
+    {% include "/partial/comment_list.html" %}
+</div>
+{% endif %}
+
+
+{% endblock %}

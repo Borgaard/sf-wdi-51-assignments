@@ -1,0 +1,26 @@
+{% extends "layout.html" %} {% block content %}
+<h1>Welcome to Breddit</h1>
+
+<div class="columns">
+  <div class="column">
+    <h2>Add a Sub to Breddit</h2>
+    <!-- create a new sub with post, validation handled by backend -->
+    <form method="POST" action="" novalidate>
+      <!-- hidden tag to user -->
+      {{ form.hidden_tag() }}
+
+      <div class="field">
+        <!-- use builder to: -->
+        {{ form.name.label }}
+        {{ form.name(class_="input") }}
+      </div>
+      <div class="field">
+        {{ form.description.label }}
+        {{ form.description(class_="textarea") }}
+      </div>
+
+      {{ form.submit(class_="button") }}
+    </form>
+  </div>
+</div>
+{% endblock %}
