@@ -12,9 +12,9 @@ class CreateTodoForm extends Component {
     }
     
     onFormSubmit = (event) => {
-        event.preventDefault()
-        let todo = this.state.todo
-        this.props.createTodo(todo)
+        event.preventDefault();
+        let todo = this.state.todo;
+        this.props.createTodo(todo);
         this.setState({
         todo: ""
         })
@@ -26,7 +26,8 @@ class CreateTodoForm extends Component {
             <form onSubmit={ this.onFormSubmit } id="taskForm">
             <input  
                 onChange={ this.onInputChange } 
-                type="text" id="newItemDescription" 
+                type="text" 
+                id="newItemDescription" 
                 placeholder="What do you need to do?" 
                 value={this.state.todo}
             />
