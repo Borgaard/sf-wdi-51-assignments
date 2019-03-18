@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- 
+validation will be handled by the backend as opposed to the front-end -->
+
+  <form method="POST" action="" novalidate>
+
+      <!-- database checks the hidden tag to see if the data is malicious or not -->
+
+    {{ form.hidden_tag() }}
+
+    <div>
+      {{ form.name.label }}
+
+      <!-- if you want to define a class from WTF forms  to these inputs , syntax is class_ -->
+
+      {{ form.name(class_='input') }} 
+    </div>
+    <div>
+      {{ form.description.label() }}
+      {{ form.description(class_='textarea') }}
+    </div>
+
+    {{ form.submit(class_='button') }}
+  </form>
+{% endblock %}
