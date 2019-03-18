@@ -9,7 +9,7 @@ class Main extends Component {
     render() {
         return (
             <main>
-                <div class="wrap grid-wrapper">
+                <div className="wrap grid-wrapper">
                     <section>
                         <article>
                             <h3>11/23/2016</h3>

@@ -4,7 +4,7 @@ import './blogHeader.css'
 class BlogHeader extends Component {
     render() {
         return (
-            <header class="vertical-center">
+            <header id="blog-header" className="vertical-center">
                 <div>
                     <h1><a href="index.html">Monument</a></h1>
                 </div>
