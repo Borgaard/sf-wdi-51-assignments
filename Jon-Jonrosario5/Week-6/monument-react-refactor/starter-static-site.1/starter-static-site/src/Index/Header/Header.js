@@ -5,7 +5,7 @@ import "./Header.css";
 class Header extends Component {
     render(){
         return (
-            <header class="vertical-center">
+            <header className="vertical-center">
 
             <div>
                 <h1>Monument</h1>
