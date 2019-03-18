@@ -39,6 +39,7 @@ class TodoForm extends Component {
             type='text'
             value={(this.state && this.state.todo) || ''} />
           <input 
+            onChange={ this.onChange }
             type='number'
             value='priority'
           />

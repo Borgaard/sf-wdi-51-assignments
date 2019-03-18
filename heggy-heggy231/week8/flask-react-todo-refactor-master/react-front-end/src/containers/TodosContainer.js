@@ -21,6 +21,7 @@ class TodosContainer extends Component {
 
   fetchData = () => {
     TodoModel.all().then( (res) => {
+      // debugger;
       this.setState ({
         todos: res.data.todos,
         todo: '',
@@ -32,6 +33,7 @@ class TodosContainer extends Component {
   createTodo = (todo) => {
     let newTodo = {
         body: todo,
+        priority: 1,
         completed: false
     }
     TodoModel.create(newTodo).then((res) => {

@@ -1,7 +1,10 @@
 import React from 'react';
+
 import { Switch, Route } from 'react-router-dom';
 import Home from '../components/Home';
 import TodosContainer from '../containers/TodosContainer';
+
+// Then use it before your routes are set up:
 
 export default (
   <Switch>

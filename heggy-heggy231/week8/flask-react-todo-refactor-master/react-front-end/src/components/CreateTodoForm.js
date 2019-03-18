@@ -31,7 +31,7 @@ class CreateTodoForm extends Component {
       <div >
         <form onSubmit={ this.onFormSubmit } id="taskForm">
           <input  
-            // onChange={ this.onInputChange } 
+            onChange={ this.onInputChange } 
             type="text" id="newItemDescription" 
             placeholder="What do you need to do?" 
             value={this.state.todo}

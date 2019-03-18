@@ -1,13 +1,19 @@
 from flask import Flask, g
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for, jsonify
+from playhouse.shortcuts import model_to_dict, dict_to_model
+from flask_cors import CORS
+import sys
 
-from forms import SubForm, PostForm, CommentForm
 import models
+from peewee import *
+from forms import TaskForm
 
 DEBUG = True
 PORT = 8000
 
+
 app = Flask(__name__)
+CORS(app)
 app.secret_key = 'adkjfalj.adflja.dfnasdf.asd'
 
 # Handle requests when the come in (before) and when they complete (after)
@@ -30,22 +36,42 @@ def index():
 
 @app.route('/api/todos')
 @app.route('/api/todos/')
-@app.route('/api/todos/<task>', methods=['GET', 'POST'])
-def r(task=None):
-	if task == None:
-		tasks = models.Sub.select().limit(100) # now I am looking into Sub Model
-		return render_template("subs.html", subs=subs) 
+@app.route('/api/todos/<task>', methods=['GET'])
+def todos(task=None):
+  if task == None:
+    tasks = models.Todo.select().limit(100) # now I am looking into Sub Model
+    results = []
+    print ("^%&$&^", file=sys.stderr)
+    for task in tasks:
+      results.append(model_to_dict(task))
+		
+    return jsonify({"todos": results})
 		# go to template, subs=subs is sending all the data inside of subs=models.Sub.select()
-# 	else:
-# 		sub_id = int(sub)
+  else:
+    task_id = int(task)
 # # Find the right Sub
 # 		sub = models.Sub.get(models.Sub.id == sub_id) # sub.id gets created implicitly
 # 		posts = sub.posts #  sub = ForeignKeyField(Sub, backref="posts") 
 
+
+@app.route('/api/todos/', methods=['POST'])
+def newtodos(task=None):
 # # Define the form for Posts
-# 		form = PostForm()
+    form = TaskForm()
 # 		if form.validate_on_submit():
-# 			models.Post.create(
+# strip() gets rid of extra string in a input
+    print ("#################" + form.body.data.strip(), file=sys.stderr)
+
+    print ("#################" + str(form.priority.data), file=sys.stderr)
+
+    print ("#################" + str(form.completed.data), file=sys.stderr)
+
+
+    models.Todo.create(
+      body =form.body.data.strip(),
+      priority = form.priority.data,
+      completed = form.completed.data)
+    return '0'
 # 				user=form.user.data.strip(),
 # 				title=form.title.data.strip(),
 # 				text=form.text.data.strip(),
@@ -62,30 +88,7 @@ def r(task=None):
 #   title = TextField("Title")
 #   comment = TextAreaField("Content")
 #   submit = SubmitField('Create Comment')
-@app.route('/posts')
-@app.route('/posts/')
-@app.route('/posts/<id>', methods=['GET', 'POST'])
-def posts(id=None):
-	if id == None:
-		posts = models.Post.select().limit(100)
-		return render_template('posts.html', posts=posts)
-	else:
-		post_id = int(id)
-		post = models.Post.get(models.Post.id == post_id)
-		# get the post comments
-		comments = post.comments  # post = ForeignKeyField(Post, backref="comments") This give you access to everything in comments!!!
-		
-		# Define the form for comments
-		form = CommentForm()
-		if form.validate_on_submit():
-			models.Comment.create( #creating a instance of Comment
-				username = form.username.data.strip(),
-				title = form.title.data.strip(),
-				comment = form.comment.data.strip(),
-				post=post #post = ForeignKeyField(Post, backref="comments"), post secon val = models.Post.get(models.Post.id == post_id) , left side is from models.py
-			)
-		# right side post = models.Post.get(models.Post.id == post_id)
-		return render_template('post.html', post=post, comments=comments, form=form)
+
 
 if __name__ == '__main__':
 	models.initialize()

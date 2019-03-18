@@ -2,6 +2,7 @@ import datetime
 # peewee is a small and simple ORM, like mongoose but simpler
 from peewee import *
 
+
 DATABASE = SqliteDatabase('heggytodo.db')
 
 # important peewee doc: http://docs.peewee-orm.com/en/latest/peewee/models.html?highlight=charfield()
@@ -24,7 +25,8 @@ class Todo(Model):
   # comment = TextAreaField("Content")
   # submit = SubmitField('Create Comment')
 
+# pass the model info, same as seeding the db with mongodb
 def initialize():
   DATABASE.connect()
-  DATABASE.create_tables([Sub, Post], safe=True)
+  DATABASE.create_tables([Todo], safe=True)
   DATABASE.close()

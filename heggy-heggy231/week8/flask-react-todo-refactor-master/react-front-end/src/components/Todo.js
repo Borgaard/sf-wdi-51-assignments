@@ -49,12 +49,12 @@ class Todo extends Component {
           <span 
             className= { this.state.completed ? "completed item" : "item" }>
             {this.props.todo.body}</span>
-          <a
+          <a href='#'
             className='edit' 
             onClick={this.toggleBodyForm}>
             edit
           </a>
-          <a
+          <a href='#'
             className='remove'
             onClick={this.deleteClickedTodo}>
             Remove

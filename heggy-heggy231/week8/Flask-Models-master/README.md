@@ -1,4 +1,4 @@
-# Flask Models
+# Flask Models https://git.generalassemb.ly/sf-wdi-51/Flask-Models
 This lesson on building models in Flask comes hot off the heels of our Flask Templates lesson. The starter code in this repo is where you should have left off in the last lesson and that's where we're going to start today.
 
 Clone down this repo, and navigate to the `starter-code` directory in your file structure.

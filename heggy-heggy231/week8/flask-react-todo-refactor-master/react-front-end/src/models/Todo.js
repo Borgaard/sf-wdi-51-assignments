@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 // const url = `https://super-crud-api.herokuapp.com/api/todos`
-const url = `http://localhost:8000/api/todos`
+const url = `http://localhost:8000/api/todos/`
+axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Content-Type';
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 class TodoModel {
   static all = () =>{

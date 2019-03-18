@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/Heggy/Document/GA/wdi/sf-wdi-51-assignments/heggy-heggy231/week8/Flask-Models-master/starter-code/.env"
+VIRTUAL_ENV="/Users/Heggy/Document/GA/wdi/sf-wdi-51-assignments/heggy-heggy231/week8/flask-react-todo-refactor-master/flask-back-end/.env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
