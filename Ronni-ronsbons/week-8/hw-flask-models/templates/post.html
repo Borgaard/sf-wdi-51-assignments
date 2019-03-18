@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Post</h1>
+    <article class="message is-primary">
+        <div class="message-header">
+            <a href={{url_for('posts', id=post.id)}}>{{post.title}}</a>
+
+            <p>By: {{post.user}}</p>
+        </div>
+        <div class="message-body">
+            {{post.text}}
+        </div>
+    </article>
+
+    <!-- display all comments -->
+    {% if comments %}
+        <h1>Comments</h1>
+        {% for comment in comments %}
+            <article class="message is-primary">
+                <div class="message-body">
+                    {{comment.text}}
+                </div>
+                <div class="message-footer">
+                    <p>By: {{comment.user}}</p>
+                </div>    
+            </article>
+        {% endfor %}
+    {% endif %}
+
+    <!-- incorporate add comment form -->
+    <section>
+        <h2>Add a Comment</h2>
+        <form method="POST" novalidate>
+            <!-- form is passed down in app.py - return render_template(form = comment_form) -->
+            {{ form.hidden_tag() }}
+
+            <div>
+                {{ form.text.label }}
+                {{ form.text(class_="textarea") }}
+            </div>
+            <div>
+                {{ form.user.label("Comment By:") }}
+                {{ form.user(class_="input") }}
+            </div>
+            {{ form.submit(class_="button") }}
+        </form>
+    </section>
+
+{% endblock %}

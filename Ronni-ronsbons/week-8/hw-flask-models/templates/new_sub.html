@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <!-- novalidate tells frontend not to validate,
+    backend will handle -->
+  <form method="POST" novalidate>
+    <!-- database checks this hidden tag (csrf_token - cross site request forgery) to check that data is not malicious/is valid. keeps people from submitting the form if they're not on our site -->
+    {{ form.hidden_tag() }}
+    <div>
+      {{ form.name.label() }}
+      <!-- [] WHY PARENTHESES AFTER NAME? -->
+      <!-- in the parentheses after name, you can put data="" or other attributes in general -->
+      <!-- class_="input" applies class to the name input field -->
+      {{ form.name(class_="input") }}
+    </div>
+    <div>
+      {{ form.description.label() }}
+      {{ form.description(class_="textarea") }}
+    </div>
+    {{ form.submit(class_="submit") }}
+  </form>
+{% endblock %}
