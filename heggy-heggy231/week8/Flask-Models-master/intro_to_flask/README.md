@@ -11,8 +11,10 @@ Code to start off!!
 ```
 $ pip3 install virtualenv
 $ virtualenv .env -p python3
-$ source .env/bin/activate
+$ source .env/bin/activate // activate your .env virtualenv
 
+> python3 app.py  // run the app
+In your browser go to `http://localhost:5000/`
 
 - ADDED .gitignore from https://github.com/kennethreitz/flask-common/blob/master/.gitignore
 
