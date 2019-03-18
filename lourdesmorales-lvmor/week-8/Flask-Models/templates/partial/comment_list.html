@@ -1,0 +1,13 @@
+{% for comment in comments %}
+<article class="message is-secondary">
+    <div class="message-header">
+        <p>{{comment.text}}</p>
+
+        <p>By: {{comment.user}}</p>
+    </div>
+    <div class="message-body">
+        {{comment.text}}
+    </div>
+    <a>r/{{comment.post_id}}</a>
+</article>
+{% endfor %}
