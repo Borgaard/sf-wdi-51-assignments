@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Comment</h1>
+<article class="message is-primary">
+    <div class="message-header">
+        <!-- <a href={{url_for('comments', id=comment.id)}}></a> -->
+
+        <p>By: {{comment.user}}</p>
+    </div>
+    <div class="message-body">
+        {{comment.text}}
+    </div>
+    <!-- <a>r/{{post.sub}}</a> -->
+</article>
+{% endblock %}
