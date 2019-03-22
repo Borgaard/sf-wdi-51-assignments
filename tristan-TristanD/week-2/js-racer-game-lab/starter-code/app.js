@@ -11,33 +11,40 @@ world.height = 600;
 //     color: "#FF0000"
 // }
 
-let gamePiece = document.querySelector("#piece");
-let val = 0;
-let gamePiece2 = document.querySelector("#piece2");
+let rover = document.querySelector("#piece");
 let val2 = 0;
+let musk = document.querySelector("#piece2");
+var val = 0;
 
 
 document.addEventListener('keydown', function(event) {
+    console.log(rover.offsetWidth)
     let width = window.innerWidth;
-console.log('pressed');
+    if(event.keyCode == 68) {
+        val += 40;
+        musk.style.marginLeft = val + "px"
+    }
+    if(event.keyCode == 39) {
+        val2 += 40;
+        rover.style.marginLeft = val2 + "px"
+    }
+// console.log('pressed');
     console.log(width);
-    console.log(gamePiece.offsetWidth);
-    console.log(val)
-if (gamePiece.offsetWidth + val >= width) {
-    alert('Rover Wins!');
+    console.log((rover.offsetWidth + val2));
 
-}else if (gamePiece2.offsetWidth + val2 >= width){
-    alert('Elon Won!!');
+if ((musk.offsetWidth + val) >= width) {
+    console.log('musk wins')
+    // alert('Rover Wins!');
+    // window.reload();
+
+}
+if ((rover.offsetWidth + val2) >= width){
+    console.log('rover wins')
+    // alert('Elon Won!!');
+     // window.reload();
 }
 
-    if(event.keyCode == 39) {
-        val += 40;
-        gamePiece.style.marginLeft = val + "px"
-    }
-    else if(event.keyCode == 68) {
-        val2 += 40;
-        gamePiece2.style.marginLeft = val2 + "px"
-    }
+
 });
 
 

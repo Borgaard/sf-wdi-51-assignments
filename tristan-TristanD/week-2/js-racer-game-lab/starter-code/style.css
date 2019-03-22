@@ -5,7 +5,7 @@ html,body {
 
 body {
   background-image: url("css/marsBG.jpg");
-  background-size: cover;
+  /*background-size: cover;*/
   background-repeat: no-repeat;
 
   max-height:100%;
