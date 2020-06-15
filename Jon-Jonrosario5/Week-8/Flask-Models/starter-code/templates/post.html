@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Post</h1>
+<article class="message is-primary">
+    <div class="message-header">
+        <a href={{url_for('posts', id=post.id)}}>{{post.title}}</a>
+
+        <p>By: {{post.user}}</p>
+    </div>
+    <div class="message-body">
+        {{post.text}}
+    </div>
+</article>
+<br>
+{% if comments %}
+<h1>Comments</h1>
+{% for comment in comments %}
+<article class="message is-primary">
+    <div class="message-header">
+        <a href={{url_for('posts', id=post.id)}}>{{comment.title}}</a>
+
+        <p>By: {{comment.user}}</p>
+    </div>
+    <div class="message-body">
+        {{comment.text}}
+    </div>
+    <a>r/{{comment.post}}</a>
+</article>
+{% endfor %}
+{% endif %}
+
+{% endblock %}
+<br>
+
+<section>
+    <h2>Submit Comments</h2>
+    <form method="POST" action="" novalidate>
+        {{ form.hidden_tag() }}
+        <div>
+        {{ form.text.label }}
+        {{ form.text() }}
+        </div>
+        <div>
+        {{ form.user.label("Comment By:") }}
+        {{ form.user() }}
+        </div>
+
+        {{ form.submit() }}
+    </form>
+</section>
