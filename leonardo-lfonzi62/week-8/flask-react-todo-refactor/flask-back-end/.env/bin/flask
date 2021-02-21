@@ -1,0 +1,10 @@
+#!/Users/lfontenette/WDI/sf-wdi-51-assignments/leonardo-lfonzi62/week-8/flask-react-todo-refactor/flask-back-end/.env/bin/python3.7
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from flask.cli import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
